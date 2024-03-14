@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\SpecificationController;
@@ -67,6 +68,11 @@ Route::middleware([
             Route::get('/departments/data', 'DepartmentController@data')->name('departments.data');
             Route::delete('/departments/bulk_delete', 'DepartmentController@bulkDelete')->name('departments.bulk_delete');
             Route::resource('departments', DepartmentController::class);
+
+            ///Conferences routes
+            Route::get('/conferences/data', 'ConferenceController@data')->name('conferences.data');
+            Route::delete('/conferences/bulk_delete', 'ConferenceController@bulkDelete')->name('conferences.bulk_delete');
+            Route::resource('conferences', ConferenceController::class);
 
             //Product routes
             Route::get('/products/data', 'ProductController@data')->name('products.data');

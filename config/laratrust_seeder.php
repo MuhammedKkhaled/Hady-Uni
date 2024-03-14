@@ -24,6 +24,7 @@ return [
             'news'          => 'c,r,u,d',
             'specifications'=> 'c,r,u,d',
             'departments'   => 'c,r,u,d',
+            'conferences'   => 'c,r,u,d',
         ],
         'admin' => [],
         'user' => [],

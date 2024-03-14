@@ -9,7 +9,7 @@
         </div>
         <div class="card-body">
 
-            <form method="post" action="{{ route('admin.'.$name.'.update', $department->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.'.$name.'.update', $department) }}" enctype="multipart/form-data">
                 <div class="card-body">
                     @csrf
                     @method('put')
@@ -35,7 +35,7 @@
 
                     <div class="form-group">
                         <label>Minimum Percentage</label>
-                        <input type="text" name="minimum_percent" autofocus class="form-control" value="{{ old('minimum_percent', $department->minimum_percent) }}" required>
+                        <input type="text" name="minimum_percent" autofocus class="form-control" value="{{ old('minimum_percent', $department->minimum_percent) }}">
                     </div>
 
                     {{-- Maximum Percent --}}

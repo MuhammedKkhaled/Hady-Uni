@@ -86,18 +86,17 @@ class DepartmentController extends Controller
 
     }// end of edit
 
-    public function update(StoreDepartmentRequest $request, Department $departments)
+    public function update(StoreDepartmentRequest $request, Department $department)
     {
-
         $requestData = $request->validated();
 
         if ($request->image) {
-            Storage::disk('local')->delete('public/uploads/departments/' . $departments->image);
+            Storage::disk('local')->delete('public/uploads/departments/' . $department->image);
             $request->image->store('public/uploads/departments/');
             $requestData['image'] = $request->image->hashName();
         }
 
-        $departments->update($requestData);
+        $department->update($requestData);
 
         session()->flash('success', __('Update Successfully'));
 
