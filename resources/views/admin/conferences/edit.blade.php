@@ -5,32 +5,50 @@
 
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
-            <h3 class="card-title text-capitalize">{{$name}} | Edit {{$news->name}}</h3>
+            <h3 class="card-title text-capitalize">{{$name}} | Edit {{$conference->name}}</h3>
         </div>
         <div class="card-body">
 
-            <form method="post" action="{{ route('admin.'.$name.'.update', $news->id) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.'.$name.'.update', $conference->id) }}" enctype="multipart/form-data">
                 <div class="card-body">
                     @csrf
                     @method('put')
                     @include('admin.partials._errors')
 
-                    {{--Title--}}
+                    {{-- Name --}}
                     <div class="form-group">
-                        <label>News Title  <span class="text-danger">*</span></label>
-                        <input type="text" name="title" autofocus class="form-control" value="{{ old('title', $news->title) }}" required>
+                        <label>Conference Title <span class="text-danger">*</span></label>
+                        <input type="text" name="title" autofocus class="form-control" value="{{ old('title' , $conference->title) }}" required>
                     </div>
 
-                    {{--description--}}
+                    {{-- Locations --}}
                     <div class="form-group">
-                        <label> News content <span class="text-danger">*</span></label>
-                        <textarea name="content" class="form-control" cols="30" rows="10" id="content-textarea">{{ old('content', $news->content) }}</textarea>
+                        <label>Conference Location <span class="text-danger">*</span></label>
+                        <input type="text" name="location" autofocus class="form-control" value="{{ old('location' , $conference->location) }}" required>
+                    </div>
+
+                    {{-- Date --}}
+                    <div class="form-group">
+                        <label>Conference Date <span class="text-danger">*</span></label>
+                        <input type="date" name="date" autofocus class="form-control" required>
+                    </div>
+
+                    {{-- Start Time --}}
+                    <div class="form-group">
+                        <label>Conference Start Time <span class="text-danger">*</span></label>
+                        <input type="time" name="start_time" autofocus class="form-control"  required>
+                    </div>
+
+                    {{-- Date --}}
+                    <div class="form-group">
+                        <label>Conference End Time  <span class="text-danger">*</span></label>
+                        <input type="time" name="end_time" autofocus class="form-control"  required>
                     </div>
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">Main Images</label>
-                        <input type="file" name="image" id="input-file-now" class="dropify" @if(isset($news)) data-default-file="{{$news->image_path}}" data-show-remove="false" @endif data-height="585"/>
+                        <label class="text-capitalize">Conference Image</label>
+                        <input type="file" name="image" id="input-file-now" class="dropify" @if(isset($conference)) data-default-file="{{$conference->image_path}}" data-show-remove="false" @endif  data-height="355"/>
                     </div>
 
                 </div>
@@ -46,16 +64,3 @@
         </div>
     </div>
 @endsection
-
-
-@section('js')
-    <script>
-        ClassicEditor
-            .create( document.querySelector( '#content-textarea' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
-@endsection
-
-

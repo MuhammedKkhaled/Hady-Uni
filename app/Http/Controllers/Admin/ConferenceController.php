@@ -84,9 +84,9 @@ class ConferenceController extends Controller
 
     }// end of store
 
-    public function edit(News $news)
+    public function edit(Conference $conference)
     {
-        return view('admin.news.edit', compact('news'));
+        return view('admin.conferences.edit', compact('conference'));
 
     }// end of edit
 
@@ -105,9 +105,9 @@ class ConferenceController extends Controller
 
     }// end of update
 
-    public function destroy(News $news)
+    public function destroy(Conference $conference)
     {
-        $this->delete($news);
+        $this->delete($conference);
         session()->flash('success', __('site.deleted_successfully'));
         return response(__('site.deleted_successfully'));
 
@@ -117,8 +117,8 @@ class ConferenceController extends Controller
     {
         foreach (json_decode(request()->record_ids) as $recordId) {
 
-            $news = News::FindOrFail($recordId);
-            $this->delete($news);
+            $conference = Conference::FindOrFail($recordId);
+            $this->delete($conference);
 
         }//end of for each
 
@@ -127,10 +127,10 @@ class ConferenceController extends Controller
 
     }// end of bulkDelete
 
-    private function delete(News $news)
+    private function delete(Conference $conference)
     {
-        Storage::disk('local')->delete('public/uploads/news/' . $news->image);
-        $news->delete();
+        Storage::disk('local')->delete('public/uploads/conferences/' . $conference->image);
+        $conference->delete();
 
     }// end of delete
 
