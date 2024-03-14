@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\CategoryRequest;
+use App\Http\Requests\Admin\ConferenceRequest;
 use App\Http\Requests\Admin\NewsRequest;
 use App\Models\Blog;
 use App\Models\Category;
@@ -35,19 +36,25 @@ class ConferenceController extends Controller
 
         return DataTables::of($news)
 
-            ->addColumn('record_select', 'admin.news.data_table.record_select')
-            ->addColumn('image', function (News $new) {
-                return view('admin.news.data_table.image', compact('new'));
+            ->addColumn('record_select', 'admin.conferences.data_table.record_select')
+            ->addColumn('image', function (Conference $conference) {
+                return view('admin.conferences.data_table.image', compact('conference'));
 
             })
-            ->editColumn('created_at', function (News $category) {
-                return $category->created_at->format('Y-m-d');
+            ->editColumn('created_at', function (Conference $conference) {
+                return $conference->created_at->format('Y-m-d');
             })
-            ->editColumn('content', function (News $new) {
-                // Use strip_tags to remove HTML tags from the content
-                return strip_tags($new->content);
+            ->editColumn('date', function (Conference $conference) {
+                return $conference->date->format('Y-m-d');
             })
-            ->addColumn('actions', 'admin.news.data_table.actions')
+            ->editColumn('start_time', function (Conference $conference) {
+                return $conference->start_time->format('H:i a'); // Format start time as 'hour:minute'
+            })
+            ->editColumn('end_time', function (Conference $conference) {
+                return $conference->end_time->format('H:i a'); // Format end time as 'hour:minute'
+            })
+
+            ->addColumn('actions', 'admin.conferences.data_table.actions')
             ->rawColumns(['record_select', 'actions'])
             ->toJson();
 
@@ -55,27 +62,25 @@ class ConferenceController extends Controller
 
     public function create()
     {
-        return view('admin.news.create');
+        return view('admin.conferences.create');
 
     }// end of create
 
-    public function store(NewsRequest $request)
+    public function store(ConferenceRequest $request)
     {
 
         $requestData = $request->validated();
 
-        $requestData['author'] = auth()->user()->name;
-
         if ($request->image) {
-            $request->image->store('public/uploads/news/');
+            $request->image->store('public/uploads/conferences/');
             $requestData['image'] = $request->image->hashName();
         }
 
-        News::create($requestData);
+        Conference::create($requestData);
 
         session()->flash('success', 'Added Successfully');
 
-        return redirect()->route('admin.news.index');
+        return redirect()->route('admin.conferences.index');
 
     }// end of store
 

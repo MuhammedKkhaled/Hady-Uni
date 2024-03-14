@@ -1,4 +1,4 @@
-@php $name = 'news' @endphp
+@php $name = 'conferences' @endphp
 @extends('layouts.admin.app')
 @section('content')
 
@@ -10,32 +10,46 @@
         <div class="card-body">
             <form class="form" action="{{ route('admin.'.$name.'.store') }}" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
-
                     @csrf
                     @method('post')
                     @include('admin.partials._errors')
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>News Title <span class="text-danger">*</span></label>
+                        <label>Conference Title <span class="text-danger">*</span></label>
                         <input type="text" name="title" autofocus class="form-control" value="{{ old('title') }}" required>
                     </div>
 
-                    {{--description--}}
+                    {{-- Locations --}}
                     <div class="form-group">
-                        <label>News Content <span class="text-danger">*</span></label>
-                        <textarea name="content" class="form-control" cols="30" rows="10" id="content-textarea">{{ old('content') }}</textarea>
+                        <label>Conference Location <span class="text-danger">*</span></label>
+                        <input type="text" name="location" autofocus class="form-control" value="{{ old('location') }}" required>
+                    </div>
+
+                    {{-- Date --}}
+                    <div class="form-group">
+                        <label>Conference Date <span class="text-danger">*</span></label>
+                        <input type="date" name="date" autofocus class="form-control"  required>
+                    </div>
+
+                    {{-- Start Time --}}
+                    <div class="form-group">
+                        <label>Conference Start Time <span class="text-danger">*</span></label>
+                        <input type="time" name="start_time" autofocus class="form-control"  required>
+                    </div>
+
+                    {{-- Date --}}
+                    <div class="form-group">
+                        <label>Conference End Time  <span class="text-danger">*</span></label>
+                        <input type="time" name="end_time" autofocus class="form-control"  required>
                     </div>
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">News Image</label>
+                        <label class="text-capitalize">Conference Image</label>
                         <input type="file" name="image" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
-
-
                 </div>
-
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-8">
