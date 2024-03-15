@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\SpecificationController;
+use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +19,10 @@ Route::middleware([
     ->group(function () {
 
         Route::name('admin.')->prefix('admin')->group(function () {
+
+
+            Route::post('/login' , [LoginController::class , 'login'])->name('login');
+
 
             //home
             Route::get('/home/top_statistics', 'HomeController@topStatistics')->name('home.top_statistics');
@@ -73,6 +79,12 @@ Route::middleware([
             Route::get('/conferences/data', 'ConferenceController@data')->name('conferences.data');
             Route::delete('/conferences/bulk_delete', 'ConferenceController@bulkDelete')->name('conferences.bulk_delete');
             Route::resource('conferences', ConferenceController::class);
+
+            /// Teachers routes
+            Route::get('/teachers/data', 'TeacherController@data')->name('teachers.data');
+            Route::delete('/teachers/bulk_delete', 'TeacherController@bulkDelete')->name('teachers.bulk_delete');
+            Route::resource('teachers', TeacherController::class);
+
 
             //Product routes
             Route::get('/products/data', 'ProductController@data')->name('products.data');
