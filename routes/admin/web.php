@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Auth\LoginController;
@@ -84,6 +85,11 @@ Route::middleware([
             Route::get('/teachers/data', 'TeacherController@data')->name('teachers.data');
             Route::delete('/teachers/bulk_delete', 'TeacherController@bulkDelete')->name('teachers.bulk_delete');
             Route::resource('teachers', TeacherController::class);
+
+            /// properties routes
+            Route::get('/properties/data', 'PropertyController@data')->name('properties.data');
+            Route::delete('/properties/bulk_delete', 'PropertyController@bulkDelete')->name('properties.bulk_delete');
+            Route::resource('properties', PropertyController::class);
 
 
             //Product routes

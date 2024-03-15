@@ -62,7 +62,7 @@
                         <label for="brief"> Teacher Brief <span class="text-danger">*</span></label>
                         <textarea id="brief" name="brief" autofocus class="form-control"required
                                   cols="30" rows="10">
-{{ old('brief', $teacher->brief) }}
+                        {{ old('brief', $teacher->brief) }}
                         </textarea>
                     </div>
 

@@ -26,6 +26,7 @@ return [
             'departments'   => 'c,r,u,d',
             'conferences'   => 'c,r,u,d',
             'teachers'   => 'c,r,u,d',
+            'properties'   => 'c,r,u,d',
         ],
         'admin' => [],
         'user' => [],
