@@ -40,10 +40,41 @@
 
                     {{-- type --}}
                     <div class="form-group">
-                        <label for="facebook">Property Type</label>
-                        <input type="radio" name="type" value="experience" class="form-control">Experience
-                        <input type="radio" name="type" value="achievements" class="form-control">Achievements
-                        <input type="radio" name="type" value="qualifications" class="form-control">Qualifications
+                        <label>
+                            <h3>
+                            Property Type
+                            </h3>
+
+                        </label>
+                        <div class="form-group">
+                            <label for="exper">
+                            <h6>
+
+                                Experience
+                            </h6>
+
+                            </label>
+                            <input type="radio" id="exper" name="type" value="experience" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="ache">
+                            <h6>
+                                Achievements
+                            </h6>
+
+                            </label>
+                            <input type="radio"  id="ache" name="type" value="achievements" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="qual">
+                            <h6>
+
+                                Qualifications
+                            </h6>
+
+                            </label>
+                            <input type="radio"  id="qual" name="type" value="qualifications" class="form-control">
+                        </div>
                     </div>
 
                 </div>

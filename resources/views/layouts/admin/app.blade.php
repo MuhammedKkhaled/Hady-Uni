@@ -48,6 +48,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <!--end::Layout Themes-->
     <link rel="shortcut icon" href="{{asset('admin_assets')}}/media/logos/favicon.ico"/>
+    @yield('css')
 </head>
 <!--end::Head-->
 <!--begin::Body-->

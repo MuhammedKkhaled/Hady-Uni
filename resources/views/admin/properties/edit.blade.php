@@ -36,17 +36,27 @@
                     {{-- property_desc --}}
                     <div class="form-group">
                         <label for="property_desc"> Property Description <span class="text-danger">*</span></label>
-                        <textarea name="property_desc" id="property_desc" class="form-control"  required>
-                            {{ $property->property_desc }}
-                        </textarea>
+                        <textarea name="property_desc" id="property_desc" class="form-control"  required> {{ $property->property_desc }}</textarea>
                     </div>
 
                     {{-- type --}}
                     <div class="form-group">
-                        <label for="facebook">Property Type</label>
-                        <input type="radio" name="type" value="experience" class="form-check"  {{ $property->type == 'experience' ? 'checked' : '' }} >Experience
-                        <input type="radio" name="type" value="achievements" class="form-check" {{ $property->type == 'achievements' ? 'checked' : '' }}>Achievements
-                        <input type="radio" name="type" value="qualifications" class="form-check" {{ $property->type == 'qualifications' ? 'checked' : '' }}  >Qualifications
+                        <label>Property Type</label>
+                        <div class="form-group">
+                            <label for="experience"> Experience </label>
+                            <input type="radio" name="type" id="experience" value="experience" class="form-check"  {{ $property->type == 'experience' ? 'checked' : '' }} >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="achievements"> Achievements </label>
+                            <input type="radio" name="type" id="achievements" value="achievements" class="form-check" {{ $property->type == 'achievements' ? 'checked' : '' }}>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="qualifications"> Qualifications </label>
+                            <input type="radio" name="type" id="qualifications" value="qualifications" class="form-check" {{ $property->type == 'qualifications' ? 'checked' : '' }}  >
+                        </div>
+
                     </div>
 
                 </div>
