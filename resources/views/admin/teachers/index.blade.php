@@ -69,6 +69,7 @@
                                 <th>Teacher email</th>
                                 <th> Specialization </th>
                                 <th> Brief </th>
+                                <th> Teacher Type </th>
                                 <th>Created at</th>
                                 <th>Action</th>
                             </tr>
@@ -92,6 +93,19 @@
 
     <script>
 
+        var types = {
+            0: 'العميد',
+            1: 'السيرة الذاتية لمعاون العميد للشؤون المالية و الادارية',
+            2: 'السيرة الذاتية لمعاون العميد للشؤون العلمية',
+            3: 'الشعبة الادارية',
+            4: 'شعبة الحسابات',
+            5: 'القانونية',
+            6: 'التسجيل',
+            7: 'التقويم',
+            8: 'المعلومات الالكترونية'
+        };
+
+
         let rolesTable = $('#{{$name}}-table').DataTable({
             dom: "tiplr",
             serverSide: true,
@@ -107,6 +121,15 @@
                 {data: 'email', name: 'email', searchable: false},
                 {data: 'specialization', name: 'specialization', searchable: false},
                 {data: 'brief', name: 'brief', searchable: false},
+                {
+                    data: 'type',
+                    name: 'type',
+                    searchable: false,
+                    render: function(data, type, full, meta) {
+                        // Assuming 'types' is passed from the controller containing the type labels
+                        return types[data];
+                    }
+                },
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

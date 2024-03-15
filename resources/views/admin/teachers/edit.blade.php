@@ -61,9 +61,17 @@
                     <div class="form-group">
                         <label for="brief"> Teacher Brief <span class="text-danger">*</span></label>
                         <textarea id="brief" name="brief" autofocus class="form-control"required
-                                  cols="30" rows="10">
-                        {{ old('brief', $teacher->brief) }}
-                        </textarea>
+                                  cols="30" rows="10">{{ old('brief', $teacher->brief) }}</textarea>
+                    </div>
+
+                    {{-- brief --}}
+                    <div class="form-group">
+                        <label for="type">Teacher Type</label>
+                        <select name="type" id="type" class="form-control">
+                            @foreach($types as $key => $label)
+                                <option value="{{ $key }}" @if($teacher->type == $key) selected @endif>{{ $label }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     {{--image--}}

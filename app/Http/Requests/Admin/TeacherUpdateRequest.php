@@ -30,6 +30,7 @@ class TeacherUpdateRequest extends FormRequest
             'twitter' => ['nullable', 'string'],
             'specialization' => ['required', 'min:3'],
             'brief' => ['required','max:999'],
+            'type'=>['required' , 'numeric' , 'max:14'],
             'image'      => 'required|mimes:jpeg,png,jpg,gif,svg,webp',
         ];
 

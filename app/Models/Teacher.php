@@ -20,6 +20,7 @@ class Teacher extends Model
         'twitter',
         'specialization',
         'brief',
+        'type',
         'image',
     ];
 

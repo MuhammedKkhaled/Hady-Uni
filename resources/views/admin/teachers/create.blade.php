@@ -63,6 +63,16 @@
                           cols="30" rows="10"></textarea>
                     </div>
 
+                    <div class="form-group">
+                        <label for="type">Teacher Type</label>
+                        <select id="type" class="form-control" name="type">
+                            <option value="-1"> -- Please Add A Teacher  </option>
+                        @foreach($types as $value =>$label)
+                                <option value="{{ $value }}"> {{ $label }} </option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     {{--image--}}
                     <div class="form-group">
                         <label class="text-capitalize" for="input-file-now"> Teacher Photo <span class="text-danger">*</span></label>

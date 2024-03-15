@@ -104,9 +104,9 @@ class DepartmentController extends Controller
 
     }// end of update
 
-    public function destroy(Department $departments)
+    public function destroy(Department $department)
     {
-        $this->delete($departments);
+        $this->delete($department);
         session()->flash('success', __('site.deleted_successfully'));
         return response(__('site.deleted_successfully'));
 
@@ -126,10 +126,10 @@ class DepartmentController extends Controller
 
     }// end of bulkDelete
 
-    private function delete(Department $departments)
+    private function delete(Department $department)
     {
-        Storage::disk('local')->delete('public/uploads/departments/' . $departments->image);
-        $departments->delete();
+        Storage::disk('local')->delete('public/uploads/departments/' . $department->image);
+        $department->delete();
 
     }// end of delete
 

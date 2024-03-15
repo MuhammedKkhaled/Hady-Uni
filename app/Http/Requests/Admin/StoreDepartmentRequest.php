@@ -27,7 +27,7 @@ class StoreDepartmentRequest extends FormRequest
             'minimum_percent'    => ['nullable'],
             'maximum_percent'    => ['required'],
             'price'              => ['required', 'numeric'],
-            'image'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp',
+            'image'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
         ];
 
         if (in_array($this->method(), ['PUT', 'PATCH'])) {

@@ -54,11 +54,25 @@ class TeacherController extends Controller
 
     public function create()
     {
-        return view('admin.teachers.create');
+
+        $types = [
+            0 => 'العميد',
+            1 => 'السيرة الذاتية لمعاون العميد للشؤون المالية و الادارية',
+            2 => 'السيرة الذاتية لمعاون العميد للشؤون العلمية',
+            3 => 'الشعبة الادارية',
+            4 => 'الشعبة الحسابات',
+            5 => 'الشعبة القانونية',
+            6 => 'الشعبة التسجيل',
+            7 => 'الشعبة التقويم',
+            8 => 'الشعبة المعلومات الالكترونية',
+        ];
+
+        return view('admin.teachers.create' , compact('types'));
     }// end of create
 
     public function store(TeacherStoreRequest $request)
     {
+
 
         $requestData = $request->validated();
 
@@ -77,7 +91,19 @@ class TeacherController extends Controller
 
     public function edit(Teacher $teacher)
     {
-        return view('admin.teachers.edit', compact('teacher'));
+        $types = [
+            0 => 'العميد',
+            1 => 'السيرة الذاتية لمعاون العميد للشؤون المالية و الادارية',
+            2 => 'السيرة الذاتية لمعاون العميد للشؤون العلمية',
+            3 => 'الشعبة الادارية',
+            4 => 'الشعبة الحسابات',
+            5 => 'الشعبة القانونية',
+            6 => 'الشعبة التسجيل',
+            7 => 'الشعبة التقويم',
+            8 => 'الشعبة المعلومات الالكترونية',
+        ];
+
+        return view('admin.teachers.edit', compact('teacher' , 'types'));
 
     }// end of edit
 
