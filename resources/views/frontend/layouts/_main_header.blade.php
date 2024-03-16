@@ -43,15 +43,10 @@
                             <li>
                                 <a href="#">الاقسام</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="department-details.html">قسم طب الاسنان</a></li>
-                                    <li><a href="#">قسم تقنيات الاشغة</a></li>
-                                    <li><a href="#">قسم تقنيات الاجهزة الطبية</a></li>
-                                    <li><a href="#">قسم التمريض</a></li>
-                                    <li><a href="#">قسم تقنيات المختبرات الطبية</a></li>
-                                    <li><a href="#">قسم تقنيات التخدير</a></li>
-                                    <li><a href="#">قسم الفيزياء الطبية</a></li>
-                                    <li><a href="#">قسم القانون</a></li>
-                                    <li><a href="#">قسم التصميم الداخلي</a></li>
+                                    @foreach($sections as $section)
+                                    <li><a href="{{ route('main.departments.show' , $section->id) }}">{{ $section->name }}</a></li>
+                                    @endforeach
+
                                 </ul>
                             </li>
                             <li>

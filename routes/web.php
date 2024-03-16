@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\DepartmentController;
 use App\Models\Conference;
 use App\Models\Department;
 use App\Models\News;
@@ -83,11 +84,12 @@ Route::prefix('main/')->group(function (){
 
     });
 
+    Route::get('departments/{id}', [DepartmentController::class , 'show'])->name('main.departments.show');
+
 });
 
 
 
-/// Route Default param
 
 
 Auth::routes(['register'=>false]);

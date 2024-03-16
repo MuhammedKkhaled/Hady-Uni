@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
+use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
@@ -90,6 +91,11 @@ Route::middleware([
             Route::get('/properties/data', 'PropertyController@data')->name('properties.data');
             Route::delete('/properties/bulk_delete', 'PropertyController@bulkDelete')->name('properties.bulk_delete');
             Route::resource('properties', PropertyController::class);
+
+            /// properties routes
+            Route::get('/libraries/data', 'LibraryController@data')->name('libraries.data');
+            Route::delete('/libraries/bulk_delete', 'LibraryController@bulkDelete')->name('libraries.bulk_delete');
+            Route::resource('libraries', LibraryController::class);
 
 
             //Product routes

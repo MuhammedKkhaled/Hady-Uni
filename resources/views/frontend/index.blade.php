@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title' , 'جامعة الهدي ')
+@section('title' , 'جامعة الهادي ')
 
 @section('content')
 
@@ -336,7 +336,7 @@
     <section class="newsletter-area">
         <div class="container">
             <div class="newsletter-wrapper bg_cover wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s"
-                 style="background-image: url(assets/images/newsletter-bg-1.webp);">
+                 style="background-image: url({{ asset("assets/images/newsletter-bg-1.webp") }});">
                 <div class="row align-items-center">
 
                     <div class="col-lg-7">
