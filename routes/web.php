@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Front\DepartmentController;
+use App\Http\Controllers\Front\JournalController;
+use App\Http\Controllers\Front\LibraryController;
 use App\Models\Conference;
 use App\Models\Department;
 use App\Models\News;
@@ -86,6 +88,9 @@ Route::prefix('main/')->group(function (){
 
     Route::get('departments/{id}', [DepartmentController::class , 'show'])->name('main.departments.show');
 
+    Route::get('libraries/{id}' ,[ LibraryController::class , 'show'])->name('main.libraries.show');
+
+    Route::get('journal', [JournalController::class , 'show']);
 });
 
 

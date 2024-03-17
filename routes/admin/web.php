@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
+use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PropertyController;
@@ -96,6 +97,11 @@ Route::middleware([
             Route::get('/libraries/data', 'LibraryController@data')->name('libraries.data');
             Route::delete('/libraries/bulk_delete', 'LibraryController@bulkDelete')->name('libraries.bulk_delete');
             Route::resource('libraries', LibraryController::class);
+
+            /// properties routes
+            Route::get('/journals/data', 'JournalController@data')->name('journals.data');
+            Route::delete('/journals/bulk_delete', 'JournalController@bulkDelete')->name('journals.bulk_delete');
+            Route::resource('journals', JournalController::class);
 
 
             //Product routes

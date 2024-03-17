@@ -30,15 +30,13 @@
                             <li>
                                 <a href="#">المكتبة</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="#">مكتبة الكلية</a></li>
-                                    <li><a href="#">المكتبة الالكترونية</a></li>
-                                    <li><a href="#">المكتبة الافتراضية</a></li>
-                                    <li><a href="#">منصة البحوث التطبيقية</a></li>
-                                    <li><a href="#">المحلات الاكاديمية العلمية العراقي</a></li>
+                                    @foreach($categories as $category)
+                                    <li><a href="{{ route("main.libraries.show" , $category->id) }}">{{ $category->name }}</a></li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">مجلة البحوث الصحية</a>
+                                <a href="{{ url('/main/journal') }}">مجلة البحوث الصحية</a>
                             </li>
                             <li>
                                 <a href="#">الاقسام</a>

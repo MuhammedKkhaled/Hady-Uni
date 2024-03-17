@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Category;
 use App\Models\Department;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +23,8 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('*', function ($view) {
             $sections = Department::all();
-            $view->with('sections', $sections);
+            $categories= Category::all();
+            $view->with('sections', $sections)->with('categories', $categories);
         });
     }
 }

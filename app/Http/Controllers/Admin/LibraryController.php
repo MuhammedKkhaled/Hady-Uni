@@ -95,7 +95,7 @@ class LibraryController extends Controller
         $requestData = $request->validated();
         if ($request->file) {
             Storage::disk('local')->delete('public/uploads/libraries/' . $library->file);
-            $request->file->store('public/uploads/news/');
+            $request->file->store('public/uploads/libraries/');
             $requestData['file'] = $request->file->hashName();
         }
 
