@@ -91,6 +91,11 @@ Route::prefix('main/')->group(function (){
     Route::get('libraries/{id}' ,[ LibraryController::class , 'show'])->name('main.libraries.show');
 
     Route::get('journal', [JournalController::class , 'show']);
+
+    Route::get('strategies', [JournalController::class , 'showStrategies']);
+
+    Route::get('HeadTeacher-Word', [JournalController::class , 'showHeadTeacherWord']);
+    Route::get('structure', [JournalController::class , 'showStructure']);
 });
 
 

@@ -15,4 +15,21 @@ class JournalController extends Controller
         return view("frontend.pages.journals" , compact('journal'));
 
     }
+
+    public function showStrategies()
+    {
+        return view("frontend.pages.strategies");
+    }
+
+    public function showHeadTeacherWord()
+    {
+        return view("frontend.pages.HeadTeacher-Word");
+    }
+
+
+    public function showStructure()
+    {
+        return view("frontend.pages.structure");
+    }
+
 }

@@ -61,7 +61,7 @@
                                     <li><a href="#">قسم التصميم الداخلي</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">الهيكل التنظيمي و الاداري</a></li>
+                            <li><a href="{{ url("/main/structure") }}">الهيكل التنظيمي و الاداري</a></li>
 
                             <li>
                                 <a href="#">حول الكلية</a>
@@ -117,9 +117,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="strategys.html">استراتيجية الكلية</a>
+                                <a href="{{ url("/main/strategies") }}">استراتيجية الكلية</a>
                             </li>
-                            <li><a href="elamrdwordes.html">كلمة السيد العميد</a></li>
+                            <li><a href="{{ url("/main/HeadTeacher-Word") }}">كلمة السيد العميد</a></li>
 
                             <li>
                                 <a href="#">تصنيفات كلية الهادي الجامعة</a>
@@ -132,7 +132,7 @@
                         </ul>
                         </li>
                         <li>
-                            <a class="active" href="index1.html">الرئيسية</a>
+                            <a class="active" href="{{ url('/main') }}">الرئيسية</a>
                         </li>
                         </ul>
                     </nav>
@@ -140,7 +140,7 @@
 
                 <div class="col-lg-1" style="text-align: center;">
                     <div class="header-logo">
-                        <a href="index1.html"><img src="{{ asset("assets/images/logo.webp") }}" width="88" height="88"
+                        <a href="{{ url("/main") }}"><img src="{{ asset("assets/images/logo.webp") }}" width="88" height="88"
                                                    alt="Logo"></a>
                     </div>
                 </div>
