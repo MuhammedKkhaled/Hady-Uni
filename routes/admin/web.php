@@ -98,7 +98,7 @@ Route::middleware([
             Route::delete('/libraries/bulk_delete', 'LibraryController@bulkDelete')->name('libraries.bulk_delete');
             Route::resource('libraries', LibraryController::class);
 
-            /// properties routes
+            /// journals routes
             Route::get('/journals/data', 'JournalController@data')->name('journals.data');
             Route::delete('/journals/bulk_delete', 'JournalController@bulkDelete')->name('journals.bulk_delete');
             Route::resource('journals', JournalController::class);
@@ -109,15 +109,6 @@ Route::middleware([
             Route::delete('/products/bulk_delete', 'ProductController@bulkDelete')->name('products.bulk_delete');
             Route::resource('products', 'ProductController');
 
-            Route::get('langconv/{locale}' , function ($locale){
-
-                if (in_array($locale , ['en','ar']) ){
-                    session()->put('locale',$locale);
-                }
-
-                return redirect()->back();
-
-            })->name('lang.converter');
 
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');
