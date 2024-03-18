@@ -65,6 +65,10 @@
                                 </th>
                                 <th>Department Name</th>
                                 <th>Specification Name </th>
+                                <th> Department Definition</th>
+                                <th>Department Message </th>
+                                <th>Department Vision </th>
+                                <th>Department Goals </th>
                                 <th>Minimum Percent</th>
                                 <th>Maximum Percent </th>
                                 <th>Price</th>
@@ -98,6 +102,10 @@
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
                 {data: 'name', name: 'name'},
                 {data: 'specification_name', name: 'specification_name', searchable: false},
+                {data: 'department_definition', name: 'department_definition', searchable: false},
+                {data: 'department_message', name: 'department_message', searchable: false},
+                {data: 'department_vision', name: 'department_vision', searchable: false},
+                {data: 'department_goals', name: 'department_goals', searchable: false},
                 {data: 'minimum_percent', name: 'minimum_percent', searchable: false},
                 {data: 'maximum_percent', name: 'maximum_percent', searchable: false},
                 {data: 'price', name: 'price', searchable: false},

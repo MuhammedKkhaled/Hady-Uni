@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Facades\Storage; @endphp
 @extends('frontend.layouts.app')
 @section('title' , 'جامعة الهادي ')
 
@@ -69,8 +70,14 @@
                     <div class="about-content mt-40">
                         <h2 class="about-title">جامعة أهلية رائدة في <span>العراق</span></h2>
                         <span class="line"></span>
-                        <p>تأسست كلية الهادي في عام 2015، وهي حاصلة على اعتماد وزارة التعليم العالي والبحث العلمي العراقية. تقدم الكلية مجموعة متنوعة من البرامج الدراسية في المجالات الطبية والهندسية والقانونية والإدارية. تلتزم الكلية بتقديم تعليم عالي الجودة يلبي احتياجات المجتمع العراقي، وتسعى إلى إعداد طلابها ليصبحوا مهنيين مؤهلين وقادرين على المساهمة في التنمية الاجتماعية والاقتصادية للعراق.
-                            تضم كلية الهادي هيئة تدريس مؤهلة تأهيلا عاليا من ذوي الخبرة في مجالاتهم. كما تمتلك الكلية منشآت ومعدات حديثة تلبي متطلبات التعليم الحديث. تساهم كلية الهادي في المجتمع العراقي من خلال مجموعة متنوعة من البرامج والأنشطة
+                        <p>تأسست كلية الهادي في عام 2015، وهي حاصلة على اعتماد وزارة التعليم العالي والبحث العلمي
+                            العراقية. تقدم الكلية مجموعة متنوعة من البرامج الدراسية في المجالات الطبية والهندسية
+                            والقانونية والإدارية. تلتزم الكلية بتقديم تعليم عالي الجودة يلبي احتياجات المجتمع العراقي،
+                            وتسعى إلى إعداد طلابها ليصبحوا مهنيين مؤهلين وقادرين على المساهمة في التنمية الاجتماعية
+                            والاقتصادية للعراق.
+                            تضم كلية الهادي هيئة تدريس مؤهلة تأهيلا عاليا من ذوي الخبرة في مجالاتهم. كما تمتلك الكلية
+                            منشآت ومعدات حديثة تلبي متطلبات التعليم الحديث. تساهم كلية الهادي في المجتمع العراقي من خلال
+                            مجموعة متنوعة من البرامج والأنشطة
                         </p>
                         <a href="#" class="main-btn">المزيد</a>
                     </div>
@@ -78,29 +85,37 @@
                 <div class="col-lg-7">
                     <div class="about-image mt-50">
                         <div class="single-image image-1">
-                            <img src="assets/images/about/about-1.png" width="290" height="290" alt="about">
+                            <img src="{{ asset("assets/images/about/about-1.png") }}" width="290" height="290"
+                                 alt="about">
                         </div>
                         <div class="single-image image-2">
-                            <img src="assets/images/about/about-2.png" width="225" height="225" alt="about">
+                            <img src="{{ asset("assets/images/about/about-2.png") }}" width="225" height="225"
+                                 alt="about">
                         </div>
                         <div class="single-image image-3">
-                            <img src="assets/images/about/about-3.png" width="190" height="190" alt="about">
+                            <img src="{{ asset("assets/images/about/about-3.png") }}" width="190" height="190"
+                                 alt="about">
                         </div>
                         <div class="single-image image-4">
-                            <img src="assets/images/about/about-4.png" width="140" height="140" alt="about">
+                            <img src="{{ asset("assets/images/about/about-4.png") }}" width="140" height="140"
+                                 alt="about">
                         </div>
 
                         <div class="about-icon icon-1">
-                            <img src="assets/images/about/icon/icon-1.webp" width="46" height="46" alt="icon">
+                            <img src="{{ asset("assets/images/about/icon/icon-1.webp") }}" width="46" height="46"
+                                 alt="icon">
                         </div>
                         <div class="about-icon icon-2">
-                            <img src="assets/images/about/icon/icon-2.webp" width="46" height="46" alt="icon">
+                            <img src="{{ asset("assets/images/about/icon/icon-2.webp") }}" width="46" height="46"
+                                 alt="icon">
                         </div>
                         <div class="about-icon icon-3">
-                            <img src="assets/images/about/icon/icon-3.webp" width="46" height="46" alt="icon">
+                            <img src="{{ asset("assets/images/about/icon/icon-3.webp") }}" width="46" height="46"
+                                 alt="icon">
                         </div>
                         <div class="about-icon icon-4">
-                            <img src="assets/images/about/icon/icon-4.webp" width="46" height="46" alt="icon">
+                            <img src="{{ asset("assets/images/about/icon/icon-4.webp") }}" width="46" height="46"
+                                 alt="icon">
                         </div>
                     </div>
                 </div>
@@ -110,6 +125,32 @@
 
     <!--====== About Ends ======-->
 
+
+    <!--====== Campus Visit Start ======-->
+
+    <section class="campus-visit-area" style="padding-left: 30px;padding-bottom: 30px;">
+        <div class="container">
+            <div class="campus-visit-wrapper">
+                <div class="campus-image-col">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pXyEvMIyFHY?si=WfyPfXujHgF-lo7K"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen=""></iframe>
+                </div>
+                <div class="campus-content-col">
+                    <div class="campus-content">
+                        <h2 class="campus-title">تعرف عليا اكثر</h2>
+                        <span class="line"></span>
+                        <p>نحن موجودين في كافه المنصات و بكافه طرق العرض</p>
+                        <a class="play video-popup" href="https://youtu.be/pXyEvMIyFHY"><i class="fas fa-play"></i>
+                            <span>شاهد الان</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Campus Visit Ends ======-->
 
     <!--====== Blog Start ======-->
 
@@ -127,23 +168,25 @@
             <div class="blog-wrapper">
                 <div class="row-wrapper blog-active">
                     @foreach($news as $new)
-                    <div class="custom-col">
-                        <div class="single-blog mt-30">
-                            <div class="blog-image">
-                                <a href="#">
-                                    <img src="{{ $new->image_path }}" width="270" height="150" alt="blog">
-                                </a>
-                            </div>
-                            <div class="blog-content" style="text-align:end">
-                                <ul class="meta">
-                                    <li><a href="#">{{ $new->created_at->format('D M Y')  }}</a></li>
-                                    <li><a href="#">By: {{ $new->author }}</a></li>
-                                </ul>
-                                <h4 class="blog-title"><a href="#" style="text-align:end">  {{ $new->title }} </a></h4>
-                                <a href="#" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
+                        <div class="custom-col">
+                            <div class="single-blog mt-30">
+                                <div class="blog-image">
+                                    <a href="#">
+                                        <img src="{{ asset(Storage::url("uploads/news/". $new->image)) }}" width="270"
+                                             height="150" alt="blog">
+                                    </a>
+                                </div>
+                                <div class="blog-content" style="text-align:end">
+                                    <ul class="meta">
+                                        <li><a href="#">{{ $new->created_at->format('D M Y')  }}</a></li>
+                                        <li><a href="#">By: {{ $new->author }}</a></li>
+                                    </ul>
+                                    <h4 class="blog-title"><a href="#" style="text-align:end">  {{ $new->title }} </a>
+                                    </h4>
+                                    <a href="#" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
                 </div>
             </div>
@@ -159,7 +202,7 @@
                 <div class="col-lg-4">
                     <div class="features-image-2">
                         <img class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s"
-                             src="assets/images/features-2.webp" width="342" height="524" alt="Features">
+                             src="{{ asset("assets/images/features-2.webp") }}" width="342" height="524" alt="Features">
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -168,7 +211,8 @@
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.2s">
                                 <div class="item-icon">
-                                    <img src="{{ asset("assets/images/icon/icon-2-1.webp") }}" width="70" height="70" alt="Icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-1.webp") }}" width="70" height="70"
+                                         alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p> {{ count($departments)  }} <br> أقسام</p>
@@ -177,7 +221,8 @@
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.4s">
                                 <div class="item-icon">
-                                    <img src="{{ asset("assets/images/icon/icon-2-2.webp") }}" width="70" height="70" alt="Icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-2.webp") }}" width="70" height="70"
+                                         alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p>1000 <br> خريج</p>
@@ -186,7 +231,8 @@
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.6s">
                                 <div class="item-icon">
-                                    <img src="{{ asset("assets/images/icon/icon-2-3.webp") }}" width="70" height="70" alt="Icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-3.webp") }}" width="70" height="70"
+                                         alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p>تعليم <br> حديث</p>
@@ -198,7 +244,8 @@
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.2s">
                                 <div class="item-icon">
-                                    <img src="{{ asset("assets/images/icon/icon-2-4.webp") }}" width="70" height="70" alt="Icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-4.webp") }}" width="70" height="70"
+                                         alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p>{{ count($teachers) }} <br> أستـاذ</p>
@@ -207,7 +254,8 @@
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.4s">
                                 <div class="item-icon">
-                                    <img src="assets/images/icon/icon-2-2.webp" width="70" height="70" alt="Icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-2.webp") }}" width="70" height="70"
+                                         alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p>8000 <br> طالب</p>
@@ -216,7 +264,8 @@
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.4s">
                                 <div class="item-icon">
-                                    <img src="assets/images/icon/icon-2-5.webp" width="70" height="70" alt="Icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-5.webp") }}" width="70" height="70"
+                                         alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p>90% <br> نســبة النجــاح</p>
@@ -258,14 +307,14 @@
                 <div class="row grid">
                     @foreach($departments as $department )
                         <div class="col-lg-3 col-sm-6 {{ $department->id }}">
-                        <div class="single-event text-center mt-30">
-                            <h4 class="event-title"><a>{{ $department->name }}</a></h4>
-                            <span class="time">{{$department->specification_name }}</span>
-                            <span class="date">{{ $department->minimum_percent }}% </span>
-                            <span class="date"> {{ $department->maximum_percent }}% </span>
-                            <p class="place">{{ number_format($department->price, 0, '.', ',') }} IQD<br></p>
+                            <div class="single-event text-center mt-30">
+                                <h4 class="event-title"><a>{{ $department->name }}</a></h4>
+                                <span class="time">{{$department->specification_name }}</span>
+                                <span class="date">{{ $department->minimum_percent }}% </span>
+                                <span class="date"> {{ $department->maximum_percent }}% </span>
+                                <p class="place">{{ number_format($department->price, 0, '.', ',') }} IQD<br></p>
+                            </div>
                         </div>
-                    </div>
 
                     @endforeach
 
@@ -302,26 +351,26 @@
 
                 @foreach($conferences as $conference)
 
-                <div class="col-lg-6">
-                    <div class="event-wrapper-2">
-                        <div class="single-event-2  wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
-                            <div class="event-date">
-                                <span class="date"> {{ $conference->date->format('D M Y') }} </span>
-                            </div>
-                            <div class="event-content">
-                                <h4 class="event-title-2"><a href="#">{{ $conference->title }}</a>
-                                </h4>
-                                <p class="place">المكان :{{ $conference->location }}</p>
-                                <span class="time">
+                    <div class="col-lg-6">
+                        <div class="event-wrapper-2">
+                            <div class="single-event-2  wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="event-date">
+                                    <span class="date"> {{ $conference->date->format('D M Y') }} </span>
+                                </div>
+                                <div class="event-content">
+                                    <h4 class="event-title-2"><a href="#">{{ $conference->title }}</a>
+                                    </h4>
+                                    <p class="place">المكان :{{ $conference->location }}</p>
+                                    <span class="time">
                                     من{{ $conference->start_time->format(' H:I ') }} ألي
                                     {{ $conference->end_time->format('H:I') }}
                                 </span>
-                                <!--  <a href="#" class="more">Read more <i
-                                        class="fas fa-chevron-right"></i></a> -->
+                                    <!--  <a href="#" class="more">Read more <i
+                                            class="fas fa-chevron-right"></i></a> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
                 @endforeach
             </div>

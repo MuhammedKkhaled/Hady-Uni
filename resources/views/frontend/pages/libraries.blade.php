@@ -34,8 +34,8 @@
                         <div class="col-lg-3 col-sm-6 courses-col">
                             <div class="single-courses-2 mt-30">
                                 <div class="courses-image">
-                                    <a href="{{ Storage::url('uploads/libraries/' . $library->file) }}"
-                                       target="_blank"><img src="{{ Storage::url('uploads/libraries/' . $library->file) }}" width="270" height="170" alt="courses"></a>
+                                    <a href="{{ asset(Storage::url('uploads/libraries/' . $library->file)) }}"
+                                       target="_blank"><img src="{{ asset(Storage::url('uploads/libraries/' . $library->file)) }}" width="270" height="170" alt="courses"></a>
                                 </div>
                                 <div class="courses-content">
                                     <a href="#" class="category"> {{ $library->specialization_name }} </a>

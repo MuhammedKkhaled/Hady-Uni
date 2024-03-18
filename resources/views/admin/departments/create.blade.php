@@ -30,6 +30,28 @@
                         </select>
                     </div>
 
+                    {{-- department_definition --}}
+                    <div class="form-group">
+                        <label for="department_definition">Department Definition <span class="text-danger">*</span></label>
+                        <input type="text" id="department_definition" name="department_definition" autofocus class="form-control" value="{{ old('department_definition') }}" required>
+                    </div>
+{{-- department_message --}}
+                    <div class="form-group">
+                        <label for="department_message">Department Message <span class="text-danger">*</span></label>
+                        <input type="text" id="department_message" name="department_message" autofocus class="form-control" value="{{ old('department_message') }}" required>
+                    </div>
+{{-- department_vision --}}
+                    <div class="form-group">
+                        <label for="department_vision">Department Vision <span class="text-danger">*</span></label>
+                        <input type="text" id="department_vision" name="department_vision" autofocus class="form-control" value="{{ old('department_vision') }}" required>
+                    </div>
+{{-- department_goals --}}
+                    <div class="form-group">
+                        <label for="department_goals">Department Goals <span class="text-danger">*</span></label>
+                        <input type="text" id="department_goals" name="department_goals" autofocus class="form-control" value="{{ old('department_goals') }}" required>
+                    </div>
+
+
                     {{-- minimum percent --}}
                     <div class="form-group">
                         <label> Minimum Percentage </label>
@@ -51,9 +73,16 @@
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">News Image</label>
+                        <label class="text-capitalize">Department Image</label>
                         <input type="file" name="image" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
+
+                    {{--file--}}
+                    <div class="form-group">
+                        <label class="text-capitalize">Department File   <span class="text-danger">PDF,DOCX*</span></label>
+                        <input type="file" name="file" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
+                    </div>
+
                 </div>
 
                 <div class="card-footer">

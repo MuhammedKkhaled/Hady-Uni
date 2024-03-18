@@ -1,10 +1,12 @@
+@php use Illuminate\Support\Facades\Storage; @endphp
 @extends('frontend.layouts.app')
 @section("title" , "جامعة الهادي معلومات الاقسام")
 @section('content')
     <!--====== Page Banner Start ======-->
 
     <section class="page-banner">
-        <div class="page-banner-bg bg_cover" style="background-image: url({{ asset("assets/images/campus-2-2.jpg") }});">
+        <div class="page-banner-bg bg_cover"
+             style="background-image: url({{ asset("assets/images/campus-2-2.jpg") }});">
             <div class="container">
                 <div class="banner-content text-center">
                     <h2 class="title">
@@ -24,7 +26,8 @@
             <div class="row flex-row-reverse">
                 <div class="col-lg-9">
                     <div class="courses-details-content mt-50">
-                        <img src="{{ asset("assets/images/courses-details.webp") }}" width="845" height="533" alt="Course Details">
+                        <img src="{{ asset(Storage::url("uploads/departments/" .$department->image)) }}" width="845"
+                             height="533" alt="Course Details">
 
                     </div>
 
@@ -36,13 +39,17 @@
                                 <h4 class="title">معلومات القسم</h4>
                             </div>
                             <ul class="courses-features-items">
-                                <li> <strong>اقل نسيه قبول</strong> {{ $department->minimum_percent ?? 'لا يوجد ' }}%</li>
-                                <li> <strong>اعلي نسيه قبول</strong> {{ $department->maximum_percent ?? 'لا يوجد ' }}%</li>
-                                <li> <strong>التخصص</strong> {{ $department->specification_name }}</li>
-                                <li> <strong>القسط</strong> {{ number_format($department->price, 0, '.', ',')." IQD" }}</li>
+                                <li><strong>اقل نسيه قبول</strong> {{ $department->minimum_percent ?? 'لا يوجد ' }}%
+                                </li>
+                                <li><strong>اعلي نسيه قبول</strong> {{ $department->maximum_percent ?? 'لا يوجد ' }}%
+                                </li>
+                                <li><strong>التخصص</strong> {{ $department->specification_name }}</li>
+                                <li><strong>القسط</strong> {{ number_format($department->price, 0, '.', ',')." IQD" }}
+                                </li>
                             </ul>
                             <div class="sidebar-btn">
-                                <a class="main-btn" href="{{ asset("assets/files/department1.pdf") }}" target="_blank">معلومات اكثر</a>
+                                <a class="main-btn" href="{{  asset(Storage::url("uploads/departments/" .$department->file))}}" target="_blank">معلومات
+                                    اكثر</a>
                             </div>
                         </div>
 

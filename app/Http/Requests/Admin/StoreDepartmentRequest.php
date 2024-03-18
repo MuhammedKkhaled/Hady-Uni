@@ -24,14 +24,20 @@ class StoreDepartmentRequest extends FormRequest
         $rules = [
             'name'               => 'required',
             'specification_name' => ['required' , 'exists:specifications,name'],
+            'department_definition' => ['required' , 'string'],
+            'department_message' => ['required' , 'string'],
+            'department_vision' => ['required' , 'string'],
+            'department_goals' => ['required' , 'string'],
             'minimum_percent'    => ['nullable'],
             'maximum_percent'    => ['required'],
             'price'              => ['required', 'numeric'],
-            'image'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
+            'image'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp',
+            'file'              => 'required|mimes:pdf,docx',
         ];
 
         if (in_array($this->method(), ['PUT', 'PATCH'])) {
             $rules['image'] = 'sometimes|nullable';
+            $rules['file'] = 'sometimes|nullable';
         }//end of if
 
         return $rules;

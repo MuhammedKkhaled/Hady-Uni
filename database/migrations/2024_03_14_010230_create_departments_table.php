@@ -15,10 +15,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('specification_name');
+            $table->string('department_definition');
+            $table->string('department_message');
+            $table->string('department_vision');
+            $table->string('department_goals');
             $table->string('minimum_percent')->nullable();
             $table->string('maximum_percent');
             $table->double('price');
             $table->text('image');
+            $table->text("file");
             $table->timestamps();
         });
     }

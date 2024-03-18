@@ -109,7 +109,15 @@ Route::middleware([
             Route::delete('/products/bulk_delete', 'ProductController@bulkDelete')->name('products.bulk_delete');
             Route::resource('products', 'ProductController');
 
+            Route::get('langconv/{locale}' , function ($locale){
 
+                if (in_array($locale , ['en','ar']) ){
+                    session()->put('locale',$locale);
+                }
+
+                return redirect()->back();
+
+            })->name('lang.converter');
 
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');

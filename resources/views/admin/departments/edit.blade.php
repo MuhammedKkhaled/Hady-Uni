@@ -21,6 +21,30 @@
                         <input type="text" name="name" autofocus class="form-control" value="{{ old('name', $department->name) }}" required>
                     </div>
 
+                    {{--department_definition--}}
+                    <div class="form-group">
+                        <label>Department Definition  <span class="text-danger">*</span></label>
+                        <input type="text" name="department_definition" autofocus class="form-control" value="{{ old('department_definition', $department->department_definition) }}" required>
+                    </div>
+
+                    {{--department_message--}}
+                    <div class="form-group">
+                        <label>Department Message<span class="text-danger">*</span></label>
+                        <input type="text" name="department_message" autofocus class="form-control" value="{{ old('department_message', $department->department_message) }}" required>
+                    </div>
+
+                    {{--department_vision--}}
+                    <div class="form-group">
+                        <label>Department Vision  <span class="text-danger">*</span></label>
+                        <input type="text" name="department_vision" autofocus class="form-control" value="{{ old('department_vision', $department->department_vision) }}" required>
+                    </div>
+
+                    {{--Title--}}
+                    <div class="form-group">
+                        <label>Department Goals  <span class="text-danger">*</span></label>
+                        <input type="text" name="department_goals" autofocus class="form-control" value="{{ old('department_goals', $department->department_goals) }}" required>
+                    </div>
+
                     {{--Specifications--}}
                     <div class="form-group">
                         <label for="Specifications"> Specification Name </label>
@@ -52,9 +76,17 @@
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">Main Images</label>
+                        <label class="text-capitalize">Main Department Images</label>
                         <input type="file" name="image" id="input-file-now" class="dropify" @if(isset($department)) data-default-file="{{$department->image_path}}" data-show-remove="false" @endif data-height="585"/>
                     </div>
+
+                    {{--file--}}
+                    <div class="form-group">
+                        <label class="text-capitalize">Main Department File </label>
+                        <input type="file" name="file" id="input-file-now" class="dropify" @if(isset($department)) data-default-file="{{$department->file_path}}" data-show-remove="false" @endif data-height="585"/>
+                    </div>
+
+
                 </div>
 
                 <div class="card-footer">

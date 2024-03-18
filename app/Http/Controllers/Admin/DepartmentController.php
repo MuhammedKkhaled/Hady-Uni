@@ -68,7 +68,9 @@ class DepartmentController extends Controller
 
         if ($request->image) {
             $request->image->store('public/uploads/departments/');
+            $request->file->store('public/uploads/departments/');
             $requestData['image'] = $request->image->hashName();
+            $requestData['file'] = $request->file->hashName();
         }
 
         Department::create($requestData);
@@ -92,8 +94,11 @@ class DepartmentController extends Controller
 
         if ($request->image) {
             Storage::disk('local')->delete('public/uploads/departments/' . $department->image);
+            Storage::disk('local')->delete('public/uploads/departments/' . $department->file);
             $request->image->store('public/uploads/departments/');
+            $request->file->store('public/uploads/departments/');
             $requestData['image'] = $request->image->hashName();
+            $requestData['file'] = $request->file->hashName();
         }
 
         $department->update($requestData);
@@ -106,8 +111,11 @@ class DepartmentController extends Controller
 
     public function destroy(Department $department)
     {
+
         $this->delete($department);
+
         session()->flash('success', __('site.deleted_successfully'));
+
         return response(__('site.deleted_successfully'));
 
     }// end of destroy
@@ -128,7 +136,11 @@ class DepartmentController extends Controller
 
     private function delete(Department $department)
     {
+
         Storage::disk('local')->delete('public/uploads/departments/' . $department->image);
+
+        Storage::disk('local')->delete('public/uploads/departments/' . $department->file);
+
         $department->delete();
 
     }// end of delete
