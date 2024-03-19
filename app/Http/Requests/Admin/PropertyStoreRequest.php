@@ -23,9 +23,12 @@ class PropertyStoreRequest extends FormRequest
     {
         return [
             'teacher_id'=>['required','exists:teachers,id'],
-            'property_title'=>['required','string'],
-            'property_desc'=>['required','max:500'],
-            'type'=>['required'],
+            'property_title_en'=>['required','string'],
+            'property_title_ar'=>['required','string'],
+            'property_desc_en'=>['required','max:500'],
+            'property_desc_ar'=>['required','max:500'],
+            'type_en'=>['required'],
+            'type_ar'=>['required'],
         ];
     }
 }

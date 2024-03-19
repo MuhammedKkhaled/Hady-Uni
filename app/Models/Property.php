@@ -12,9 +12,12 @@ class Property extends Model
 
     protected $fillable = [
         'teacher_id',
-        'property_title',
-        'property_desc',
-        'type',
+        'property_title_en',
+        'property_title_ar',
+        'property_desc_en',
+        'property_desc_ar',
+        'type_en',
+        'type_ar',
     ];
 
     public function teacher():BelongsTo
