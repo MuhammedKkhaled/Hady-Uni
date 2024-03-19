@@ -118,7 +118,7 @@ class TeacherController extends Controller
         }
 
         $teacher->update($requestData);
-        session()->flash('success', __('Update Successfully'));
+        session()->flash('success', __('custom.Update Successfully'));
         return redirect()->route('admin.teachers.index');
 
     }// end of update
@@ -126,7 +126,7 @@ class TeacherController extends Controller
     public function destroy(Teacher $teacher)
     {
         $this->delete($teacher);
-        session()->flash('success', __('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
         return response(__('site.deleted_successfully'));
 
     }// end of destroy
@@ -140,7 +140,7 @@ class TeacherController extends Controller
 
         }//end of for each
 
-        session()->flash('success', __('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
         return response(__('site.deleted_successfully'));
 
     }// end of bulkDelete

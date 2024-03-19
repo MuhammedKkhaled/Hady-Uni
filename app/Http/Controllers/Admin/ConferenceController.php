@@ -10,6 +10,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Conference;
 use App\Models\News;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
 
@@ -40,6 +41,12 @@ class ConferenceController extends Controller
             ->addColumn('image', function (Conference $conference) {
                 return view('admin.conferences.data_table.image', compact('conference'));
 
+            })
+            ->editColumn('title_'.LaravelLocalization::getCurrentLocale() , function (Conference $conference){
+                return $conference->{"title_".LaravelLocalization::getCurrentLocale()};
+            })
+            ->editColumn('location_'.LaravelLocalization::getCurrentLocale() , function (Conference $conference){
+                return $conference->{"location_".LaravelLocalization::getCurrentLocale()};
             })
             ->editColumn('created_at', function (Conference $conference) {
                 return $conference->created_at->format('Y-m-d');
@@ -90,7 +97,7 @@ class ConferenceController extends Controller
 
     }// end of edit
 
-    public function update(NewsRequest $request, News $news)
+    public function update(ConferenceRequest $request, News $news)
     {
         $requestData = $request->validated();
         if ($request->image) {

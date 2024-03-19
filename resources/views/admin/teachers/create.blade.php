@@ -16,9 +16,17 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="name">{{ __("custom.Teacher Name") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="name" name="name" autofocus class="form-control" value="{{ old('name') }}" required>
+                        <label for="name_en">{{ __("custom.Teacher Name en") }} <span class="text-danger">*</span></label>
+                        <input type="text" id="name_en" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" required>
                     </div>
+
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label for="name_ar">{{ __("custom.Teacher Name ar") }} <span class="text-danger">*</span></label>
+                        <input type="text" id="name_ar" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" required>
+                    </div>
+
 
                     {{-- Phone --}}
                     <div class="form-group">
@@ -52,14 +60,26 @@
 
                     {{-- specialization --}}
                     <div class="form-group">
-                        <label for="specialization">{{ __("custom.Specialization") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="specialization" id="specialization" autofocus class="form-control"  value="{{ old('specialization') }}" required>
+                        <label for="specialization_en">{{ __("custom.Specialization en") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="specialization_en" id="specialization_en" autofocus class="form-control"  value="{{ old('specialization_en') }}" required>
+                    </div>
+      {{-- specialization --}}
+                        <div class="form-group">
+                            <label for="specialization_ar">{{ __("custom.Specialization ar") }} <span class="text-danger">*</span></label>
+                            <input type="text" name="specialization_ar" id="specialization_ar" autofocus class="form-control"  value="{{ old('specialization_ar') }}" required>
+                        </div>
+
+                    {{-- brief --}}
+                    <div class="form-group">
+                        <label for="brief_en"> {{ __("custom.Brief en") }} <span class="text-danger">*</span></label>
+                        <textarea id="brief_en" name="brief_en" autofocus class="form-control" value="{{ old('brief_en') }}" required
+                          cols="30" rows="10"></textarea>
                     </div>
 
                     {{-- brief --}}
                     <div class="form-group">
-                        <label for="brief"> {{ __("custom.Brief") }} <span class="text-danger">*</span></label>
-                        <textarea id="brief" name="brief" autofocus class="form-control" value="{{ old('brief') }}" required
+                        <label for="brief_ar"> {{ __("custom.Brief ar") }} <span class="text-danger">*</span></label>
+                        <textarea id="brief_ar" name="brief_ar" autofocus class="form-control" value="{{ old('brief_ar') }}" required
                           cols="30" rows="10"></textarea>
                     </div>
 

@@ -16,14 +16,28 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Conference Title") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="title" autofocus class="form-control" value="{{ old('title') }}" required>
+                        <label>{{ __("custom.Conference Title en") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="title_en" autofocus class="form-control" value="{{ old('title_en') }}" required>
                     </div>
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.Conference Title ar") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar') }}" required>
+                    </div>
+
 
                     {{-- Locations --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Conference Place") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="location" autofocus class="form-control" value="{{ old('location') }}" required>
+                        <label>{{ __("custom.Conference Place en") }}<span class="text-danger">*</span></label>
+                        <input type="text" name="location_en" autofocus class="form-control" value="{{ old('location_en') }}" required>
+                    </div>
+
+
+                    {{-- Locations --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.Conference Place ar") }}<span class="text-danger">*</span></label>
+                        <input type="text" name="location_ar" autofocus class="form-control" value="{{ old('location_ar') }}" required>
                     </div>
 
                     {{-- Date --}}

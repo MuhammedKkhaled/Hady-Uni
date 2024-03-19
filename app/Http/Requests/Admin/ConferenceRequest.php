@@ -22,8 +22,10 @@ class ConferenceRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'title'       => 'required',
-            'location' => ['required' , 'string'],
+            'title_en'       => 'required',
+            'title_ar'       => 'required',
+            'location_en' => ['required' , 'string'],
+            'location_ar' => ['required' , 'string'],
             'date' => ['required' , 'date' , 'after_or_equal:today'],
             'start_time' => ['required'],
             'end_time' => ['required' , 'after:start_time'],
