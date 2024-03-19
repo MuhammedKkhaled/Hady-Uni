@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->foreignId('teacher_id')->constrained('teachers')->cascadeOnDelete();
-            $table->string('property_title');
-            $table->string('property_desc', 999);
-            $table->string('type');
+            $table->string('property_title_en');
+            $table->string('property_title_ar');
+            $table->string('property_desc_en', 999);
+            $table->string('property_desc_ar', 999);
+            $table->string('type_en');
+            $table->string('type_ar');
             $table->timestamps();
         });
     }

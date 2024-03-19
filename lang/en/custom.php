@@ -141,6 +141,13 @@ return [
 
 
 
+    //// Properties
+    "Create | Properties" => "Create | Properties",
+    'Teacher Property title'=>'Teacher Property title',
+    'Teacher Property Description' => 'Teacher Property Description',
+    'Property Type'=>'Property Type',
+
+
 
 
 
