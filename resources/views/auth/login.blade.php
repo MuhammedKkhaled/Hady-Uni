@@ -231,13 +231,13 @@
     <div class="login-container">
         <div class="circle circle-one"></div>
         <div class="form-container">
-            <h1 class="opacity">LOGIN</h1>
+            <h1 class="opacity">{{ __("custom.LOGIN") }}</h1>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
                 <div class="row mb-3">
                     <label for="email" class="col-md-4 col-form-label text-md-end"
-                    >{{ __('Email Address') }}</label
+                    >{{ __('custom.Email Address') }}</label
                     >
 
                     <div class="col-md-6">
@@ -264,7 +264,7 @@
                     <label
                         for="password"
                         class="col-md-4 col-form-label text-md-end"
-                    >{{ __('Password') }}</label
+                    >{{ __('custom.Password') }}</label
                     >
 
                     <div class="col-md-6">
@@ -285,7 +285,7 @@
                     </div>
                 </div>
 
-                <button class="opacity" type="submit">Login</button>
+                <button class="opacity" type="submit">{{ __("custom.Login") }}</button>
             </form>
         </div>
         <div class="circle circle-two"></div>

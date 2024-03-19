@@ -13,12 +13,18 @@ return new class extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('specification_name');
-            $table->string('department_definition');
-            $table->string('department_message');
-            $table->string('department_vision');
-            $table->string('department_goals');
+            $table->string('name_en');
+            $table->string('name_ar');
+            $table->string('specification_name_en');
+            $table->string('specification_name_ar');
+            $table->string('department_definition_en');
+            $table->string('department_definition_ar');
+            $table->string('department_message_en');
+            $table->string('department_message_ar');
+            $table->string('department_vision_en');
+            $table->string('department_vision_ar');
+            $table->string('department_goals_en');
+            $table->string('department_goals_ar');
             $table->string('minimum_percent')->nullable();
             $table->string('maximum_percent');
             $table->double('price');

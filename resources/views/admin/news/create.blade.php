@@ -17,19 +17,32 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>News Title <span class="text-danger">*</span></label>
-                        <input type="text" name="title" autofocus class="form-control" value="{{ old('title') }}" required>
+                        <label>{{ __("custom.News Title en") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="title_en" autofocus class="form-control" value="{{ old('title_en') }}" required>
+                    </div>
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.News Title ar") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar') }}" required>
+                    </div>
+
+
+                    {{--description--}}
+                    <div class="form-group">
+                        <label>{{ __("custom.News Content en") }} <span class="text-danger">*</span></label>
+                        <textarea name="content_en" class="form-control" cols="30" rows="10" id="content-textarea">{{ old('content_en') }}</textarea>
                     </div>
 
                     {{--description--}}
                     <div class="form-group">
-                        <label>News Content <span class="text-danger">*</span></label>
-                        <textarea name="content" class="form-control" cols="30" rows="10" id="content-textarea">{{ old('content') }}</textarea>
+                        <label>{{ __("custom.News Content ar") }} <span class="text-danger">*</span></label>
+                        <textarea name="content_ar" class="form-control" cols="30" rows="10" id="content-textarea">{{ old('content_ar') }}</textarea>
                     </div>
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">News Image</label>
+                        <label class="text-capitalize">{{ __("custom.News Image") }}</label>
                         <input type="file" name="image" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
 
@@ -39,7 +52,7 @@
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-8">
-                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <button type="submit" class="btn btn-primary mr-2">{{ __("custom.Submit") }}</button>
                         </div>
                     </div>
                 </div>

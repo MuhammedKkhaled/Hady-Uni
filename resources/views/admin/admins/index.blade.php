@@ -6,7 +6,7 @@
     <div class="card-header flex-wrap py-3">
         <div class="card-title">
             <h3 class="card-label text-capitalize">
-                {{$name}}
+                {{ __("custom.admins") }}
             </h3>
         </div>
         <div class="card-toolbar">
@@ -25,7 +25,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                        New Record
+                        {{ __("custom.New Record") }}
                     </a>
                 @endif
 
@@ -34,7 +34,7 @@
                         @csrf
                         @method('delete')
                         <input type="hidden" name="record_ids" id="record-ids">
-                        <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> Delete</button>
+                        <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> {{ __("custom.Delete") }}</button>
                     </form><!-- end of form -->
                 @endif
             </div>

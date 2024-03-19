@@ -8,6 +8,7 @@ use App\Models\News;
 use App\Models\Specification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 
 class SpecificationController extends Controller
@@ -38,6 +39,10 @@ class SpecificationController extends Controller
 //                return view('admin.news.data_table.image', compact('new'));
 //
 //            })
+             ->editColumn('name_'.LaravelLocalization::getCurrentLocale() , function (Specification $specification){
+                 return $specification->{"name_".LaravelLocalization::getCurrentLocale()};
+            })
+
             ->editColumn('created_at', function (Specification $specification) {
                 return $specification->created_at->format('Y-m-d');
             })
@@ -61,14 +66,15 @@ class SpecificationController extends Controller
     {
 
         $requestData = $request->validate([
-            'name'=>['required' , "string" , 'unique:specifications']
+            'name_en'=>['required' , "string" , 'unique:specifications,name_en'],
+            'name_ar'=>['required' , "string" , 'unique:specifications,name_ar'],
         ]);
 
 
 
         Specification::create($requestData);
 
-        session()->flash('success', 'Added Successfully');
+        session()->flash('success', __('Added Successfully'));
 
         return redirect()->route('admin.specifications.index');
 
@@ -83,7 +89,8 @@ class SpecificationController extends Controller
     public function update(Request $request, Specification $specification)
     {
         $requestData = $request->validate([
-            'name'=>['required','string','unique:specifications,name,'.$specification->id]
+            'name_ar'=>['required','string','unique:specifications,name_ar,'.$specification->id],
+            'name_en'=>['required','string','unique:specifications,name_en,'.$specification->id],
         ]);
 
         $specification->update($requestData);

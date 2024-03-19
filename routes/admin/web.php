@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::middleware([
     // 'localeSessionRedirect',
@@ -25,7 +26,6 @@ Route::middleware([
 
 
             Route::post('/login' , [LoginController::class , 'login'])->name('login');
-
 
             //home
             Route::get('/home/top_statistics', 'HomeController@topStatistics')->name('home.top_statistics');

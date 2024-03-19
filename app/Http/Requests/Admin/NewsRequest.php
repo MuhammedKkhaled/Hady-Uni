@@ -22,8 +22,10 @@ class NewsRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'title'       => 'required',
-            'content' => 'required',
+            'title_ar'       => 'required',
+            'title_en'       => 'required',
+            'content_ar' => 'required',
+            'content_en' => 'required',
             'image'      => 'required|mimes:jpeg,png,jpg,gif,svg,webp',
         ];
 

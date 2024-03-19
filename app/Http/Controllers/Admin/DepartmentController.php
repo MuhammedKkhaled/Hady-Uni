@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\Department;
 use App\Models\News;
 use App\Models\Specification;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,6 +44,26 @@ class DepartmentController extends Controller
                 return view('admin.departments.data_table.image', compact('department'));
 
             })
+
+            ->editColumn('name_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
+                return $department->{"name_".LaravelLocalization::getCurrentLocale()};
+            })
+            ->editColumn('specification_name_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
+                return $department->{"specification_name_".LaravelLocalization::getCurrentLocale()};
+            })
+            ->editColumn('department_definition_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
+                return $department->{"department_definition_".LaravelLocalization::getCurrentLocale()};
+            })
+            ->editColumn('department_message_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
+                return $department->{"department_message_".LaravelLocalization::getCurrentLocale()};
+            })
+              ->editColumn('department_vision_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
+                return $department->{"department_vision_".LaravelLocalization::getCurrentLocale()};
+            })
+             ->editColumn('department_goals_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
+                return $department->{"department_goals_".LaravelLocalization::getCurrentLocale()};
+            })
+
             ->editColumn('created_at', function (Department $category) {
                 return $category->created_at->format('Y-m-d');
             })

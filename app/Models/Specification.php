@@ -10,7 +10,8 @@ class Specification extends Model
     use HasFactory;
 
     protected $fillable  = [
-      'name',
+      'name_en',
+      'name_ar',
     ];
 
     public function scopeWhenSearch($query, $search)

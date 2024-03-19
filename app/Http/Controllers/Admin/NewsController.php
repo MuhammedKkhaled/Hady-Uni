@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\NewsRequest;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\News;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
 
@@ -32,19 +33,26 @@ class NewsController extends Controller
     {
         $news = News::get();
 
+
+
+        $locale =  LaravelLocalization::getCurrentLocale()  ;
+
+
+
         return DataTables::of($news)
 
             ->addColumn('record_select', 'admin.news.data_table.record_select')
             ->addColumn('image', function (News $new) {
                 return view('admin.news.data_table.image', compact('new'));
-
+            })
+            ->editColumn('title_'. LaravelLocalization::getCurrentLocale(), function ( News $new) {
+                return $new->{"title_".LaravelLocalization::getCurrentLocale()} ;
+            })
+            ->addColumn('content_'. LaravelLocalization::getCurrentLocale(), function (News $new) {
+                return strip_tags( $new->{"content_".LaravelLocalization::getCurrentLocale()}) ;
             })
             ->editColumn('created_at', function (News $category) {
                 return $category->created_at->format('Y-m-d');
-            })
-            ->editColumn('content', function (News $new) {
-                // Use strip_tags to remove HTML tags from the content
-                return strip_tags($new->content);
             })
             ->addColumn('actions', 'admin.news.data_table.actions')
             ->rawColumns(['record_select', 'actions'])
@@ -72,7 +80,7 @@ class NewsController extends Controller
 
         News::create($requestData);
 
-        session()->flash('success', 'Added Successfully');
+        session()->flash('success', __('Added Successfully'));
 
         return redirect()->route('admin.news.index');
 
@@ -102,8 +110,8 @@ class NewsController extends Controller
     public function destroy(News $news)
     {
         $this->delete($news);
-        session()->flash('success', __('site.deleted_successfully'));
-        return response(__('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
+        return response(__('custom.deleted_successfully'));
 
     }// end of destroy
 
@@ -116,8 +124,8 @@ class NewsController extends Controller
 
         }//end of for each
 
-        session()->flash('success', __('site.deleted_successfully'));
-        return response(__('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
+        return response(__('custom.deleted_successfully'));
 
     }// end of bulkDelete
 

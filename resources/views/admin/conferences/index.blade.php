@@ -6,7 +6,7 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{$name}}
+                    {{ __("custom.conferences") }}
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -25,7 +25,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            New {{ $name }}
+                            {{ __("custom.New Conferences") }}
                         </a>
                     @endif
 
@@ -34,7 +34,7 @@
                             @csrf
                             @method('delete')
                             <input type="hidden" name="record_ids" id="record-ids">
-                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> Delete</button>
+                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> {{ __("custom.Delete") }}</button>
                         </form><!-- end of form -->
                     @endif
                 </div>
@@ -63,14 +63,14 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>Conference Title </th>
-                                <th>Conference Place / Hall </th>
-                                <th>Conference Date </th>
-                                <th>start Time</th>
-                                <th>End Time</th>
-                                <th>Conference Poster</th>
-                                <th>Created at</th>
-                                <th>Action</th>
+                                <th>{{ __("custom.Conference Title") }} </th>
+                                <th>{{ __("custom.Conference Place") }} </th>
+                                <th>{{ __("custom.Conference Date") }} </th>
+                                <th>{{ __("custom.start Time") }}</th>
+                                <th>{{ __("custom.End Time") }}</th>
+                                <th>{{ __("custom.Conference Poster") }}</th>
+                                <th>{{ __("custom.Created at") }}</th>
+                                <th>{{ __("custom.Action") }}</th>
                             </tr>
                             </thead>
                         </table>

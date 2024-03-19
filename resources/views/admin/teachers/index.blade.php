@@ -6,7 +6,7 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{$name}}
+                    {{ __("custom.teachers") }}
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -25,7 +25,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            New {{ $name }}
+                            {{ __("custom.New Teacher") }}
                         </a>
                     @endif
 
@@ -34,7 +34,7 @@
                             @csrf
                             @method('delete')
                             <input type="hidden" name="record_ids" id="record-ids">
-                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> Delete</button>
+                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> {{ __("custom.Delete") }}</button>
                         </form><!-- end of form -->
                     @endif
                 </div>
@@ -63,15 +63,15 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>Teacher Name </th>
-                                <th>Teacher Photo </th>
-                                <th>Teacher Phone</th>
-                                <th>Teacher email</th>
-                                <th> Specialization </th>
-                                <th> Brief </th>
-                                <th> Teacher Type </th>
-                                <th>Created at</th>
-                                <th>Action</th>
+                                <th>{{ __("custom.Teacher Name") }} </th>
+                                <th>{{ __("custom.Teacher Photo") }} </th>
+                                <th>{{ __("custom.Teacher Phone") }}</th>
+                                <th>{{ __("custom.Teacher email") }}</th>
+                                <th> {{ __("custom.Specialization") }} </th>
+                                <th> {{ __("custom.Brief") }} </th>
+                                <th> {{ __("custom.Teacher Type") }} </th>
+                                <th>{{ __("custom.Created at") }}</th>
+                                <th>{{ __("custom.Action") }}</th>
                             </tr>
                             </thead>
                         </table>

@@ -6,7 +6,7 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{$name}}
+                    {{ __("custom.news") }}
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -25,7 +25,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            New {{ $name }}
+                             {{ __("custom.New News")  }}
                         </a>
                     @endif
 
@@ -34,7 +34,7 @@
                             @csrf
                             @method('delete')
                             <input type="hidden" name="record_ids" id="record-ids">
-                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> Delete</button>
+                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> {{ __("custom.delete News") }}</button>
                         </form><!-- end of form -->
                     @endif
                 </div>
@@ -63,12 +63,12 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>News  Title  </th>
-                                <th>News Author </th>
-                                <th>News Poster</th>
-                                <th>News content</th>
-                                <th>Created at</th>
-                                <th>Action</th>
+                                <th>{{ __("custom.News Title") }}</th>
+                                <th>{{ __("custom.News Author") }}</th>
+                                <th>{{ __("custom.News content") }}</th>
+                                <th>{{ __("custom.News Poster") }}</th>
+                                <th>{{ __("custom.Created at") }}</th>
+                                <th>{{ __("custom.Action") }}</th>
                             </tr>
                             </thead>
                         </table>
@@ -99,9 +99,9 @@
             },
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
-                {data: 'title', name: 'title'},
+                {data: 'title_'+'{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}' , name: 'title_'+ '{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}' },
                 {data: 'author', name: 'author', searchable: false},
-                {data: 'content', name: 'content', searchable: false},
+                {data: 'content_'+'{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}', name: 'content_'+ '{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}', searchable: false},
                 {data: 'image', name: 'image', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
@@ -117,7 +117,8 @@
 
         $('#data-table-search').keyup(function () {
             rolesTable.search(this.value).draw();
-        })
-    </script>
 
+        });
+
+    </script>
 @endpush

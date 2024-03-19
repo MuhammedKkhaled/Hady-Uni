@@ -31,7 +31,7 @@
     <link href="{{asset('admin_assets')}}/plugins/global/plugins.bundle.css?v=7.0.6" rel="stylesheet" type="text/css"/>
     <link href="{{asset('admin_assets')}}/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.6" rel="stylesheet"
           type="text/css"/>
-    <link href="{{asset('admin_assets')}}/css/style.bundle.css?v=7.0.6" rel="stylesheet" type="text/css"/>
+    <link href="{{asset('admin_assets')}}/css/style.bundle-{{ LaravelLocalization::getCurrentLocaleDirection() }}.css?v=7.0.6" rel="stylesheet" type="text/css"/>
     <!--end::Global Theme Styles-->
     <!--begin::Layout Themes(used by all pages)-->
     <link href="{{asset('admin_assets')}}/css/themes/layout/header/base/light.css?v=7.0.6" rel="stylesheet"
@@ -66,8 +66,11 @@
             <!--begin::Brand-->
             <div class="brand flex-column-auto " id="kt_brand">
                 <!--begin::Logo-->
-                <a href="index.html" class="brand-logo">
-                    <img alt="Logo" src="{{asset('admin_assets')}}/media/logos/logo-light.png"/>
+                <a href="#" class="brand-logo">
+                    <img alt="Logo" src="{{asset('admin_assets')}}/media/logos/logo-light.png" style="
+    width: 145px;
+    height: 69px;
+"/>
                 </a>
                 <!--end::Logo-->
                 <!--begin::Toggle-->
@@ -193,7 +196,15 @@
                         <div class="d-flex align-items-center flex-wrap mr-2">
                             <!--begin::Page Title-->
                             <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">
-                                Dashboard
+                                <ul>
+                                    @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                            <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                {{ $properties['native'] }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             </h5>
                             <!--end::Page Title-->
                         </div>
