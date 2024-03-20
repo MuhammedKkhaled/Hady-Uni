@@ -178,4 +178,30 @@ return [
     'File Published Date' => 'File Published Date',
     'Journal File' => 'Journal File',
 
+
+    ///  Affiliates
+    'Affiliates' => 'Affiliates',
+    'View ِAll Affiliates' => 'View ِAll Affiliates',
+    'Create Affiliates' => 'Create Affiliates',
+    'New Affiliate' => 'New Affiliate',
+    'Affiliate Certificate' => 'Affiliate Certificate',
+    'Affiliate Certificate en' => 'Affiliate Certificate English',
+    'Affiliate Certificate ar' => 'Affiliate Certificate Arabic',
+    'General Specialization' => 'General Specialization',
+    'General Specialization en' =>  'General Specialization English',
+    'General Specialization ar' =>  'General Specialization Arabic',
+    'special Specialization' => 'special Specialization',
+    'special Specialization ar' => 'special Specialization Arabic',
+    'special Specialization en' => 'special Specialization English',
+    'Affiliate Title' => 'Affiliate Title',
+    'Affiliate Title en' => 'Affiliate Title English',
+    'Affiliate Title ar' => 'Affiliate Title Arabic',
+    'Affiliate Name' => 'Affiliate Name',
+    'Affiliate Name en' => 'Affiliate Name English',
+    'Affiliate Name ar' => 'Affiliate Name Arabic',
+    'Affiliate Notes' => "Affiliate Notes" ,
+    'Affiliate Notes en' => "Affiliate Notes English" ,
+    'Affiliate Notes ar' => "Affiliate Notes Arabic" ,
+
 ];
+

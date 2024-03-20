@@ -31,8 +31,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnific-popup.css') }}">
 
     <!--====== Main Style CSS ======-->
-    <!-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css-rtl/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css-rtl/style.min.css') }}">
 
     @yield('css')
 

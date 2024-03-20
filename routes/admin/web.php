@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AffiliateController;
 use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\JournalController;
@@ -102,6 +103,12 @@ Route::middleware([
             Route::get('/journals/data', 'JournalController@data')->name('journals.data');
             Route::delete('/journals/bulk_delete', 'JournalController@bulkDelete')->name('journals.bulk_delete');
             Route::resource('journals', JournalController::class);
+
+
+            /// journals routes
+            Route::get('/affiliates/data', 'AffiliateController@data')->name('affiliates.data');
+            Route::delete('/affiliates/bulk_delete', 'AffiliateController@bulkDelete')->name('affiliates.bulk_delete');
+            Route::resource('affiliates', AffiliateController::class);
 
 
             //Product routes
