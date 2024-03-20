@@ -28,24 +28,24 @@
 
                     {{-- property_title --}}
                     <div class="form-group">
-                        <label for="property_title_en">{{ __("Property Title en") }} <span class="text-danger">*</span></label>
+                        <label for="property_title_en">{{ __("Custom.Property Title en") }} <span class="text-danger">*</span></label>
                         <input type="text" id="property_title_en" name="property_title_en" placeholder="Enter Property Title" autofocus class="form-control" value="{{ old('property_title_en') }}" required>
                     </div>
                     {{-- property_title --}}
                     <div class="form-group">
-                        <label for="property_title_ar">{{ __("Property Title ar") }}  <span class="text-danger">*</span></label>
+                        <label for="property_title_ar">{{ __("Custom.Property Title ar") }}  <span class="text-danger">*</span></label>
                         <input type="text" id="property_title_ar" name="property_title_ar" placeholder="Enter Property Title" autofocus class="form-control" value="{{ old('property_title_ar') }}" required>
                     </div>
 
                     {{-- property_desc --}}
                     <div class="form-group">
-                        <label for="property_desc_en"> {{ __("Property Description en") }} <span class="text-danger">*</span></label>
+                        <label for="property_desc_en"> {{ __("Custom.Property Description en") }} <span class="text-danger">*</span></label>
                         <textarea name="property_desc_en" id="property_desc_en" class="form-control" value="{{ old('property_desc_en') }}" required></textarea>
                     </div>
 
                     {{-- property_desc --}}
                     <div class="form-group">
-                        <label for="property_desc_ar">  {{ __("Property Description ar") }} <span class="text-danger">*</span></label>
+                        <label for="property_desc_ar">  {{ __("Custom.Property Description ar") }} <span class="text-danger">*</span></label>
                         <textarea name="property_desc_ar" id="property_desc_ar" class="form-control" value="{{ old('property_desc_ar') }}" required></textarea>
                     </div>
 
@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <label>
                             <h3>
-                            {{ __("custom.Property Type") }}
+                            {{ __("custom.Property Type en") }}
                             </h3>
 
                         </label>
@@ -63,67 +63,72 @@
                             <label for="exper">
                             <h6>
 
-                                {{ __("custom.Experience_en") }}
+                                Experience
                             </h6>
 
                             </label>
-                            <input type="radio" id="exper" name="type_en" value=" {{ __("custom.Experience_en") }}" class="form-control">
+                            <input type="radio" id="exper" name="type_en" value="Experience" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="ache">
                                 <h6>
-                                    {{ __("custom.Achievements_en") }}
-
+                                    Achievements
                             </h6>
 
                             </label>
-                            <input type="radio"  id="ache" name="type_en" value=" {{ __("custom.Achievements_en") }}" class="form-control">
+                            <input type="radio"  id="ache" name="type_en" value="Achievements" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="qual">
                             <h6>
 
-                                {{ __("custom.Qualifications_en") }}
+                                Qualifications
                             </h6>
 
                             </label>
-                            <input type="radio"  id="qual" name="type_en" value="{{ __("custom.Qualifications_en") }}" class="form-control">
+                            <input type="radio"  id="qual" name="type_en" value="Qualifications" class="form-control">
                         </div>
 
-                        <div class="form-group"
-                        >
-                            <label for="exper">
-                                <h6>
+                    </div>
 
-                                    {{ __("custom.Experience_ar") }}
-                                </h6>
-
-                            </label>
-                            <input type="radio" id="exper" name="type_ar" value=" {{ __("custom.Experience_ar") }}" class="form-control">
-                        </div>
                         <div class="form-group">
-                            <label for="ache">
-                                <h6>
-                                    {{ __("custom.Achievements_ar") }}
+                                <label>
+                                    <h3>
+                                        {{ __("custom.Property Type ar") }}
+                                    </h3>
 
-                                </h6>
+                                </label>
+                            <div class="form-group"
+                            >
+                                <label for="exper">
+                                    <h6>
 
-                            </label>
-                            <input type="radio"  id="ache" name="type_ar" value=" {{ __("custom.Achievements_ar") }}" class="form-control">
-                        </div>
-                        <div class="form-group">
+                                        الخبرة
+                                    </h6>
+
+                                </label>
+                                <input type="radio" id="exper" name="type_ar" value="الخبرة" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="ache">
+                                    <h6>
+                                        الانجازات
+                                    </h6>
+
+                                </label>
+                                <input type="radio"  id="ache" name="type_ar" value="الانجازات" class="form-control">
+                            </div>
+                            <div class="form-group">
                             <label for="qual">
                                 <h6>
 
-                                    {{ __("custom.Qualifications_ar") }}
+                                    المؤهلات
                                 </h6>
 
                             </label>
-                            <input type="radio"  id="qual" name="type_ar" value="{{ __("custom.Qualifications_ar") }}" class="form-control">
+                            <input type="radio"  id="qual" name="type_ar" value="المؤهلات" class="form-control">
                         </div>
-
-
-                    </div>
+                        </div>
 
                 </div>
                 <div class="card-footer">

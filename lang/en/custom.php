@@ -146,6 +146,8 @@ return [
     'Teacher Property title'=>'Teacher Property title',
     'Teacher Property Description' => 'Teacher Property Description',
     'Property Type'=>'Property Type',
+    'Property Type en'=>'Property Type In English',
+    'Property Type ar'=>'Property Type In Arabic',
     'Property Title en' =>'Property Title In English ',
     'Property Title ar' =>'Property Title In Arabic ',
     'Property Description en' =>'Property Title In English ',
@@ -156,6 +158,7 @@ return [
     'Experience_ar' => 'Experience property in Arabic',
     'Achievements_ar'=>'Achievements property in Arabic',
     'Qualifications_ar'=>'Achievements property in Arabic',
+    'Properties | Edit'=>' Properties | Edit',
 
 
 

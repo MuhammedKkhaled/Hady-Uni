@@ -15,6 +15,7 @@ use App\Models\Conference;
 use App\Models\News;
 use App\Models\Property;
 use App\Models\Teacher;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
 
@@ -43,7 +44,7 @@ class PropertyController extends Controller
 
             ->addColumn('record_select', 'admin.properties.data_table.record_select')
            ->editColumn('teacher_id' , function (Property $property){
-                return $property->teacher->name ;
+                return $property->teacher->{ 'name_'.LaravelLocalization::getCurrentLocale()} ;
            })
             ->editColumn('created_at', function (Property $property) {
                 return $property->created_at->format('Y-m-d');
@@ -87,7 +88,7 @@ class PropertyController extends Controller
 
         $property->update($requestData);
 
-        session()->flash('success', __('Update Successfully'));
+        session()->flash('success', __('custom.Update Successfully'));
 
         return redirect()->route('admin.properties.index');
 
@@ -96,8 +97,8 @@ class PropertyController extends Controller
     public function destroy(Property $property)
     {
         $this->delete($property);
-        session()->flash('success', __('site.deleted_successfully'));
-        return response(__('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
+        return response(__('custom.deleted_successfully'));
 
     }// end of destroy
 
@@ -110,8 +111,8 @@ class PropertyController extends Controller
 
         }//end of for each
 
-        session()->flash('success', __('site.deleted_successfully'));
-        return response(__('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
+        return response(__('custom.deleted_successfully'));
 
     }// end of bulkDelete
 
