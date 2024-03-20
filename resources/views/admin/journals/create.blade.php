@@ -16,8 +16,13 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="name">Research Name <span class="text-danger">*</span></label>
-                        <input type="text" id="name" name="name" autofocus class="form-control" value="{{ old('name') }}" required>
+                        <label for="name_en"> {{ __("custom.Journal Name en") }}<span class="text-danger">*</span></label>
+                        <input type="text" id="name_en" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" required>
+                    </div>
+{{-- Name --}}
+                    <div class="form-group">
+                        <label for="name_ar"> {{ __("custom.Journal Name ar") }} <span class="text-danger">*</span></label>
+                        <input type="text" id="name_ar" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" required>
                     </div>
 
                     {{-- Date --}}

@@ -6,7 +6,7 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{$name}}
+                    {{ __("custom.Journals") }}
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -25,7 +25,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            New {{ $name }}
+{{ __("custom.New Journal")}}
                         </a>
                     @endif
 
@@ -34,7 +34,7 @@
                             @csrf
                             @method('delete')
                             <input type="hidden" name="record_ids" id="record-ids">
-                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> Delete</button>
+                            <button type="submit" class="btn btn-danger" id="bulk-delete" disabled="true"><i class="fa fa-trash"></i> {{ __("custom.Delete") }}</button>
                         </form><!-- end of form -->
                     @endif
                 </div>
@@ -63,11 +63,11 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>Research Name </th>
-                                <th>Date Of Publishing </th>
-                                <th>Research File </th>
-                                <th>Created at</th>
-                                <th>Action</th>
+                                <th>{{ __("custom.Research Name") }} </th>
+                                <th>{{ __("custom.Date Of Publishing") }} </th>
+                                <th>{{ __("custom.Research File") }} </th>
+                                <th>{{ __("custom.Created at") }}</th>
+                                <th>{{ __("custom.Action") }}</th>
                             </tr>
                             </thead>
                         </table>
@@ -98,7 +98,7 @@
             },
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
-                {data: 'name', name: 'name'},
+                {data: 'name_'+'{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}', name: 'name_'+'{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}'},
                 {data: 'published_at', name: 'published_at', searchable: false},
                 {data: 'file', name: 'file', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},

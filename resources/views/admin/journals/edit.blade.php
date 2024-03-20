@@ -5,7 +5,7 @@
 
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
-            <h3 class="card-title text-capitalize">{{$name}} | Edit {{$journal->name}}</h3>
+            <h3 class="card-title text-capitalize">{{ __("custom.Edit | Journal") }} {{$journal->name}}</h3>
         </div>
         <div class="card-body">
 
@@ -19,22 +19,29 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>Library Name <span class="text-danger">*</span></label>
-                        <input type="text" name="name" autofocus class="form-control" value="{{ old('name' , $journal->name) }}" required>
+                        <label>{{ __("custom.Journal Name en") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $journal->name_en) }}" required>
+                    </div>
+
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.Journal Name ar") }} <span class="text-danger">*</span></label>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $journal->name_ar) }}" required>
                     </div>
 
 
 
                     {{-- Date --}}
                     <div class="form-group">
-                        <label for="published_at">File Published Date<span class="text-danger">*</span></label>
+                        <label for="published_at">{{ __("custom.File Published Date") }}<span class="text-danger">*</span></label>
                         <input type="date" name="published_at" id="published_at" autofocus class="form-control" value="{{ $journal->published_at }}" required>
                     </div>
 
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">Conference Image</label>
+                        <label class="text-capitalize">{{ __("custom.Journal File") }}</label>
                         <input type="file" name="file" id="input-file-now" class="dropify" @if(isset($journal)) data-default-file="{{$journal->file_path}}" data-show-remove="false" @endif  data-height="355"/>
                     </div>
 

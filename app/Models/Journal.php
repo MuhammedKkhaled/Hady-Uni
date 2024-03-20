@@ -11,7 +11,8 @@ class Journal extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'name_en',
+        'name_ar',
         'file',
         'published_at',
     ];

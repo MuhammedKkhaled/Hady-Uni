@@ -106,8 +106,8 @@ class JournalController extends Controller
     public function destroy(Journal $journal)
     {
         $this->delete($journal);
-        session()->flash('success', __('site.deleted_successfully'));
-        return response(__('site.deleted_successfully'));
+        session()->flash('success', __('custom.deleted_successfully'));
+        return response(__('custom.deleted_successfully'));
 
     }// end of destroy
 

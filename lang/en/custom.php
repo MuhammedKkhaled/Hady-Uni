@@ -167,6 +167,15 @@ return [
     'Categories Name' =>'Categories Name ',
 
 
-
+    //// Journals
+    'New Journal'=> 'New Journal',
+    'Research Name'=> 'Research Name',
+    'Research File'=> 'Research File',
+    'Journals'=>'Journals',
+    'Edit | Journal'=>'Edit | Journal',
+    'Journal Name en' => 'Journal Name In English',
+    'Journal Name ar' =>'Journal Name In Arabic',
+    'File Published Date' => 'File Published Date',
+    'Journal File' => 'Journal File',
 
 ];
