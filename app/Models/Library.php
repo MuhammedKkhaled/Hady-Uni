@@ -12,10 +12,12 @@ class Library extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'name_en',
+        'name_ar',
         'category_id',
         'file',
-        'specialization_name',
+        'specialization_name_en',
+        'specialization_name_ar',
         'published_at',
     ];
 

@@ -9,9 +9,6 @@ return [
     "Password" => "Password",
     "Login" => "Login",
 
-
-
-
     /// Sidebar
     "Dashboard"=> 'Dashboard',
     "My Profile"=>"My Profile",
@@ -160,9 +157,14 @@ return [
     'Qualifications_ar'=>'Achievements property in Arabic',
     'Properties | Edit'=>' Properties | Edit',
 
-
-
-
+    /////////// libraries
+    'New Library'=>'New Library',
+    'Library Name'=>'Library Name',
+    'Date Of Publishing' =>'Date Of Publishing',
+    'Library File' =>'Library File',
+    'Library Name en' => 'Library Name  in English',
+    'Library Name ar' =>'Library Name  In Arabic',
+    'Categories Name' =>'Categories Name ',
 
 
 

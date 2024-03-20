@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('libraries', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id')->constrained('categories')->cascadeOnDelete();
-            $table->string('name');
+            $table->string('name_en');
+            $table->string('name_ar');
             $table->text('file');
-            $table->string('specialization_name');
+            $table->string('specialization_name_en');
+            $table->string('specialization_name_ar');
             $table->date('published_at');
             $table->timestamps();
         });
