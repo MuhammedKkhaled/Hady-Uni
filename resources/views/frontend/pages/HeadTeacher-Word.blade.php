@@ -1,6 +1,10 @@
 @extends("frontend.layouts.app")
 
-@section("title" , "جامعة الهادي | كلمة العميد")
+@section("title" )
+
+    {{ __('custom.frontend.Head Teacher Word') }}
+
+@stop
 
 @section("content")
     <!--====== Page Banner Start ======-->

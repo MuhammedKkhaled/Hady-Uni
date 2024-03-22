@@ -4,6 +4,8 @@
 @yield('content')
 
 
+
+@include('frontend.layouts._newstteler')
 @include('frontend.layouts._footer')
 
 @include('frontend.layouts._scripts')

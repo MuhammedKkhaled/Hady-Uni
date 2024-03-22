@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
 
     Template Name: Edumate Education HTML Template
-    Template URI: 
+    Template URI:
     Description: Edumate Education HTML Template
     Author: HasTech
     Author URI: https://themeforest.net/user/hastech
@@ -14,40 +14,40 @@
     ===================
 
     01. Theme default CSS
-	02. Header css 
-    03. Slider css 
-	04. Features css 
-    05. Top Courses css 
+	02. Header css
+    03. Slider css
+	04. Features css
+    05. Top Courses css
     06. Specialty css
-    07. Campus Visit css  
-    08. Event css 
-    09. Testimonials css 
-    10. Counter css 
-    11. Blog css 
-    12. Newsletter css 
-    13. Footer css 
-    14. About css 
-    15. Inline Library css 
-    16. Page Banner css 
-    17. Teachers css 
-    18. Courses Sidebar css 
-    19. Courses Details css 
-    20. Event Details css 
-    21. Gallery css 
-    22. Teachers Details css 
-    23. Shop Sidebar css 
-    24. Product Details css 
+    07. Campus Visit css
+    08. Event css
+    09. Testimonials css
+    10. Counter css
+    11. Blog css
+    12. Newsletter css
+    13. Footer css
+    14. About css
+    15. Inline Library css
+    16. Page Banner css
+    17. Teachers css
+    18. Courses Sidebar css
+    19. Courses Details css
+    20. Event Details css
+    21. Gallery css
+    22. Teachers Details css
+    23. Shop Sidebar css
+    24. Product Details css
     25. Blog Sidebar css
-    26. Blog Details css 
-    27. Contact css 
-    28. FAQ's css 
-    29. Login & Register css 
-    30. Notice css 
+    26. Blog Details css
+    27. Contact css
+    28. FAQ's css
+    29. Login & Register css
+    30. Notice css
 
 
 -----------------------------------------------------------------------------------*/
 /*===========================
-    1. COMMON css 
+    1. COMMON css
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Cairo:wght@300;400;500;600;700;800&display=swap");
@@ -754,7 +754,7 @@ button, input[type=submit] {
   }
 }
 /*===========================
-    02. Header css 
+    02. Header css
 ===========================*/
 .header-area {
   position: absolute;
@@ -1142,7 +1142,7 @@ button, input[type=submit] {
   height: 30px;
   padding: 6px 2px 0;
   position: absolute;
-  top: 50%;
+  top: 100%;
   margin-top: -14px;
   left: 15px;
   cursor: pointer;
@@ -1316,7 +1316,7 @@ button, input[type=submit] {
   }
 }
 /*===========================
-      03. Slider css 
+      03. Slider css
 ===========================*/
 .slider-area {
   padding-top: 155px;
@@ -1493,7 +1493,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    04. Features css 
+    04. Features css
 ===========================*/
 .features-area {
   padding-top: 150px;
@@ -1740,7 +1740,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-     05. Top Courses css 
+     05. Top Courses css
 ===========================*/
 .top-courses-area {
   padding-top: 110px;
@@ -2675,7 +2675,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-     06. Specialty css 
+     06. Specialty css
 ===========================*/
 .specialty-area {
   padding-top: 130px;
@@ -2776,7 +2776,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    07. Campus Visit css 
+    07. Campus Visit css
 ===========================*/
 .campus-visit-area {
   padding-top: 160px;
@@ -3253,7 +3253,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    08. Event css 
+    08. Event css
 ===========================*/
 .event-area {
   padding-top: 110px;
@@ -3869,7 +3869,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-     09. Testimonials css 
+     09. Testimonials css
 ===========================*/
 .testimonials-area {
   overflow: hidden;
@@ -4355,7 +4355,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-     10. Counter css 
+     10. Counter css
 ===========================*/
 @media (max-width: 767px) {
   .counter-area {
@@ -4567,7 +4567,7 @@ button, input[type=submit] {
   }
 }
 /*===========================
-    11. Blog css 
+    11. Blog css
 ===========================*/
 .blog-area {
   padding-top: 150px;
@@ -4880,7 +4880,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    12. Newsletter css 
+    12. Newsletter css
 ===========================*/
 .newsletter-area {
   padding-top: 160px;
@@ -4995,7 +4995,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    13. Footer css 
+    13. Footer css
 ===========================*/
 .footer-area {
   position: relative;
@@ -5219,7 +5219,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    14. About css 
+    14. About css
 ===========================*/
 .about-area {
   padding-top: 110px;
@@ -5535,7 +5535,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    15. Inline Library css 
+    15. Inline Library css
 ===========================*/
 .online-library-area {
   padding-top: 150px;
@@ -5720,7 +5720,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    16. Page Banner css 
+    16. Page Banner css
 ===========================*/
 .page-banner {
   padding-top: 155px;
@@ -5775,7 +5775,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    17. Teachers css 
+    17. Teachers css
 ===========================*/
 .teachers-area {
   padding-top: 110px;
@@ -5926,7 +5926,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    18. Courses Sidebar css 
+    18. Courses Sidebar css
 ===========================*/
 .courses-sidebar .sidebar-title .title {
   font-weight: 500;
@@ -6030,7 +6030,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    19. Courses Details css 
+    19. Courses Details css
 ===========================*/
 .courses-details {
   padding-top: 110px;
@@ -6401,7 +6401,7 @@ button, input[type=submit] {
   color: #EAB830;
 }
 /*===========================
-    20. Event Details css 
+    20. Event Details css
 ===========================*/
 .event-details {
   padding-top: 110px;
@@ -6649,7 +6649,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    21. Gallery css 
+    21. Gallery css
 ===========================*/
 .gallery-page {
   padding-top: 130px;
@@ -6666,7 +6666,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    22. Teachers Details css 
+    22. Teachers Details css
 ===========================*/
 .teacher-details {
   padding-top: 110px;
@@ -6906,7 +6906,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    23. Shop Sidebar css 
+    23. Shop Sidebar css
 ===========================*/
 .shop-sidebar .sidebar-title .title {
   font-weight: 500;
@@ -7009,7 +7009,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    24. Product Details css 
+    24. Product Details css
 ===========================*/
 .product-details-page {
   padding-top: 110px;
@@ -7542,7 +7542,7 @@ button, input[type=submit] {
   color: #EAB830;
 }
 /*===========================
-    25. Blog Sidebar css 
+    25. Blog Sidebar css
 ===========================*/
 .blog-sidebar {
   padding-left: 50px;
@@ -7726,7 +7726,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    26. Blog Details css 
+    26. Blog Details css
 ===========================*/
 .blog-details-page {
   padding-top: 110px;
@@ -8069,7 +8069,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    27. Contact css 
+    27. Contact css
 ===========================*/
 .contact-area {
   padding-top: 130px;
@@ -8208,7 +8208,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    28. FAQ's css 
+    28. FAQ's css
 ===========================*/
 .faq-area {
   padding-top: 150px;
@@ -8346,7 +8346,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-   29. Login & Register css 
+   29. Login & Register css
 ===========================*/
 .login-register {
   padding-top: 150px;
@@ -8417,7 +8417,7 @@ button, input[type=submit] {
 }
 
 /*===========================
-    30. Notice css 
+    30. Notice css
 ===========================*/
 .notice-area {
   padding-top: 150px;

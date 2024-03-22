@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <div class="footer-link mt-45">
-                        <h4 class="footer-title">مواقع ذات صلة</h4>
+                        <h4 class="footer-title">  {{ __('custom.frontend.websites') }}</h4>
                         <ul class="link-list">
                             <li><a href="https://www.cabinet.iq" target="_blank">الأمانة العامة لمجلس الوزراء</a>
                             </li>
@@ -28,10 +28,10 @@
                 </div>
                 <div class="col-md-3 col-sm-3">
                     <div class="footer-link mt-45">
-                        <h4 class="footer-title">تواصل معنا</h4>
+                        <h4 class="footer-title">{{ __("custom.frontend.contact Us") }}</h4>
                         <ul class="link-list">
-                            <li>
-                                <p>شارع ٦٠، الدورة، بغداد، العراق <br>كلية الهادي الجامعة</p>
+                            <li style="color: white">
+                                    {{ __("custom.frontend.location") }}
                             </li>
                             <li>
                                 <p><a href="tel:6484">6484</a></p>
@@ -57,11 +57,10 @@
                 </div>
                 <div class="footer-menu">
                     <ul class="menu">
-                        <li><a href="strategys.html">ستراتيجية الكلية</a></li>
-                        <li><a href="#">المؤتمرات</a></li>
-                        <li><a href="#">اخر الاخبار</a></li>
-                        <li><a href="#">من نحن</a></li>
-                        <li><a href="#">عن الكلية</a></li>
+                        <li><a href="#">{{ __("custom.frontend.strategy") }}</a></li>
+                        <li><a href="#">{{ __("custom.conferences") }}</a></li>
+                        <li><a href="#"> {{ __("custom.frontend.Latest News") }}</a></li>
+                        <li><a href="#">{{ __("custom.frontend.About") }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +69,7 @@
     <div class="footer-copyright">
         <div class="container">
             <div class="copyright text-center">
-                <p>جميع الحقوق محفوظة | © 2024 قسم تكنولوجيا المعلومات | كلية الهادي الجامعة</p>
+                <p> {{ __("custom.frontend.rights") }}</p>
             </div>
         </div>
     </div>

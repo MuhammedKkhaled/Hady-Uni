@@ -1,4 +1,5 @@
-<!doctype html>
+@php use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
+    <!doctype html>
 <html class="no-js" lang="ar">
 
 <head>
@@ -31,8 +32,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/magnific-popup.css') }}">
 
     <!--====== Main Style CSS ======-->
-    <link rel="stylesheet" href="{{ asset('assets/css-rtl/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css-rtl/style.min.css') }}">
+    <link rel="stylesheet"
+          href="{{ asset('assets')}}/css{{ LaravelLocalization::getCurrentLocaleDirection() == 'rtl' ?'-rtl' :'' }}/style.css">
+    <link rel="stylesheet"
+          href="{{ asset('assets') }}/css{{ LaravelLocalization::getCurrentLocaleDirection() == 'rtl' ?'-rtl' : ''  }}/style.min.css">
 
     @yield('css')
 

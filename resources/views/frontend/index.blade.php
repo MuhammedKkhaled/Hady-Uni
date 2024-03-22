@@ -1,6 +1,10 @@
-@php use Illuminate\Support\Facades\Storage; @endphp
+@php use Illuminate\Support\Facades\Storage;use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
 @extends('frontend.layouts.app')
-@section('title' , 'جامعة الهادي ')
+@section('title' )
+
+    {{ __("custom.frontend.title") }}
+
+@endsection
 
 @section('content')
 
@@ -10,48 +14,58 @@
 
     <section class="slider-area slider-02 slider-active">
         <div class="single-slider d-flex align-items-center bg_cover"
-             style="background-image: url(assets/images/slider-2-1.webp);">
+             style="background-image: url({{ asset("assets/images/slider-2-1.webp") }});">
             <div class="container">
                 <div class="slider-content slider-content-2">
-                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">مؤسسة تعليمية اهلية تم تأسيسها في
-                        بغداد عام 2015
+                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">
+                        {{ __("custom.frontend.text title") }}
                     </h2>
                     <ul class="slider-btn">
-                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">شاهد
-                                الاقسام</a></li>
-                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn" href="#">عن الكلية</a></li>
+                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">
+                                {{ __('custom.frontend.watch section') }}
+                            </a></li>
+                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn"
+                               href="#"> {{ __("custom.frontend.About") }}</a></li>
+
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="single-slider d-flex align-items-center bg_cover"
-             style="background-image: url(assets/images/slider-2-2.webp);">
+             style="background-image: url({{ asset("assets/images/slider-2-2.webp") }});">
             <div class="container">
                 <div class="slider-content slider-content-2">
-                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">مؤسسة تعليمية اهلية تم تأسيسها في
-                        بغداد عام 2015
+                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">
+                        {{ __("custom.frontend.text title") }}
                     </h2>
                     <ul class="slider-btn">
-                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">شاهد
-                                الاقسام</a></li>
-                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn" href="#">عن الكلية</a></li>
+                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">
+                                {{ __('custom.frontend.watch section') }}
+
+                            </a></li>
+                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn" href="#">
+                                {{ __("custom.frontend.About") }}
+                            </a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="single-slider d-flex align-items-center bg_cover"
-             style="background-image: url(assets/images/slider-2-3.webp);">
+             style="background-image: url({{ asset("assets/images/slider-2-3.webp") }});">
             <div class="container">
                 <div class="slider-content slider-content-2">
-                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">مؤسسة تعليمية اهلية تم تأسيسها في
-                        بغداد عام 2015
+                    <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">
+                        {{ __("custom.frontend.text title") }}
+
                     </h2>
                     <ul class="slider-btn">
-                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">شاهد
-                                الاقسام</a></li>
-                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn" href="#">عن الكلية</a></li>
+                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">
+                                {{ __('custom.frontend.watch section') }}
+                            </a></li>
+                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn"
+                               href="#">{{ __("custom.frontend.About") }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,18 +82,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="about-content mt-40">
-                        <h2 class="about-title">جامعة أهلية رائدة في <span>العراق</span></h2>
+                        <h2 class="about-title">{{ __("custom.frontend.ahaly") }}
+                            <span>{{__("custom.frontend.country")}}</span></h2>
                         <span class="line"></span>
-                        <p>تأسست كلية الهادي في عام 2015، وهي حاصلة على اعتماد وزارة التعليم العالي والبحث العلمي
-                            العراقية. تقدم الكلية مجموعة متنوعة من البرامج الدراسية في المجالات الطبية والهندسية
-                            والقانونية والإدارية. تلتزم الكلية بتقديم تعليم عالي الجودة يلبي احتياجات المجتمع العراقي،
-                            وتسعى إلى إعداد طلابها ليصبحوا مهنيين مؤهلين وقادرين على المساهمة في التنمية الاجتماعية
-                            والاقتصادية للعراق.
-                            تضم كلية الهادي هيئة تدريس مؤهلة تأهيلا عاليا من ذوي الخبرة في مجالاتهم. كما تمتلك الكلية
-                            منشآت ومعدات حديثة تلبي متطلبات التعليم الحديث. تساهم كلية الهادي في المجتمع العراقي من خلال
-                            مجموعة متنوعة من البرامج والأنشطة
+                        <p>
+                            {{ __("custom.frontend.big text") }}
                         </p>
-                        <a href="#" class="main-btn">المزيد</a>
+                        <a href="#" class="main-btn">{{ __("custom.frontend.more") }}</a>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -139,11 +148,11 @@
                 </div>
                 <div class="campus-content-col">
                     <div class="campus-content">
-                        <h2 class="campus-title">تعرف عليا اكثر</h2>
+                        <h2 class="campus-title">{{ __("custom.frontend.six") }}</h2>
                         <span class="line"></span>
-                        <p>نحن موجودين في كافه المنصات و بكافه طرق العرض</p>
+                        <p>{{ __("custom.frontend.we are here") }}</p>
                         <a class="play video-popup" href="https://youtu.be/pXyEvMIyFHY"><i class="fas fa-play"></i>
-                            <span>شاهد الان</span></a>
+                            <span> {{ __("custom.frontend.watch now") }}</span></a>
                     </div>
                 </div>
             </div>
@@ -155,12 +164,12 @@
     <!--====== Blog Start ======-->
 
     <section class="blog-area-2">
-        <h4 class="trending-title">Tأحدث الاخبــار</h4>
+        <h4 class="trending-title"> {{ __("custom.frontend.Latest News") }}</h4>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title-2">
-                        <h2 class="title">أحدث الاخبــار</h2>
+                        <h2 class="title">{{ __("custom.frontend.Latest News") }}</h2>
                         <span class="line"></span>
                     </div>
                 </div>
@@ -181,7 +190,11 @@
                                         <li><a href="#">{{ $new->created_at->format('D M Y')  }}</a></li>
                                         <li><a href="#">By: {{ $new->author }}</a></li>
                                     </ul>
-                                    <h4 class="blog-title"><a href="#" style="text-align:end">  {{ $new->title }} </a>
+                                    <h4 class="blog-title"><a href="#"
+                                                              style="text-align:end">
+                                        {{ $new->{'title_'.LaravelLocalization::getCurrentLocale()} }}
+
+                                        </a>
                                     </h4>
                                     <a href="#" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
                                 </div>
@@ -215,7 +228,9 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p> {{ count($departments)  }} <br> أقسام</p>
+                                    <p> {{ count($departments)  }} <br>
+                                    {{ __("custom.frontend.sections") }}
+                                    </p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -225,7 +240,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>1000 <br> خريج</p>
+                                    <p>1000 <br> {{ __("custom.frontend.graduated") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -235,7 +250,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>تعليم <br> حديث</p>
+                                    <p> {{ __("custom.frontend.modern Learning") }}</p>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +263,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>{{ count($teachers) }} <br> أستـاذ</p>
+                                    <p>{{ count($teachers) }} <br> {{ __("custom.frontend.teacher") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -258,7 +273,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>8000 <br> طالب</p>
+                                    <p>8000 <br> {{ __("custom.frontend.student") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -268,7 +283,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>90% <br> نســبة النجــاح</p>
+                                    <p>90% <br> {{ __("custom.frontend.success percent") }}</p>
                                 </div>
                             </div>
                         </div>
@@ -288,7 +303,7 @@
 
                 <div class="col-lg-4">
                     <div class="section-title mt-40">
-                        <h2 class="title">أقســاط<br>الكــلية</h2>
+                        <h2 class="title">{{ __("custom.frontend.Sections aq") }}</h2>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -297,7 +312,7 @@
                             <li data-filter="*" class="active">الكل</li>
                             @foreach($departments as $department )
 
-                                <li data-filter=".{{ $department->id }}">{{ $department->name  }}</li>
+                                <li data-filter=".{{ $department->id }}">{{ $department->{'name_'.LaravelLocalization::getCurrentLocale()}  }}</li>
                             @endforeach
                         </ul>
                     </div>
@@ -308,8 +323,8 @@
                     @foreach($departments as $department )
                         <div class="col-lg-3 col-sm-6 {{ $department->id }}">
                             <div class="single-event text-center mt-30">
-                                <h4 class="event-title"><a>{{ $department->name }}</a></h4>
-                                <span class="time">{{$department->specification_name }}</span>
+                                <h4 class="event-title"><a>{{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
+                                <span class="time">{{$department->{'specification_name_'.LaravelLocalization::getCurrentLocale()} }}</span>
                                 <span class="date">{{ $department->minimum_percent }}% </span>
                                 <span class="date"> {{ $department->maximum_percent }}% </span>
                                 <p class="place">{{ number_format($department->price, 0, '.', ',') }} IQD<br></p>
@@ -340,9 +355,9 @@
                 <div class="col-lg-6">
                     <div class="event-title mt-40">
                         <div class="section-title-2">
-                            <h2 class="title">اخر <br> المؤتمرات</h2>
+                            <h2 class="title">{{ __("custom.frontend.Latest Conferences") }} </h2>
                             <span class="line"></span>
-                            <p>نعرض اخر المؤتمرات المقامة في جامعة الهادي و نعرض افضل المشاركات من الطلاب الخاصه بنا</p>
+                            <p> {{ __("custom.frontend.conference text") }}</p>
                         </div>
                     </div>
                 </div>
@@ -358,9 +373,9 @@
                                     <span class="date"> {{ $conference->date->format('D M Y') }} </span>
                                 </div>
                                 <div class="event-content">
-                                    <h4 class="event-title-2"><a href="#">{{ $conference->title }}</a>
+                                    <h4 class="event-title-2"><a href="#">{{ $conference->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                     </h4>
-                                    <p class="place">المكان :{{ $conference->location }}</p>
+                                    <p class="place">المكان :{{ $conference->{'location_'.LaravelLocalization::getCurrentLocale()} }}</p>
                                     <span class="time">
                                     من{{ $conference->start_time->format(' H:I ') }} ألي
                                     {{ $conference->end_time->format('H:I') }}
@@ -380,50 +395,6 @@
     <!--====== Event Ends ======-->
 
 
-    <!--====== Newsletter Start ======-->
 
-    <section class="newsletter-area">
-        <div class="container">
-            <div class="newsletter-wrapper bg_cover wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s"
-                 style="background-image: url({{ asset("assets/images/newsletter-bg-1.webp") }});">
-                <div class="row align-items-center">
-
-                    <div class="col-lg-7">
-
-                        <div class="comment-form">
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="single-form">
-                                            <input type="email" placeholder="البريد الالكتروني">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single-form">
-                                            <textarea placeholder="التواصل معنا بخصوص ..."></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="single-form">
-                                            <button class="main-btn">Submit now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="section-title-2 mt-25">
-                            <h2 class="title">أتصـــل بــنا</h2>
-                            <span class="line"></span>
-                            <p>نحن دائما في اتقبال الاتصالات منكم</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--====== Newsletter Ends ======-->
 
 @endsection()

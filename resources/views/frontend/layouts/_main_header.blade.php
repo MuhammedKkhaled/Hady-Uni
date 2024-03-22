@@ -1,4 +1,5 @@
-<!--====== Header Start ======-->
+@php use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
+    <!--====== Header Start ======-->
 
 <header class="header-area">
     <div class="header-top">
@@ -6,13 +7,13 @@
             <div class="header-top-wrapper d-flex flex-wrap justify-content-sm-between">
                 <div class="header-top-left mt-10">
                     <ul class="header-meta">
-                        <li><a href="mailto://infoedumate@example.com">huc.edu@gmail.com</a></li>
+                        <li><a href="mailto://infoedumate@example.com" style="color: whitesmoke">huc.edu@gmail.com</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="header-top-right mt-10">
                     <div class="header-link">
-                        <a class="notice" href="#">ملاظات</a>
-                        <a class="login" href="#">تسجيل دخول</a>
+                        <a class="notice" href="#">{{ __("custom.frontend.notes") }}</a>
                     </div>
                 </div>
             </div>
@@ -28,26 +29,26 @@
                     <nav class="nav-menus-wrapper">
                         <ul class="nav-menu">
                             <li>
-                                <a href="#">المكتبة</a>
+                                <a href="#">{{ __("custom.libraries") }}</a>
                                 <ul class="nav-dropdown nav-submenu">
                                     @foreach ($categories as $category)
                                         <li><a
-                                                href="{{ route('main.libraries.show', $category->id) }}">{{ $category->name }}</a>
+                                                href="{{ route('main.libraries.show', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
                                     @endforeach
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ url('/main/journal') }}">مجلة البحوث الصحية</a>
+                                <a href="{{ url('/main/journal') }}">{{ __("custom.frontend.journals") }}</a>
                             </li>
 
-                           
+
                             <li>
-                                <a href="#">الاقسام</a>
+                                <a href="#">{{ __("custom.frontend.sections") }}</a>
                                 <ul class="nav-dropdown nav-submenu">
                                     @foreach ($sections as $section)
                                         <li><a
-                                                href="{{ route('main.departments.show', $section->id) }}">{{ $section->name }}</a>
+                                                href="{{ route('main.departments.show', $section->id) }}">{{ $section->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
                                     @endforeach
 
@@ -56,63 +57,48 @@
 
                             <li>
                                 <a href="#">منتسبي الكلية</a>
-                                <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="#">الموظفين و الاداريين المرتبطين بمركز الكلية</a></li>
-                                    <li><a href="#">قسم طب الاسنان</a></li>
-                                    <li><a href="#">قسم الاشغة</a></li>
-                                    <li><a href="#">قسم تقنيات الاجهزة الطبية</a></li>
-                                    <li><a href="#">قسم التمريض</a></li>
-                                    <li><a href="#">قسم المختبرات</a></li>
-                                    <li><a href="#">قسم الفيزياء الطبية</a></li>
-                                    <li><a href="#">قسم القانون</a></li>
-                                    <li><a href="#">قسم التصميم الداخلي</a></li>
-                                </ul>
                             </li>
 
-                            <li><a href="{{ url('/main/structure') }}">الهيكل التنظيمي و الاداري</a></li>
+                            <li><a href="{{ url('/main/structure') }}">{{ __("custom.frontend.structure") }}</a></li>
 
                             <li>
-                                <a href="#">حول الكلية</a>
+                                <a href="#">{{ __('custom.frontend.About') }}</a>
                                 <ul class="nav-dropdown nav-submenu">
                                     <li>
-                                        <a href="#">عمادة الكلية</a>
+                                        <a href="#">{{ __("custom.frontend.dean") }}</a>
                                         <ul class="nav-dropdown nav-submenu">
-                                            <li><a href="#">عميد الكلية</a>
+                                            <li><a href="#">{{ __('custom.frontend.deans') }}</a>
                                                 <ul class="nav-dropdown nav-submenu">
-                                                    <li><a href="{{ url('main/teacher-details/0') }}">سيرة ذاتية</a>
+                                                    <li><a href="{{ url('main/teacher-details/0') }}">{{ __("custom.frontend.cv") }}</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="#">معاون العميد للشؤون المالية و
-                                                    الادارية</a>
+                                                <a href="#">
+                                                    {{ __("custom.frontend.assistant dean") }}
+                                                </a>
                                                 <ul class="nav-dropdown nav-submenu">
-                                                    <li><a href="{{ url('main/teacher-details/1') }}">السيرة الذاتية
-                                                            لمعاون العميد للشؤون المالية و الادارية</a></li>
-                                                    <li><a href="{{ url('main/teachers/3') }}">الشعبة الادارية</a></li>
-                                                    <li><a href="{{ url('main/teachers/4') }}">شعبة الحسابات</a></li>
-                                                    <li><a href="{{ url('main/teachers/5') }}">الشعبة القانونية</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">معاون العميد للشؤون العلمية</a>
-                                                <ul class="nav-dropdown nav-submenu">
-                                                    <li><a href="{{ url('main/teacher-details/2') }}">السيرة الذاتية
-                                                            لمعاون العميد للشؤون العلمية</a></li>
-                                                    <li><a href="{{ url('main/teachers/6') }}">شعبة التسجيل</a></li>
-                                                    <li><a href="{{ url('main/teachers/7') }}">شعبة التقويم</a></li>
-                                                    <li><a href="{{ url('main/teachers/8') }}">شعبة المعلومات
-                                                            الالكترونية</a>
-                                                    </li>
+                                                    <li><a href="{{ url('main/teacher-details/1') }}">@lang('custom.frontend.biography')</a></li>
+                                                    <li><a href="{{ url('main/teachers/3') }}">@lang('custom.frontend.administrative_department')</a></li>
+                                                    <li><a href="{{ url('main/teachers/4') }}">@lang('custom.frontend.accounts_department')</a></li>
+                                                    <li><a href="{{ url('main/teachers/5') }}">@lang('custom.frontend.legal_department')</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="">مجلس الكلية</a>
+                                                <a href="#">@lang('custom.frontend.assistant_dean_academic_affairs')</a>
                                                 <ul class="nav-dropdown nav-submenu">
-                                                    <li><a href="#">نبذة عن مجلس
-                                                            الكلية</a></li>
-                                                    <li><a href="teachers.html">اعضاء مجلس الكلية</a></li>
-                                                    <li><a href="#">البريد الالكتروني</a></li>
+                                                    <li><a href="{{ url('main/teacher-details/2') }}">@lang('custom.frontend.biography')</a></li>
+                                                    <li><a href="{{ url('main/teachers/6') }}">@lang('custom.frontend.registration_department')</a></li>
+                                                    <li><a href="{{ url('main/teachers/7') }}">@lang('custom.frontend.evaluation_department')</a></li>
+                                                    <li><a href="{{ url('main/teachers/8') }}">@lang('custom.frontend.electronic_information_department')</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">@lang('custom.frontend.faculty_board')</a>
+                                                <ul class="nav-dropdown nav-submenu">
+                                                    <li><a href="#">@lang('custom.frontend.faculty_overview')</a></li>
+                                                    <li><a href="#">@lang('custom.frontend.self_evaluation_report')</a></li>
+                                                    <li><a href="#">@lang('custom.frontend.college_classification')</a></li>
                                                 </ul>
                                             </li>
                                     </li>
@@ -121,49 +107,58 @@
                             </li>
 
                             <li>
-                                <a href="#">نبذة عن الكلية</a>
+                                <a href="#">@lang('custom.frontend.faculty_overview')</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="{{ asset('assets/files/strategy1.pdf') }}" target="_blank">الخطة
-                                            الستراتيجية لكلية
-                                            الهادي الجامعة 2022
-                                            - 2026</a></li>
-                                    <li><a href="{{ asset('assets/files/strategy2.pdf') }}" target="_blank">تقرير
-                                            التقييم الذاتي
-                                            لكلية
-                                            الهادي الجامعة 2019 - 2020</a></li>
+                                    <li><a href="{{ asset('assets/files/strategy1.pdf') }}" target="_blank">@lang('custom.frontend.strategic_plan') 2022 - 2026</a></li>
+                                    <li><a href="{{ asset('assets/files/strategy2.pdf') }}" target="_blank">@lang('custom.frontend.self_evaluation_report') 2019 - 2020</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="{{ url('/main/strategies') }}">استراتيجية الكلية</a>
+                                <a href="{{ url('/main/strategies') }}">@lang('custom.frontend.strategic_plan')</a>
                             </li>
 
-                            <li><a href="{{ url('/main/HeadTeacher-Word') }}">كلمة السيد العميد</a></li>
+
+                            <li><a href="{{ url('/main/HeadTeacher-Word') }}">@lang('custom.frontend.dean_word')</a></li>
 
                             <li>
-                                <a href="#">تصنيفات كلية الهادي الجامعة</a>
+                                <a href="#">@lang('custom.frontend.college_classification')</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="#">التصنيف العراقي للجامعات</a></li>
-                                    <li><a href="#">تصنيف Webometrics</a></li>
-                                    <li><a href="#">تصنيف Greenmertrics</a></li>
+                                    <li><a href="#">@lang('custom.frontend.iraqi_universities_classification')</a></li>
+                                    <li><a href="#">@lang('custom.frontend.webometrics_classification')</a></li>
+                                    <li><a href="#">@lang('custom.frontend.greenmetrics_classification')</a></li>
                                 </ul>
                             </li>
+
 
                         </ul>
                         </li>
-
                         <li>
-                            <a class="active" href="{{ url('/main') }}">الرئيسية</a>
+                            <a class="active" href="{{ url('/main') }}">@lang('custom.frontend.home')</a>
                         </li>
-                        
-                    </ul>
+                        </ul>
                     </nav>
                 </div>
 
                 <div class="col-lg-1" style="text-align: center;">
                     <div class="header-logo">
                         <a href="{{ url('/main') }}"><img src="{{ asset('assets/images/logo.webp') }}" width="88"
-                                height="88" alt="Logo"></a>
+                                                          height="88" alt="Logo"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-1" style="text-align: center;">
+                    <div class="header-logo">
+                        <ul>
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <li>
+                                    <a rel="alternate" hreflang="{{ $localeCode }}"
+                                       href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
