@@ -1551,7 +1551,7 @@ lg {
 }
 
 .slider-content .title {
-    font-size: 76px;
+    font-size: 50px;
     font-weight: 700;
     color: #fff
 }
@@ -6679,7 +6679,7 @@ lg {
 .banner-content .title {
     color: #fff;
     font-weight: 700;
-    font-size: 76px
+    font-size: 50px
 }
 
 @media only screen and (min-width:768px) and (max-width:991px) {

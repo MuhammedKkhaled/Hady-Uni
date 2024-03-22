@@ -235,7 +235,7 @@ return [
         'strategy' => ' Colleague Strategies',
         'notes' => ' Notes',
         'journals' => ' Journals ',
-        'structure' => "The organizational and administrative structure",
+        'structure' => "organizational structure",
         'dean' => "dean of faculty",
         'deans' => "Dean",
         'cv' => "The Biography",

@@ -41,4 +41,4 @@
 
 </head>
 
-<body style="text-align: right; ">
+<body style="text-align: {{ LaravelLocalization::getCurrentLocaleDirection() == 'rtl' ?'right' :'left' }}; ">

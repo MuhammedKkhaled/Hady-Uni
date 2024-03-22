@@ -137,7 +137,7 @@
 
     <!--====== Campus Visit Start ======-->
 
-    <section class="campus-visit-area" style="padding-left: 30px;padding-bottom: 30px;">
+    <section class="campus-visit-area" style="padding-left: 30px;padding-bottom: 30px; ">
         <div class="container">
             <div class="campus-visit-wrapper">
                 <div class="campus-image-col">
@@ -146,7 +146,7 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen=""></iframe>
                 </div>
-                <div class="campus-content-col">
+                <div class="campus-content-col" style="text-align: center;">
                     <div class="campus-content">
                         <h2 class="campus-title">{{ __("custom.frontend.six") }}</h2>
                         <span class="line"></span>
@@ -162,7 +162,8 @@
     <!--====== Campus Visit Ends ======-->
 
     <!--====== Blog Start ======-->
-
+    @if ( count($news) > 0 )
+        
     <section class="blog-area-2">
         <h4 class="trending-title"> {{ __("custom.frontend.Latest News") }}</h4>
         <div class="container">
@@ -205,6 +206,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     <!--====== Blog Ends ======-->
     <!--====== Features Start ======-->
