@@ -13,6 +13,7 @@ use App\Models\Category;
 use App\Models\Conference;
 use App\Models\News;
 use App\Models\Teacher;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
 
@@ -42,6 +43,10 @@ class TeacherController extends Controller
             ->addColumn('record_select', 'admin.teachers.data_table.record_select')
             ->addColumn('image', function (Teacher $teacher) {
                 return view('admin.teachers.data_table.image', compact('teacher'));
+            })
+            ->addColumn('brief_' . LaravelLocalization::getCurrentLocale(), function (Teacher $teacher) {
+                $text = $teacher->{'brief_' . LaravelLocalization::getCurrentLocale()};
+                return strlen($text) > 20 ? substr($text, 0, 10) . '...' : $text;
             })
             ->editColumn('created_at', function (Teacher $teacher) {
                 return $teacher->created_at->format('Y-m-d');

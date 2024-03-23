@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Front\AffiliateController;
 use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
 use App\Http\Controllers\Front\LibraryController;
+use App\Http\Controllers\MessageController;
 use App\Models\Conference;
 use App\Models\Department;
 use App\Models\News;
@@ -96,6 +98,10 @@ Route::prefix('main/')->group(function (){
 
     Route::get('HeadTeacher-Word', [JournalController::class , 'showHeadTeacherWord']);
     Route::get('structure', [JournalController::class , 'showStructure']);
+
+    Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
+
+    Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
 });
 
 

@@ -59,7 +59,6 @@ class AffiliateController extends Controller
     public function create()
     {
         $depratments =  Department::all();
-
         return view('admin.affiliates.create' , compact('depratments'));
     }// end of create
 

@@ -48,20 +48,25 @@ class DepartmentController extends Controller
             ->editColumn('name_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
                 return $department->{"name_".LaravelLocalization::getCurrentLocale()};
             })
-            ->editColumn('specification_name_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
-                return $department->{"specification_name_".LaravelLocalization::getCurrentLocale()};
+            ->editColumn('specification_name_'.LaravelLocalization::getCurrentLocale(), function (Department $department) {
+                $text = $department->{"specification_name_".LaravelLocalization::getCurrentLocale()};
+                return strlen($text) > 50 ? substr($text, 0, 50) . '...' : $text;
             })
-            ->editColumn('department_definition_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
-                return $department->{"department_definition_".LaravelLocalization::getCurrentLocale()};
+            ->editColumn('department_definition_'.LaravelLocalization::getCurrentLocale(), function (Department $department) {
+                $text = $department->{"department_definition_".LaravelLocalization::getCurrentLocale()};
+                return strlen($text) > 50 ? substr($text, 0, 50) . '...' : $text;
             })
-            ->editColumn('department_message_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
-                return $department->{"department_message_".LaravelLocalization::getCurrentLocale()};
+            ->editColumn('department_message_'.LaravelLocalization::getCurrentLocale(), function (Department $department) {
+                $text = $department->{"department_message_".LaravelLocalization::getCurrentLocale()};
+                return strlen($text) > 50 ? substr($text, 0, 50) . '...' : $text;
             })
-              ->editColumn('department_vision_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
-                return $department->{"department_vision_".LaravelLocalization::getCurrentLocale()};
+            ->editColumn('department_vision_'.LaravelLocalization::getCurrentLocale(), function (Department $department) {
+                $text = $department->{"department_vision_".LaravelLocalization::getCurrentLocale()};
+                return strlen($text) > 50 ? substr($text, 0, 50) . '...' : $text;
             })
-             ->editColumn('department_goals_'.LaravelLocalization::getCurrentLocale() ,function (Department $department){
-                return $department->{"department_goals_".LaravelLocalization::getCurrentLocale()};
+            ->editColumn('department_goals_'.LaravelLocalization::getCurrentLocale(), function (Department $department) {
+                $text = $department->{"department_goals_".LaravelLocalization::getCurrentLocale()};
+                return strlen($text) > 50 ? substr($text, 0, 50) . '...' : $text;
             })
 
             ->editColumn('created_at', function (Department $category) {

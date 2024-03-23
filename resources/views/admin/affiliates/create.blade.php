@@ -3,6 +3,7 @@
 @extends('layouts.admin.app')
 @section('content')
 
+
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
             <h3 class="card-title text-capitalize">{{ __("custom.Create Affiliates") }}</h3>
@@ -21,11 +22,12 @@
                         <select id="department_id" name="department_id" class="form-control">
                             <option value="0" disabled selected>-- Select --</option>
 
-                            @foreach($depratments  as $department) @endforeach
+
+                            @foreach($depratments  as $department)
                             <option value="{{ $department->id }}">
                                 {{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}
                             </option>
-
+                            @endforeach
                         </select>
                     </div>
 

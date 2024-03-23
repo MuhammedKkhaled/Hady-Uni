@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
@@ -105,10 +106,16 @@ Route::middleware([
             Route::resource('journals', JournalController::class);
 
 
-            /// journals routes
+            /// affiliates routes
             Route::get('/affiliates/data', 'AffiliateController@data')->name('affiliates.data');
             Route::delete('/affiliates/bulk_delete', 'AffiliateController@bulkDelete')->name('affiliates.bulk_delete');
             Route::resource('affiliates', AffiliateController::class);
+
+
+            /// journals routes
+            Route::get('/messages/data', 'MessageController@data')->name('messages.data');
+            Route::delete('/messages/bulk_delete', 'MessageController@bulkDelete')->name('messages.bulk_delete');
+            Route::resource('messages', MessageController::class);
 
 
             //Product routes

@@ -202,6 +202,12 @@ return [
     'Affiliate Notes' => "Affiliate Notes" ,
     'Affiliate Notes en' => "Affiliate Notes English" ,
     'Affiliate Notes ar' => "Affiliate Notes Arabic" ,
+    'messages Email' => "Email" ,
+    'messages content' => "Message Content" ,
+    'messages' => "Messages" ,
+    'View ِAll messages' => "View ِAll messages" ,
+    'Department Vision' => "Department Vision" ,
+
 
     //////////// Front End
     'frontend'=>[
@@ -267,6 +273,17 @@ return [
         'dept_affiliates' => 'The Department Affiliates',
         'costs' => 'Department Costs',
         'Head Teacher Word' => 'Head Teacher Word',
+        'messages' => 'The Message Send Successfully',
+        'Affiliates' => 'Affiliates',
+        'Affiliate' => 'Affiliate',
+        'Affiliate title' => 'Elhady Collegue | Affiliates',
+        "This Department Hasn't Affiliates Yet" => "This Department Hasn't Affiliates Yet",
+        "The Word" => "
+        Al Hadi University College is one of the leading educational institutions in the region, as it reflects the university’s vision of providing distinguished higher education and developing society. The college consists of several departments, and is distinguished by the diversity of its educational programs, covering a wide range of medical and scientific specializations
+Al Hadi University College was established in 2015, and since then, the college has rapidly grown and developed into one of the premier destinations for higher education in the region. The college includes multiple departments, most of which specialize in medical fields, namely the Department of Dentistry, Department of Anesthesia Techniques, Department of Radiology Techniques, Department of Medical Device Techniques, Department of Nursing, Department of Medical Laboratories, Department of Medical Physics, Department of Law, Department of Interior Design, which provides broad opportunities. For students to choose the specialization that suits them
+Thanks to its distinguished educational structure based on the latest technologies and equipment, students at Al Hadi College have a unique opportunity to acquire the knowledge and practical skills necessary for their success in their chosen fields. The various student activities and cultural and social events organized by the college reflect its vibrant spirit and enhance communication and interaction among students
+The college has approximately 8,000 students, which reflects the growing demand for higher education and the quality that the college provides. The college is witnessing remarkable success in graduating students, with three courses having been graduated so far, which reflects the quality of education and interest in developing students to become pioneers and innovators in their society and fields of work.
+        ",
 
     ]
 

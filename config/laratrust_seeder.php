@@ -30,6 +30,7 @@ return [
             'libraries'     => 'c,r,u,d',
             'journals'      => 'c,r,u,d',
             'affiliates'      => 'c,r,u,d',
+            'messages'      => 'c,r,u,d',
         ],
         'admin' => [],
         'user' => [],

@@ -25,7 +25,7 @@
             <div class="row align-items-center">
 
                 <div class="col-lg-10 position-static">
-                    <div class="nav-toggle"></div>
+                    <div class="nav-toggle  d-block d-md-none"></div>
                     <nav class="nav-menus-wrapper">
                         <ul class="nav-menu">
                             <li>
@@ -56,7 +56,12 @@
                             </li>
 
                             <li>
-                                <a href="#">منتسبي الكلية</a>
+                                <a href="#">{{ __("custom.frontend.Affiliates") }}</a>
+                                <ul class="nav-dropdown nav-submenu">
+                                @foreach($sections as $section)
+                                    <li><a href="{{ route('affiliates.show' , $section->id) }}">{{ __("custom.frontend.Affiliate") }} {{ $section->{'name_'.LaravelLocalization::getCurrentLocale() } }}</a></li>
+                                    @endforeach
+                                </ul>
                             </li>
 
                             <li><a href="{{ url('/main/structure') }}">{{ __("custom.frontend.structure") }}</a></li>
