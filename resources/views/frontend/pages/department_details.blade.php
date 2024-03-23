@@ -59,7 +59,7 @@
                             </div>
                             <div class="sidebar-btn">
                                 <a class="main-btn"
-                                   href="#"
+                                   href="{{ route('affiliates.show' , $department->id) }}"
                                    target="_blank">
                                         {{ __("custom.frontend.dept_affiliates") }}
                                 </a>
