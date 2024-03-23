@@ -104,7 +104,7 @@
                 </li>
                 <li><span class="bold">{{ __("custom.frontend.department_goals") }}:</span>
                     <p>
-                        {{ $department->{'department_goals_'.LaravelLocalization::getCurrentLocale()} ?? " " }}
+                        {{ $department->{'department_goals_'.LaravelLocalization::getCurrentLocale()} ?? " 1" }}
                     </p>
 
 
