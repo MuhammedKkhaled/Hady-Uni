@@ -284,6 +284,10 @@ Al Hadi University College was established in 2015, and since then, the college 
 Thanks to its distinguished educational structure based on the latest technologies and equipment, students at Al Hadi College have a unique opportunity to acquire the knowledge and practical skills necessary for their success in their chosen fields. The various student activities and cultural and social events organized by the college reflect its vibrant spirit and enhance communication and interaction among students
 The college has approximately 8,000 students, which reflects the growing demand for higher education and the quality that the college provides. The college is witnessing remarkable success in graduating students, with three courses having been graduated so far, which reflects the quality of education and interest in developing students to become pioneers and innovators in their society and fields of work.
         ",
+        'definition' => 'Definition',
+        'department_message' => 'Department Message',
+        'department_vision' => 'Department Vision',
+        'department_goals' => 'Department Goals',
 
     ]
 

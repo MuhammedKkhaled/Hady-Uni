@@ -4,6 +4,13 @@
 
     {{ __("custom.frontend.department_details_title") }}
 @endsection
+@section('css')
+
+  section .bold {
+    font-weight: bold;
+    }
+
+  @stop
 @section('content')
     <!--====== Page Banner Start ======-->
 
@@ -73,5 +80,37 @@
     </section>
 
     <!--====== Courses Details Ends ======-->
+
+    <section class="txt" id="txt2">
+        <div class="txty" style="text-align: right; padding: 20px; margin-left: 150px; margin-right: 150px">
+            <ul>
+                <li><span class="bold">{{ __("custom.frontend.definition") }}:</span>
+                <p>
+                    {{ $department->{'department_definition_'.LaravelLocalization::getCurrentLocale()}  ?? " " }}
+                </p>
+
+                </li>
+                <li><span class="bold">{{ __("custom.frontend.department_message") }}:</span>
+                    <p>
+                        {{ $department->{'department_message_'.LaravelLocalization::getCurrentLocale()}  ?? " "}}
+                    </p>
+                </li>
+                <li><span class="bold">{{ __("custom.frontend.department_vision") }}:</span>
+
+                    <p>
+                        {{ $department->{'department_vision_'.LaravelLocalization::getCurrentLocale()} ?? " "}}
+                    </p>
+
+                </li>
+                <li><span class="bold">{{ __("custom.frontend.department_goals") }}:</span>
+                    <p>
+                        {{ $department->{'department_goals_'.LaravelLocalization::getCurrentLocale()} ?? " " }}
+                    </p>
+
+
+                </li>
+            </ul>
+        </div>
+    </section>
 
 @endsection
