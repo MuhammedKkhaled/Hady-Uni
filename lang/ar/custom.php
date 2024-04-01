@@ -95,6 +95,8 @@ return [
     "Department Goals"=>"أهداف القسم",
     "Department Goals en"=>"أهداف القسم بالإنجليزية",
     "Department Goals ar"=>"أهداف القسم بالعربية",
+    'department_head_word_en' =>'كلمة رئيس القسم باللغة الانجليزية',
+    'department_head_word_ar' =>'كلمة رئيس القسم باللغة العربية',
     "Minimum Percent"=>"الحد الأدنى بالنسبة المئوية",
     "Maximum Percent"=>"الحد الأقصى بالنسبة المئوية",
     "Price"=>"السعر",
@@ -204,10 +206,47 @@ return [
     'View ِAll messages' => "مشاهدة جميع الرسائل" ,
     'Department Vision' => "رؤية القسم " ,
 
+    /// Studnet
+    'Student' => "طالب",
+    'New Student' => "طالب جديد",
+    'Student File' => "ملف الطلاب",
+    'Graduate File' => "ملف الخريجيين",
+    'Year' => "السنة",
+    'Student Department' => "قسم الطالب",
+    'View All Department' => "عرض كل الأقسام",
+    'Create Department' => "إنشاء قسم الطلاب",
+
+    /// links
+    'Program Description' => "وصف البرنامج",
+    'Study program'=>'الخطة الدراسية',
+    'course Study' => 'المنهج الدراسي',
+    'university calender' => 'التقويم الجامعي',
+    'Exam Table' => 'جدول الامتحانات',
+    'School Schedule' => 'الجدول الدراسي',
+    'Create links' => 'انشاء روابط',
+    'links' => 'روابط القسم',
+    'view all links' => 'رؤية جميع روابط القسم',
+    'Create Students' => 'أنشاء طلاب للقسم',
+    'Links' => 'الروابط',
+    'New Link' => 'روابط جديدة',
+    'Galleries' => 'معرض الاقسام',
+    'New Gallery' => 'اضافة صور جديدة',
+    'Create Gallery' => 'انشاء معرض للصور',
+    'Main Image' => 'الصورة الاساسسية',
+    'Image' => 'صورة',
+    'view all Gallery' => 'رؤية جميع المعارض للاقسام',
+    'Important Links' => 'اهم الروابط',
+    'Watch Department' => 'شاهد القسم',
+
+
+
+
 
     //////////// Front End
     'frontend'=>[
         'title' => 'كلية الهادي',
+		
+        'sustainable' => 'التنمية المستدامة',
         'text title' => "مؤسسة تعليمية مستقلة تم تأسيسها في بغداد عام ٢٠١٥.",
         'watch section' => "شاهد الأقسام",
         'About' => "عن الكلية",
@@ -219,7 +258,7 @@ return [
         'we are here' => "نحن هنا",
         'six' => "تعرف علينا أكثر",
         'Latest News' => "أحدث الأخبار",
-        'teacher' => "المدرسين",
+        'teacher' => "الاساتذة",
         'sections' => "الأقسام",
         'graduated' => "الخريجين",
         'modern Learning' => "التعلم الحديث",
@@ -234,8 +273,8 @@ return [
         'websites' => "المواقع ذات الصلة",
         'location' => "٦٠ شارع، الدورة، بغداد، العراق، كلية الهادي الجامعة",
         'rights' => "كل الحقوق محفوظة | © ٢٠٢٤ قسم تكنولوجيا المعلومات | كلية الهادي الجامعة",
-        'strategy' => 'استراتيجيات الكلية',
-        'journals' => 'مجلة البحوث الصحية',
+        'strategy' => 'تعليمات وقوانين جامعية',
+        'journals' => 'مجلة بحوث الهادي',
         'Structure' => 'الهيكل التنظيمي و الاداري',
         'dean' => "عمادة الكلية",
         'deans' => "عميد الكلية",
@@ -254,7 +293,7 @@ return [
         'electronic_information_department' => 'شعبة المعلومات الالكترونية',
         'faculty_board' => 'مجلس الكلية',
         'faculty_overview' => 'نبذة عن الكلية',
-        'strategic_plan' => 'الخطة الاستراتيجية',
+        'strategic_plan' => "تعليمات وقوانين جامعية",
         'self_evaluation_report' => 'تقرير التقييم الذاتي',
         'college_classification' => 'تصنيفات كلية الهادي الجامعة',
         'iraqi_universities_classification' => 'التصنيف العراقي للجامعات',
@@ -264,7 +303,7 @@ return [
         'dean_word' => 'كلمة السيد العميد',
         'min percent' => 'أقل نسبة قبول ',
         'max percent' => ' أعلي نسبة قبول',
-        'more info' => 'معلومات اكقر',
+        'more info' => 'معلومات اكثر',
         'Section Information' => 'معلومات القسم',
         'department_details_title' => 'كلية الهادي | معلومات القسم ',
         'structure' => 'الهيكل التنظيمي والاداري ',
@@ -286,6 +325,14 @@ return [
         'department_message' => 'رسالة القسم',
         'department_vision' => 'الرؤية للقسم',
         'department_goals' => 'الأهداف للقسم',
+        'Department Head Teacher Word' => 'كلمة السيد رئيس القسم',
+        'Department Students' => 'طلاب القسم',
+        'year' => 'عام',
+        'pioneers' => 'الطلاب المتميززين',
+        'Graduated' => 'الخريجيين',
+
+
+
     ]
 
 ];

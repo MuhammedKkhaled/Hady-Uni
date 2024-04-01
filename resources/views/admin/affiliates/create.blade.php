@@ -37,7 +37,7 @@
                         <label for="name_en">{{ __("custom.Affiliate Name en") }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="name_en" name="name_en" autofocus class="form-control"
-                               value="{{ old('name_en') }}" required>
+                               value="{{ old('name_en') }}" >
                     </div>
 
 
@@ -54,7 +54,7 @@
                         <label for="certificate_en">{{ __("custom.Affiliate Certificate en") }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="certificate_en" name="certificate_en" autofocus class="form-control"
-                               value="{{ old('certificate_en') }}" required>
+                               value="{{ old('certificate_en') }}" >
                     </div>
 
 
@@ -73,7 +73,7 @@
                         <label for="general_specialization_en">{{ __("custom.General Specialization en") }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="general_specialization_en" name="general_specialization_en" autofocus class="form-control"
-                               value="{{ old('general_specialization_en') }}" required>
+                               value="{{ old('general_specialization_en') }}" >
                     </div>
 
                     {{-- General Specialization  --}}
@@ -89,7 +89,7 @@
                         <label for="special_specialization_en">{{ __("custom.special Specialization en") }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="special_specialization_en" name="special_specialization_en" autofocus class="form-control"
-                               value="{{ old('special_specialization_en') }}" required>
+                               value="{{ old('special_specialization_en') }}" >
                     </div>
 
 
@@ -106,7 +106,7 @@
                         <label for="title_en">{{ __("custom.Affiliate Title en") }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="title_en" name="title_en" autofocus class="form-control"
-                               value="{{ old('title_en') }}" required>
+                               value="{{ old('title_en') }}" >
                     </div>
 
                     {{-- Affiliate Title  --}}
@@ -123,7 +123,7 @@
                         <label for="notes_en">{{ __("custom.Affiliate Notes en") }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="notes_en" name="notes_en" autofocus class="form-control"
-                               value="{{ old('notes_en') }}" required>
+                               value="{{ old('notes_en') }}" >
                     </div>
 
 

@@ -36,7 +36,7 @@
                                 <div class="courses-image">
                                     <a href="{{ asset(Storage::url('uploads/libraries/' . $library->file)) }}"
                                        target="_blank"><img
-                                            src="{{ asset(Storage::url('uploads/libraries/' . $library->file)) }}"
+                                            src="{{ asset('assets/images/logo.webp') }}"
                                             width="270" height="170" alt="courses"></a>
                                 </div>
                                 <div class="courses-content">

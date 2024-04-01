@@ -17,12 +17,12 @@
 
                     <div class="form-group">
                         <label>{{ __("custom.Specifications Name en") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" required>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" >
                     </div>
 
                     <div class="form-group">
                         <label>{{ __("custom.Specifications Name ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" required>
+                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" >
                     </div>
 
                 </div>

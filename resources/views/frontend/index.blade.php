@@ -21,11 +21,11 @@
                         {{ __("custom.frontend.text title") }}
                     </h2>
                     <ul class="slider-btn">
-                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">
+                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#departments">
                                 {{ __('custom.frontend.watch section') }}
                             </a></li>
                         <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn"
-                               href="#"> {{ __("custom.frontend.About") }}</a></li>
+                               href="#moreinfo"> {{ __("custom.frontend.About") }}</a></li>
 
                     </ul>
                 </div>
@@ -40,11 +40,11 @@
                         {{ __("custom.frontend.text title") }}
                     </h2>
                     <ul class="slider-btn">
-                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">
+                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#departments">
                                 {{ __('custom.frontend.watch section') }}
 
                             </a></li>
-                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn" href="#">
+                        <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn" href="#moreinfo">
                                 {{ __("custom.frontend.About") }}
                             </a></li>
                     </ul>
@@ -61,11 +61,11 @@
 
                     </h2>
                     <ul class="slider-btn">
-                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#">
+                        <li><a data-animation="fadeInLeft" data-delay="0.6s" class="main-btn main-btn-2" href="#departments">
                                 {{ __('custom.frontend.watch section') }}
                             </a></li>
                         <li><a data-animation="fadeInLeft" data-delay="1s" class="main-btn"
-                               href="#">{{ __("custom.frontend.About") }}</a></li>
+                               href="#moreinfo">{{ __("custom.frontend.About") }}</a></li>
                     </ul>
                 </div>
             </div>
@@ -77,7 +77,7 @@
     <!--====== About Start ======-->
     <!-- Not A main section  -->
 
-    <section class="about-area">
+    <section class="about-area" id="moreinfo">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5">
@@ -182,14 +182,14 @@
                             <div class="single-blog mt-30">
                                 <div class="blog-image">
                                     <a href="#">
-                                        <img src="{{ asset(Storage::url("uploads/news/". $new->image)) }}" width="270"
-                                             height="150" alt="blog">
+                                        <img src="{{ Storage::url("uploads/news/". $new->image) }}" width="270"
+                                             height="150" alt="blogsss">
                                     </a>
                                 </div>
                                 <div class="blog-content" style="text-align:end">
                                     <ul class="meta">
                                         <li><a href="#">{{ $new->created_at->format('D M Y')  }}</a></li>
-                                        <li><a href="#">By: {{ $new->author }}</a></li>
+                                        <!--<li><a href="#">By: {{ $new->author }}</a></li>-->
                                     </ul>
                                     <h4 class="blog-title"><a href="#"
                                                               style="text-align:end">
@@ -242,7 +242,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>1000 <br> {{ __("custom.frontend.graduated") }}</p>
+                                    <p>1000<br> {{ __("custom.frontend.graduated") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -265,7 +265,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>{{ count($teachers) }} <br> {{ __("custom.frontend.teacher") }}</p>
+                                    <p>{{count($affiliates)}} <br> {{ __("custom.frontend.teacher") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -299,7 +299,7 @@
 
     <!--====== Top Course Start ======-->
 
-    <section class="event-page">
+    <section class="event-page" id="departments">
         <div class="container">
             <div class="row justify-content-center">
 

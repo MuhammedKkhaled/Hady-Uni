@@ -18,7 +18,7 @@
                 {{--Title--}}
                 <div class="form-group">
                     <label>Title <span class="text-danger">*</span></label>
-                    <input type="text" name="title" autofocus class="form-control" value="{{ old('title', $blog->title) }}" required>
+                    <input type="text" name="title" autofocus class="form-control" value="{{ old('title', $blog->title) }}" >
                 </div>
 
                 {{--description--}}

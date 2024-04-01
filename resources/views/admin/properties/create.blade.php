@@ -29,24 +29,24 @@
                     {{-- property_title --}}
                     <div class="form-group">
                         <label for="property_title_en">{{ __("Custom.Property Title en") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="property_title_en" name="property_title_en" placeholder="Enter Property Title" autofocus class="form-control" value="{{ old('property_title_en') }}" required>
+                        <input type="text" id="property_title_en" name="property_title_en" placeholder="Enter Property Title" autofocus class="form-control" value="{{ old('property_title_en') }}" >
                     </div>
                     {{-- property_title --}}
                     <div class="form-group">
                         <label for="property_title_ar">{{ __("Custom.Property Title ar") }}  <span class="text-danger">*</span></label>
-                        <input type="text" id="property_title_ar" name="property_title_ar" placeholder="Enter Property Title" autofocus class="form-control" value="{{ old('property_title_ar') }}" required>
+                        <input type="text" id="property_title_ar" name="property_title_ar" placeholder="Enter Property Title" autofocus class="form-control" value="{{ old('property_title_ar') }}" >
                     </div>
 
                     {{-- property_desc --}}
                     <div class="form-group">
                         <label for="property_desc_en"> {{ __("Custom.Property Description en") }} <span class="text-danger">*</span></label>
-                        <textarea name="property_desc_en" id="property_desc_en" class="form-control" value="{{ old('property_desc_en') }}" required></textarea>
+                        <textarea name="property_desc_en" id="property_desc_en" class="form-control" value="{{ old('property_desc_en') }}" ></textarea>
                     </div>
 
                     {{-- property_desc --}}
                     <div class="form-group">
                         <label for="property_desc_ar">  {{ __("Custom.Property Description ar") }} <span class="text-danger">*</span></label>
-                        <textarea name="property_desc_ar" id="property_desc_ar" class="form-control" value="{{ old('property_desc_ar') }}" required></textarea>
+                        <textarea name="property_desc_ar" id="property_desc_ar" class="form-control" value="{{ old('property_desc_ar') }}" ></textarea>
                     </div>
 
                     {{-- type --}}

@@ -24,17 +24,17 @@ class AffiliateRequest extends FormRequest
         return [
 
             'department_id' => ['required'],
-            'name_en'=>['required', 'string'  , 'max:500'],
+            'name_en'=>[ 'string'  , 'max:500'],
             'name_ar'=>['required', 'string'  , 'max:500'],
-            'certificate_en'=>['required', 'string'  , 'max:900'],
+            'certificate_en'=>[ 'string'  , 'max:900'],
             'certificate_ar'=>['required', 'string'  , 'max:900'],
-            'general_specialization_en'=>['required', 'string'  , 'max:900'],
+            'general_specialization_en'=>[ 'string'  , 'max:900'],
             'general_specialization_ar'=>['required', 'string'  , 'max:900'],
-            'special_specialization_en'=>['required', 'string'  , 'max:900'],
+            'special_specialization_en'=>[ 'string'  , 'max:900'],
             'special_specialization_ar'=>['required', 'string'  , 'max:900'],
-            'title_en'=>['required', 'string'  , 'max:900'],
+            'title_en'=>[ 'string'  , 'max:900'],
             'title_ar'=>['required', 'string'  , 'max:900'],
-            'notes_en'=>['required', 'string'  , 'max:900'],
+            'notes_en'=>['string'  , 'max:900'],
             'notes_ar'=>['required', 'string'  , 'max:900'],
         ];
     }

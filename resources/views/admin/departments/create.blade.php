@@ -16,13 +16,13 @@
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Department Name en") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" required>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Department Name ar") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" required>
+                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" >
                     </div>
 
                     {{--Specifications--}}
@@ -52,54 +52,68 @@
                     {{-- department_definition --}}
                     <div class="form-group">
                             <label for="department_definition_en">{{ __("custom.Department Definition en") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="department_definition_en" name="department_definition_en" autofocus class="form-control" value="{{ old('department_definition_en') }}" required>
+                        <input type="text" id="department_definition_en" name="department_definition_en" autofocus class="form-control" value="{{ old('department_definition_en') }}" >
                     </div>
 
                     {{-- department_definition --}}
                     <div class="form-group">
                         <label for="department_definition_ar">{{ __("custom.Department Definition ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="department_definition_ar" name="department_definition_ar" autofocus class="form-control" value="{{ old('department_definition_ar') }}" required>
+                        <input type="text" id="department_definition_ar" name="department_definition_ar" autofocus class="form-control" value="{{ old('department_definition_ar') }}" >
                     </div>
 
 
                     {{-- department_message --}}
                     <div class="form-group">
                         <label for="department_message_en">{{ __("custom.Department Message en") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="department_message_en" name="department_message_en" autofocus class="form-control" value="{{ old('department_message_en') }}" required>
+                        <input type="text" id="department_message_en" name="department_message_en" autofocus class="form-control" value="{{ old('department_message_en') }}" >
                     </div>
 
 
                     {{-- department_message --}}
                     <div class="form-group">
                         <label for="department_message_ar">{{ __("custom.Department Message ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="department_message_ar" name="department_message_ar" autofocus class="form-control" value="{{ old('department_message_ar') }}" required>
+                        <input type="text" id="department_message_ar" name="department_message_ar" autofocus class="form-control" value="{{ old('department_message_ar') }}" >
                     </div>
 
                     {{-- department_vision --}}
                     <div class="form-group">
                         <label for="department_vision_en">{{ __("custom.Department Vision en") }}<span class="text-danger">*</span></label>
-                        <input type="text" id="department_vision_en" name="department_vision_en" autofocus class="form-control" value="{{ old('department_vision_en') }}" required>
+                        <input type="text" id="department_vision_en" name="department_vision_en" autofocus class="form-control" value="{{ old('department_vision_en') }}" >
                     </div>
 
                     {{-- department_vision --}}
                     <div class="form-group">
                         <label for="department_vision_ar">{{ __("custom.Department Vision ar") }}<span class="text-danger">*</span></label>
-                        <input type="text" id="department_vision_ar" name="department_vision_ar" autofocus class="form-control" value="{{ old('department_vision_ar') }}" required>
+                        <input type="text" id="department_vision_ar" name="department_vision_ar" autofocus class="form-control" value="{{ old('department_vision_ar') }}" >
                     </div>
 
 
                     {{-- department_goals --}}
                     <div class="form-group">
                         <label for="department_goals_en">{{ __("custom.Department Goals en") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="department_goals_en" name="department_goals_en" autofocus class="form-control" value="{{ old('department_goals_en') }}" required>
+                        <input type="text" id="department_goals_en" name="department_goals_en" autofocus class="form-control" value="{{ old('department_goals_en') }}" >
                     </div>
 
                     {{-- department_goals --}}
                     <div class="form-group">
                         <label for="department_goals_ar">{{ __("custom.Department Goals ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="department_goals_ar" name="department_goals_ar" autofocus class="form-control" value="{{ old('department_goals_ar') }}" required>
+                        <input type="text" id="department_goals_ar" name="department_goals_ar" autofocus class="form-control" value="{{ old('department_goals_ar') }}" >
                     </div>
 
+                    {{-- department_goals --}}
+                    <div class="form-group">
+                        <label for="department_head_word_en">{{ __('custom.department_head_word_en') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="department_head_word_en" name="department_head_word_en" autofocus
+                            class="form-control" >
+                    </div>
+                    {{-- department_goals --}}
+                    <div class="form-group">
+                        <label for="department_head_word_ar">{{ __('custom.department_head_word_ar') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="department_head_word_ar" name="department_head_word_ar" autofocus
+                            class="form-control" >
+                    </div>
 
                     {{-- minimum percent --}}
                     <div class="form-group">
@@ -110,13 +124,13 @@
                     {{-- Maximum Percent --}}
                     <div class="form-group">
                         <label> {{ __("custom.Maximum Percent") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="maximum_percent" autofocus class="form-control" value="{{ old('maximum_percent') }}" required>
+                        <input type="text" name="maximum_percent" autofocus class="form-control" value="{{ old('maximum_percent') }}" >
                     </div>
 
                     {{-- price --}}
                     <div class="form-group">
                         <label> {{ __("custom.Price") }} <span class="text-danger">*</span></label>
-                        <input type="number" name="price" autofocus class="form-control" value="{{ old('price') }}" required>
+                        <input type="number" name="price" autofocus class="form-control" value="{{ old('price') }}" >
                     </div>
 
 

@@ -37,7 +37,7 @@
                                 <p><a href="tel:6484">6484</a></p>
                             </li>
                             <li>
-                                <p><a href="mailto://huc.edu@gmail.com">huc.edu@gmail.com</a></p>
+                                <p><a href="mailto://huc.edu@gmail.com">huc.edu@huc.edu.iq</a></p>
                                 <p></p>
                             </li>
                         </ul>

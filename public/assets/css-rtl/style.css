@@ -1319,21 +1319,21 @@ button, input[type=submit] {
       03. Slider css 
 ===========================*/
 .slider-area {
-  padding-top: 155px;
+  padding-top: 125px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .slider-area {
-    padding-top: 155px;
+    padding-top: 125px;
   }
 }
 @media (max-width: 767px) {
   .slider-area {
-    padding-top: 190px;
+    padding-top: 165px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .slider-area {
-    padding-top: 155px;
+    padding-top: 125px;
   }
 }
 
@@ -3797,7 +3797,7 @@ button, input[type=submit] {
 .event-menu .menu-items li {
   display: inline-block;
   width: 125px;
-  height: 45px;
+  /* height: 45px; */
   line-height: 43px;
   text-align: center;
   font-weight: 600;
@@ -3844,7 +3844,7 @@ button, input[type=submit] {
     width: auto;
     font-size: 14px;
     padding: 0 15px;
-    height: 40px;
+    /* height: 40px; */
     line-height: 38px;
   }
 }

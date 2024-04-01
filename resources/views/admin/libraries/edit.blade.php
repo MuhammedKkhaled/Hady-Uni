@@ -33,14 +33,14 @@
                     <div class="form-group">
                         <label>{{ __("custom.Library Name en") }}<span class="text-danger">*</span></label>
                         <input type="text" name="name_en" autofocus class="form-control"
-                               value="{{ old('name_en' , $library->name_en) }}" required>
+                               value="{{ old('name_en' , $library->name_en) }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Library Name ar") }} <span class="text-danger">*</span></label>
                         <input type="text" name="name_ar" autofocus class="form-control"
-                               value="{{ old('name_ar' , $library->name_ar) }}" required>
+                               value="{{ old('name_ar' , $library->name_ar) }}" >
                     </div>
 
                     {{--Specifications--}}
@@ -73,7 +73,7 @@
                     <div class="form-group">
                         <label for="published_at">File Published Date<span class="text-danger">*</span></label>
                         <input type="date" name="published_at" id="published_at" autofocus class="form-control"
-                               value="{{ $library->published_at }}" required>
+                               value="{{ $library->published_at }}" >
                     </div>
 
 

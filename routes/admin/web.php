@@ -3,12 +3,15 @@
 use App\Http\Controllers\Admin\AffiliateController;
 use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
+use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
+use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
+use App\Http\Controllers\Admin\StudnetController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
@@ -27,13 +30,13 @@ Route::middleware([
         Route::name('admin.')->prefix('admin')->group(function () {
 
 
-            Route::post('/login' , [LoginController::class , 'login'])->name('login');
+            Route::post('/login', [LoginController::class, 'login'])->name('login');
 
             //home
             Route::get('/home/top_statistics', 'HomeController@topStatistics')->name('home.top_statistics');
             Route::get('/home/movies_chart', 'HomeController@moviesChart')->name('home.movies_chart');
             Route::get('/', 'HomeController@index')->name('home');
-            Route::get('/logout', [HomeController::class , "logout"])->name('logout');
+            Route::get('/logout', [HomeController::class, "logout"])->name('logout');
 
             //role routes
             Route::get('/roles/data', 'RoleController@data')->name('roles.data');
@@ -122,6 +125,22 @@ Route::middleware([
             Route::get('/products/data', 'ProductController@data')->name('products.data');
             Route::delete('/products/bulk_delete', 'ProductController@bulkDelete')->name('products.bulk_delete');
             Route::resource('products', 'ProductController');
+
+            //students routes
+            Route::get('/students/data', 'StudnetController@data')->name('students.data');
+            Route::delete('/students/bulk_delete', 'StudnetController@bulkDelete')->name('students.bulk_delete');
+            Route::resource('students', StudnetController::class);
+
+            //links routes
+            Route::get('/links/data', 'LinkController@data')->name('links.data');
+            Route::delete('/links/bulk_delete', 'LinkController@bulkDelete')->name('links.bulk_delete');
+            Route::resource('links', LinkController::class);
+
+
+            //links routes
+            Route::get('/galleries/data', 'GalleryController@data')->name('galleries.data');
+            Route::delete('/galleries/bulk_delete', 'GalleryController@bulkDelete')->name('galleries.bulk_delete');
+            Route::resource('galleries', GalleryController::class);
 
 
             // //Contact Us routes

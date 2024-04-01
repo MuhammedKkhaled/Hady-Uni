@@ -23,9 +23,9 @@ class NewsRequest extends FormRequest
     {
         $rules = [
             'title_ar'       => 'required',
-            'title_en'       => 'required',
+            'title_en'       => 'nullable',
             'content_ar' => 'required',
-            'content_en' => 'required',
+            'content_en' => 'nullable',
             'image'      => 'required|mimes:jpeg,png,jpg,gif,svg,webp',
         ];
 

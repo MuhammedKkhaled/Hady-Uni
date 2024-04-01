@@ -96,6 +96,8 @@ return [
     "Department Goals"=>"Department Goals",
     "Department Goals en"=>"Department Goals in English",
     "Department Goals ar"=>"Department Goals in Arabic",
+    'department_head_word_en' =>'Head Teacher Department Word In English',
+    'department_head_word_ar' =>'Head Teacher Department Word In Arabic',
     "Minimum Percent"=>"Minimum Percent",
     "Maximum Percent"=>"Maximum Percent",
     "Price"=>"Price",
@@ -209,9 +211,44 @@ return [
     'Department Vision' => "Department Vision" ,
 
 
+    /// Studnet
+    'Student' => "Student",
+    'New Student' => "New Student",
+    'Student File' => "Student File",
+    'Graduate File' => "Graduate File",
+    'Year' => "Year",
+    'Student Department' => "Student Department",
+    'View ِAll Department' => "View ِAll Department",
+    'Create Department' => "Create Department Students",
+
+    /// links
+    'Program Description' => "Program Description",
+    'Study program'=>'Study program',
+    'course Study' => 'Course Study',
+    'university calender' => 'University Calender',
+    'Exam Table' => 'Exam Table',
+    'School Schedule' => 'School Schedule',
+    'Create links' => 'Create Links',
+    'links' => 'Department Links',
+    'view all links' => 'View All Links',
+    'Create Students' => 'Create Students',
+    'Links' => 'Links',
+    'New Link' => 'New Link',
+    'Galleries' => 'Gallery',
+    'New Gallery' => 'New Gallery',
+    'Create Gallery' => 'Create Gallery',
+    'Main Image' => 'Main Image',
+    'Image' => 'Image',
+    'view all Gallery' => 'view all Gallery',
+    'Important Links' => 'Important Links',
+    'Watch Department' => 'Watch Department',
+
+
     //////////// Front End
     'frontend'=>[
         'title' => 'Elhady Collegue',
+		
+        'sustainable' => 'sustainable',
         'text title' => "An independent educational institution established in Baghdad in 2015." ,
         'watch section' => "Watch Sections",
         'About' => "About Colleague",
@@ -288,6 +325,11 @@ The college has approximately 8,000 students, which reflects the growing demand 
         'department_message' => 'Department Message',
         'department_vision' => 'Department Vision',
         'department_goals' => 'Department Goals',
+        'Department Head Teacher Word' => 'Department Head Teacher Word',
+        'Department Students' => 'Department Students',
+        'year' => 'Year',
+        'pioneers' => 'pioneers',
+        'Graduated' => 'Graduated Students',
 
     ]
 

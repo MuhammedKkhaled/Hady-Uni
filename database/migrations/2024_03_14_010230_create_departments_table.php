@@ -25,6 +25,8 @@ return new class extends Migration
             $table->longText('department_vision_ar')->nullable();
             $table->longText('department_goals_en')->nullable();
             $table->longText('department_goals_ar')->nullable();
+            $table->longText('department_head_word_en')->nullable();
+            $table->longText('department_head_word_ar')->nullable();
             $table->string('minimum_percent')->nullable();
             $table->string('maximum_percent');
             $table->double('price');

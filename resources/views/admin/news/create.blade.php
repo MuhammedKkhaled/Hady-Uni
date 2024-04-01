@@ -18,13 +18,13 @@
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.News Title en") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="title_en" autofocus class="form-control" value="{{ old('title_en') }}" required>
+                        <input type="text" name="title_en" autofocus class="form-control" value="{{ old('title_en') }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.News Title ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar') }}" required>
+                        <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar') }}" >
                     </div>
 
 

@@ -23,10 +23,10 @@ class LibraryRequest extends FormRequest
     {
 
         $rules = [
-            'name_en'       => 'required|string',
+            'name_en'       => 'string',
             'name_ar'       => 'required|string',
             'category_id' => ['required' , 'min:1', 'exists:categories,id'],
-            'specialization_name_en' => ['required' , 'string'],
+            'specialization_name_en' => [ 'string'],
             'specialization_name_ar' => ['required' , 'string'],
             'published_at' => ['required' , 'date'],
             'file'      => 'required|mimes:jpeg,png,jpg,gif,pdf,docx',

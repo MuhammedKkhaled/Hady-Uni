@@ -31,7 +31,7 @@
 
                         <div class="single-courses-2 courses-list mt-30">
                             <div class="courses-image">
-                                <a href="#"><img src="{{ asset("assets/images/courses-list/courses-1.webp") }}"
+                                <a href="#"><img src="{{ asset('assets/images/logo.webp') }}"
                                                  width="320" height="300" alt="courses"></a>
                             </div>
                             <div class="courses-content">

@@ -20,14 +20,14 @@
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Journal Name en") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $journal->name_en) }}" required>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $journal->name_en) }}" >
                     </div>
 
 
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Journal Name ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $journal->name_ar) }}" required>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $journal->name_ar) }}" >
                     </div>
 
 
@@ -35,7 +35,7 @@
                     {{-- Date --}}
                     <div class="form-group">
                         <label for="published_at">{{ __("custom.File Published Date") }}<span class="text-danger">*</span></label>
-                        <input type="date" name="published_at" id="published_at" autofocus class="form-control" value="{{ $journal->published_at }}" required>
+                        <input type="date" name="published_at" id="published_at" autofocus class="form-control" value="{{ $journal->published_at }}" >
                     </div>
 
 

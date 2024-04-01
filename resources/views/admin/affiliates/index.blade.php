@@ -73,10 +73,6 @@
                                 </th>
                                 <th>{{ __("custom.Affiliate Name") }} </th>
                                 <th>{{ __("custom.Affiliate Certificate") }} </th>
-                                <th>{{ __("custom.General Specialization") }}</th>
-                                <th>{{ __("custom.special Specialization") }}</th>
-                                <th> {{ __("custom.Affiliate Title") }} </th>
-                                <th> {{ __("custom.Affiliate Notes") }} </th>
                                 <th> {{ __("custom.Department Name") }} </th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
@@ -113,11 +109,7 @@
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
                 {data: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
                 {data: 'certificate_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'certificate_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'general_specialization_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'general_specialization_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'special_specialization_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'special_specialization_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'title_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'title_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'notes_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'notes_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'department_id', name: 'department_id', searchable: false},
+                 {data: 'department_id', name: 'department_id', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

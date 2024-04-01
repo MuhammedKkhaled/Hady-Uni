@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
 use App\Http\Controllers\Front\LibraryController;
 use App\Http\Controllers\MessageController;
+use App\Models\Affiliate;
 use App\Models\Conference;
 use App\Models\Department;
 use App\Models\News;
@@ -25,19 +26,31 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('auth.login');
+   /*  return view('auth.login'); */
+   
+   $conferences = Conference::latest()->paginate(3);
+   $departments = Department::all();
+   $teachers = Teacher::all();
+   $affiliates = Affiliate::all();
+   $news = News::latest()->paginate(3);
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates'));
 });
 
+
+Route::get('/adminlogin', function () {
+    return view('auth.login');
+ });
 
 
 Route::prefix('main/')->group(function (){
 
     Route::get('' , function (){
-        $conferences = Conference::all();
-        $departments = Department::all();
-        $teachers = Teacher::all();
-        $news = News::latest()->paginate(3);
-        return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences'));
+   $conferences = Conference::latest()->paginate(3);
+   $departments = Department::all();
+   $teachers = Teacher::all();
+   $affiliates = Affiliate::all();
+   $news = News::latest()->paginate(3);
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates'));
     });
 
     Route::get("teacher-details/{type?}" ,function ($type = 0){

@@ -73,14 +73,9 @@
                                 </th>
                                 <th>{{ __("custom.Department Name") }}</th>
                                 <th>{{ __("custom.Specification Name") }} </th>
-                                <th> {{ __('custom.Department Definition') }}</th>
-                                <th>{{ __("custom.Department Message") }} </th>
-                                <th>{{ __("custom.Department Vision") }} </th>
-                                <th>{{ __("custom.Department Goals") }} </th>
                                 <th>{{ __("custom.Minimum Percent") }}</th>
                                 <th>{{ __("custom.Maximum Percent") }} </th>
                                 <th>{{ __("custom.Price") }}</th>
-                                <th>{{ __("custom.Department Image") }}</th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
@@ -110,14 +105,9 @@
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
                 {data: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
                 {data: 'specification_name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'specification_name_' + '{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
-                {data: 'department_definition_'+'{{ LaravelLocalization::getCurrentLocale() }}', name: 'department_definition_'+'{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
-                {data: 'department_message_'+'{{ LaravelLocalization::getCurrentLocale() }}', name: 'department_message_'+'{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
-                {data: 'department_vision_'+'{{ LaravelLocalization::getCurrentLocale() }}', name: 'department_vision_'+'{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
-                {data: 'department_goals_'+'{{ LaravelLocalization::getCurrentLocale() }}', name: 'department_goals_'+'{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
                 {data: 'minimum_percent', name: 'minimum_percent', searchable: false},
                 {data: 'maximum_percent', name: 'maximum_percent', searchable: false},
                 {data: 'price', name: 'price', searchable: false},
-                {data: 'image', name: 'image', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

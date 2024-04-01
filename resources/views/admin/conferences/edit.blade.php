@@ -18,46 +18,46 @@
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Conference Title en") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="title_en" autofocus class="form-control" value="{{ old('title_en' , $conference->title_en) }}" required>
+                        <input type="text" name="title_en" autofocus class="form-control" value="{{ old('title_en' , $conference->title_en) }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Conference Title ar") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar' , $conference->title_ar) }}" required>
+                        <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar' , $conference->title_ar) }}" >
                     </div>
 
 
                     {{-- Locations --}}
                     <div class="form-group">
                         <label>{{ __("custom.Conference Place en") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="location_en" autofocus class="form-control" value="{{ old('location_en' , $conference->location_en) }}" required>
+                        <input type="text" name="location_en" autofocus class="form-control" value="{{ old('location_en' , $conference->location_en) }}" >
                     </div>
 
 
                     {{-- Locations --}}
                     <div class="form-group">
                         <label>{{ __("custom.Conference Place ar") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="location_ar" autofocus class="form-control" value="{{ old('location_ar' , $conference->location_ar) }}" required>
+                        <input type="text" name="location_ar" autofocus class="form-control" value="{{ old('location_ar' , $conference->location_ar) }}" >
                     </div>
 
 
                     {{-- Date --}}
                     <div class="form-group">
                         <label>{{ __("custom.Conference Date") }}<span class="text-danger">*</span></label>
-                        <input type="date" name="date" autofocus class="form-control" required>
+                        <input type="date" name="date" autofocus class="form-control" >
                     </div>
 
                     {{-- Start Time --}}
                     <div class="form-group">
                         <label {{ __("custom.start Time") }}<span class="text-danger">*</span></label>
-                        <input type="time" name="start_time" autofocus class="form-control"  required>
+                        <input type="time" name="start_time" autofocus class="form-control"  >
                     </div>
 
                     {{-- Date --}}
                     <div class="form-group">
                         <label>{{ __("custom.Conference End Time") }}<span class="text-danger">*</span></label>
-                        <input type="time" name="end_time" autofocus class="form-control"  required>
+                        <input type="time" name="end_time" autofocus class="form-control"  >
                     </div>
 
                     {{--image--}}

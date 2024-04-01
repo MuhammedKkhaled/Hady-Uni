@@ -2,23 +2,6 @@
     <!--====== Header Start ======-->
 
 <header class="header-area">
-    <div class="header-top">
-        <div class="container">
-            <div class="header-top-wrapper d-flex flex-wrap justify-content-sm-between">
-                <div class="header-top-left mt-10">
-                    <ul class="header-meta">
-                        <li><a href="mailto://infoedumate@example.com" style="color: whitesmoke">huc.edu@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header-top-right mt-10">
-                    <div class="header-link">
-                        <a class="notice" href="#">{{ __("custom.frontend.notes") }}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="navigation" class="navigation navigation-landscape">
         <div class="container position-relative">
@@ -64,8 +47,17 @@
                                 </ul>
                             </li>
 
-                            <li><a href="{{ url('/main/structure') }}">{{ __("custom.frontend.structure") }}</a></li>
+                            <li>
+                                <a href="#">{{ __("custom.frontend.sustainable") }}</a>
+                                <ul class="nav-dropdown nav-submenu">
+                                    @foreach ($sections as $section)
+                                        <li><a
+                                                href="{{ route('main.departments.show', $section->id) }}">{{ $section->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
+                                        </li>
+                                    @endforeach
 
+                                </ul>
+                            </li>
                             <li>
                                 <a href="#">{{ __('custom.frontend.About') }}</a>
                                 <ul class="nav-dropdown nav-submenu">
@@ -106,6 +98,7 @@
                                                     <li><a href="#">@lang('custom.frontend.college_classification')</a></li>
                                                 </ul>
                                             </li>
+                                            
                                     </li>
 
                                 </ul>
@@ -135,6 +128,7 @@
                                 </ul>
                             </li>
 
+                            <li><a href="{{ url('/main/structure') }}">{{ __("custom.frontend.structure") }}</a></li>
 
                         </ul>
                         </li>

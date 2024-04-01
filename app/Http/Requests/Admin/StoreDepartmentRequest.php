@@ -24,16 +24,18 @@ class StoreDepartmentRequest extends FormRequest
         $rules = [
             'name_en'               => 'required',
             'name_ar'               => 'required',
-            'specification_name_en' => ['required' , 'exists:specifications,name_en'],
-            'specification_name_ar' => ['required' , 'exists:specifications,name_ar'],
-            'department_definition_en' => ['required' , 'string'],
-            'department_definition_ar' => ['required' , 'string'],
-            'department_message_en' => ['required' , 'string'],
-            'department_message_ar' => ['required' , 'string'],
-            'department_vision_en' => ['required' , 'string'],
-            'department_vision_ar' => ['required' , 'string'],
-            'department_goals_en' => ['required' , 'string'],
-            'department_goals_ar' => ['required' , 'string'],
+            'specification_name_en' => ['required', 'exists:specifications,name_en'],
+            'specification_name_ar' => ['required', 'exists:specifications,name_ar'],
+            'department_definition_en' => ['required', 'string'],
+            'department_definition_ar' => ['required', 'string'],
+            'department_message_en' => ['required', 'string'],
+            'department_message_ar' => ['required', 'string'],
+            'department_vision_en' => ['required', 'string'],
+            'department_vision_ar' => ['required', 'string'],
+            'department_goals_en' => ['required', 'string'],
+            'department_goals_ar' => ['required', 'string'],
+            'department_head_word_en' => ['nullable'],
+            'department_head_word_ar' => ['required', 'string'],
             'minimum_percent'    => ['nullable'],
             'maximum_percent'    => ['required'],
             'price'              => ['required', 'numeric'],
@@ -44,7 +46,7 @@ class StoreDepartmentRequest extends FormRequest
         if (in_array($this->method(), ['PUT', 'PATCH'])) {
             $rules['image'] = 'sometimes|nullable';
             $rules['file'] = 'sometimes|nullable';
-        }//end of if
+        } //end of if
 
         return $rules;
     }

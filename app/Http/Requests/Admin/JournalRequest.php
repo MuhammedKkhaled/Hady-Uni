@@ -22,7 +22,7 @@ class JournalRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'name_en'       => 'required|string',
+            'name_en'       => 'string',
             'name_ar'       => 'required|string',
             'published_at' => ['required' , 'date'],
             'file'      => 'required|mimes:jpeg,png,jpg,gif,pdf,docx',

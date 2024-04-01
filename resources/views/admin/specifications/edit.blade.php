@@ -19,14 +19,14 @@
                     {{--name--}}
                     <div class="form-group">
                         <label>{{__("custom.Specifications Name en")}} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en', $specification->name_en) }}" required>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en', $specification->name_en) }}" >
                         <input type="hidden" value="{{ $specification }}">
                     </div>
 
                     {{--name--}}
                     <div class="form-group">
                         <label>{{__("custom.Specifications Name ar")}} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar', $specification->name_ar) }}" required>
+                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar', $specification->name_ar) }}" >
                         <input type="hidden" value="{{ $specification }}">
                     </div>
 

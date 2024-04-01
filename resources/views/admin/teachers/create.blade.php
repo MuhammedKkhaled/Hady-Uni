@@ -17,27 +17,27 @@
                     {{-- Name --}}
                     <div class="form-group">
                         <label for="name_en">{{ __("custom.Teacher Name en") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="name_en" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" required>
+                        <input type="text" id="name_en" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" >
                     </div>
 
 
                     {{-- Name --}}
                     <div class="form-group">
                         <label for="name_ar">{{ __("custom.Teacher Name ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" id="name_ar" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" required>
+                        <input type="text" id="name_ar" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" >
                     </div>
 
 
                     {{-- Phone --}}
                     <div class="form-group">
                         <label for="phone">{{ __("custom.Teacher Phone") }}<span class="text-danger">*</span></label>
-                        <input type="text" id="phone" name="phone" placeholder=" Ex: +964 72 050 0205" autofocus class="form-control" value="{{ old('phone') }}" required>
+                        <input type="text" id="phone" name="phone" placeholder=" Ex: +964 72 050 0205" autofocus class="form-control" value="{{ old('phone') }}" >
                     </div>
 
                     {{-- Email --}}
                     <div class="form-group">
                         <label for="email">{{ __("custom.Teacher email") }} <span class="text-danger">*</span></label>
-                        <input type="email" name="email"  id="email" autofocus class="form-control"  value="{{ old('email') }}" required>
+                        <input type="email" name="email"  id="email" autofocus class="form-control"  value="{{ old('email') }}" >
                     </div>
 
                     {{-- Facebook --}}
@@ -61,25 +61,25 @@
                     {{-- specialization --}}
                     <div class="form-group">
                         <label for="specialization_en">{{ __("custom.Specialization en") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="specialization_en" id="specialization_en" autofocus class="form-control"  value="{{ old('specialization_en') }}" required>
+                        <input type="text" name="specialization_en" id="specialization_en" autofocus class="form-control"  value="{{ old('specialization_en') }}" >
                     </div>
       {{-- specialization --}}
                         <div class="form-group">
                             <label for="specialization_ar">{{ __("custom.Specialization ar") }} <span class="text-danger">*</span></label>
-                            <input type="text" name="specialization_ar" id="specialization_ar" autofocus class="form-control"  value="{{ old('specialization_ar') }}" required>
+                            <input type="text" name="specialization_ar" id="specialization_ar" autofocus class="form-control"  value="{{ old('specialization_ar') }}" >
                         </div>
 
                     {{-- brief --}}
                     <div class="form-group">
                         <label for="brief_en"> {{ __("custom.Brief en") }} <span class="text-danger">*</span></label>
-                        <textarea id="brief_en" name="brief_en" autofocus class="form-control" value="{{ old('brief_en') }}" required
+                        <textarea id="brief_en" name="brief_en" autofocus class="form-control" value="{{ old('brief_en') }}" 
                           cols="30" rows="10"></textarea>
                     </div>
 
                     {{-- brief --}}
                     <div class="form-group">
                         <label for="brief_ar"> {{ __("custom.Brief ar") }} <span class="text-danger">*</span></label>
-                        <textarea id="brief_ar" name="brief_ar" autofocus class="form-control" value="{{ old('brief_ar') }}" required
+                        <textarea id="brief_ar" name="brief_ar" autofocus class="form-control" value="{{ old('brief_ar') }}" 
                           cols="30" rows="10"></textarea>
                     </div>
 

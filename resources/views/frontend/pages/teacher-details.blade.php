@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-
+<!--
             <div class="teacher-details-tab">
                 <ul class="nav nav-justified">
                     <li class="nav-item"><a data-bs-toggle="tab" href="#educational">المؤهلات العلميه</a></li>
@@ -193,7 +193,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        --></div>
     </section>
 
     <!--====== Teacher Details Ends ======-->
