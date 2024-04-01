@@ -105,8 +105,87 @@
                             class="form-control"
                             value="{{ old('department_head_word_ar', $department->department_head_word_ar) }}" required>
                     </div>
-
-
+                    {{-- Scholarships --}}
+                    <div class="form-group">
+                        <label for="scholarships_en">{{ __('custom.Scholarships') }} الانجليزي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="scholarships_en" name="scholarships_en" autofocus
+                            class="form-control"
+                            value="{{ old('scholarships_en', $department->scholarships_en) }}"  >
+                    </div>
+                    {{-- Scholarships --}}
+                    <div class="form-group">
+                        <label for="scholarships_ar">{{ __('custom.Scholarships') }} العربي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="scholarships_ar" name="scholarships_ar" autofocus
+                            class="form-control" 
+                            value="{{ old('scholarships_ar', $department->scholarships_ar) }}" >
+                    </div>
+                    {{-- Installments --}}
+                    <div class="form-group">
+                        <label for="installments_en">{{ __('custom.Installments') }} الانجليزي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="installments_en" name="installments_en" autofocus
+                            class="form-control"
+                            value="{{ old('installments_en', $department->installments_en) }}" >
+                    </div>
+                    {{-- Installments --}}
+                    <div class="form-group">
+                        <label for="installments_ar">{{ __('custom.Installments') }} العربي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="installments_ar" name="installments_ar" autofocus
+                            class="form-control" 
+                            value="{{ old('installments_ar', $department->installments_ar) }}">
+                    </div>
+                    {{-- Graduation --}}
+                    <div class="form-group">
+                        <label for="graduation_en">{{ __('custom.Graduation requirements') }} الانجليزي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="graduation_en" name="graduation_en" autofocus
+                            class="form-control" 
+                            value="{{ old('graduation_en', $department->graduation_en) }}">
+                    </div>
+                    {{-- Graduation --}}
+                    <div class="form-group">
+                        <label for="graduation_ar">{{ __('custom.Graduation requirements') }} العربي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="graduation_ar" name="graduation_ar" autofocus
+                            class="form-control"
+                            value="{{ old('graduation_ar', $department->graduation_ar) }}" >
+                    </div>
+                    {{-- Admission --}}
+                    <div class="form-group">
+                        <label for="admission_en">{{ __('custom.Admission') }} الانجليزي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="admission_en" name="admission_en" autofocus
+                            class="form-control" 
+                            value="{{ old('admission_en', $department->admission_en) }}">
+                    </div>
+                    {{-- Admission --}}
+                    <div class="form-group">
+                        <label for="admission_ar">{{ __('custom.Admission') }} العربي<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="admission_ar" name="admission_ar" autofocus
+                            class="form-control" 
+                            value="{{ old('admission_ar', $department->admission_ar) }}">
+                    </div>
+                    
+                    {{-- Employer opinion forms --}}
+                    <div class="form-group">
+                        <label for="employe_link">{{ __('custom.Employer opinion forms') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="employe_link" name="employe_link" autofocus
+                            class="form-control" 
+                            value="{{ old('employe_link', $department->employe_link) }}">
+                    </div>
+                    {{-- Graduate opinion forms --}}
+                    <div class="form-group">
+                        <label for="graduate_link">{{ __('custom.Graduate opinion forms') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="graduate_link" name="graduate_link" autofocus
+                            class="form-control"
+                            value="{{ old('graduate_link', $department->graduate_link) }}" >
+                    </div>
                     {{-- Specifications --}}
                     <div class="form-group">
                         <label for="specification_name_en"> {{ __('custom.Specification Name en') }} </label>

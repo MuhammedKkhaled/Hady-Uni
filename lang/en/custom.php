@@ -106,6 +106,10 @@ return [
     "Forms"=>"Opinion forms",
     "Employer opinion forms"=>"Employer opinion forms",
     "Graduate opinion forms"=>"Graduate opinion forms",
+    "Admission"=>"Admission Requirements",
+    "Graduation requirements"=>"Graduation requirements",
+    "Installments"=>"Installments",
+    "Scholarships"=>"Scholarships",
 
     ///// Conferences
     "New Conferences"=>"New Conferences",

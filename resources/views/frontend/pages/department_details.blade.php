@@ -172,7 +172,50 @@
         </div>
     </section>
 
-    <!--====== Contact Ends ======--> <!--====== Gallery Start ======-->
+    <!--====== Contact Ends ======-->
+    <section class="contact-area">
+        <div class="container">
+    <div class="teacher-details-tab">
+        <ul class="nav nav-justified">
+            <li class="nav-item"><a data-bs-toggle="tab" href="#Admission">{{ __('custom.Admission') }}</a></li>
+            <li class="nav-item"><a data-bs-toggle="tab" href="#Graduation ">{{ __('custom.Graduation requirements') }}</a></li>
+            <li class="nav-item"><a  data-bs-toggle="tab" href="#Installments">{{ __('custom.Installments') }}</a></li>
+            <li class="nav-item"><a class="active" data-bs-toggle="tab" href="#Scholarships">{{ __('custom.Scholarships') }}</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="Scholarships">
+                <div class="row">
+                    <p style="text-align: end;">
+                        {{ $department->{'scholarships_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                    </p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Installments">
+                <div class="row">
+                    <p style="text-align: end;">
+                        {{ $department->{'installments_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                    </p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Graduation">
+                <div class="row">
+                    <p style="text-align: end;">
+                        {{ $department->{'graduation_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                    </p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="Admission">
+                <div class="row">
+                    <p style="text-align: end;">
+                        {{ $department->{'admission_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    <!--====== Gallery Start ======-->
 
     <div class="gallery-page">
         <div class="container">
@@ -202,6 +245,9 @@
     </div>
 
     <!--====== Gallery Ends ======-->
+    
+        
+        
     <!--====== Blog Details Start ======-->
 
 
@@ -337,15 +383,15 @@
                                 <h3 class="title">{{ __('custom.Forms') }}</h3>
                                 <br>
                                 <div class="row">
-                                    @if ($link)
+                                    @if ($department)
                                         <div class="sidebar-btn col-lg-6">
                                             <a class="main-btn col-lg-12"
-                                                href="{{ asset($link->program_desc_file) ?? '#' }}"
+                                                href="{{ $department->employe_link }}"
                                                 target="_blank">{{ __('custom.Employer opinion forms') }}</a>
                                         </div>
                                         <div class="sidebar-btn col-lg-6">
                                             <a class="main-btn col-lg-12"
-                                            href="{{ asset($link->program_desc_file) ?? '#' }}"
+                                            href="{{ $department->graduate_link}}"
                                                 target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
                                         </div>
                                     @else

@@ -105,6 +105,11 @@ return [
     "Forms"=>"استمارات الاراء",
     "Employer opinion forms"=>"استمارات راي اصحاب العمل",
     "Graduate opinion forms"=>"استمارات راي الخريجين",
+    "Admission"=>"متطلبات القبول",
+    "Graduation requirements"=>"متطلبات التخرج",
+    "Installments"=>"الاقساط",
+    "Scholarships"=>"المنح الدراسية",
+
     ///// Conferences
     "New Conferences"=>"مؤتمرات جديدة",
     "Conference Title"=>"عنوان المؤتمر",
