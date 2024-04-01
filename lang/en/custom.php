@@ -103,6 +103,9 @@ return [
     "Price"=>"Price",
     "Department Image"=>"Department Image",
     "Department File"=>"Department File",
+    "Forms"=>"Opinion forms",
+    "Employer opinion forms"=>"Employer opinion forms",
+    "Graduate opinion forms"=>"Graduate opinion forms",
 
     ///// Conferences
     "New Conferences"=>"New Conferences",

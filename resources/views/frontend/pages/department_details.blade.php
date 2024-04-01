@@ -327,5 +327,40 @@
     </section>
 
     <!--====== Contact Ends ======-->
+        <!--====== Contact Start ======-->
+
+        <section class="contact-area">
+            <div class="container">
+                <div class="contact-form" style="padding-top: 20px;">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="contact-title text-center">
+                                <h3 class="title">{{ __('custom.Forms') }}</h3>
+                                <br>
+                                <div class="row">
+                                    @if ($link)
+                                        <div class="sidebar-btn col-lg-6">
+                                            <a class="main-btn col-lg-12"
+                                                href="{{ asset($link->program_desc_file) ?? '#' }}"
+                                                target="_blank">{{ __('custom.Employer opinion forms') }}</a>
+                                        </div>
+                                        <div class="sidebar-btn col-lg-6">
+                                            <a class="main-btn col-lg-12"
+                                            href="{{ asset($link->program_desc_file) ?? '#' }}"
+                                                target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
+                                        </div>
+                                    @else
+                                        <p>No links found for this department.</p>
+                                    @endif
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!--====== Contact Ends ======-->
 
 @endsection

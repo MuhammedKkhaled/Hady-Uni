@@ -102,7 +102,9 @@ return [
     "Price"=>"السعر",
     "Department Image"=>"صورة القسم",
     "Department File"=>"ملف القسم",
-
+    "Forms"=>"استمارات الاراء",
+    "Employer opinion forms"=>"استمارات راي اصحاب العمل",
+    "Graduate opinion forms"=>"استمارات راي الخريجين",
     ///// Conferences
     "New Conferences"=>"مؤتمرات جديدة",
     "Conference Title"=>"عنوان المؤتمر",
