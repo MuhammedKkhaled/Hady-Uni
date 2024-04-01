@@ -181,20 +181,19 @@
                 <h3 class="title">{{ __('custom.Watch Department') }}</h3>
 
             </div>
-            @if ($gallery)
+            @if ($galleries)
                 <div class="row grid-masonry">
-                    @foreach (['image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6', 'image_7', 'image_8'] as $imagePath)
-                        @if ($gallery->$imagePath)
+                    @foreach ($galleries as $gallery)
+
                             <div class="col-lg-4 col-sm-6 grid-item">
                                 <div class="single-gallery mt-30">
                                     <a class="image-popup"
-                                        href="{{ asset(Storage::url('uploads/galleries/' . $gallery->$imagePath)) }}">
-                                        <img src="{{ asset(Storage::url('uploads/galleries/' . $gallery->$imagePath)) }}"
+                                        href="{{ asset(Storage::url('uploads/galleries/' . $gallery->image_1)) }}">
+                                        <img src="{{ asset(Storage::url('uploads/galleries/' . $gallery->image_1)) }}"
                                             alt="gallery">
                                     </a>
                                 </div>
                             </div>
-                        @endif
                     @endforeach
                 </div>
             @endif
@@ -353,14 +352,14 @@
                                         <p>No links found for this department.</p>
                                     @endif
                                 </div>
-    
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    
+
         <!--====== Contact Ends ======-->
 
 @endsection

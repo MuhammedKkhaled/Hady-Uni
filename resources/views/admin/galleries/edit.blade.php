@@ -36,49 +36,6 @@
                         <input type="file" name="image_1" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_1}}" data-show-remove="false" @endif  data-height="355"/>
                     </div>
 
-                    {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_2" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_2}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_3" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_3}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_4" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_4}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_5" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_5}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_6" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_6}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_7" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_7}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">JPG,PNG*</span></label>
-                        <input type="file" name="image_8" id="input-file-now" class="dropify" @if(isset($gallery)) data-default-file="{{$gallery->image_8}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
-
-
                 </div>
                 <div class="card-footer">
                     <div class="row">

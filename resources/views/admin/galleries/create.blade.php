@@ -33,41 +33,6 @@
                         <label class="text-capitalize">{{ __("custom.Main Image") }} <span class="text-danger">PNG , JPg*</span></label>
                         <input type="file" name="image_1" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_2" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_3" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_4" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_5" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_6" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_7" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
-  {{--file--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_8" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
 
                 </div>
                 <div class="card-footer">

@@ -73,30 +73,9 @@ class GalleryController extends Controller
         $requestData = $request->validated();
 
         if ($request->image_1) {
-
             $request->image_1->store('public/uploads/galleries/');
-            $request->image_2->store('public/uploads/galleries/');
-            $request->image_3->store('public/uploads/galleries/');
-            $request->image_4->store('public/uploads/galleries/');
-            $request->image_5->store('public/uploads/galleries/');
-            $request->image_6->store('public/uploads/galleries/');
-            $request->image_7->store('public/uploads/galleries/');
-            $request->image_8->store('public/uploads/galleries/');
-
-
             $requestData['image_1'] = $request->image_1->hashName();
 
-            $requestData['image_2'] = $request->image_2->hashName();
-
-            $requestData['image_3'] = $request->image_3->hashName();
-
-            $requestData['image_4'] = $request->image_4->hashName();
-
-            $requestData['image_5'] = $request->image_5->hashName();
-
-            $requestData['image_6'] = $request->image_6->hashName();
-            $requestData['image_7'] = $request->image_7->hashName();
-            $requestData['image_8'] = $request->image_8->hashName();
         }
 
         Gallery::create($requestData);
@@ -121,39 +100,11 @@ class GalleryController extends Controller
         $requestData = $request->validated();
 
         if ($request->image_1) {
-
             Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_1);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_2);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_3);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_4);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_5);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_6);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_7);
-            Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_8);
 
             $request->image_1->store('public/uploads/galleries/');
-            $request->image_2->store('public/uploads/galleries/');
-            $request->image_3->store('public/uploads/galleries/');
-            $request->image_4->store('public/uploads/galleries/');
-            $request->image_5->store('public/uploads/galleries/');
-            $request->image_6->store('public/uploads/galleries/');
-            $request->image_7->store('public/uploads/galleries/');
-            $request->image_8->store('public/uploads/galleries/');
-
 
             $requestData['image_1'] = $request->image_1->hashName();
-
-            $requestData['image_2'] = $request->image_2->hashName();
-
-            $requestData['image_3'] = $request->image_3->hashName();
-
-            $requestData['image_4'] = $request->image_4->hashName();
-
-            $requestData['image_5'] = $request->image_5->hashName();
-
-            $requestData['image_6'] = $request->image_6->hashName();
-            $requestData['image_7'] = $request->image_7->hashName();
-            $requestData['image_8'] = $request->image_8->hashName();
         }
 
         $gallery->update($requestData);
@@ -186,18 +137,8 @@ class GalleryController extends Controller
 
     private function delete(Gallery $gallery)
     {
-
         Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_1);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_2);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_3);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_4);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_5);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_6);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_7);
-        Storage::disk('local')->delete('public/uploads/galleries/' . $gallery->image_8);
-
         $gallery->delete();
-
     }// end of delete
 
 }//end of controller

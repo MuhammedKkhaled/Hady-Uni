@@ -20,8 +20,8 @@ class DepartmentController extends Controller
 
         $link = Link::where('department_id', $id)->first();
 
-        $gallery = Gallery::where('department_id', $id)->first();
+        $galleries = Gallery::where('department_id', $id)->get();
 
-        return view("frontend.pages.department_details", compact('department', 'department_students', 'link', 'gallery'));
+        return view("frontend.pages.department_details", compact('department', 'department_students', 'link', 'galleries'));
     }
 }

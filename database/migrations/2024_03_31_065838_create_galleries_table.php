@@ -15,13 +15,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('department_id')->constrained('departments')->cascadeOnDelete();
             $table->text('image_1');
-            $table->text('image_2');
-            $table->text('image_3');
-            $table->text('image_4');
-            $table->text('image_5');
-            $table->text('image_6');
-            $table->text('image_7');
-            $table->text('image_8');
             $table->timestamps();
         });
     }

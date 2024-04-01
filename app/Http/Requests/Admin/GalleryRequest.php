@@ -24,24 +24,10 @@ class GalleryRequest extends FormRequest
         $rules = [
             'department_id'                     => ['numeric' , 'required'],
             'image_1'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_2'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_3'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_4'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_5'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_6'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_7'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
-            'image_8'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
         ];
 
         if (in_array($this->method(), ['PUT', 'PATCH'])) {
             $rules['image_1'] = 'sometimes|nullable';
-            $rules['image_2'] = 'sometimes|nullable';
-            $rules['image_3'] = 'sometimes|nullable';
-            $rules['image_4'] = 'sometimes|nullable';
-            $rules['image_5'] = 'sometimes|nullable';
-            $rules['image_6'] = 'sometimes|nullable';
-            $rules['image_7'] = 'sometimes|nullable';
-            $rules['image_8'] = 'sometimes|nullable';
         }//end of if
 
         return $rules;
