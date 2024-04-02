@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;
 
 class Ads extends Model
@@ -38,4 +39,8 @@ class Ads extends Model
 
     }// end of scopeWhenSearch
 
+    public function department():BelongsTo
+    {
+        return  $this->belongsTo(Department::class , 'department_id');
+    }
 }

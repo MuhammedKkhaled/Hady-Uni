@@ -9,15 +9,10 @@ use Illuminate\Support\Facades\Storage;
 
 class Category extends Model
 {
+
     use HasFactory;
-    protected $fillable = ['name'];
 
-    protected $appends = ['image_path'];
-
-    public function getImagePathAttribute(): string
-    {
-     return Storage::url('uploads/categories/' . $this->image);
-    }
+    protected $fillable = ['name_en' ,'name_ar'];
 
     public function scopeWhenSearch($query, $search)
     {

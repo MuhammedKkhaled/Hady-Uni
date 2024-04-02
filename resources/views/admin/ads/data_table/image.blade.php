@@ -1,1 +1,2 @@
-<img src="{{\Illuminate\Support\Facades\Storage::url("uploads/ads/". $new->image) }}" style="width: 100px;" alt="">
+@php use Illuminate\Support\Facades\Storage; @endphp
+<img src="{{asset( Storage::url("uploads/ads/". $ad->image) ) }}" style="width: 100px;" alt="">

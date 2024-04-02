@@ -34,6 +34,8 @@ return [
             'students'      => 'c,r,u,d',
             'links'         => 'c,r,u,d',
             'galleries'     => 'c,r,u,d',
+            'accreditation'     => 'c,r,u,d',
+            'ads'     => 'c,r,u,d',
         ],
         'admin' => [],
         'user' => [],

@@ -84,4 +84,14 @@ class Department extends Model
     {
         return $this->hasOne(Gallery::class);
     }
+
+    public function accreditations():HasMany
+    {
+        return $this->hasMany(Accreditation::class);
+    }
+
+    public function ads():HasMany
+    {
+        return $this->hasMany(Ads::class);
+    }
 }
