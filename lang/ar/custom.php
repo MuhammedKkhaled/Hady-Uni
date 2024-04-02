@@ -30,9 +30,9 @@ return [
     "conferences" =>"المؤتمرات",
     "View Conferences"=>"عرض المؤتمرات",
     "Create Conferences" =>"إنشاء مؤتمر",
-    "teachers" =>"المدرسين",
-    "View Teachers" =>"عرض المدرسين",
-    "Create Teacher"=>"إنشاء مدرس",
+    "teachers" =>"العمادة",
+    "View Teachers" =>"عرض العمادة",
+    "Create Teacher"=>"إنشاء العمادة",
     "properties"=>"الخصائص",
     "View Teacher Properties" =>'عرض خصائص المدرس',
     "Create Properties" =>"إنشاء خصائص",
@@ -244,6 +244,17 @@ return [
     'view all Gallery' => 'رؤية جميع المعارض للاقسام',
     'Important Links' => 'اهم الروابط',
     'Watch Department' => 'شاهد القسم',
+    //accreditation
+    'accreditation' => 'معرض الاعتماد',
+    'New accreditation' => 'اضافة اعتماد جديد',
+    'Create accreditation' => 'انشاء اعتماد',
+    'Main Image' => 'الصورة الاساسسية',
+    'Image' => 'صورة',
+    'view all accreditation' => 'رؤية جميع الاعتمادات للاقسام',
+    'Important Links' => 'اهم الروابط',
+    'Watch Department' => 'شاهد القسم',
+    "accreditation Name en"=>"اسم الاعتماد بالإنجليزية",
+    "accreditation Name ar"=>"اسم الاعتماد بالعربية",
 
 
 

@@ -74,9 +74,6 @@
                                 <th>{{ __("custom.Conference Title") }} </th>
                                 <th>{{ __("custom.Conference Place") }} </th>
                                 <th>{{ __("custom.Conference Date") }} </th>
-                                <th>{{ __("custom.start Time") }}</th>
-                                <th>{{ __("custom.End Time") }}</th>
-                                <th>{{ __("custom.Conference Poster") }}</th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
@@ -112,9 +109,6 @@
                 {data: 'title_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'title_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
                 {data: 'location_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'location_' + '{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
                 {data: 'date', name: 'date', searchable: false},
-                {data: 'start_time', name: 'start_time', searchable: false},
-                {data: 'end_time', name: 'end_time', searchable: false},
-                {data: 'image', name: 'image', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

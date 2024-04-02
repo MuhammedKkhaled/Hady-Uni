@@ -1,5 +1,5 @@
 @php use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
-@php $name = 'teachers' @endphp
+@php $name = 'accreditation' @endphp
 @extends('layouts.admin.app')
 @section('content')
 
@@ -7,7 +7,7 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{ __("custom.teachers") }}
+                    {{ __("custom.Galleries") }}
                 </h3>
             </div>
             <div class="card-toolbar">
@@ -29,7 +29,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            {{ __("custom.New Teacher") }}
+                            {{ __("custom.New accreditation") }}
                         </a>
                     @endif
 
@@ -70,10 +70,7 @@
                                             <span class="label-text"></span>
                                         </label>
                                     </div>
-                                </th>
-                                <th>{{ __("custom.Teacher Name") }} </th>
-                                <th>{{ __("custom.Teacher email") }}</th>
-                                <th> {{ __("custom.Teacher Type") }} </th>
+                                <th> {{ __("custom.Department Name") }} </th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
@@ -97,18 +94,6 @@
 
     <script>
 
-        var types = {
-            0: 'العميد',
-            1: 'السيرة الذاتية لمعاون العميد للشؤون المالية و الادارية',
-            2: 'السيرة الذاتية لمعاون العميد للشؤون العلمية',
-            3: 'الشعبة الادارية',
-            4: 'شعبة الحسابات',
-            5: 'القانونية',
-            6: 'التسجيل',
-            7: 'التقويم',
-            8: 'المعلومات الالكترونية'
-        };
-
 
         let rolesTable = $('#{{$name}}-table').DataTable({
             dom: "tiplr",
@@ -119,17 +104,7 @@
             },
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
-                {data: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'name'},
-                {data: 'email', name: 'email', searchable: false},
-                {
-                    data: 'type',
-                    name: 'type',
-                    searchable: false,
-                    render: function (data, type, full, meta) {
-                        // Assuming 'types' is passed from the controller containing the type labels
-                        return types[data];
-                    }
-                },
+                {data: 'department_id', name: 'department_id'},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

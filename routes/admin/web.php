@@ -4,11 +4,13 @@ use App\Http\Controllers\Admin\AffiliateController;
 use App\Http\Controllers\Admin\ConferenceController;
 use App\Http\Controllers\Admin\DepartmentController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\AccreditationController;
 use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\AdsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\StudnetController;
@@ -141,7 +143,16 @@ Route::middleware([
             Route::get('/galleries/data', 'GalleryController@data')->name('galleries.data');
             Route::delete('/galleries/bulk_delete', 'GalleryController@bulkDelete')->name('galleries.bulk_delete');
             Route::resource('galleries', GalleryController::class);
+            
+            //links routes
+            Route::get('/accreditation/data', 'AccreditationController@data')->name('accreditation.data');
+            Route::delete('/accreditation/bulk_delete', 'AccreditationController@bulkDelete')->name('accreditation.bulk_delete');
+            Route::resource('accreditation', AccreditationController::class);
 
+            //links routes
+            Route::get('/ads/data', 'AdsController@data')->name('ads.data');
+            Route::delete('/ads/bulk_delete', 'AdsController@bulkDelete')->name('ads.bulk_delete');
+            Route::resource('ads', AdsController::class);
 
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');

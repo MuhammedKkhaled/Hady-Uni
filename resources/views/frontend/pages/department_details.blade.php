@@ -407,5 +407,39 @@
         </section>
 
         <!--====== Contact Ends ======-->
+            <!--====== Contact Start ======-->
+
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-form" style="padding-top: 20px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="contact-title text-center">
+                            <h3 class="title">{{ __('custom.accreditation') }}</h3>
+                            <br>
+                            
+            @if ($galleries)
+            <div class="row">
+                @foreach ($accreditations as $accreditation)
+
+                <div class="sidebar-btn col-lg-3">
+                    <a class="main-btn col-lg-12"
+                        href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
+                        target="_blank">
+                        {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
+                </div>
+                @endforeach
+            </div>
+        @endif
+                            <br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Contact Ends ======-->
 
 @endsection

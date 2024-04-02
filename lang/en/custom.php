@@ -249,6 +249,13 @@ return [
     'view all Gallery' => 'view all Gallery',
     'Important Links' => 'Important Links',
     'Watch Department' => 'Watch Department',
+    "accreditation Name en"=>"accreditation Name In English",
+    "accreditation Name ar"=>"accreditation Name In Arabic",   
+     //accreditation
+    'accreditation' => 'accreditation',
+    'New accreditation' =>  'New accreditation' ,
+    'Create accreditation' => 'Create accreditation',
+    'view all accreditation' =>  'view all accreditation',
 
 
     //////////// Front End
