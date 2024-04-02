@@ -248,22 +248,23 @@ return [
     'accreditation' => 'معرض الاعتماد',
     'New accreditation' => 'اضافة اعتماد جديد',
     'Create accreditation' => 'انشاء اعتماد',
-    'Main Image' => 'الصورة الاساسسية',
-    'Image' => 'صورة',
     'view all accreditation' => 'رؤية جميع الاعتمادات للاقسام',
-    'Important Links' => 'اهم الروابط',
-    'Watch Department' => 'شاهد القسم',
     "accreditation Name en"=>"اسم الاعتماد بالإنجليزية",
     "accreditation Name ar"=>"اسم الاعتماد بالعربية",
 
 
 
 
+    ///--Ads
+    'Ads' => 'إعلانات القسم',
+    'view all ads' => 'عرض جميع إعلانات الأقسام',
+    'Create ads' => 'إنشاء إعلان قسم',
+
 
     //////////// Front End
     'frontend'=>[
         'title' => 'كلية الهادي',
-		
+
         'sustainable' => 'التنمية المستدامة',
         'text title' => "مؤسسة تعليمية مستقلة تم تأسيسها في بغداد عام ٢٠١٥.",
         'watch section' => "شاهد الأقسام",

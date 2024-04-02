@@ -250,18 +250,21 @@ return [
     'Important Links' => 'Important Links',
     'Watch Department' => 'Watch Department',
     "accreditation Name en"=>"accreditation Name In English",
-    "accreditation Name ar"=>"accreditation Name In Arabic",   
+    "accreditation Name ar"=>"accreditation Name In Arabic",
      //accreditation
     'accreditation' => 'accreditation',
     'New accreditation' =>  'New accreditation' ,
     'Create accreditation' => 'Create accreditation',
     'view all accreditation' =>  'view all accreditation',
 
-
+    ///--Ads
+    'Ads'=>'Department Ads',
+    'view all ads'=>'View all departments ads',
+    'Create ads'=>'Create Department Ad',
     //////////// Front End
     'frontend'=>[
         'title' => 'Elhady Collegue',
-		
+
         'sustainable' => 'sustainable',
         'text title' => "An independent educational institution established in Baghdad in 2015." ,
         'watch section' => "Watch Sections",
