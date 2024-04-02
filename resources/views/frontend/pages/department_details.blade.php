@@ -407,6 +407,54 @@
         </section>
 
         <!--====== Contact Ends ======-->
+            <!--====== Blog Start ======-->
+    @if ( count($ads) > 0 )
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-form" style="padding-top: 20px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="contact-title text-center">
+                            <h3 class="title">{{ __('custom.Ads') }}</h3>
+                            <br>
+                            <div class="row">
+                                @foreach($ads as $ad)
+                        <div class="col-lg-4">
+                            <div class="single-blog mt-30">
+                                <div class="blog-image">
+                                    <a href="#">
+                                        <img src="{{ Storage::url("uploads/ads/". $ad->image) }}" width="270"
+                                             height="150" alt="blogsss">
+                                    </a>
+                                </div>
+                                <div class="blog-content" style="text-align:end">
+                                    <ul class="meta">
+                                        <li><a href="#">{{ $ad->created_at->format('D M Y')  }}</a></li>
+                                        <!--<li><a href="#">By: {{ $ad->author }}</a></li>-->
+                                    </ul>
+                                    <h4 class="blog-title"><a href="#"
+                                                              style="text-align:end">
+                                        {{ $ad->{'title_'.LaravelLocalization::getCurrentLocale()} }}
+
+                                        </a>
+                                    </h4>
+                                    
+                                    <p>{{ $ad->{'content_'.LaravelLocalization::getCurrentLocale()} }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+
+    <!--====== Blog Ends ======-->
             <!--====== Contact Start ======-->
 
     <section class="contact-area">

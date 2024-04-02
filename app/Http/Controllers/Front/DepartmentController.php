@@ -24,8 +24,8 @@ class DepartmentController extends Controller
 
         $galleries = Gallery::where('department_id', $id)->get();
         $accreditations = Accreditation::where('department_id', $id)->get();
-        /*$ads = Ads::where('department_id', $id)->get();*/
+        $ads = Ads::where('department_id', $id)->get();
 
-        return view("frontend.pages.department_details", compact('department', 'department_students', 'link', 'galleries','accreditations'));
+        return view("frontend.pages.department_details", compact('department', 'department_students', 'link', 'galleries','accreditations','ads'));
     }
 }

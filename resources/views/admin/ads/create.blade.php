@@ -14,17 +14,16 @@
                     @csrf
                     @method('post')
                     @include('admin.partials._errors')
-                </div>
-                <label for="department_id"> {{ __("custom.Department Name") }}</label>
-                <select id="department_id" name="department_id" class="form-control">
-                    <option value="0" disabled selected>-- Select Department --</option>
-                    @foreach($depratments  as $department)
-                    <option value="{{ $department->id }}">
-                        {{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}
-                    </option>
-                    @endforeach
-                </select>
-            </div>
+                
+                    <label for="department_id"> {{ __("custom.Department Name") }}</label>
+                    <select id="department_id" name="department_id" class="form-control">
+                        <option value="0" disabled selected>-- Select Department --</option>
+                        @foreach($depratments  as $department)
+                        <option value="{{ $department->id }}">
+                            {{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}
+                        </option>
+                        @endforeach
+                    </select>
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.News Title en") }} <span class="text-danger">*</span></label>
@@ -36,7 +35,6 @@
                         <label>{{ __("custom.News Title ar") }} <span class="text-danger">*</span></label>
                         <input type="text" name="title_ar" autofocus class="form-control" value="{{ old('title_ar') }}" >
                     </div>
-
 
                     {{--description--}}
                     <div class="form-group">
@@ -55,8 +53,6 @@
                         <label class="text-capitalize">{{ __("custom.News Image") }}</label>
                         <input type="file" name="image" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
-
-
                 </div>
 
                 <div class="card-footer">
