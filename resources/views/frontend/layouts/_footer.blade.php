@@ -49,10 +49,10 @@
             <div class="footer-widget-wrapper">
                 <div class="footer-social">
                     <ul class="social">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.facebook.com/HUC.edu/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/huc.edu.iq"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.tiktok.com/@huc.edu"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a href="https://www.youtube.com/@user-pj2ns3gy1v/videos"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
                 <div class="footer-menu">

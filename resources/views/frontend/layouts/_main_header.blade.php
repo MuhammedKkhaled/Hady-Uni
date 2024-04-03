@@ -107,7 +107,7 @@
                             <li>
                                 <a href="#">@lang('custom.frontend.faculty_overview')</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="{{ asset('assets/files/strategy1.pdf') }}" target="_blank">@lang('custom.frontend.strategic_plan') 2022 - 2026</a></li>
+                                    <li><a href="{{ asset('assets/files/strategy1.pdf') }}" target="_blank">@lang('custom.frontend.strategic_plan1') 2022 - 2026</a></li>
                                     <li><a href="{{ asset('assets/files/strategy2.pdf') }}" target="_blank">@lang('custom.frontend.self_evaluation_report') 2019 - 2020</a></li>
                                 </ul>
                             </li>

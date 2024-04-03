@@ -12,6 +12,7 @@ return [
     /// Sidebar
     "Dashboard"=> 'Dashboard',
     "My Profile"=>"My Profile",
+    'strategic_plan1' => "strategic plan",
     "CUSTOM" =>"Custom",
     "admins"=>"Admins",
     "View Admin "=>"View Admin ",
@@ -332,12 +333,13 @@ return [
         'Affiliate' => 'Affiliate',
         'Affiliate title' => 'Elhady Collegue | Affiliates',
         "This Department Hasn't Affiliates Yet" => "This Department Hasn't Affiliates Yet",
-        "The Word" => "
-        Al Hadi University College is one of the leading educational institutions in the region, as it reflects the university’s vision of providing distinguished higher education and developing society. The college consists of several departments, and is distinguished by the diversity of its educational programs, covering a wide range of medical and scientific specializations
-Al Hadi University College was established in 2015, and since then, the college has rapidly grown and developed into one of the premier destinations for higher education in the region. The college includes multiple departments, most of which specialize in medical fields, namely the Department of Dentistry, Department of Anesthesia Techniques, Department of Radiology Techniques, Department of Medical Device Techniques, Department of Nursing, Department of Medical Laboratories, Department of Medical Physics, Department of Law, Department of Interior Design, which provides broad opportunities. For students to choose the specialization that suits them
-Thanks to its distinguished educational structure based on the latest technologies and equipment, students at Al Hadi College have a unique opportunity to acquire the knowledge and practical skills necessary for their success in their chosen fields. The various student activities and cultural and social events organized by the college reflect its vibrant spirit and enhance communication and interaction among students
-The college has approximately 8,000 students, which reflects the growing demand for higher education and the quality that the college provides. The college is witnessing remarkable success in graduating students, with three courses having been graduated so far, which reflects the quality of education and interest in developing students to become pioneers and innovators in their society and fields of work.
-        ",
+        "The Word" => "Al-Hadi University College is one of the leading educational institutions in the region, reflecting the university's vision in providing distinguished higher education and community development. The college consists of several departments and is characterized by the diversity of its educational programs, which cover a wide range of medical and scientific specialties.
+
+        Established in 2015, Al-Hadi University College has rapidly grown and developed since then to become one of the primary destinations for higher education in the region. The college encompasses multiple departments, most of which specialize in medical fields such as the Department of Dentistry, Anesthesia Technology Department, Radiology Technology Department, Medical Devices Technology Department, Nursing Department, Medical Laboratories Department, Medical Physics Department, as well as scientific departments demanded in the job market, such as the Law Department, Interior Design Department, in addition to five departments under development, providing ample opportunities for students to choose the specialization that suits them.
+        
+        Thanks to its distinguished educational structure, relying on the latest technologies and equipment, Al-Hadi College students have a unique opportunity to acquire the knowledge and practical skills necessary for success in their chosen fields. With experienced teaching and technical staff, and the latest technologies, equipment, and supplies, the college reflects its vitality through diverse student activities, cultural events, and social activities that promote communication and interaction between students and the community.
+        
+        The college has approximately 8000 male and female students, reflecting the increasing demand for higher education and the quality provided by the college. The college has witnessed significant success in graduating students, with three graduating classes so far, reflecting the quality of education and the commitment to developing students to become leaders and innovators in their communities and workplaces.",
         'definition' => 'Definition',
         'department_message' => 'Department Message',
         'department_vision' => 'Department Vision',
