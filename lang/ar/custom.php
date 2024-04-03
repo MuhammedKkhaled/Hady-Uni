@@ -36,7 +36,7 @@ return [
     "properties"=>"الخصائص",
     "View Teacher Properties" =>'عرض خصائص المدرس',
     "Create Properties" =>"إنشاء خصائص",
-    "libraries"=>"المكتبات",
+    "libraries"=>"المستودع الرقمي",
     "View All Libraries" =>"عرض جميع المكتبات",
     "Create Library"=>"إنشاء مكتبة",
     'journals' => 'المجلات',
@@ -251,8 +251,10 @@ return [
     'view all accreditation' => 'رؤية جميع الاعتمادات للاقسام',
     "accreditation Name en"=>"اسم الاعتماد بالإنجليزية",
     "accreditation Name ar"=>"اسم الاعتماد بالعربية",
-
-
+    "First axis"=>"المحور الاول",
+    "Secondary axis"=>"المحور الثاني",
+    "Third axis"=>"المحور الثالث",
+    "Fourth axis"=>"المحور الرابع",
 
 
     ///--Ads
@@ -264,7 +266,11 @@ return [
     //////////// Front End
     'frontend'=>[
         'title' => 'كلية الهادي',
-
+        'The Iraqi Academic'=>"المجلة الأكاديمية العلمية العراقية",
+        "Private Higher"=>"دائرة التعليم الجامعي الأهلي",
+        "Ministry of Education"=>"وزارة التربية",
+        "Ministry of Higher"=>"وزارة التعليم العالي والبحث العلمي",
+        "General Secretariat"=>"الأمانة العامة لمجلس الوزراء",
         'sustainable' => 'التنمية المستدامة',
         'text title' => "مؤسسة تعليمية مستقلة تم تأسيسها في بغداد عام ٢٠١٥.",
         'watch section' => "شاهد الأقسام",
@@ -287,7 +293,7 @@ return [
         'Latest Conferences' => "أحدث المؤتمرات",
         'conference text' => "نعرض أحدث المؤتمرات التي عقدت في جامعة الهادي ونسلط الضوء على أفضل مساهمات طلابنا.",
         'contact Us' => "اتصل بنا",
-        'complement' => "إكمال",
+        'complement' => "الكتابة هنا",
         'Send' => "إرسال",
         'websites' => "المواقع ذات الصلة",
         'location' => "٦٠ شارع، الدورة، بغداد، العراق، كلية الهادي الجامعة",

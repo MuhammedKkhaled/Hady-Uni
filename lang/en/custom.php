@@ -38,7 +38,7 @@ return [
     "properties"=>"Properties",
     "View Teacher Properties" =>'View Teacher Properties',
     "Create Properties" =>"Create Properties",
-    "libraries"=>"Libraries",
+    "libraries"=>"Digital Repository",
     "View All Libraries" =>"View All Libraries",
     "Create Library"=>"Create Library",
     'journals' => 'Journals',
@@ -257,6 +257,10 @@ return [
     'New accreditation' =>  'New accreditation' ,
     'Create accreditation' => 'Create accreditation',
     'view all accreditation' =>  'view all accreditation',
+    "First axis"=>"First axis",
+    "Secondary axis"=>"Secondary axis",
+    "Third axis"=>"Third axis",
+    "Fourth axis"=>"Fourth axis",
 
     ///--Ads
     'Ads'=>'Department Ads',
@@ -265,6 +269,11 @@ return [
     //////////// Front End
     'frontend'=>[
         'title' => 'Elhady Collegue',
+        'The Iraqi Academic'=>'The Iraqi Academic Scientific Journal',
+        "Private Higher"=>"Private Higher Education Department",
+        "Ministry of Education"=>"Ministry of Education",
+        "Ministry of Higher"=>"Ministry of Higher Education and Scientific Research",
+        "General Secretariat"=>"General Secretariat of the Council of Ministers",
 
         'sustainable' => 'sustainable',
         'text title' => "An independent educational institution established in Baghdad in 2015." ,
@@ -288,7 +297,7 @@ return [
         'Latest Conferences' => "Latest Conferences",
         'conference text' => "We showcase the latest conferences held at Al-Hadi University and highlight our best student contributions.",
         'contact Us' => "Contact Us",
-        'complement' => "complement",
+        'complement' => "Writing here",
         'Send' => "Send",
         'websites' => " Related Websites ",
         'location' => "60th Street, Al-Doura, Baghdad, Iraq Al-Hadi University College",

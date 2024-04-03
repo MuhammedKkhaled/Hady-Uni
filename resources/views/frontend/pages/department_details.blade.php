@@ -324,18 +324,18 @@
                             <br>
                             <div class="row">
                                 @if ($link)
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->program_desc_file)) ?? '' }}"
                                             target="_blank">{{ __('custom.Program Description') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->study_plan_file)) }}"
                                             target="_blank">{{ __('custom.Study program') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->course_study_file)) }}"
                                             target="_blank">{{ __('custom.course Study') }}</a>
                                     </div>
@@ -346,18 +346,18 @@
                             <br>
                             <div class="row">
                                 @if ($link)
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->university_calender_file)) }}"
                                             target="_blank">{{ __('custom.university calender') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->exam_table_file)) }}"
                                             target="_blank">{{ __('custom.Exam Table') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->school_schedule_file)) }}"
                                             target="_blank">{{ __('custom.School Schedule') }}</a>
                                     </div>
@@ -384,13 +384,13 @@
                                 <br>
                                 <div class="row">
                                     @if ($department)
-                                        <div class="sidebar-btn col-lg-6">
-                                            <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                                 href="{{ $department->employe_link }}"
                                                 target="_blank">{{ __('custom.Employer opinion forms') }}</a>
                                         </div>
-                                        <div class="sidebar-btn col-lg-6">
-                                            <a class="main-btn col-lg-12"
+                                        <div class="sidebar-btn col-lg-4  col-sm-12">
+                                            <a class="main-btn col-lg-12 w-100"
                                             href="{{ $department->graduate_link}}"
                                                 target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
                                         </div>
@@ -466,7 +466,7 @@
                             <h3 class="title">{{ __('custom.accreditation') }}</h3>
                             <br>
                             
-            @if ($galleries)
+            @if ($accreditations)
             <div class="row">
                 @foreach ($accreditations as $accreditation)
 

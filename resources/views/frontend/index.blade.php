@@ -151,7 +151,7 @@
                         <h2 class="campus-title">{{ __("custom.frontend.six") }}</h2>
                         <span class="line"></span>
                         <p>{{ __("custom.frontend.we are here") }}</p>
-                        <a class="play video-popup" href="https://youtu.be/pXyEvMIyFHY"><i class="fas fa-play"></i>
+                        <a class="play" href="https://www.youtube.com/@user-pj2ns3gy1v/videos"target="_blank"><i class="fas fa-play"></i>
                             <span> {{ __("custom.frontend.watch now") }}</span></a>
                     </div>
                 </div>
