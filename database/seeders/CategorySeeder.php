@@ -17,25 +17,9 @@ class CategorySeeder extends Seeder
             'name_en' => 'College library',
             'name_ar' => 'مكتبة الكلية'
         ]);
-
-        Category::create([
-            'name_en' => 'Electronic library',
-            'name_ar' => 'المكتبة الالكترونية'
-        ]);
-
-        Category::create([
-            'name_en' => 'Virtual library',
-            'name_ar' => 'المكتبة الافتراضية'
-        ]);
-
         Category::create([
             'name_en' => 'Applied research platform',
             'name_ar' => 'منصة البحوث التطبيقية'
-        ]);
-
-        Category::create([
-            'name_en' => 'Iraqi scientific academic stores',
-            'name_ar' => 'المحلات الاكاديمية العلمية العراقي'
         ]);
     }
 }

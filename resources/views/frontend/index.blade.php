@@ -134,9 +134,64 @@
 
     <!--====== About Ends ======-->
 
+    
+<br>
+<br>
+    <!--====== Specialty Start ======-->
 
+    <div class="specialty-area" style="padding-top:0px">
+        <div class="container">
+            <div class="row no-gutters wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="col-sm-4">
+                    <a href="https://port.huc.edu.iq/index" target="_blank"class="w-100">
+                    <div class="single-specialty mt-30">
+                        <div class="specialty-box">
+                            <div class="box-icon">
+                                <img src="{{ asset("assets/images/icon/icon-1.webp") }}" width="70" height="70" alt="icon">
+                            </div>
+                            <div class="box-content">
+                                <p>نظام الإدارة</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://port.huc.edu.iq/index" target="_blank"class="w-100">
+                    <div class="single-specialty active mt-30">
+                        <div class="specialty-box">
+                            <div class="box-icon">
+                                <img src="{{ asset("assets/images/icon/icon-2.webp") }}" width="70" height="70" alt="icon">
+                            </div>
+                            <div class="box-content">
+                                <p>نظام تسجيل الطلاب</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-sm-4">
+                    <a href="https://hadiuc.bis.edu.iq/" target="_blank"class="w-100">
+                        <div class="single-specialty mt-30">
+                            <div class="specialty-box">
+                                <div class="box-icon">
+                                    <img src="{{ asset("assets/images/icon/icon-3.webp") }}" width="70" height="70" alt="icon">
+                                </div>
+                                <div class="box-content">
+                                    <p>مسار بولونيا</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+    <!--====== Specialty Ends ======-->
     <!--====== Campus Visit Start ======-->
-
+{{-- 
     <section class="campus-visit-area" style="padding-left: 30px;padding-bottom: 30px; ">
         <div class="container">
             <div class="campus-visit-wrapper">
@@ -157,10 +212,48 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section class="blog-area-2">
+        <h4 class="trending-title">{{ __("custom.frontend.six") }}</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2">
+                        <h2 class="title">{{ __("custom.frontend.six") }}</h2>
+                        <span class="line"></span>
+                        <br>
+                        <a class="play" href="https://www.youtube.com/@user-pj2ns3gy1v/videos"target="_blank"><i class="fas fa-play"></i>
+                            <span> {{ __("custom.frontend.watch now") }}</span></a>
+                            <br>
+                    </div>
+                </div>
+            </div>
+                <div class="row-wrapper blog-active">
+                    <div class="col-lg-4">
+                        <iframe height="315" class="w-100" src="https://www.youtube.com/embed/pXyEvMIyFHY?si=WfyPfXujHgF-lo7K"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen=""></iframe>
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe height="315" class="w-100"src="https://www.youtube.com/embed/SEdmZhtK2JI?si=TI0g2S4V1g8O24Um"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen=""></iframe>
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe   height="315"class="w-100" src="https://www.youtube.com/embed/BaGRQPClr6E?si=sJvZ4OoPrlE3Yb-I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen=""></iframe>
+                    </div>
+                </div>
+        </div>
     </section>
-
+    <br>
+    <br>
     <!--====== Campus Visit Ends ======-->
-
     <!--====== Blog Start ======-->
     @if ( count($news) > 0 )
         

@@ -14,11 +14,25 @@
                             <li>
                                 <a href="#">{{ __("custom.libraries") }}</a>
                                 <ul class="nav-dropdown nav-submenu">
+                                    
+
                                     @foreach ($categories as $category)
                                         <li><a
                                                 href="{{ route('main.libraries.show', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
                                     @endforeach
+                                    <li><a
+                                        href="https://drive.google.com/drive/u/1/folders/1IYA9a1dOFvlmIEr_tEk6a5VH1fSgJsqt?usp=sharing&pli=1" target="_blank">
+                                        {{ __("custom.frontend.Electronic library") }}</a>
+                                    </li>
+                                    <li><a
+                                        href="https://www.ivsl.org/ivsl?func=feedback&language=ar" target="_blank">
+                                        {{ __("custom.frontend.Virtual library") }}</a>
+                                    </li>
+                                    <li><a
+                                            href="https://www.iasj.net/" target="_blank">
+                                            {{ __("custom.frontend.The Iraqi Academic") }}</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
