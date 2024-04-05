@@ -283,6 +283,7 @@ return [
         'we are here' => "نحن هنا",
         'six' => "تعرف علينا أكثر",
         'Latest News' => "أحدث الأخبار",
+        "Show More"=>"شاهد اكثر",
         'teacher' => "الاساتذة",
         'sections' => "الأقسام",
         'graduated' => "الخريجين",

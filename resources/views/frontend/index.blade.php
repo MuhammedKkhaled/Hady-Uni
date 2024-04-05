@@ -225,7 +225,7 @@
                         <br>
                         <a class="play" href="https://www.youtube.com/@user-pj2ns3gy1v/videos"target="_blank"><i class="fas fa-play"></i>
                             <span> {{ __("custom.frontend.watch now") }}</span></a>
-                            <br>
+                            
                     </div>
                 </div>
             </div>
@@ -264,7 +264,9 @@
                 <div class="col-lg-12">
                     <div class="section-title-2">
                         <h2 class="title">{{ __("custom.frontend.Latest News") }}</h2>
-                        <span class="line"></span>
+                        <span class="line"></span><br>
+                        <a class="play" href="{{ url('/main/news') }}">
+                            <span> {{ __("custom.frontend.Show More") }}</span></a>
                     </div>
                 </div>
             </div>
@@ -452,7 +454,9 @@
                         <div class="section-title-2">
                             <h2 class="title">{{ __("custom.frontend.Latest Conferences") }} </h2>
                             <span class="line"></span>
-                            <p> {{ __("custom.frontend.conference text") }}</p>
+                            <p> {{ __("custom.frontend.conference text") }}</p><br>
+                            <a class="play" href="{{ url('/main/conferences') }}">
+                                <span> {{ __("custom.frontend.Show More") }}</span></a>
                         </div>
                     </div>
                 </div>

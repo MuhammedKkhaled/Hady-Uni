@@ -288,6 +288,7 @@ return [
         'we are here' => "We Are Here",
         'six' => "Know Us More ",
         'Latest News' => "Latest News ",
+        "Show More" => "Show More",
         'teacher' => "Teachers",
         'sections' => "Sections",
         'graduated' => "graduated",

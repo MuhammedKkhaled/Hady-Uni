@@ -3,6 +3,7 @@
 use App\Http\Controllers\Front\AffiliateController;
 use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
+use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\LibraryController;
 use App\Http\Controllers\MessageController;
 use App\Models\Affiliate;
@@ -45,7 +46,7 @@ Route::get('/adminlogin', function () {
 Route::prefix('main/')->group(function (){
 
     Route::get('' , function (){
-   $conferences = Conference::latest()->paginate(3);
+   $conferences = Conference::latest()->paginate(4);
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
@@ -106,6 +107,8 @@ Route::prefix('main/')->group(function (){
     Route::get('libraries/{id}' ,[ LibraryController::class , 'show'])->name('main.libraries.show');
 
     Route::get('journal', [JournalController::class , 'show']);
+    Route::get('news', [NewsController::class , 'show']);
+    Route::get('conferences', [NewsController::class , 'showconferences']);
 
     Route::get('strategies', [JournalController::class , 'showStrategies']);
 

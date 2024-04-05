@@ -64,9 +64,10 @@
                             <li>
                                 <a href="#">{{ __("custom.frontend.sustainable") }}</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    @foreach ($sections as $section)
+                                   
+                                    @foreach ($categories as $category)
                                         <li><a
-                                                href="{{ route('main.departments.show', $section->id) }}">{{ $section->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
+                                                href="{{ route('main.libraries.show', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
                                     @endforeach
 
