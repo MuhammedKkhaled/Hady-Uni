@@ -265,6 +265,18 @@ return [
     'Ads'=>'Department Ads',
     'view all ads'=>'View all departments ads',
     'Create ads'=>'Create Department Ad',
+    'Awards and achievements'=>'Awards and achievements',
+    
+    ///--Characters
+    'Characters' => 'The best characters',
+    'view all Characters' => 'View all the best characters',
+    'Create Characters' => 'Create the best characters',
+    'Awards and achievements'=>'Awards and achievements',
+    'view all awards' => 'view all Awards',
+    'Create awards' => 'Create Awards' ,
+
+
+
     //////////// Front End
     'frontend'=>[
         'title' => 'Elhady Collegue',

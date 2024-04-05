@@ -263,6 +263,15 @@ return [
     'Create ads' => 'إنشاء إعلان قسم',
 
 
+    ///--Characters
+    'Characters' => 'الشخصيات المهمه',
+    'view all Characters' => 'عرض الشخصيات المهمه',
+    'Create Characters' => 'إنشاء شخصيه مهمه',
+    'Awards and achievements'=>"الجوائز و الانجازات",
+    'view all awards' => 'عرض كل الانجازات',
+    'Create awards' => 'إنشاء انجاز',
+
+
     //////////// Front End
     'frontend'=>[
         'title' => 'كلية الهادي',

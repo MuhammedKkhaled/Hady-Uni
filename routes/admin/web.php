@@ -9,7 +9,9 @@ use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
@@ -153,6 +155,15 @@ Route::middleware([
             Route::get('/ads/data', 'AdsController@data')->name('ads.data');
             Route::delete('/ads/bulk_delete', 'AdsController@bulkDelete')->name('ads.bulk_delete');
             Route::resource('ads', AdsController::class);
+            
+            //links routes
+            Route::get('/characters/data', 'CharactersController@data')->name('characters.data');
+            Route::delete('/characters/bulk_delete', 'CharactersController@bulkDelete')->name('characters.bulk_delete');
+            Route::resource('characters', CharactersController::class);
+            //links routes
+            Route::get('/awards/data', 'awardsController@data')->name('awards.data');
+            Route::delete('/awards/bulk_delete', 'awardsController@bulkDelete')->name('awards.bulk_delete');
+            Route::resource('awards', awardsController::class);
 
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');

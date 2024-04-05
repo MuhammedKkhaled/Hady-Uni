@@ -8,7 +8,9 @@ use App\Http\Controllers\Front\LibraryController;
 use App\Http\Controllers\MessageController;
 use App\Models\Affiliate;
 use App\Models\Conference;
+use App\Models\Characters;
 use App\Models\Department;
+use App\Models\awards;
 use App\Models\News;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Auth;
@@ -29,12 +31,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
    /*  return view('auth.login'); */
    
-   $conferences = Conference::latest()->paginate(3);
+   $conferences = Conference::latest()->paginate(4);
+   $characters = Characters::latest()->paginate(3);
+   $awards = awards::latest()->paginate(4);
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards'));
 });
 
 
@@ -47,11 +51,13 @@ Route::prefix('main/')->group(function (){
 
     Route::get('' , function (){
    $conferences = Conference::latest()->paginate(4);
+   $characters = Characters::latest()->paginate(3);
+   $awards = awards::latest()->paginate(4);
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards'));
     });
 
     Route::get("teacher-details/{type?}" ,function ($type = 0){

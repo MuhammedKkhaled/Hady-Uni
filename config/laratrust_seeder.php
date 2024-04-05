@@ -36,6 +36,8 @@ return [
             'galleries'     => 'c,r,u,d',
             'accreditation'     => 'c,r,u,d',
             'ads'     => 'c,r,u,d',
+            'characters'     => 'c,r,u,d',
+            'awards'     => 'c,r,u,d',
         ],
         'admin' => [],
         'user' => [],

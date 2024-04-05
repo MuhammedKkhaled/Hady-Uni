@@ -492,8 +492,80 @@
     </section>
 
     <!--====== Event Ends ======-->
+    <!--====== Blog Start ======-->
+    @if ( count($characters) > 0 )
+        
+    <section class="blog-area-2">
+        <h4 class="trending-title"> {{ __("custom.Characters") }}</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2">
+                        <h2 class="title">{{ __("custom.Characters") }}</h2>
+                        <span class="line"></span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-wrapper">
+                <div class="row-wrapper blog-active">
+                    @foreach($characters as $character)
+                    <div class="col-md-4 col-sm-6 teachers-col">
+                        <div class="single-teacher mt-80 text-center">
+                            <div class="teacher-social">
+                            </div>
+                            <div class="teacher-image">
+                                <a href="">
+                                    <img src="{{ Storage::url("uploads/characters/". $character->image) }}" width="266" height="359" alt="teacher">
+                                </a>
+                            </div>
+                            <div class="teacher-content">
+                                <h4 class="name"><a href="">{{$character->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
+                                <span class="designation">{{$character->{'content_'.LaravelLocalization::getCurrentLocale()} }}
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
 
+    <!--====== Blog Ends ======-->
 
+    <!--====== Shop Start ======-->
+    
+    @if ( count($awards) > 0 )
+    <section class="shop-area">
+        <div class="shop-wrapper">
+            
+            <div class="contact-title text-center">
+                <h3 class="title">{{ __('custom.Awards and achievements') }}</h3>
 
+            </div>
+            <div class="row">
+                
+                @foreach($awards as $award)
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-library text-center mt-30">
+                        <div class="library-image">
+                            <a href="#"><img src={{ Storage::url("uploads/awards/". $award->image) }} width="276" height="286" alt="Product"></a>
+                        </div>
+                        <div class="library-content">
+                            <h4 class="library-title"><a href="product-details.html">{{$award->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
+                            <span class="price">{{$award->{'content_'.LaravelLocalization::getCurrentLocale()} }}</span>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+@endif
+
+<!--====== Shop Ends ======-->
 
 @endsection()
