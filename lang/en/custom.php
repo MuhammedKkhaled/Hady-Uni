@@ -265,13 +265,12 @@ return [
     'Ads'=>'Department Ads',
     'view all ads'=>'View all departments ads',
     'Create ads'=>'Create Department Ad',
-    'Awards and achievements'=>'Awards and achievements',
     
     ///--Characters
-    'Characters' => 'The best characters',
+    'Characters' => 'Icons and Celebrities',
     'view all Characters' => 'View all the best characters',
     'Create Characters' => 'Create the best characters',
-    'Awards and achievements'=>'Awards and achievements',
+    'Awards and achievements'=>'Awards and Honors',
     'view all awards' => 'view all Awards',
     'Create awards' => 'Create Awards' ,
 
@@ -351,9 +350,12 @@ return [
         'dept_affiliates' => 'The Department Affiliates',
         'costs' => 'Department Costs',
         'Head Teacher Word' => 'Head Teacher Word',
+        'Bologna'=>"Bologna Information System",
+        "Student Registration System"=>'Student Registration System',
         'messages' => 'The Message Send Successfully',
         'Affiliates' => 'Affiliates',
         'Affiliate' => 'Affiliate',
+        'Management System'=>'Management System',
         'Affiliate title' => 'Elhady Collegue | Affiliates',
         "This Department Hasn't Affiliates Yet" => "This Department Hasn't Affiliates Yet",
         "The Word" => "Al-Hadi University College is one of the leading educational institutions in the region, reflecting the university's vision in providing distinguished higher education and community development. The college consists of several departments and is characterized by the diversity of its educational programs, which cover a wide range of medical and scientific specialties.

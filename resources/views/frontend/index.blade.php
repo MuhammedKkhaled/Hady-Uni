@@ -150,7 +150,7 @@
                                 <img src="{{ asset("assets/images/icon/icon-1.webp") }}" width="70" height="70" alt="icon">
                             </div>
                             <div class="box-content">
-                                <p>نظام الإدارة</p>
+                                <p>{{ __("custom.frontend.Student Registration System") }}</p>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,7 @@
                                 <img src="{{ asset("assets/images/icon/icon-2.webp") }}" width="70" height="70" alt="icon">
                             </div>
                             <div class="box-content">
-                                <p>نظام تسجيل الطلاب</p>
+                                <p>{{ __("custom.frontend.Student Registration System") }}</p>
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                                     <img src="{{ asset("assets/images/icon/icon-3.webp") }}" width="70" height="70" alt="icon">
                                 </div>
                                 <div class="box-content">
-                                    <p>مسار بولونيا</p>
+                                    <p>{{ __("custom.frontend.Bologna") }}</p>
                                 </div>
                             </div>
                         </div>

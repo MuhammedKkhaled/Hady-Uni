@@ -264,10 +264,12 @@ return [
 
 
     ///--Characters
-    'Characters' => 'الشخصيات المهمه',
+    'Characters' => 'الرموز والمشاهير',
     'view all Characters' => 'عرض الشخصيات المهمه',
     'Create Characters' => 'إنشاء شخصيه مهمه',
-    'Awards and achievements'=>"الجوائز و الانجازات",
+
+
+    'Awards and achievements'=>"الجوائز والاوسمة",
     'view all awards' => 'عرض كل الانجازات',
     'Create awards' => 'إنشاء انجاز',
 
@@ -341,6 +343,9 @@ return [
         'min percent' => 'معدل القبول المسائي ',
         'max percent' => 'معدل القبول الصباحي ',
         'more info' => 'معلومات اكثر',
+        'Bologna'=>"مسار بولونيا",
+        'Management System'=>'نظام الإدارة',
+        "Student Registration System"=>"نظام تسجيل الطلاب",
         'Section Information' => 'معلومات القسم',
         'department_details_title' => 'كلية الهادي | معلومات القسم ',
         'structure' => 'الهيكل التنظيمي والاداري ',
@@ -367,7 +372,7 @@ return [
         'Department Head Teacher Word' => 'كلمة السيد رئيس القسم',
         'Department Students' => 'طلاب القسم',
         'year' => 'عام',
-        'pioneers' => 'الطلاب المتميززين',
+        'pioneers' => 'الطلاب المتميزين',
         'Graduated' => 'الخريجيين',
 
 

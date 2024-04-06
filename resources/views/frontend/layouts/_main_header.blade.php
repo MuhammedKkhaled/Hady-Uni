@@ -36,7 +36,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ url('/main/journal') }}">{{ __("custom.frontend.journals") }}</a>
+                                <a href="https://ojs.huc.edu.iq/">{{ __("custom.frontend.journals") }}</a>
                             </li>
 
 

@@ -48,7 +48,6 @@
                                 }
                             }
                         @endphp
-
                         @php $name = 'admins' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -92,8 +91,6 @@
                                 </div>
                             </li>
                         @endif
-
-
                         @php $name = 'roles' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -137,7 +134,6 @@
                                 </div>
                             </li>
                         @endif
-
                         @php $name = 'news' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -181,7 +177,6 @@
                                 </div>
                             </li>
                         @endif
-
                         @php $name = 'specifications' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -268,7 +263,6 @@
                                 </div>
                             </li>
                         @endif
-
                         @php $name = 'conferences' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -312,8 +306,6 @@
                                 </div>
                             </li>
                         @endif
-
-
                         @php $name = 'teachers' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -357,8 +349,6 @@
                                 </div>
                             </li>
                         @endif
-
-
                         @php $name = 'properties' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -402,8 +392,6 @@
                                 </div>
                             </li>
                         @endif
-
-
                         @php $name = 'libraries' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -447,8 +435,6 @@
                                 </div>
                             </li>
                         @endif
-
-
                         @php $name = 'journals' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -492,8 +478,6 @@
                                 </div>
                             </li>
                         @endif
-
-
                         @php $name = 'affiliates' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -537,7 +521,6 @@
                                 </div>
                             </li>
                         @endif
-
                         @php $name = 'messages' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -571,7 +554,6 @@
                                 </div>
                             </li>
                         @endif
-
                         @php $name = 'students' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -615,7 +597,6 @@
                                 </div>
                             </li>
                         @endif
-
                         @php $name = 'links' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
@@ -659,8 +640,7 @@
                                 </div>
                             </li>
                         @endif
-
-                      @php $name = 'galleries' @endphp
+                        @php $name = 'galleries' @endphp
                         @if(auth()->user()->hasPermission('read_'.$name))
                             <li class="menu-item menu-item-submenu {{is_active(2, $name)}}" aria-haspopup="true" data-menu-toggle="hover">
                                 <a href="javascript:;" class="menu-link menu-toggle">
