@@ -316,6 +316,17 @@ return [
     "Third axis"=>"Third axis",
     "Fourth axis"=>"Fourth axis",
 
+
+
+    //curricula
+    'curricula' => 'curricula',
+    'view all curricula' => 'view all curricula',
+    'Create curricula' => 'Create curricula',
+    "Name"=>"Name",
+    
+
+        
+
     ///--Ads
     'Ads'=>'Department Ads',
     'view all ads'=>'View all departments ads',

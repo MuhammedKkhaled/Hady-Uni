@@ -384,12 +384,12 @@
                                 <br>
                                 <div class="row">
                                     @if ($department)
-                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    <div class="sidebar-btn col-lg-6  col-sm-12">
                                         <a class="main-btn col-lg-12 w-100"
                                                 href="{{ $department->employe_link }}"
                                                 target="_blank">{{ __('custom.Employer opinion forms') }}</a>
                                         </div>
-                                        <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <div class="sidebar-btn col-lg-6  col-sm-12">
                                             <a class="main-btn col-lg-12 w-100"
                                             href="{{ $department->graduate_link}}"
                                                 target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
@@ -466,19 +466,19 @@
                             <h3 class="title">{{ __('custom.accreditation') }}</h3>
                             <br>
                             
-            @if ($accreditations)
-            <div class="row">
-                @foreach ($accreditations as $accreditation)
+                            @if ($accreditations)
+                                <div class="row">
+                                    @foreach ($accreditations as $accreditation)
 
-                <div class="sidebar-btn col-lg-3">
-                    <a class="main-btn col-lg-12"
-                        href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
-                        target="_blank">
-                        {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
-                </div>
-                @endforeach
-            </div>
-        @endif
+                                    <div class="sidebar-btn col-lg-3">
+                                        <a class="main-btn col-lg-12"
+                                            href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
+                                            target="_blank">
+                                            {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            @endif
                             <br>
 
                         </div>
@@ -489,5 +489,38 @@
     </section>
 
     <!--====== Contact Ends ======-->
+    <!--====== Blog Ends ======-->
+            <!--====== Contact Start ======-->
+            @if (count($curriculas)>0)
+            <section class="contact-area">
+                <div class="container">
+                    <div class="contact-form" style="padding-top: 20px;">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="contact-title text-center">
+                                    <h3 class="title">{{ __('custom.curricula') }}</h3>
+                                    <br>
+                                        <div class="row">
+                                            @foreach ($curriculas as $curricula)
+                            
+                                            <div class="sidebar-btn col-lg-3">
+                                                <a class="main-btn col-lg-12"
+                                                    href="{{ asset(Storage::url('uploads/curricula/' . $curricula->image_1)) }}"
+                                                    target="_blank">
+                                                    {{ $curricula->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    
+                                    <br>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @endif
+            <!--====== Contact Ends ======-->
 
 @endsection

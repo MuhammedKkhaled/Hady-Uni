@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
+use App\Http\Controllers\Admin\CurriculaController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\StudnetController;
@@ -147,6 +148,12 @@ Route::middleware([
             Route::get('/galleries/data', 'GalleryController@data')->name('galleries.data');
             Route::delete('/galleries/bulk_delete', 'GalleryController@bulkDelete')->name('galleries.bulk_delete');
             Route::resource('galleries', GalleryController::class);
+
+            
+            //links curricula
+            Route::get('/curricula/data', 'CurriculaController@data')->name('curricula.data');
+            Route::delete('/curricula/bulk_delete', 'CurriculaController@bulkDelete')->name('curricula.bulk_delete');
+            Route::resource('curricula', CurriculaController::class);
             
             //links routes
             Route::get('/accreditation/data', 'AccreditationController@data')->name('accreditation.data');

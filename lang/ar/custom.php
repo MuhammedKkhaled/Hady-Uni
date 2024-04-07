@@ -77,7 +77,7 @@ return [
     "Publisher"=>"جهة النشر",
     "Research Title"=>"عنوان البحث",
     "date of publication"=>"تاريخ النشر",
-    "Link"=>"رابط البحث",
+    "Link"=>"الرابط",
     "View Departments"=>"عرض الأقسام",
     "Create Departments"=>"إنشاء قسم",
     "Create sustainable"=>"إنشاء تنميه مستدامة",
@@ -317,6 +317,15 @@ return [
     "Secondary axis"=>"المحور الثاني",
     "Third axis"=>"المحور الثالث",
     "Fourth axis"=>"المحور الرابع",
+
+    //curricula
+    'curricula' => 'المحاضرات',
+    'view all curricula' => 'عرض المحاضرات',
+    'Create curricula' => 'إنشاء المحاضرات',
+    "Name"=>"Name",
+
+
+
 
 
     ///--Ads
