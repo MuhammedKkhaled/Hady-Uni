@@ -3,11 +3,11 @@
 @section('content')
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
-            <h3 class="card-title text-capitalize">{{ $name }} | Edit {{ $department->name }}</h3>
+            <h3 class="card-title text-capitalize">{{ $name }} | Edit {{ $sustainable->name }}</h3>
         </div>
         <div class="card-body">
 
-            <form method="post" action="{{ route('admin.' . $name . '.update', $department) }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.' . $name . '.update', $sustainable) }}" enctype="multipart/form-data">
                 <div class="card-body">
                     @csrf
                     @method('put')
@@ -53,7 +53,7 @@
                     <div class="form-group">
                         <label class="text-capitalize">{{ __('custom.Department Image') }}</label>
                         <input type="file" name="image" id="input-file-now" class="dropify"
-                            @if (isset($department)) data-default-file="{{ $department->image_path }}" data-show-remove="false" @endif
+                            @if (isset($sustainable)) data-default-file="{{ $sustainable->image_path }}" data-show-remove="false" @endif
                             data-height="585" />
                     </div>
 
@@ -61,7 +61,7 @@
                     <div class="form-group">
                         <label class="text-capitalize">{{ __('custom.Department File') }} </label>
                         <input type="file" name="file" id="input-file-now" class="dropify"
-                            @if (isset($department)) data-default-file="{{ $department->file_path }}" data-show-remove="false" @endif
+                            @if (isset($sustainable)) data-default-file="{{ $sustainable->file_path }}" data-show-remove="false" @endif
                             data-height="585" />
                     </div>
 

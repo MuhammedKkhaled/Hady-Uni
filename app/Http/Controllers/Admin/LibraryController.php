@@ -76,10 +76,8 @@ class LibraryController extends Controller
 
     public function edit(Library $library)
     {
-        $categories = Category::all();
-
-        $specifications = Specification::all();
-        return view('admin.libraries.edit', compact('library' , 'specifications' , 'categories'));
+        $depratments =  Department::all();
+        return view('admin.libraries.edit', compact('library' , 'depratments'));
 
     }// end of edit
 
