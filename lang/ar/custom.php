@@ -331,6 +331,8 @@ return [
         'assistant dean' => 'معاون العميد للشؤون المالية و
                                                         الادارية',
         'Study in Iraq'=>"ادرس في العراق",
+        "College library"=>"مكتبة الكلية",
+        "Research platform"=>"منصة البحوث",
         "Electronic library"=>'المكتبة الالكترونية',
         'Virtual library'=>'المكتبة الافتراضية',
         'biography' => 'السيرة الذاتية',

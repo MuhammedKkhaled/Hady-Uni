@@ -316,6 +316,8 @@ return [
         'sections' => "Sections",
         'graduated' => "graduated",
         'Study in Iraq'=>"Study in Iraq",
+        "College library"=>"College library",
+        "Research platform"=>"Research platform",
         'modern Learning' => "Modern Learning ",
         'student' => "Students",
         'success percent' => "Success Percent",
