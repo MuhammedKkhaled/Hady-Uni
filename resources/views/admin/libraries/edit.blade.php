@@ -16,75 +16,71 @@
                     @method('put')
                     @include('admin.partials._errors')
 
-                    {{-- Categories --}}
-                    <div class="form-group">
-                        <label for="cate">{{ __("custom.Categories Name") }} <span class="text-danger">*</span></label>
-                        <select class="form-control" id="cate" name="category_id">
-                            <option value="0" selected disabled>-- Choose category --</option>
-                            @foreach($categories as $categorie)
-                                <option
-                                    value="{{ $categorie->id}}" {{ $library->category_id == $categorie->id ? 'selected' : ''   }}> {{ $categorie->{'name_'. LaravelLocalization::getCurrentLocale()} }} </option>
-                            @endforeach
-                        </select>
-                    </div>
-
-
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Library Name en") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control"
-                               value="{{ old('name_en' , $library->name_en) }}" >
+                        <label for="name_en">{{ __("custom.Library Name en") }} <span class="text-danger">*</span></label>
+                        <input type="text" id="name_en" name="name_en" autofocus class="form-control"
+                               value="{{ old('name_en') }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Library Name ar") }} <span class="text-danger">*</span></label>
-                        <input type="text" name="name_ar" autofocus class="form-control"
-                               value="{{ old('name_ar' , $library->name_ar) }}" >
+                        <label for="name_ar">{{ __("custom.Library Name ar") }} <span class="text-danger">*</span></label>
+                        <input type="text" id="name_ar" name="name_ar" autofocus class="form-control"
+                               value="{{ old('name_ar') }}" >
+                    </div>
+                    
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label for="publisher_en">جهة النشر بلانجليزي <span class="text-danger">*</span></label>
+                        <input type="text" id="publisher_en" name="publisher_en" autofocus class="form-control"
+                               value="{{ old('publisher_en') }}" >
                     </div>
 
-                    {{--Specifications--}}
+                    {{-- Name --}}
                     <div class="form-group">
-                        <label for="specialization_name_en">Specialization Name </label>
-                        <select id="specialization_name_en" name="specialization_name_en" class="form-control">
-                            @foreach($specifications as $specification)
-                                <option
-                                    value="{{ $specification->name_en }}" {{ $library->specialization_name_en == $specification->name_en ? 'selected' : '' }}>
-                                    {{ $specification->name_en }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
-
-        {{--Specifications--}}
-                    <div class="form-group">
-                        <label for="specialization_name_ar">Specialization Name </label>
-                        <select id="specialization_name_ar" name="specialization_name_ar" class="form-control">
-                            @foreach($specifications as $specification)
-                                <option
-                                    value="{{ $specification->name_ar }}" {{ $library->specialization_name_ar == $specification->name_ar ? 'selected' : '' }}>
-                                    {{ $specification->name_ar }}
-                                </option>
-                            @endforeach
-                        </select>
+                        <label for="publisher_ar">جهة النشر بلعربي<span class="text-danger">*</span></label>
+                        <input type="text" id="publisher_ar" name="publisher_ar" autofocus class="form-control"
+                               value="{{ old('publisher_ar') }}" >
                     </div>
 
                     {{-- Date --}}
                     <div class="form-group">
-                        <label for="published_at">File Published Date<span class="text-danger">*</span></label>
+                        <label for="published_at"> File Published Data <span class="text-danger">*</span></label>
                         <input type="date" name="published_at" id="published_at" autofocus class="form-control"
-                               value="{{ $library->published_at }}" >
+                               >
                     </div>
 
+                    {{-- Specialization --}}
+                    <div class="form-group">
+                        <label for="specialization_name_en"> الفسم<span class="text-danger">*</span></label>
+                        <select class="form-control" id="specialization_name_en" name="specialization_name_en">
+                            <option value="0" selected disabled>-- Choose Specialization in English --</option>
+                            @foreach($depratments as $depratment)
+                                <option
+                                    value="{{ $depratment->name_en  }} "> {{ $depratment->name_en }} </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                {{-- Specialization --}}
+                    <div class="form-group">
+                        <label for="specialization_name_ar">الفسم<span class="text-danger">*</span></label>
+                        <select class="form-control" id="specialization_name_ar" name="specialization_name_ar">
+                            <option value="0" selected disabled>-- Choose Specialization --</option>
+                            @foreach($depratments as $depratment)
+                            <option
+                                value="{{ $depratment->name_ar  }} "> {{ $depratment->name_ar }} </option>
+                        @endforeach
+                        </select>
+                    </div>
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">Conference Image</label>
-                        <input type="file" name="file" id="input-file-now" class="dropify"
-                               @if(isset($library)) data-default-file="{{$library->file_path}}" data-show-remove="false"
-                               @endif  data-height="355"/>
+                        <label class="text-capitalize">اللينك</label>
+                        <input type="text" id="file" name="file" autofocus class="form-control"
+                               value="{{ old('file') }}" >
                     </div>
-
                 </div>
 
                 <div class="card-footer">

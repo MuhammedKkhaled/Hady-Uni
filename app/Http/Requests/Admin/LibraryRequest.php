@@ -25,11 +25,12 @@ class LibraryRequest extends FormRequest
         $rules = [
             'name_en'       => 'string',
             'name_ar'       => 'required|string',
-            'category_id' => ['required' , 'min:1', 'exists:categories,id'],
             'specialization_name_en' => [ 'string'],
             'specialization_name_ar' => ['required' , 'string'],
+            'publisher_en'=> [ 'string'],
+            'publisher_ar'=> [ 'string'],
             'published_at' => ['required' , 'date'],
-            'file'      => 'required|mimes:jpeg,png,jpg,gif,pdf,docx',
+            'file'      => [ 'string'],
         ];
 
         if (in_array($this->method(), ['PUT', 'PATCH'])) {

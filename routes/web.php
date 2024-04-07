@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
 use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\LibraryController;
+use App\Http\Controllers\Front\ResearchController;
 use App\Http\Controllers\Front\SustainableController;
 use App\Http\Controllers\MessageController;
 use App\Models\Affiliate;
@@ -126,6 +127,7 @@ Route::prefix('main/')->group(function (){
     Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
+    Route::get('Research/' , [ResearchController::class , 'show'])->name('Research.show');
 });
 
 

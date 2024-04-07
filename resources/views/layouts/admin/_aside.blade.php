@@ -407,7 +407,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-text text-capitalize">{{__("custom.libraries")}}</span>
+                                    <span class="menu-text text-capitalize">{{__("custom.frontend.Research platform")}}</span>
                                     <i class="menu-arrow"></i>
                                 </a>
                                 <div class="menu-submenu" kt-hidden-height="240" style="">

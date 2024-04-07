@@ -25,7 +25,7 @@
                                         href="{{-- {{ route('main.libraries.show', 1) }} --}}"> {{ __("custom.frontend.College library") }}</a>
                                 </li>
                                 <li><a
-                                    href="{{-- {{ route('main.libraries.show', 2) }} --}}"> {{ __("custom.frontend.Research platform") }}</a>
+                                    href="{{ route('Research.show') }}"> {{ __("custom.frontend.Research platform") }}</a>
                             </li>
                                     <li><a
                                         href="https://drive.google.com/drive/u/1/folders/1IYA9a1dOFvlmIEr_tEk6a5VH1fSgJsqt?usp=sharing&pli=1" target="_blank">
