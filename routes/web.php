@@ -51,6 +51,10 @@ Route::get('/adminlogin', function () {
 
 Route::prefix('main/')->group(function (){
 
+    Route::get('/Important', function () {
+        return view('frontend.pages.Important');
+     });
+
     Route::get('' , function (){
    $conferences = Conference::latest()->paginate(4);
    $characters = Characters::latest()->paginate(3);

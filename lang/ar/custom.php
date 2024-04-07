@@ -2,6 +2,54 @@
 
 return [
 
+    //Important sites
+    "University Name"=>"اسم الجامعه",
+    "Official Website"=>"الموقع الرسمي",
+    "Important sites"=>"مواقع مهمة",
+    "University Of Baghdad"=>"جامعة بغداد",
+    "Mustansiriyah University"=>"جامعة المستنصرية",
+    "UNIVERSITY OF TECHNOLOGY"=>"الجامعة التكنولوجية",
+    "UNIVERSITY OF BASRAH"=>"جامعة البصرة",
+    "University of  Mosul"=>"جامعة الموصل",
+    "Al-Nahrain University"=>"جامعة النهرين",
+    "Tikrit University"=>"جامعة تكريت",
+    "Al-iraqia University"=>"الجامعة العراقية",
+    "University of Diyala"=>"جامعة ديالى",
+    "University of Karbala"=>"جامعة كربلاء",
+    "Wasit University"=>"جامعة واسط",
+    "University of Kirkuk"=>"جامعة كركوك",
+    "Basra University of Oil and Gas"=>"جامعة البصرة للنفط والغاز",
+    "Jabir inb hayyan medical University"=>"جابر بن الحيان الطبية",
+    "University of al-Hamdaniya"=>"جامعة الحمدانية",
+    "University of Al-Furat Al-Awsat"=>"جامعة الفرات الأوسط التقنية",
+    "University of Fallujah"=>"جامعة الفلوجة",
+    "Ibn Sina University"=>"جامعة ابن سينا للعلوم الطبية والصيدلانية",
+    "The foundation  of technical education"=>"الجامعة التقنية الشمالية",
+    "Al-Mansour University College"=>"كلية المنصور الجامعة",
+    "Al-Rafidain University College"=>"كلية الرافدين الجامعة",
+    "Al-Maamoun University College"=>"كلية المأمون الجامعة",
+    "al-yarmok  university"=>"كلية اليرموك الجامعة",
+    "Dijlah University"=>"كلية دجلة الجامعة",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ///// Login
     "LOGIN" => "تسجيل الدخول",
     "Email Address" => "عنوان البريد الإلكتروني",

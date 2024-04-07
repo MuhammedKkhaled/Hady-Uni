@@ -3,6 +3,46 @@
 
 return [
 
+    //Important sites
+    "University Name"=>"University Name",
+    "Official Website"=>"Official Website",
+    "Important sites"=>"Important sites",
+
+    
+    "University Of Baghdad"=>"University Of Baghdad",
+    "Mustansiriyah University"=>"Mustansiriyah University",
+    "UNIVERSITY OF TECHNOLOGY"=>"UNIVERSITY OF TECHNOLOGY",
+    "UNIVERSITY OF BASRAH"=>"UNIVERSITY OF BASRAH",
+    "University of  Mosul"=>"University of  Mosul",
+    "Al-Nahrain University"=>"Al-Nahrain University",
+    "Tikrit University"=>"Tikrit University",
+    "Al-iraqia University"=>"Al-iraqia University",
+    "University of Diyala"=> "University of Diyala",
+    "University of Karbala"=>"University of Karbala",
+    "Wasit University"=>"Wasit University",
+    "University of Kirkuk"=>"University of Kirkuk",
+    "Basra University of Oil and Gas"=>"Basra University of Oil and Gas",
+    "Jabir inb hayyan medical University"=>"Jabir inb hayyan medical University",
+    "University of al-Hamdaniya"=>"University of al-Hamdaniya",
+    "University of Al-Furat Al-Awsat"=>"University of Al-Furat Al-Awsat",
+    "University of Fallujah"=>"University of Fallujah",
+    "Ibn Sina University"=>"Ibn Sina University",
+    "The foundation  of technical education"=>"The foundation  of technical education",
+    "Al-Mansour University College"=>"Al-Mansour University College",
+    "Al-Rafidain University College"=>"Al-Rafidain University College",
+    "Al-Maamoun University College"=>"Al-Maamoun University College",
+    "al-yarmok  university"=>"al-yarmok  university",
+    "Dijlah University"=>"Dijlah University",
+
+
+
+
+
+
+
+
+
+
     ///// Login
     "LOGIN" => "Login",
     "Email Address" => "Email Address",

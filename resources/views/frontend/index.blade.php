@@ -578,6 +578,36 @@
     </div>
 </section>
 
+    <!--====== Contact Start ======-->
+
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-form" style="padding-top: 20px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="contact-title text-center">
+                            <h3 class="title">{{ __('custom.Important Links') }}</h3>
+                            <br>
+                            <div class="row">
+                                <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    </div>
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
+                                            href="{{ url('main/Important') }}">{{ __('custom.Important sites') }}</a>
+                                    </div>
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Contact Ends ======-->
+
 @endif
 
 <!--====== Shop Ends ======-->
