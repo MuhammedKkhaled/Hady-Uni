@@ -27,6 +27,15 @@ return [
     "departments"=>"الأقسام",
     "View Departments"=>"عرض الأقسام",
     "Create Departments"=>"إنشاء قسم",
+    "Create sustainable"=>"إنشاء تنميه مستدامة",
+    'View All sustainable'=>"مشاهده التنميه المستدامة",
+    "Create sustainablesgalleries"=>"إنشاء صوره تنميه مستدامة",
+    'View All sustainablesgalleries'=>"مشاهده صور التنميه المستدامة",
+    "categories"=>"قئات التنميه المستدامة",
+    "Create categories"=>"أنشاء فئه",
+    "View All categories"=>"شهاد الكل",
+    "categoriesar"=>"الفئات بلعربي",
+    "categoriesen"=>"الفئات بلانجليزي",
     "conferences" =>"المؤتمرات",
     "View Conferences"=>"عرض المؤتمرات",
     "Create Conferences" =>"إنشاء مؤتمر",
@@ -263,6 +272,7 @@ return [
     'Create ads' => 'إنشاء إعلان قسم',
 
 
+    "The most important pictures"=>"اهم الصور",
     ///--Characters
     'Characters' => 'الرموز والمشاهير',
     'view all Characters' => 'عرض الشخصيات المهمه',
@@ -283,6 +293,7 @@ return [
         "Ministry of Higher"=>"وزارة التعليم العالي والبحث العلمي",
         "General Secretariat"=>"الأمانة العامة لمجلس الوزراء",
         'sustainable' => 'التنمية المستدامة',
+        'sustainablesgalleries' => 'صور التنمية المستدامة',
         'text title' => "مؤسسة تعليمية مستقلة تم تأسيسها في بغداد عام ٢٠١٥.",
         'watch section' => "شاهد الأقسام",
         'About' => "عن الكلية",
@@ -300,6 +311,7 @@ return [
         'graduated' => "الخريجين",
         'modern Learning' => "التعلم الحديث",
         'student' => "الطلاب",
+        "Topic"=>"الموضوع",
         'success percent' => "نسبة النجاح",
         'Sections aq' => "رسوم الأقسام",
         'Latest Conferences' => "أحدث المؤتمرات",
@@ -318,6 +330,7 @@ return [
         'cv' => "السيرة الذاتية ",
         'assistant dean' => 'معاون العميد للشؤون المالية و
                                                         الادارية',
+        'Study in Iraq'=>"ادرس في العراق",
         "Electronic library"=>'المكتبة الالكترونية',
         'Virtual library'=>'المكتبة الافتراضية',
         'biography' => 'السيرة الذاتية',

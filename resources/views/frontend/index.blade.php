@@ -142,7 +142,7 @@
     <div class="specialty-area" style="padding-top:0px">
         <div class="container">
             <div class="row no-gutters wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <a href="https://port.huc.edu.iq/index" target="_blank"class="w-100">
                     <div class="single-specialty mt-30">
                         <div class="specialty-box">
@@ -156,7 +156,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <a href="https://port.huc.edu.iq/index" target="_blank"class="w-100">
                     <div class="single-specialty active mt-30">
                         <div class="specialty-box">
@@ -170,7 +170,7 @@
                     </div>
                 </a>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <a href="https://hadiuc.bis.edu.iq/" target="_blank"class="w-100">
                         <div class="single-specialty mt-30">
                             <div class="specialty-box">
@@ -179,6 +179,20 @@
                                 </div>
                                 <div class="box-content">
                                     <p>{{ __("custom.frontend.Bologna") }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="https://studyiniraq.scrd-gate.gov.iq/home" target="_blank"class="w-100">
+                        <div class="single-specialty mt-30">
+                            <div class="specialty-box">
+                                <div class="box-icon">
+                                    <img src="{{ asset("assets/images/icon-5.png") }}" width="70" height="70" alt="icon">
+                                </div>
+                                <div class="box-content">
+                                    <p>{{ __("custom.frontend.Study in Iraq") }}</p>
                                 </div>
                             </div>
                         </div>

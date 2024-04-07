@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
 use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\LibraryController;
+use App\Http\Controllers\Front\SustainableController;
 use App\Http\Controllers\MessageController;
 use App\Models\Affiliate;
 use App\Models\Conference;
@@ -109,8 +110,9 @@ Route::prefix('main/')->group(function (){
     });
 
     Route::get('departments/{id}', [DepartmentController::class , 'show'])->name('main.departments.show');
+    Route::get('sustainable/{id}', [SustainableController::class , 'show'])->name('main.sustainable.show');
 
-    Route::get('libraries/{id}' ,[ LibraryController::class , 'show'])->name('main.libraries.show');
+    Route::get('libraries/{id}' ,[ LibraryController::class , 'showsustainable'])->name('main.libraries.showsustainable');
 
     Route::get('journal', [JournalController::class , 'show']);
     Route::get('news', [NewsController::class , 'show']);

@@ -15,24 +15,18 @@
                     @method('put')
                     @include('admin.partials._errors')
 
-                    {{--Title--}}
+                    {{-- Name --}}
                     <div class="form-group">
-                        <label>Title <span class="text-danger">*</span></label>
-                        <input type="text" name="name" autofocus class="form-control" value="{{ old('name', $category->name) }}" >
+                        <label>{{ __("custom.Department Name en") }}<span class="text-danger">*</span></label>
+                        <input type="text" name="titel_en" autofocus class="form-control" value="{{ old('titel_en') }}" >
                     </div>
 
-                    {{--description--}}
+                    {{-- Name --}}
                     <div class="form-group">
-                        <label>Description <span class="text-danger">*</span></label>
-                        <textarea name="description" class="form-control" cols="30" rows="10">{{ old('description', $category->description) }}</textarea>
+                        <label>{{ __("custom.Department Name ar") }}<span class="text-danger">*</span></label>
+                        <input type="text" name="titel_ar" autofocus class="form-control" value="{{ old('titel_ar') }}" >
                     </div>
 
-
-                    {{--image--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">Poster</label>
-                        <input type="file" name="image" id="input-file-now" class="dropify" @if(isset($category)) data-default-file="{{$category->image_path}}" data-show-remove="false" @endif data-height="585"/>
-                    </div>
 
                 </div>
 

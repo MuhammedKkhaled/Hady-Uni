@@ -28,6 +28,10 @@ return [
     "departments"=>"Departments",
     "View Departments"=>"View Departments",
     "Create Departments"=>"Create Departments",
+    "Create sustainable"=>"Create sustainable",
+    'View All sustainable'=>"View All sustainable",
+    "Create sustainablesgalleries"=>"Create images of sustainable",
+    'View All sustainablesgalleries'=>"View All images of sustainable",
     "conferences" =>"Conferences",
     "View Conferences"=>"View Conferences",
     "Create Conferences" =>"Create Conferences",
@@ -48,7 +52,8 @@ return [
     //// Admins section
     "New Record"=>"New Record",
     "Delete"=>"Delete",
-
+//
+"The most important pictures"=>"The most important pictures",
     /// News Section
     "news"=>"News",
     "New News" =>'New News',
@@ -225,9 +230,14 @@ return [
     'Graduate File' => "Graduate File",
     'Year' => "Year",
     'Student Department' => "Student Department",
-    'View ِAll Department' => "View ِAll Department",
+    'View ِAll Department' => "View All Department",
     'Create Department' => "Create Department Students",
+    "categories"=>"sustainable categories",
+    "Create categories"=>"Create categories",
+    "View All categories"=>"View All categories",
 
+    "categoriesar"=>"categories name ar",
+    "categoriesen"=>"categories name en",
     /// links
     'Program Description' => "Program Description",
     'Study program'=>'Study program',
@@ -288,10 +298,12 @@ return [
         'Virtual library'=>'Virtual library',
         'strategic_plan1' => "strategic plan",
         'sustainable' => 'sustainable',
+        'sustainablesgalleries' => 'images of sustainable',
         'text title' => "An independent educational institution established in Baghdad in 2015." ,
         'watch section' => "Watch Sections",
         'About' => "About Colleague",
         'country' => "Iraq",
+        "Topic"=>"Topic",
         'ahaly' => 'A leading private university in',
         'big text' => "Al-Hadi College was established in 2015 and is accredited by the Iraqi Ministry of Higher Education and Scientific Research. The college offers a diverse range of academic programs in medical, engineering, legal, and administrative fields. It is committed to providing high-quality education that meets the needs of the Iraqi society, aiming to prepare its students to become qualified professionals capable of contributing to Iraq's social and economic development. Al-Hadi College has a highly qualified teaching staff with extensive experience in their fields. Additionally, the college possesses modern facilities and equipment that meet the requirements of modern education. It contributes to Iraqi society through various programs and activities.",
         'more' => "More",
@@ -303,6 +315,7 @@ return [
         'teacher' => "Teachers",
         'sections' => "Sections",
         'graduated' => "graduated",
+        'Study in Iraq'=>"Study in Iraq",
         'modern Learning' => "Modern Learning ",
         'student' => "Students",
         'success percent' => "Success Percent",

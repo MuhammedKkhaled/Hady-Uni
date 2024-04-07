@@ -8,6 +8,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class CategoryController extends Controller
 {
@@ -33,9 +34,9 @@ class CategoryController extends Controller
         return DataTables::of($categories)
 
             ->addColumn('record_select', 'admin.categories.data_table.record_select')
-            ->addColumn('image', function (Category $category) {
-                return view('admin.categories.data_table.image', compact('category'));
-
+            
+            ->editColumn('name_'.LaravelLocalization::getCurrentLocale() ,function (Category $category){
+                return $category->{"name_".LaravelLocalization::getCurrentLocale()};
             })
             ->editColumn('created_at', function (Category $category) {
                 return $category->created_at->format('Y-m-d');

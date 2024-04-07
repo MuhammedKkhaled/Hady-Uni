@@ -16,11 +16,11 @@
                                 <ul class="nav-dropdown nav-submenu">
                                     
 
-                                    @foreach ($categories as $category)
+                                    {{-- @foreach ($categories as $category)
                                         <li><a
                                                 href="{{ route('main.libraries.show', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
-                                    @endforeach
+                                    @endforeach --}}
                                     <li><a
                                         href="https://drive.google.com/drive/u/1/folders/1IYA9a1dOFvlmIEr_tEk6a5VH1fSgJsqt?usp=sharing&pli=1" target="_blank">
                                         {{ __("custom.frontend.Electronic library") }}</a>
@@ -67,7 +67,7 @@
                                    
                                     @foreach ($categories as $category)
                                         <li><a
-                                                href="{{ route('main.libraries.show', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
+                                                href="{{ route('main.libraries.showsustainable', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
                                     @endforeach
 
