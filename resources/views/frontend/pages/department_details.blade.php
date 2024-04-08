@@ -324,18 +324,18 @@
                             <br>
                             <div class="row">
                                 @if ($link)
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->program_desc_file)) ?? '' }}"
                                             target="_blank">{{ __('custom.Program Description') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->study_plan_file)) }}"
                                             target="_blank">{{ __('custom.Study program') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->course_study_file)) }}"
                                             target="_blank">{{ __('custom.course Study') }}</a>
                                     </div>
@@ -346,18 +346,18 @@
                             <br>
                             <div class="row">
                                 @if ($link)
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->university_calender_file)) }}"
                                             target="_blank">{{ __('custom.university calender') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->exam_table_file)) }}"
                                             target="_blank">{{ __('custom.Exam Table') }}</a>
                                     </div>
-                                    <div class="sidebar-btn col-lg-4">
-                                        <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->school_schedule_file)) }}"
                                             target="_blank">{{ __('custom.School Schedule') }}</a>
                                     </div>
@@ -384,13 +384,13 @@
                                 <br>
                                 <div class="row">
                                     @if ($department)
-                                        <div class="sidebar-btn col-lg-6">
-                                            <a class="main-btn col-lg-12"
+                                    <div class="sidebar-btn col-lg-6  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                                 href="{{ $department->employe_link }}"
                                                 target="_blank">{{ __('custom.Employer opinion forms') }}</a>
                                         </div>
-                                        <div class="sidebar-btn col-lg-6">
-                                            <a class="main-btn col-lg-12"
+                                        <div class="sidebar-btn col-lg-6  col-sm-12">
+                                            <a class="main-btn col-lg-12 w-100"
                                             href="{{ $department->graduate_link}}"
                                                 target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
                                         </div>
@@ -407,6 +407,54 @@
         </section>
 
         <!--====== Contact Ends ======-->
+            <!--====== Blog Start ======-->
+    @if ( count($ads) > 0 )
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-form" style="padding-top: 20px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="contact-title text-center">
+                            <h3 class="title">{{ __('custom.Ads') }}</h3>
+                            <br>
+                            <div class="row">
+                                @foreach($ads as $ad)
+                        <div class="col-lg-4">
+                            <div class="single-blog mt-30">
+                                <div class="blog-image">
+                                    <a href="#">
+                                        <img src="{{ Storage::url("uploads/ads/". $ad->image) }}" width="270"
+                                             height="150" alt="blogsss">
+                                    </a>
+                                </div>
+                                <div class="blog-content" style="text-align:end">
+                                    <ul class="meta">
+                                        <li><a href="#">{{ $ad->created_at->format('D M Y')  }}</a></li>
+                                        <!--<li><a href="#">By: {{ $ad->author }}</a></li>-->
+                                    </ul>
+                                    <h4 class="blog-title"><a href="#"
+                                                              style="text-align:end">
+                                        {{ $ad->{'title_'.LaravelLocalization::getCurrentLocale()} }}
+
+                                        </a>
+                                    </h4>
+                                    
+                                    <p>{{ $ad->{'content_'.LaravelLocalization::getCurrentLocale()} }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
+
+    <!--====== Blog Ends ======-->
             <!--====== Contact Start ======-->
 
     <section class="contact-area">
@@ -418,19 +466,19 @@
                             <h3 class="title">{{ __('custom.accreditation') }}</h3>
                             <br>
                             
-            @if ($galleries)
-            <div class="row">
-                @foreach ($accreditations as $accreditation)
+                            @if ($accreditations)
+                                <div class="row">
+                                    @foreach ($accreditations as $accreditation)
 
-                <div class="sidebar-btn col-lg-3">
-                    <a class="main-btn col-lg-12"
-                        href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
-                        target="_blank">
-                        {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
-                </div>
-                @endforeach
-            </div>
-        @endif
+                                    <div class="sidebar-btn col-lg-3">
+                                        <a class="main-btn col-lg-12"
+                                            href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
+                                            target="_blank">
+                                            {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            @endif
                             <br>
 
                         </div>
@@ -441,5 +489,38 @@
     </section>
 
     <!--====== Contact Ends ======-->
+    <!--====== Blog Ends ======-->
+            <!--====== Contact Start ======-->
+            @if (count($curriculas)>0)
+            <section class="contact-area">
+                <div class="container">
+                    <div class="contact-form" style="padding-top: 20px;">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="contact-title text-center">
+                                    <h3 class="title">{{ __('custom.curricula') }}</h3>
+                                    <br>
+                                        <div class="row">
+                                            @foreach ($curriculas as $curricula)
+                            
+                                            <div class="sidebar-btn col-lg-3">
+                                                <a class="main-btn col-lg-12"
+                                                    href="{{ asset(Storage::url('uploads/curricula/' . $curricula->image_1)) }}"
+                                                    target="_blank">
+                                                    {{ $curricula->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
+                                            </div>
+                                            @endforeach
+                                        </div>
+                                    
+                                    <br>
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @endif
+            <!--====== Contact Ends ======-->
 
 @endsection

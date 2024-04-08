@@ -9,12 +9,17 @@ use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
+use App\Http\Controllers\Admin\CurriculaController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\StudnetController;
 use App\Http\Controllers\Admin\TeacherController;
+use App\Http\Controllers\Admin\SustainableController;
+use App\Http\Controllers\Admin\SustainablesGalleryController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -143,6 +148,12 @@ Route::middleware([
             Route::get('/galleries/data', 'GalleryController@data')->name('galleries.data');
             Route::delete('/galleries/bulk_delete', 'GalleryController@bulkDelete')->name('galleries.bulk_delete');
             Route::resource('galleries', GalleryController::class);
+
+            
+            //links curricula
+            Route::get('/curricula/data', 'CurriculaController@data')->name('curricula.data');
+            Route::delete('/curricula/bulk_delete', 'CurriculaController@bulkDelete')->name('curricula.bulk_delete');
+            Route::resource('curricula', CurriculaController::class);
             
             //links routes
             Route::get('/accreditation/data', 'AccreditationController@data')->name('accreditation.data');
@@ -153,7 +164,26 @@ Route::middleware([
             Route::get('/ads/data', 'AdsController@data')->name('ads.data');
             Route::delete('/ads/bulk_delete', 'AdsController@bulkDelete')->name('ads.bulk_delete');
             Route::resource('ads', AdsController::class);
+            
+            
+            //links routes
+            Route::get('/characters/data', 'CharactersController@data')->name('characters.data');
+            Route::delete('/characters/bulk_delete', 'CharactersController@bulkDelete')->name('characters.bulk_delete');
+            Route::resource('characters', CharactersController::class);
+            //links routes
+            Route::get('/awards/data', 'awardsController@data')->name('awards.data');
+            Route::delete('/awards/bulk_delete', 'awardsController@bulkDelete')->name('awards.bulk_delete');
+            Route::resource('awards', awardsController::class);
 
+            //links sustainable
+            Route::get('/sustainable/data', 'SustainableController@data')->name('sustainable.data');
+            Route::delete('/sustainable/bulk_delete', 'SustainableController@bulkDelete')->name('sustainable.bulk_delete');
+            Route::resource('sustainable', SustainableController::class);
+            
+            //links sustainablesgalleries            
+            Route::get('/sustainablesgalleries/data', 'SustainablesGalleryController@data')->name('sustainablesgalleries.data');
+            Route::delete('/sustainablesgalleries/bulk_delete', 'SustainablesGalleryController@bulkDelete')->name('sustainablesgalleries.bulk_delete');
+            Route::resource('sustainablesgalleries', SustainablesGalleryController::class);
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');
             // Route::delete('/contacts/bulk_delete', 'ContactController@bulkDelete')->name('contacts.bulk_delete');

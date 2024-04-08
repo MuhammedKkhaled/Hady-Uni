@@ -14,15 +14,31 @@
                             <li>
                                 <a href="#">{{ __("custom.libraries") }}</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    @foreach ($categories as $category)
+                                    
+
+                                    {{-- @foreach ($categories as $category)
                                         <li><a
                                                 href="{{ route('main.libraries.show', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
-                                    @endforeach
+                                    @endforeach --}}
+                                    <li><a
+                                        href="{{-- {{ route('main.libraries.show', 1) }} --}}"> {{ __("custom.frontend.College library") }}</a>
+                                </li>
+                                <li><a
+                                    href="{{ route('Research.show') }}"> {{ __("custom.frontend.Research platform") }}</a>
+                            </li>
+                                    <li><a
+                                        href="https://drive.google.com/drive/u/1/folders/1IYA9a1dOFvlmIEr_tEk6a5VH1fSgJsqt?usp=sharing&pli=1" target="_blank">
+                                        {{ __("custom.frontend.Electronic library") }}</a>
+                                    </li>
+                                    <li><a
+                                        href="">
+                                        {{ __("custom.frontend.Written books and patents") }}</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="{{ url('/main/journal') }}">{{ __("custom.frontend.journals") }}</a>
+                                <a href="https://ojs.huc.edu.iq/">{{ __("custom.frontend.journals") }}</a>
                             </li>
 
 
@@ -50,9 +66,10 @@
                             <li>
                                 <a href="#">{{ __("custom.frontend.sustainable") }}</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    @foreach ($sections as $section)
+                                   
+                                    @foreach ($categories as $category)
                                         <li><a
-                                                href="{{ route('main.departments.show', $section->id) }}">{{ $section->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
+                                                href="{{ route('main.libraries.showsustainable', $category->id) }}">{{ $category->{'name_'.LaravelLocalization::getCurrentLocale()} }}</a>
                                         </li>
                                     @endforeach
 
@@ -107,7 +124,7 @@
                             <li>
                                 <a href="#">@lang('custom.frontend.faculty_overview')</a>
                                 <ul class="nav-dropdown nav-submenu">
-                                    <li><a href="{{ asset('assets/files/strategy1.pdf') }}" target="_blank">@lang('custom.frontend.strategic_plan') 2022 - 2026</a></li>
+                                    <li><a href="{{ asset('assets/files/strategy1.pdf') }}" target="_blank">@lang('custom.frontend.strategic_plan1') 2022 - 2026</a></li>
                                     <li><a href="{{ asset('assets/files/strategy2.pdf') }}" target="_blank">@lang('custom.frontend.self_evaluation_report') 2019 - 2020</a></li>
                                 </ul>
                             </li>

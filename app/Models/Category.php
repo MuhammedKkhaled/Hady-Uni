@@ -24,6 +24,10 @@ class Category extends Model
 
     }// End function
 
+    protected $casts = [
+        'created_at' =>'date'
+    ];
+
     public function libraries():HasMany
     {
         return $this->hasMany(Library::class);

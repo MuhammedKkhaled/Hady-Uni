@@ -17,20 +17,13 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>Category Name <span class="text-danger">*</span></label>
-                        <input type="text" name="name" autofocus class="form-control" value="{{ old('name') }}" >
+                        <label>{{ __("custom.categoriesen") }}<span class="text-danger">*</span></label>
+                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" >
                     </div>
-
-                    {{--description--}}
+                    {{-- Name --}}
                     <div class="form-group">
-                        <label>Description <span class="text-danger">*</span></label>
-                        <textarea name="description" class="form-control" cols="30" rows="10">{{ old('description') }}</textarea>
-                    </div>
-
-                    {{--image--}}
-                    <div class="form-group">
-                        <label class="text-capitalize">Category Image </label>
-                        <input type="file" name="image" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
+                        <label>{{ __("custom.categoriesar") }}<span class="text-danger">*</span></label>
+                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name') }}" >
                     </div>
 
                 </div>

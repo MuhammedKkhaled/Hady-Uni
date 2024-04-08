@@ -134,9 +134,78 @@
 
     <!--====== About Ends ======-->
 
+    
+<br>
+<br>
+    <!--====== Specialty Start ======-->
 
+    <div class="specialty-area" style="padding-top:0px">
+        <div class="container">
+            <div class="row no-gutters wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="col-sm-3">
+                    <a href="https://port.huc.edu.iq/index" target="_blank"class="w-100">
+                    <div class="single-specialty mt-30">
+                        <div class="specialty-box">
+                            <div class="box-icon">
+                                <img src="{{ asset("assets/images/icon/icon-1.webp") }}" width="70" height="70" alt="icon">
+                            </div>
+                            <div class="box-content">
+                                <p>{{ __("custom.frontend.Student Registration System") }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="https://port.huc.edu.iq/index" target="_blank"class="w-100">
+                    <div class="single-specialty active mt-30">
+                        <div class="specialty-box">
+                            <div class="box-icon">
+                                <img src="{{ asset("assets/images/icon/icon-2.webp") }}" width="70" height="70" alt="icon">
+                            </div>
+                            <div class="box-content">
+                                <p>{{ __("custom.frontend.Student Registration System") }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="https://hadiuc.bis.edu.iq/" target="_blank"class="w-100">
+                        <div class="single-specialty mt-30">
+                            <div class="specialty-box">
+                                <div class="box-icon">
+                                    <img src="{{ asset("assets/images/icon/icon-3.webp") }}" width="70" height="70" alt="icon">
+                                </div>
+                                <div class="box-content">
+                                    <p>{{ __("custom.frontend.Bologna") }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="https://studyiniraq.scrd-gate.gov.iq/home" target="_blank"class="w-100">
+                        <div class="single-specialty mt-30">
+                            <div class="specialty-box">
+                                <div class="box-icon">
+                                    <img src="{{ asset("assets/images/icon-5.png") }}" width="70" height="70" alt="icon">
+                                </div>
+                                <div class="box-content">
+                                    <p>{{ __("custom.frontend.Study in Iraq") }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+    <!--====== Specialty Ends ======-->
     <!--====== Campus Visit Start ======-->
-
+{{-- 
     <section class="campus-visit-area" style="padding-left: 30px;padding-bottom: 30px; ">
         <div class="container">
             <div class="campus-visit-wrapper">
@@ -151,16 +220,54 @@
                         <h2 class="campus-title">{{ __("custom.frontend.six") }}</h2>
                         <span class="line"></span>
                         <p>{{ __("custom.frontend.we are here") }}</p>
-                        <a class="play video-popup" href="https://youtu.be/pXyEvMIyFHY"><i class="fas fa-play"></i>
+                        <a class="play" href="https://www.youtube.com/@user-pj2ns3gy1v/videos"target="_blank"><i class="fas fa-play"></i>
                             <span> {{ __("custom.frontend.watch now") }}</span></a>
                     </div>
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section class="blog-area-2">
+        <h4 class="trending-title">{{ __("custom.frontend.six") }}</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2">
+                        <h2 class="title">{{ __("custom.frontend.six") }}</h2>
+                        <span class="line"></span>
+                        <br>
+                        <a class="play" href="https://www.youtube.com/@user-pj2ns3gy1v/videos"target="_blank"><i class="fas fa-play"></i>
+                            <span> {{ __("custom.frontend.watch now") }}</span></a>
+                            
+                    </div>
+                </div>
+            </div>
+                <div class="row-wrapper blog-active">
+                    <div class="col-lg-4">
+                        <iframe height="315" class="w-100" src="https://www.youtube.com/embed/pXyEvMIyFHY?si=WfyPfXujHgF-lo7K"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen=""></iframe>
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe height="315" class="w-100"src="https://www.youtube.com/embed/SEdmZhtK2JI?si=TI0g2S4V1g8O24Um"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen=""></iframe>
+                    </div>
+                    <div class="col-lg-4">
+                        <iframe   height="315"class="w-100" src="https://www.youtube.com/embed/BaGRQPClr6E?si=sJvZ4OoPrlE3Yb-I"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen=""></iframe>
+                    </div>
+                </div>
+        </div>
     </section>
-
+    <br>
+    <br>
     <!--====== Campus Visit Ends ======-->
-
     <!--====== Blog Start ======-->
     @if ( count($news) > 0 )
         
@@ -171,7 +278,9 @@
                 <div class="col-lg-12">
                     <div class="section-title-2">
                         <h2 class="title">{{ __("custom.frontend.Latest News") }}</h2>
-                        <span class="line"></span>
+                        <span class="line"></span><br>
+                        <a class="play" href="{{ url('/main/news') }}">
+                            <span> {{ __("custom.frontend.Show More") }}</span></a>
                     </div>
                 </div>
             </div>
@@ -359,7 +468,9 @@
                         <div class="section-title-2">
                             <h2 class="title">{{ __("custom.frontend.Latest Conferences") }} </h2>
                             <span class="line"></span>
-                            <p> {{ __("custom.frontend.conference text") }}</p>
+                            <p> {{ __("custom.frontend.conference text") }}</p><br>
+                            <a class="play" href="{{ url('/main/conferences') }}">
+                                <span> {{ __("custom.frontend.Show More") }}</span></a>
                         </div>
                     </div>
                 </div>
@@ -395,8 +506,110 @@
     </section>
 
     <!--====== Event Ends ======-->
+    <!--====== Blog Start ======-->
+    @if ( count($characters) > 0 )
+        
+    <section class="blog-area-2">
+        <h4 class="trending-title"> {{ __("custom.Characters") }}</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-2">
+                        <h2 class="title">{{ __("custom.Characters") }}</h2>
+                        <span class="line"></span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-wrapper">
+                <div class="row-wrapper blog-active">
+                    @foreach($characters as $character)
+                    <div class="col-md-4 col-sm-6 teachers-col">
+                        <div class="single-teacher mt-80 text-center">
+                            <div class="teacher-social">
+                            </div>
+                            <div class="teacher-image">
+                                <a href="">
+                                    <img src="{{ Storage::url("uploads/characters/". $character->image) }}" width="266" height="359" alt="teacher">
+                                </a>
+                            </div>
+                            <div class="teacher-content">
+                                <h4 class="name"><a href="">{{$character->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
+                                <span class="designation">{{$character->{'content_'.LaravelLocalization::getCurrentLocale()} }}
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
 
+    <!--====== Blog Ends ======-->
 
+    <!--====== Shop Start ======-->
+    
+    @if ( count($awards) > 0 )
+    <section class="shop-area">
+        <div class="shop-wrapper">
+            
+            <div class="contact-title text-center">
+                <h3 class="title">{{ __('custom.Awards and achievements') }}</h3>
 
+            </div>
+            <div class="row">
+                
+                @foreach($awards as $award)
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-library text-center mt-30">
+                        <div class="library-image">
+                            <a href="#"><img src={{ Storage::url("uploads/awards/". $award->image) }} width="276" height="286" alt="Product"></a>
+                        </div>
+                        <div class="library-content">
+                            <h4 class="library-title"><a href="product-details.html">{{$award->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
+                            <span class="price">{{$award->{'content_'.LaravelLocalization::getCurrentLocale()} }}</span>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--====== Contact Start ======-->
+
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-form" style="padding-top: 20px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="contact-title text-center">
+                            <h3 class="title">{{ __('custom.Important Links') }}</h3>
+                            <br>
+                            <div class="row">
+                                <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    </div>
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
+                                            href="{{ url('main/Important') }}">{{ __('custom.Important sites') }}</a>
+                                    </div>
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Contact Ends ======-->
+
+@endif
+
+<!--====== Shop Ends ======-->
 
 @endsection()

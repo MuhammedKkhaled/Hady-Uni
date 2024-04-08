@@ -8,6 +8,7 @@ use App\Models\Blog;
 use App\Models\Category;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class CategoryController extends Controller
 {
@@ -33,13 +34,14 @@ class CategoryController extends Controller
         return DataTables::of($categories)
 
             ->addColumn('record_select', 'admin.categories.data_table.record_select')
-            ->addColumn('image', function (Category $category) {
-                return view('admin.categories.data_table.image', compact('category'));
 
+            ->editColumn('name_'.LaravelLocalization::getCurrentLocale() ,function (Category $category){
+                return $category->{"name_".LaravelLocalization::getCurrentLocale()};
             })
-            ->editColumn('created_at', function (Category $category) {
+            ->editColumn('created_at' ,function (Category $category){
                 return $category->created_at->format('Y-m-d');
             })
+
             ->addColumn('actions', 'admin.categories.data_table.actions')
             ->rawColumns(['record_select', 'actions'])
             ->toJson();
@@ -75,11 +77,11 @@ class CategoryController extends Controller
     public function update(CategoryRequest $request, Category $category)
     {
         $requestData = $request->validated();
-        if ($request->image) {
-            Storage::disk('local')->delete('public/uploads/categories/' . $category->image);
-            $request->image->store('public/uploads/categories/');
-            $requestData['image'] = $request->image->hashName();
-        }
+//        if ($request->image) {
+//            Storage::disk('local')->delete('public/uploads/categories/' . $category->image);
+//            $request->image->store('public/uploads/categories/');
+//            $requestData['image'] = $request->image->hashName();
+//        }
 
         $category->update($requestData);
         session()->flash('success', __('Update Successfully'));

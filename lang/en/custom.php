@@ -3,6 +3,46 @@
 
 return [
 
+    //Important sites
+    "University Name"=>"University Name",
+    "Official Website"=>"Official Website",
+    "Important sites"=>"Important sites",
+
+    
+    "University Of Baghdad"=>"University Of Baghdad",
+    "Mustansiriyah University"=>"Mustansiriyah University",
+    "UNIVERSITY OF TECHNOLOGY"=>"UNIVERSITY OF TECHNOLOGY",
+    "UNIVERSITY OF BASRAH"=>"UNIVERSITY OF BASRAH",
+    "University of  Mosul"=>"University of  Mosul",
+    "Al-Nahrain University"=>"Al-Nahrain University",
+    "Tikrit University"=>"Tikrit University",
+    "Al-iraqia University"=>"Al-iraqia University",
+    "University of Diyala"=> "University of Diyala",
+    "University of Karbala"=>"University of Karbala",
+    "Wasit University"=>"Wasit University",
+    "University of Kirkuk"=>"University of Kirkuk",
+    "Basra University of Oil and Gas"=>"Basra University of Oil and Gas",
+    "Jabir inb hayyan medical University"=>"Jabir inb hayyan medical University",
+    "University of al-Hamdaniya"=>"University of al-Hamdaniya",
+    "University of Al-Furat Al-Awsat"=>"University of Al-Furat Al-Awsat",
+    "University of Fallujah"=>"University of Fallujah",
+    "Ibn Sina University"=>"Ibn Sina University",
+    "The foundation  of technical education"=>"The foundation  of technical education",
+    "Al-Mansour University College"=>"Al-Mansour University College",
+    "Al-Rafidain University College"=>"Al-Rafidain University College",
+    "Al-Maamoun University College"=>"Al-Maamoun University College",
+    "al-yarmok  university"=>"al-yarmok  university",
+    "Dijlah University"=>"Dijlah University",
+
+
+
+
+
+
+
+
+
+
     ///// Login
     "LOGIN" => "Login",
     "Email Address" => "Email Address",
@@ -26,8 +66,17 @@ return [
     "View Specifications" =>"View Specifications",
     "Create Specifications" =>"Create Specifications",
     "departments"=>"Departments",
+    "department"=>"department",
+    "Publisher"=>"Publisher",
+    "Research Title"=>"Research Title",
+    "date of publication"=>"date of publication",
+    "Link"=>"Link",
     "View Departments"=>"View Departments",
     "Create Departments"=>"Create Departments",
+    "Create sustainable"=>"Create sustainable",
+    'View All sustainable'=>"View All sustainable",
+    "Create sustainablesgalleries"=>"Create images of sustainable",
+    'View All sustainablesgalleries'=>"View All images of sustainable",
     "conferences" =>"Conferences",
     "View Conferences"=>"View Conferences",
     "Create Conferences" =>"Create Conferences",
@@ -37,7 +86,7 @@ return [
     "properties"=>"Properties",
     "View Teacher Properties" =>'View Teacher Properties',
     "Create Properties" =>"Create Properties",
-    "libraries"=>"Libraries",
+    "libraries"=>"Digital Repository",
     "View All Libraries" =>"View All Libraries",
     "Create Library"=>"Create Library",
     'journals' => 'Journals',
@@ -48,7 +97,8 @@ return [
     //// Admins section
     "New Record"=>"New Record",
     "Delete"=>"Delete",
-
+//
+"The most important pictures"=>"The most important pictures",
     /// News Section
     "news"=>"News",
     "New News" =>'New News',
@@ -208,9 +258,9 @@ return [
     'Affiliate Name' => 'Affiliate Name',
     'Affiliate Name en' => 'Affiliate Name English',
     'Affiliate Name ar' => 'Affiliate Name Arabic',
-    'Affiliate Notes' => "Affiliate Notes" ,
-    'Affiliate Notes en' => "Affiliate Notes English" ,
-    'Affiliate Notes ar' => "Affiliate Notes Arabic" ,
+    'Affiliate Notes' => "University Email" ,
+    'Affiliate Notes en' => "University Email English" ,
+    'Affiliate Notes ar' => "University Email Arabic" ,
     'messages Email' => "Email" ,
     'messages content' => "Message Content" ,
     'messages' => "Messages" ,
@@ -225,9 +275,14 @@ return [
     'Graduate File' => "Graduate File",
     'Year' => "Year",
     'Student Department' => "Student Department",
-    'View ِAll Department' => "View ِAll Department",
+    'View ِAll Department' => "View All Department",
     'Create Department' => "Create Department Students",
+    "categories"=>"sustainable categories",
+    "Create categories"=>"Create categories",
+    "View All categories"=>"View All categories",
 
+    "categoriesar"=>"categories name ar",
+    "categoriesen"=>"categories name en",
     /// links
     'Program Description' => "Program Description",
     'Study program'=>'Study program',
@@ -256,20 +311,55 @@ return [
     'New accreditation' =>  'New accreditation' ,
     'Create accreditation' => 'Create accreditation',
     'view all accreditation' =>  'view all accreditation',
+    "First axis"=>"First axis",
+    "Secondary axis"=>"Secondary axis",
+    "Third axis"=>"Third axis",
+    "Fourth axis"=>"Fourth axis",
+
+
+
+    //curricula
+    'curricula' => 'curricula',
+    'view all curricula' => 'view all curricula',
+    'Create curricula' => 'Create curricula',
+    "Name"=>"Name",
+    
+
+        
 
     ///--Ads
     'Ads'=>'Department Ads',
     'view all ads'=>'View all departments ads',
     'Create ads'=>'Create Department Ad',
+    
+    ///--Characters
+    'Characters' => 'Icons and Celebrities',
+    'view all Characters' => 'View all the best characters',
+    'Create Characters' => 'Create the best characters',
+    'Awards and achievements'=>'Awards and Honors',
+    'view all awards' => 'view all Awards',
+    'Create awards' => 'Create Awards' ,
+
+
+
     //////////// Front End
     'frontend'=>[
         'title' => 'Elhady Collegue',
-
+        'The Iraqi Academic'=>'The Iraqi Academic Scientific Journal',
+        "Private Higher"=>"Private Higher Education Department",
+        "Ministry of Education"=>"Ministry of Education",
+        "Ministry of Higher"=>"Ministry of Higher Education and Scientific Research",
+        "General Secretariat"=>"General Secretariat of the Council of Ministers",
+        "Electronic library"=>"Electronic library",
+        'Virtual library'=>'Virtual library',
+        'strategic_plan1' => "strategic plan",
         'sustainable' => 'sustainable',
+        'sustainablesgalleries' => 'images of sustainable',
         'text title' => "An independent educational institution established in Baghdad in 2015." ,
         'watch section' => "Watch Sections",
         'About' => "About Colleague",
         'country' => "Iraq",
+        "Topic"=>"Topic",
         'ahaly' => 'A leading private university in',
         'big text' => "Al-Hadi College was established in 2015 and is accredited by the Iraqi Ministry of Higher Education and Scientific Research. The college offers a diverse range of academic programs in medical, engineering, legal, and administrative fields. It is committed to providing high-quality education that meets the needs of the Iraqi society, aiming to prepare its students to become qualified professionals capable of contributing to Iraq's social and economic development. Al-Hadi College has a highly qualified teaching staff with extensive experience in their fields. Additionally, the college possesses modern facilities and equipment that meet the requirements of modern education. It contributes to Iraqi society through various programs and activities.",
         'more' => "More",
@@ -277,9 +367,13 @@ return [
         'we are here' => "We Are Here",
         'six' => "Know Us More ",
         'Latest News' => "Latest News ",
+        "Show More" => "Show More",
         'teacher' => "Teachers",
         'sections' => "Sections",
         'graduated' => "graduated",
+        'Study in Iraq'=>"Study in Iraq",
+        "College library"=>"College library",
+        "Research platform"=>"Research platform",
         'modern Learning' => "Modern Learning ",
         'student' => "Students",
         'success percent' => "Success Percent",
@@ -287,7 +381,7 @@ return [
         'Latest Conferences' => "Latest Conferences",
         'conference text' => "We showcase the latest conferences held at Al-Hadi University and highlight our best student contributions.",
         'contact Us' => "Contact Us",
-        'complement' => "complement",
+        'complement' => "Writing here",
         'Send' => "Send",
         'websites' => " Related Websites ",
         'location' => "60th Street, Al-Doura, Baghdad, Iraq Al-Hadi University College",
@@ -319,25 +413,29 @@ return [
         'greenmetrics_classification' => 'Greenmetrics Classification',
         'home' => 'Home',
         'dean_word' => 'Dean Word',
-        'min percent' => 'Minimum Percent',
-        'max percent' => 'Maximum Percent',
+        'min percent' => 'Evening Acceptance Rate',
+        'max percent' => ' Morning Acceptance Rate',
         'more info' => 'More Information',
         'Section Information' => 'Section Information',
         'department_details_title' => 'Elhady Universtiy | Department Details',
         'dept_affiliates' => 'The Department Affiliates',
         'costs' => 'Department Costs',
         'Head Teacher Word' => 'Head Teacher Word',
+        'Bologna'=>"Bologna Information System",
+        "Student Registration System"=>'Student Registration System',
         'messages' => 'The Message Send Successfully',
         'Affiliates' => 'Affiliates',
         'Affiliate' => 'Affiliate',
+        'Management System'=>'Management System',
         'Affiliate title' => 'Elhady Collegue | Affiliates',
         "This Department Hasn't Affiliates Yet" => "This Department Hasn't Affiliates Yet",
-        "The Word" => "
-        Al Hadi University College is one of the leading educational institutions in the region, as it reflects the university’s vision of providing distinguished higher education and developing society. The college consists of several departments, and is distinguished by the diversity of its educational programs, covering a wide range of medical and scientific specializations
-Al Hadi University College was established in 2015, and since then, the college has rapidly grown and developed into one of the premier destinations for higher education in the region. The college includes multiple departments, most of which specialize in medical fields, namely the Department of Dentistry, Department of Anesthesia Techniques, Department of Radiology Techniques, Department of Medical Device Techniques, Department of Nursing, Department of Medical Laboratories, Department of Medical Physics, Department of Law, Department of Interior Design, which provides broad opportunities. For students to choose the specialization that suits them
-Thanks to its distinguished educational structure based on the latest technologies and equipment, students at Al Hadi College have a unique opportunity to acquire the knowledge and practical skills necessary for their success in their chosen fields. The various student activities and cultural and social events organized by the college reflect its vibrant spirit and enhance communication and interaction among students
-The college has approximately 8,000 students, which reflects the growing demand for higher education and the quality that the college provides. The college is witnessing remarkable success in graduating students, with three courses having been graduated so far, which reflects the quality of education and interest in developing students to become pioneers and innovators in their society and fields of work.
-        ",
+        "The Word" => "Al-Hadi University College is one of the leading educational institutions in the region, reflecting the university's vision in providing distinguished higher education and community development. The college consists of several departments and is characterized by the diversity of its educational programs, which cover a wide range of medical and scientific specialties.
+
+        Established in 2015, Al-Hadi University College has rapidly grown and developed since then to become one of the primary destinations for higher education in the region. The college encompasses multiple departments, most of which specialize in medical fields such as the Department of Dentistry, Anesthesia Technology Department, Radiology Technology Department, Medical Devices Technology Department, Nursing Department, Medical Laboratories Department, Medical Physics Department, as well as scientific departments demanded in the job market, such as the Law Department, Interior Design Department, in addition to five departments under development, providing ample opportunities for students to choose the specialization that suits them.
+        
+        Thanks to its distinguished educational structure, relying on the latest technologies and equipment, Al-Hadi College students have a unique opportunity to acquire the knowledge and practical skills necessary for success in their chosen fields. With experienced teaching and technical staff, and the latest technologies, equipment, and supplies, the college reflects its vitality through diverse student activities, cultural events, and social activities that promote communication and interaction between students and the community.
+        
+        The college has approximately 8000 male and female students, reflecting the increasing demand for higher education and the quality provided by the college. The college has witnessed significant success in graduating students, with three graduating classes so far, reflecting the quality of education and the commitment to developing students to become leaders and innovators in their communities and workplaces.",
         'definition' => 'Definition',
         'department_message' => 'Department Message',
         'department_vision' => 'Department Vision',
@@ -347,6 +445,8 @@ The college has approximately 8,000 students, which reflects the growing demand 
         'year' => 'Year',
         'pioneers' => 'pioneers',
         'Graduated' => 'Graduated Students',
+        
+        "Written books and patents"=>"Written books and patents",
 
     ]
 

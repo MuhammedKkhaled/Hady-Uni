@@ -3,11 +3,16 @@
 use App\Http\Controllers\Front\AffiliateController;
 use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
+use App\Http\Controllers\Front\NewsController;
 use App\Http\Controllers\Front\LibraryController;
+use App\Http\Controllers\Front\ResearchController;
+use App\Http\Controllers\Front\SustainableController;
 use App\Http\Controllers\MessageController;
 use App\Models\Affiliate;
 use App\Models\Conference;
+use App\Models\Characters;
 use App\Models\Department;
+use App\Models\awards;
 use App\Models\News;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Auth;
@@ -28,12 +33,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
    /*  return view('auth.login'); */
    
-   $conferences = Conference::latest()->paginate(3);
+   $conferences = Conference::latest()->paginate(4);
+   $characters = Characters::latest()->paginate(3);
+   $awards = awards::latest()->paginate(4);
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards'));
 });
 
 
@@ -44,13 +51,19 @@ Route::get('/adminlogin', function () {
 
 Route::prefix('main/')->group(function (){
 
+    Route::get('/Important', function () {
+        return view('frontend.pages.Important');
+     });
+
     Route::get('' , function (){
-   $conferences = Conference::latest()->paginate(3);
+   $conferences = Conference::latest()->paginate(4);
+   $characters = Characters::latest()->paginate(3);
+   $awards = awards::latest()->paginate(4);
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards'));
     });
 
     Route::get("teacher-details/{type?}" ,function ($type = 0){
@@ -102,10 +115,13 @@ Route::prefix('main/')->group(function (){
     });
 
     Route::get('departments/{id}', [DepartmentController::class , 'show'])->name('main.departments.show');
+    Route::get('sustainable/{id}', [SustainableController::class , 'show'])->name('main.sustainable.show');
 
-    Route::get('libraries/{id}' ,[ LibraryController::class , 'show'])->name('main.libraries.show');
+    Route::get('libraries/{id}' ,[ LibraryController::class , 'showsustainable'])->name('main.libraries.showsustainable');
 
     Route::get('journal', [JournalController::class , 'show']);
+    Route::get('news', [NewsController::class , 'show']);
+    Route::get('conferences', [NewsController::class , 'showconferences']);
 
     Route::get('strategies', [JournalController::class , 'showStrategies']);
 
@@ -115,6 +131,7 @@ Route::prefix('main/')->group(function (){
     Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
+    Route::get('Research/' , [ResearchController::class , 'show'])->name('Research.show');
 });
 
 

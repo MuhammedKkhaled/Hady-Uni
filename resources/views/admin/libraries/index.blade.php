@@ -71,11 +71,8 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>{{ __("custom.Library Name") }} </th>
-                                <th>{{ __("custom.Specialization") }} </th>
-                                <th>{{ __("custom.Date Of Publishing") }} </th>
-                                <th>{{ __("custom.Library File") }} </th>
-                                <th>{{ __("custom.Created at") }}</th>
+                                <th>{{ __("custom.Research Title") }} </th>
+                                <th>{{ __("custom.date of publication") }} </th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
                             </thead>
@@ -108,10 +105,7 @@
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
                 {data: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'specialization_name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'specialization_name_' + '{{ LaravelLocalization::getCurrentLocale() }}', searchable: false},
                 {data: 'published_at', name: 'published_at', searchable: false},
-                {data: 'file', name: 'file', searchable: false},
-                {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],
             order: [[3, 'desc']],

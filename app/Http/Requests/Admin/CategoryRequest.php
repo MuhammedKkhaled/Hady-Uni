@@ -24,14 +24,10 @@ class CategoryRequest extends FormRequest
     public function rules()
     {
         $rules = [
-            'name' => 'required' ,
-            'description'=> "required|String",
-            'image'=>"required|mimes:jpeg,png,jpg,gif,svg,webp"
+            'name_en' => 'required' ,
+            'name_ar' => 'required' ,
         ];
 
-        if (in_array($this->method(), ['PUT', 'PATCH'])) {
-            $rules['image'] = 'sometimes|nullable';
-        }
         return $rules;
 
     }//end of rules

@@ -9,7 +9,8 @@
         <div class="page-banner-bg bg_cover" style="background-image: url({{ asset("assets/images/campus-2-2.jpg") }});">
             <div class="container">
                 <div class="banner-content text-center">
-                    <h2 class="title">استراتيجية الكلية</h2>
+                    <h2 class="title">
+                        {{ __("custom.frontend.strategic_plan") }}</h2>
                 </div>
             </div>
         </div>
@@ -27,7 +28,8 @@
 
                         <div class="blog-sidebar-post mt-30">
                             <div class="sidebar-title">
-                                <h4 class="title">المحور الاول</h4>
+                                <h4 class="title">
+                                    {{ __("custom.First axis") }}</h4>
                             </div>
                             <ul class="post-items">
                                 <li>
@@ -62,7 +64,8 @@
 
                         <div class="blog-sidebar-post mt-30">
                             <div class="sidebar-title">
-                                <h4 class="title">المحور الثاني</h4>
+                                <h4 class="title">
+                                    {{ __("custom.Secondary axis") }}</h4>
                             </div>
                             <ul class="post-items">
                                 <li>
@@ -108,7 +111,8 @@
 
                         <div class="blog-sidebar-post mt-30">
                             <div class="sidebar-title">
-                                <h4 class="title">المحور الثالث</h4>
+                                <h4 class="title">
+                                    {{ __("custom.Third axis") }}</h4>
                             </div>
                             <ul class="post-items">
                                 <li>
@@ -132,7 +136,8 @@
 
                         <div class="blog-sidebar-post mt-30">
                             <div class="sidebar-title">
-                                <h4 class="title">المحور الرابع</h4>
+                                <h4 class="title">
+                                    {{ __("custom.Fourth axis") }}</h4>
                             </div>
                             <ul class="post-items">
 

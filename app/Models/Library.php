@@ -14,10 +14,11 @@ class Library extends Model
     protected $fillable = [
         'name_en',
         'name_ar',
-        'category_id',
         'file',
         'specialization_name_en',
         'specialization_name_ar',
+        'publisher_en',
+        'publisher_ar',
         'published_at',
     ];
 

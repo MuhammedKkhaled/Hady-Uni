@@ -24,7 +24,7 @@
                 <h5>Permissions <span class="text-danger">*</span></h5>
 
                 @php
-                    $models = ['roles', 'admins', 'categories', 'blogs','affiliates','conferences','departments','journals','libraries','news','specifications','teachers','messages','students','galleries','links','accreditations'];
+                    $models = ['roles', 'admins', 'categories', 'blogs','affiliates','conferences','departments','journals','libraries','news','specifications','teachers','messages','students','galleries','links','accreditation',"ads",'characters','awards','sustainable','sustainablesgalleries'];
                 @endphp
 
                 <table class="table">

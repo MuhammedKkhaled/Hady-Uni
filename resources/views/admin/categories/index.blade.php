@@ -52,7 +52,8 @@
             <div id="kt_datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="row">
                     <div class="col-sm-12">
-                        <table class="table datatable table-bordered table-checkable dataTable no-footer dtr-inline " id="{{$name}}-table" role="grid" aria-describedby="kt_datatable_info" style="width: 1233px;">
+                        <table class="table datatable table-bordered table-checkable dataTable no-footer dtr-inline "
+                         id="{{$name}}-table" role="grid" aria-describedby="kt_datatable_info" style="width: 1233px;">
                             <thead>
                             <tr>
                                 <th>
@@ -63,11 +64,9 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>Category Name </th>
-                                <th>Category Description</th>
-                                <th>Category image</th>
-                                <th>Created at</th>
-                                <th>Action</th>
+                                <th>{{ __("custom.categories") }}</th>
+                                <th>{{ __("custom.Created at") }}</th>
+                                <th>{{ __("custom.Action") }}</th>
                             </tr>
                             </thead>
                         </table>
@@ -98,9 +97,7 @@
             },
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
-                {data: 'name', name: 'name'},
-                {data: 'description', name: 'description', searchable: false},
-                {data: 'image', name: 'image', searchable: false},
+                {data: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

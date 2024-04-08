@@ -10,11 +10,13 @@ use App\Http\Requests\Admin\NewsRequest;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Conference;
+use App\Models\Department;
 use App\Models\Library;
 use App\Models\News;
 use App\Models\Specification;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class LibraryController extends Controller
 {
@@ -40,12 +42,9 @@ class LibraryController extends Controller
         return DataTables::of($libraries)
 
             ->addColumn('record_select', 'admin.libraries.data_table.record_select')
-            ->addColumn('file', function (Library $library) {
-                return view('admin.libraries.data_table.image', compact('library'));
-
-            })
-            ->editColumn('created_at', function (Library $library) {
-                return $library->created_at->format('Y-m-d');
+           
+            ->editColumn('name_'. LaravelLocalization::getCurrentLocale(), function ( Library $libraries) {
+                return $libraries->{"name_".LaravelLocalization::getCurrentLocale()} ;
             })
             ->editColumn('published_at', function (Library $library) {
                 return $library->published_at->format('Y');
@@ -58,20 +57,14 @@ class LibraryController extends Controller
 
     public function create()
     {
-        $categories = Category::all();
-        $specifications = Specification::all();
-        return view('admin.libraries.create' , compact('categories' , 'specifications'));
+        $depratments =  Department::all();
+        return view('admin.libraries.create' , compact('depratments'));
     }// end of create
 
     public function store(LibraryRequest $request)
     {
 
         $requestData = $request->validated();
-
-        if ($request->file) {
-            $request->file->store('public/uploads/libraries/');
-            $requestData['file'] = $request->file->hashName();
-        }
 
         Library::create($requestData);
 
@@ -83,10 +76,8 @@ class LibraryController extends Controller
 
     public function edit(Library $library)
     {
-        $categories = Category::all();
-
-        $specifications = Specification::all();
-        return view('admin.libraries.edit', compact('library' , 'specifications' , 'categories'));
+        $depratments =  Department::all();
+        return view('admin.libraries.edit', compact('library' , 'depratments'));
 
     }// end of edit
 
