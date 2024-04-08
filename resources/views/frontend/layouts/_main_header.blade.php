@@ -32,12 +32,8 @@
                                         {{ __("custom.frontend.Electronic library") }}</a>
                                     </li>
                                     <li><a
-                                        href="https://www.ivsl.org/ivsl?func=feedback&language=ar" target="_blank">
-                                        {{ __("custom.frontend.Virtual library") }}</a>
-                                    </li>
-                                    <li><a
-                                            href="https://www.iasj.net/" target="_blank">
-                                            {{ __("custom.frontend.The Iraqi Academic") }}</a>
+                                        href="">
+                                        {{ __("custom.frontend.Written books and patents") }}</a>
                                     </li>
                                 </ul>
                             </li>

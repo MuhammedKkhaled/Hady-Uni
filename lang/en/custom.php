@@ -445,6 +445,8 @@ return [
         'year' => 'Year',
         'pioneers' => 'pioneers',
         'Graduated' => 'Graduated Students',
+        
+        "Written books and patents"=>"Written books and patents",
 
     ]
 

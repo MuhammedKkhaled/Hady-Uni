@@ -8,7 +8,6 @@
             <h3 class="card-title text-capitalize">{{$name}} |  Edit</h3>
         </div>
         <div class="card-body">
-
             <form method="post" action="{{ route('admin.'.$name.'.update', $curricula->id) }}"
                   enctype="multipart/form-data">
                 <div class="card-body">

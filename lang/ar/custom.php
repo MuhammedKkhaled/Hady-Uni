@@ -451,7 +451,7 @@ return [
         'year' => 'عام',
         'pioneers' => 'الطلاب المتميزين',
         'Graduated' => 'الخريجيين',
-
+        "Written books and patents"=>"الكتب المؤلفة وبراءات الاختراع",
 
 
     ]
