@@ -81,8 +81,7 @@
                     <div class="form-group">
                         <label class="text-capitalize">Conference Image</label>
                         <input type="file" name="file" id="input-file-now" class="dropify"
-                               @if(isset($library)) data-default-file="{{$library->file_path}}" data-show-remove="false"
-                               @endif  data-height="355"/>
+                               @if(isset($library)) data-default-file="{{$library->file_path}}" data-show-remove="false" @endif  data-height="355"/>
                     </div>
 
                 </div>
