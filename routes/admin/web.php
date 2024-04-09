@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
+use App\Http\Controllers\Admin\CollegeController;
 use App\Http\Controllers\Admin\CurriculaController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
@@ -110,6 +111,10 @@ Route::middleware([
             Route::delete('/libraries/bulk_delete', 'LibraryController@bulkDelete')->name('libraries.bulk_delete');
             Route::resource('libraries', LibraryController::class);
 
+            /// properties routes
+            Route::get('/college/data', 'CollegeController@data')->name('college.data');
+            Route::delete('/college/bulk_delete', 'CollegeController@bulkDelete')->name('college.bulk_delete');
+            Route::resource('college', CollegeController::class);
             /// journals routes
             Route::get('/journals/data', 'JournalController@data')->name('journals.data');
             Route::delete('/journals/bulk_delete', 'JournalController@bulkDelete')->name('journals.bulk_delete');

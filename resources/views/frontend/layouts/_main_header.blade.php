@@ -22,7 +22,7 @@
                                         </li>
                                     @endforeach --}}
                                     <li><a
-                                        href="{{-- {{ route('main.libraries.show', 1) }} --}}"> {{ __("custom.frontend.College library") }}</a>
+                                        href="{{ route('College.show') }}"> {{ __("custom.frontend.College library") }}</a>
                                 </li>
                                 <li><a
                                     href="{{ route('Research.show') }}"> {{ __("custom.frontend.Research platform") }}</a>

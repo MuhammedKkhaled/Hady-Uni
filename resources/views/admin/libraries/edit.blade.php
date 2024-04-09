@@ -53,28 +53,18 @@
 
                     {{-- Specialization --}}
                     <div class="form-group">
-                        <label for="specialization_name_en"> الفسم<span class="text-danger">*</span></label>
-                        <select class="form-control" id="specialization_name_en" name="specialization_name_en">
-                            <option value="0" selected disabled>-- Choose Specialization in English --</option>
-                            @foreach($depratments as $depratment)
-                                <option
-                                    value="{{ $depratment->name_en  }} "> {{ $depratment->name_en }} </option>
-                            @endforeach
-                        </select>
+                        <label for="specialization_name_en"> {{ __("custom.department") }} EN<span class="text-danger">*</span></label>
+                        <input type="text" name="specialization_name_en" id="specialization_name_en" autofocus class="form-control"
+                        value="{{ old('published_at', $library->specialization_name_en) }}">
+
                     </div>
 
                 {{-- Specialization --}}
                     <div class="form-group">
-                        <label for="specialization_name_ar">الفسم<span class="text-danger">*</span></label>
-                        <select class="form-control" id="specialization_name_ar" name="specialization_name_ar">
-                            <option value="0" selected disabled>-- Choose Specialization --</option>
-                            @foreach($depratments as $depratment)
-                            <option
-                                value="{{ $depratment->name_ar  }} "> {{ $depratment->name_ar }} </option>
-                        @endforeach
-                        </select>
+                        <label for="specialization_name_ar">{{ __("custom.department") }} AR<span class="text-danger">*</span></label>
+                        <input type="text" name="specialization_name_ar" id="specialization_name_ar" autofocus class="form-control"
+                        value="{{ old('published_at', $library->specialization_name_ar) }}"  >
                     </div>
-
                     {{--image--}}
                     <div class="form-group">
                         <label class="text-capitalize">اللينك</label>

@@ -73,8 +73,8 @@ return [
     "View Specifications" =>"عرض المواصفات",
     "Create Specifications" =>"إنشاء مواصفات",
     "departments"=>"الأقسام",
-    "department"=>"القسم",
-    "Publisher"=>"جهة النشر",
+    "department"=>"اسم الباحث",
+    "Publisher"=>"المجلة",
     "Research Title"=>"عنوان البحث",
     "date of publication"=>"تاريخ النشر",
     "Link"=>"الرابط",
@@ -284,6 +284,15 @@ return [
     'Student Department' => "قسم الطالب",
     'View All Department' => "عرض كل الأقسام",
     'Create Department' => "إنشاء قسم الطلاب",
+    
+    /// college
+    'View All college' => "مشاهده الكل",
+    'Create college' => "إنشاء",
+
+    "Book Number"=>"رقم الكتاب",
+    "departmentCollege"=>"القسم",
+    "Author Name"=>"اسم المؤلف",
+    "Book Name"=>"اسم الكتاب",
 
     /// links
     'Program Description' => "وصف البرنامج",

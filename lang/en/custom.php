@@ -66,11 +66,19 @@ return [
     "View Specifications" =>"View Specifications",
     "Create Specifications" =>"Create Specifications",
     "departments"=>"Departments",
-    "department"=>"department",
-    "Publisher"=>"Publisher",
-    "Research Title"=>"Research Title",
-    "date of publication"=>"date of publication",
+    "department"=>"Researcher's name",
+    "Publisher"=>"Journal",
+    "Research Title"=>"Title",
+    "date of publication"=>"Date of publication",
     "Link"=>"Link",
+
+
+    "Book Number"=>"Book Number",
+    "departmentCollege"=>"department",
+    "Author Name"=>"Author Name",
+    "Book Name"=>"Book Name",
+
+
     "View Departments"=>"View Departments",
     "Create Departments"=>"Create Departments",
     "Create sustainable"=>"Create sustainable",
@@ -127,6 +135,9 @@ return [
     "Specifications Edit"=>"Specifications Edit",
 
 
+    /// college
+    'View All college' => "View All",
+    'Create college' => "Create",
     /// Departments
     "New Departments"=>"New Departments",
     "Department Name"=>"Department Name",
