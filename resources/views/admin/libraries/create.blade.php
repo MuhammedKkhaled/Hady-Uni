@@ -17,35 +17,35 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="name_en">{{ __("custom.Library Name en") }} <span class="text-danger">*</span></label>
+                        <label for="name_en">{{ __("custom.Research Title") }} en<span class="text-danger">*</span></label>
                         <input type="text" id="name_en" name="name_en" autofocus class="form-control"
                                value="{{ old('name_en') }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="name_ar">{{ __("custom.Library Name ar") }} <span class="text-danger">*</span></label>
+                        <label for="name_ar">{{ __("custom.Research Title") }} ar<span class="text-danger">*</span></label>
                         <input type="text" id="name_ar" name="name_ar" autofocus class="form-control"
                                value="{{ old('name_ar') }}" >
                     </div>
                     
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="publisher_en">جهة النشر بلانجليزي <span class="text-danger">*</span></label>
+                        <label for="publisher_en">{{ __("custom.Publisher") }} en<span class="text-danger">*</span></label>
                         <input type="text" id="publisher_en" name="publisher_en" autofocus class="form-control"
                                value="{{ old('publisher_en') }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="publisher_ar">جهة النشر بلعربي<span class="text-danger">*</span></label>
+                        <label for="publisher_ar">{{ __("custom.Publisher") }} ar<span class="text-danger">*</span></label>
                         <input type="text" id="publisher_ar" name="publisher_ar" autofocus class="form-control"
                                value="{{ old('publisher_ar') }}" >
                     </div>
 
                     {{-- Date --}}
                     <div class="form-group">
-                        <label for="published_at"> File Published Data <span class="text-danger">*</span></label>
+                        <label for="published_at">{{ __("custom.date of publication") }}<span class="text-danger">*</span></label>
                         <input type="date" name="published_at" id="published_at" autofocus class="form-control"
                                >
                     </div>
@@ -67,7 +67,7 @@
 
                     {{--image--}}
                     <div class="form-group">
-                        <label class="text-capitalize">اللينك</label>
+                        <label class="text-capitalize">{{ __("custom.Link") }}</label>
                         <input type="text" id="file" name="file" autofocus class="form-control"
                                value="{{ old('file') }}" >
                     </div>

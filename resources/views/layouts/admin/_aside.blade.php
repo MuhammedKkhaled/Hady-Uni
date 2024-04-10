@@ -465,7 +465,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">{{ __("custom.View All Libraries") }} </span>
+                                                <span class="menu-text">{{ __("custom.View All Research") }} </span>
                                             </a>
                                         </li>
                                         @if(auth()->user()->hasPermission('read_'.$name))
@@ -474,7 +474,7 @@
                                                     <i class="menu-bullet menu-bullet-dot">
                                                         <span></span>
                                                     </i>
-                                                    <span class="menu-text">{{ __("custom.Create Library") }}</span>
+                                                    <span class="menu-text">{{ __("custom.Create Research") }}</span>
                                                 </a>
                                             </li>
                                         @endif

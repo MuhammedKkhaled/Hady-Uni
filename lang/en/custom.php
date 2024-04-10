@@ -79,6 +79,22 @@ return [
     "Book Name"=>"Book Name",
 
 
+
+
+
+
+    /////////////////////Research
+    "View All Research"=>"View All Research",
+    "Create Research"=>"Create Research",
+
+
+
+
+
+
+
+
+
     "View Departments"=>"View Departments",
     "Create Departments"=>"Create Departments",
     "Create sustainable"=>"Create sustainable",

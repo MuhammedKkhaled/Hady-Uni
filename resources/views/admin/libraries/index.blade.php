@@ -7,7 +7,7 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{ __("custom.libraries") }}
+                    {{ __("custom.frontend.Research platform") }}
                 </h3>
             </div>
             <div class="card-toolbar">

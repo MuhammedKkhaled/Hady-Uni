@@ -294,6 +294,13 @@ return [
     "Author Name"=>"اسم المؤلف",
     "Book Name"=>"اسم الكتاب",
 
+
+    /////////////////////Research
+    "View All Research"=>"عرض جميع البحوث",
+    "Create Research"=>"نشاء بحث",
+
+
+
     /// links
     'Program Description' => "وصف البرنامج",
     'Study program'=>'الخطة الدراسية',
