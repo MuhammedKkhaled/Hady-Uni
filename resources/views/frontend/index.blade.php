@@ -82,8 +82,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="about-content mt-40">
-                        <h2 class="about-title">{{ __("custom.frontend.ahaly") }}
-                            <span>{{__("custom.frontend.country")}}</span></h2>
+                        <h2 class="about-title">{{ __("custom.frontend.ahaly") }} {{__("custom.frontend.country")}}
+                            <span></span></h2>
                         <span class="line"></span>
                         <p>
                             {{ __("custom.frontend.big text") }}
