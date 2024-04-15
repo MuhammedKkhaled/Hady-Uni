@@ -518,7 +518,6 @@
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="First">
                                         <div class="row">
-                                            @forelse($curriculasFirsts as $curriculasFirst)
                                                 <div class="event-schedule">
                                                     <div class="event-schedule-table table-responsive">
                                                         <table class="table">
@@ -529,6 +528,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                @forelse($curriculasFirsts as $curriculasFirst)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFirst->image_1)) }}"
@@ -539,19 +539,18 @@
                                                                         {{ $curriculasFirst->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
+                                                                @empty
+                                                                    <tr>
+                                                                    </tr>
+                                                                @endforelse
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
-                                            @empty
-                                                <tr>
-                                                </tr>
-                                            @endforelse
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="Second">
                                         <div class="row">
-                                            @forelse($curriculasSeconds as $curriculasSecond)
                                                 <div class="event-schedule">
                                                     <div class="event-schedule-table table-responsive">
                                                         <table class="table">
@@ -562,6 +561,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                            @forelse($curriculasSeconds as $curriculasSecond)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasSecond->image_1)) }}"
@@ -572,19 +572,18 @@
                                                                         {{ $curriculasSecond->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
+                                                                @empty
+                                                                    <tr>
+                                                                    </tr>
+                                                                @endforelse
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
-                                            @empty
-                                                <tr>
-                                                </tr>
-                                            @endforelse
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="Third">
                                         <div class="row">
-                                            @forelse($curriculasThirds as $curriculasThird)
                                                 <div class="event-schedule">
                                                     <div class="event-schedule-table table-responsive">
                                                         <table class="table">
@@ -595,6 +594,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                @forelse($curriculasThirds as $curriculasThird)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasThird->image_1)) }}"
@@ -605,19 +605,18 @@
                                                                         {{ $curriculasThird->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
+                                                                @empty
+                                                                    <tr>
+                                                                    </tr>
+                                                                @endforelse
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
-                                            @empty
-                                                <tr>
-                                                </tr>
-                                            @endforelse
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="Fourth">
                                         <div class="row">
-                                            @forelse($curriculasFourths as $curriculasFourth)
                                                 <div class="event-schedule">
                                                     <div class="event-schedule-table table-responsive">
                                                         <table class="table">
@@ -628,6 +627,7 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                                @forelse($curriculasFourths as $curriculasFourth)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFourth->image_1)) }}"
@@ -638,21 +638,20 @@
                                                                         {{ $curriculasFourth->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
+                                                                @empty
+                                                                    <tr>
+                    
+                                                                    </tr>
+                                                                @endforelse
                                                             </tbody>
                                                         </table>
                                                     </div>
                                                 </div>
-                                            @empty
-                                                <tr>
-
-                                                </tr>
-                                            @endforelse
                                         </div>
                                     </div>
                                     @if (count($curriculasFifths) > 0)
                                         <div class="tab-pane fade" id="Fifth">
                                             <div class="row">
-                                                @forelse($curriculasFifths as $curriculasFifth)
                                                     <div class="event-schedule">
                                                         <div class="event-schedule-table table-responsive">
                                                             <table class="table">
@@ -664,6 +663,7 @@
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
+                                                                    @forelse($curriculasFifths as $curriculasFifth)
                                                                     <tr>
                                                                         <td class="">
                                                                             <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFifth->image_1)) }}"
@@ -674,14 +674,14 @@
                                                                             {{ $curriculasFifth->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                         </td>
                                                                     </tr>
+                                                                    @empty
+                                                                        <tr>
+                                                                        </tr>
+                                                                    @endforelse
                                                                 </tbody>
                                                             </table>
                                                         </div>
                                                     </div>
-                                                @empty
-                                                    <tr>
-                                                    </tr>
-                                                @endforelse
                                             </div>
                                         </div>
                                     @endif
