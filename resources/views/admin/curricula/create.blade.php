@@ -38,13 +38,24 @@
                         <label>{{ __("custom.Department Name ar") }}<span class="text-danger">*</span></label>
                         <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" >
                     </div>
+                    <div class="form-group">
+
+                        <label for="degree"> {{ __("custom.curricula") }}</label>
+                        <select id="degree" name="degree" class="form-control">
+                            <option value="0" disabled selected>-- Select lecture --</option>
+                            <option value="1">{{ __('custom.First stage lectures') }}</option>
+                            <option value="2">{{ __('custom.Second stage lectures') }}</option>
+                            <option value="3">{{ __('custom.Third stage lectures') }}</option>
+                            <option value="4">{{ __('custom.Fourth stage lectures') }}</option>
+                            <option value="5">{{ __('custom.Fifth stage lectures') }}</option>
+                        </select>
+                    </div>
 
                     {{--file--}}
                     <div class="form-group">
                         <label class="text-capitalize">{{ __("custom.Main Image") }} <span class="text-danger">PDF,DOCX*</span></label>
                         <input type="file" name="image_1" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
-
                 </div>
                 <div class="card-footer">
                     <div class="row">

@@ -2,56 +2,70 @@
 @php $name = 'curricula' @endphp
 @extends('layouts.admin.app')
 @section('content')
-
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
-            <h3 class="card-title text-capitalize">{{$name}} |  Edit</h3>
+            <h3 class="card-title text-capitalize">{{ $name }} | Edit</h3>
         </div>
         <div class="card-body">
-            <form method="post" action="{{ route('admin.'.$name.'.update', $curriculum->id) }}"
-                  enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.' . $name . '.update', $curriculum->id) }}" enctype="multipart/form-data">
                 <div class="card-body">
                     @csrf
                     @method('put')
                     @include('admin.partials._errors')
 
                     <div class="form-group">
-                        <label for="department_id"> {{ __("custom.Department Name") }}</label>
+                        <label for="department_id"> {{ __('custom.Department Name') }}</label>
                         <select id="department_id" name="department_id" class="form-control">
                             <option value="0" disabled selected>-- Select --</option>
 
-                            @foreach($departments  as $department) @endforeach
-                            <option
-                                value="{{ $department->id }}" {{ $curriculum->department->{'name_'.LaravelLocalization::getCurrentLocale()}  == $department->{'name_'.LaravelLocalization::getCurrentLocale() } ? 'selected' :'' }} >
-                                    {{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}
-                            </option>
-
+                            @foreach ($departments as $department)
+                                <option value="{{ $department->id }}">
+                                    {{ $department->{'name_' . LaravelLocalization::getCurrentLocale()} }}
+                                </option>
+                            @endforeach
                         </select>
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Department Name en") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en' , $curriculum->name_en) }}" >
+                        <label>{{ __('custom.Department Name en') }}<span class="text-danger">*</span></label>
+                        <input type="text" name="name_en" autofocus class="form-control"
+                            value="{{ old('name_en', $curriculum->name_en) }}">
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Department Name ar") }}<span class="text-danger">*</span></label>
-                        <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar' , $curriculum->name_ar) }}" >
+                        <label>{{ __('custom.Department Name ar') }}<span class="text-danger">*</span></label>
+                        <input type="text" name="name_ar" autofocus class="form-control"
+                            value="{{ old('name_ar', $curriculum->name_ar) }}">
+                    </div>
+                    <div class="form-group">
+
+                        <label for="degree"> {{ __('custom.curricula') }}</label>
+                        <select id="degree" name="degree" class="form-control">
+                            <option value="0" disabled selected>-- Select lecture --</option>
+                            <option value="1">{{ __('custom.First stage lectures') }}</option>
+                            <option value="2">{{ __('custom.Second stage lectures') }}</option>
+                            <option value="3">{{ __('custom.Third stage lectures') }}</option>
+                            <option value="4">{{ __('custom.Fourth stage lectures') }}</option>
+                            <option value="5">{{ __('custom.Fifth stage lectures') }}</option>
+                        </select>
                     </div>
 
-                    {{--file--}}
+                    {{-- file --}}
                     <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Main Image") }} <span class="text-danger">PDF,DOCX*</span></label>
-                        <input type="file" name="image_1" id="input-file-now" class="dropify" @if (isset($curriculum)) data-default-file="{{ $curriculum->image_1 }}" data-show-remove="false" @endif data-height="355"/>
+                        <label class="text-capitalize">{{ __('custom.Main Image') }} <span
+                                class="text-danger">PDF,DOCX*</span></label>
+                        <input type="file" name="image_1" id="input-file-now" class="dropify"
+                            @if (isset($curriculum)) data-default-file="{{ $curriculum->image_1 }}" data-show-remove="false" @endif
+                            data-height="355" />
                     </div>
 
                 </div>
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-lg-8">
-                            <button type="submit" class="btn btn-primary mr-2">{{ __("custom.Submit") }}</button>
+                            <button type="submit" class="btn btn-primary mr-2">{{ __('custom.Submit') }}</button>
                         </div>
                     </div>
                 </div>

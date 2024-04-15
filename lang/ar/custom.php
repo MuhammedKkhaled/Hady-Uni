@@ -295,6 +295,13 @@ return [
     "Book Name"=>"اسم الكتاب",
 
 
+    "First stage lectures"=>"محاضرات المرحلة الاولى",
+    "Second stage lectures"=>"محاضرات المرحلة الثانية",
+    "Third stage lectures"=>"محاضرات المرحلة  الثالثة ",
+    "Fourth stage lectures"=>"محاضرات المرحلة  الرابعة",
+    "Fifth stage lectures"=>"محاضرات المرحلة الخامسة",
+    'lecture'=>"محاضره",
+    "link"=>"تفاصيل اكثر",
     /////////////////////Research
     "View All Research"=>"عرض جميع البحوث",
     "Create Research"=>"نشاء بحث",

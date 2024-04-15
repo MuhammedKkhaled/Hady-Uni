@@ -15,6 +15,7 @@ class Curricula extends Model
         'image_1',
         'name_en',
         'name_ar',
+        'degree',
         'department_id',
     ];
 

@@ -23,8 +23,12 @@ class DepartmentController extends Controller
         $galleries = Gallery::where('department_id', $id)->get();
         $accreditations = Accreditation::where('department_id', $id)->get();
         $ads = Ads::where('department_id', $id)->get();
-        $curriculas = Curricula::all();
+        $curriculasFirsts = Curricula::where('department_id', $id)->where('degree',  1)->get();
+        $curriculasSeconds = Curricula::where('department_id', $id)->where('degree',  2)->get();
+        $curriculasThirds = Curricula::where('department_id', $id)->where('degree',  3)->get();
+        $curriculasFourths = Curricula::where('department_id', $id)->where('degree',  4)->get();
+        $curriculasFifths = Curricula::where('department_id', $id)->where('degree',  5)->get();
 
-        return view("frontend.pages.department_details", compact('department', 'department_students', 'link', 'galleries','accreditations','ads','curriculas'));
+        return view("frontend.pages.department_details", compact('department', 'department_students', 'link', 'galleries','accreditations','ads','curriculasFirsts','curriculasSeconds','curriculasThirds','curriculasFourths','curriculasFifths'));
     }
 }

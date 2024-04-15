@@ -81,7 +81,14 @@ return [
 
 
 
-
+//
+"First stage lectures"=>"First stage lectures",
+"Second stage lectures"=>"Second stage lectures",
+"Third stage lectures"=>"Third stage lectures",
+"Fourth stage lectures"=>"Second stage lectures",
+"Fifth stage lectures"=>"Fifth stage lectures",    
+'lecture'=>"lecture",
+"link"=>"more details",
 
     /////////////////////Research
     "View All Research"=>"View All Research",

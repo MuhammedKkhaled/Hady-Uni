@@ -23,6 +23,7 @@ class CurriculaRequest extends FormRequest
     {
         $rules = [
             'department_id'=> ['numeric' , 'required'],
+            'degree'=> ['numeric' , 'required'],
             'name_en'       => 'string',
             'name_ar'       => 'required|string',
             'image_1'              => 'required|mimes:pdf,docx',

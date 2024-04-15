@@ -58,7 +58,8 @@
                                     {{ $department->maximum_percent ?? 'لا يوجد ' }}%
                                 </li>
                                 <li><strong>{{ __('custom.specifications') }} : </strong>
-                                    {{ $department->{'specification_name_' . LaravelLocalization::getCurrentLocale()} }}</li>
+                                    {{ $department->{'specification_name_' . LaravelLocalization::getCurrentLocale()} }}
+                                </li>
                                 <li><strong>{{ __('custom.frontend.costs') }} :</strong>
                                     {{ number_format($department->price, 0, '.', ',') . ' IQD' }}
                                 </li>
@@ -71,8 +72,7 @@
                                 </a>
                             </div>
                             <div class="sidebar-btn">
-                                <a class="main-btn" href="{{ route('affiliates.show', $department->id) }}"
-                                    target="_blank">
+                                <a class="main-btn" href="{{ route('affiliates.show', $department->id) }}" target="_blank">
                                     {{ __('custom.frontend.dept_affiliates') }}
                                 </a>
                             </div>
@@ -175,46 +175,49 @@
     <!--====== Contact Ends ======-->
     <section class="contact-area">
         <div class="container">
-    <div class="teacher-details-tab">
-        <ul class="nav nav-justified">
-            <li class="nav-item"><a data-bs-toggle="tab" href="#Admission">{{ __('custom.Admission') }}</a></li>
-            <li class="nav-item"><a data-bs-toggle="tab" href="#Graduation ">{{ __('custom.Graduation requirements') }}</a></li>
-            <li class="nav-item"><a  data-bs-toggle="tab" href="#Installments">{{ __('custom.Installments') }}</a></li>
-            <li class="nav-item"><a class="active" data-bs-toggle="tab" href="#Scholarships">{{ __('custom.Scholarships') }}</a></li>
-        </ul>
-        <div class="tab-content">
-            <div class="tab-pane fade show active" id="Scholarships">
-                <div class="row">
-                    <p style="text-align: end;">
-                        {{ $department->{'scholarships_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
-                    </p>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="Installments">
-                <div class="row">
-                    <p style="text-align: end;">
-                        {{ $department->{'installments_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
-                    </p>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="Graduation">
-                <div class="row">
-                    <p style="text-align: end;">
-                        {{ $department->{'graduation_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
-                    </p>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="Admission">
-                <div class="row">
-                    <p style="text-align: end;">
-                        {{ $department->{'admission_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
-                    </p>
+            <div class="teacher-details-tab">
+                <ul class="nav nav-justified">
+                    <li class="nav-item"><a data-bs-toggle="tab" href="#Admission">{{ __('custom.Admission') }}</a></li>
+                    <li class="nav-item"><a data-bs-toggle="tab"
+                            href="#Graduation ">{{ __('custom.Graduation requirements') }}</a></li>
+                    <li class="nav-item"><a data-bs-toggle="tab" href="#Installments">{{ __('custom.Installments') }}</a>
+                    </li>
+                    <li class="nav-item"><a class="active" data-bs-toggle="tab"
+                            href="#Scholarships">{{ __('custom.Scholarships') }}</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="Scholarships">
+                        <div class="row">
+                            <p style="text-align: end;">
+                                {{ $department->{'scholarships_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Installments">
+                        <div class="row">
+                            <p style="text-align: end;">
+                                {{ $department->{'installments_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Graduation">
+                        <div class="row">
+                            <p style="text-align: end;">
+                                {{ $department->{'graduation_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="Admission">
+                        <div class="row">
+                            <p style="text-align: end;">
+                                {{ $department->{'admission_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</section>
+    </section>
     <!--====== Gallery Start ======-->
 
     <div class="gallery-page">
@@ -227,16 +230,15 @@
             @if ($galleries)
                 <div class="row grid-masonry">
                     @foreach ($galleries as $gallery)
-
-                            <div class="col-lg-4 col-sm-6 grid-item">
-                                <div class="single-gallery mt-30">
-                                    <a class="image-popup"
-                                        href="{{ asset(Storage::url('uploads/galleries/' . $gallery->image_1)) }}">
-                                        <img src="{{ asset(Storage::url('uploads/galleries/' . $gallery->image_1)) }}"
-                                            alt="gallery">
-                                    </a>
-                                </div>
+                        <div class="col-lg-4 col-sm-6 grid-item">
+                            <div class="single-gallery mt-30">
+                                <a class="image-popup"
+                                    href="{{ asset(Storage::url('uploads/galleries/' . $gallery->image_1)) }}">
+                                    <img src="{{ asset(Storage::url('uploads/galleries/' . $gallery->image_1)) }}"
+                                        alt="gallery">
+                                </a>
                             </div>
+                        </div>
                     @endforeach
                 </div>
             @endif
@@ -245,9 +247,9 @@
     </div>
 
     <!--====== Gallery Ends ======-->
-    
-        
-        
+
+
+
     <!--====== Blog Details Start ======-->
 
 
@@ -324,8 +326,8 @@
                             <br>
                             <div class="row">
                                 @if ($link)
-                                <div class="sidebar-btn col-lg-4  col-sm-12">
-                                    <a class="main-btn col-lg-12 w-100"
+                                    <div class="sidebar-btn col-lg-4  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100"
                                             href="{{ asset(Storage::url('uploads/links/' . $link->program_desc_file)) ?? '' }}"
                                             target="_blank">{{ __('custom.Program Description') }}</a>
                                     </div>
@@ -372,78 +374,29 @@
     </section>
 
     <!--====== Contact Ends ======-->
-        <!--====== Contact Start ======-->
+    <!--====== Contact Start ======-->
 
-        <section class="contact-area">
-            <div class="container">
-                <div class="contact-form" style="padding-top: 20px;">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12">
-                            <div class="contact-title text-center">
-                                <h3 class="title">{{ __('custom.Forms') }}</h3>
-                                <br>
-                                <div class="row">
-                                    @if ($department)
-                                    <div class="sidebar-btn col-lg-6  col-sm-12">
-                                        <a class="main-btn col-lg-12 w-100"
-                                                href="{{ $department->employe_link }}"
-                                                target="_blank">{{ __('custom.Employer opinion forms') }}</a>
-                                        </div>
-                                        <div class="sidebar-btn col-lg-6  col-sm-12">
-                                            <a class="main-btn col-lg-12 w-100"
-                                            href="{{ $department->graduate_link}}"
-                                                target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
-                                        </div>
-                                    @else
-                                        <p>No links found for this department.</p>
-                                    @endif
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--====== Contact Ends ======-->
-            <!--====== Blog Start ======-->
-    @if ( count($ads) > 0 )
     <section class="contact-area">
         <div class="container">
             <div class="contact-form" style="padding-top: 20px;">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="contact-title text-center">
-                            <h3 class="title">{{ __('custom.Ads') }}</h3>
+                            <h3 class="title">{{ __('custom.Forms') }}</h3>
                             <br>
                             <div class="row">
-                                @foreach($ads as $ad)
-                        <div class="col-lg-4">
-                            <div class="single-blog mt-30">
-                                <div class="blog-image">
-                                    <a href="#">
-                                        <img src="{{ Storage::url("uploads/ads/". $ad->image) }}" width="270"
-                                             height="150" alt="blogsss">
-                                    </a>
-                                </div>
-                                <div class="blog-content" style="text-align:end">
-                                    <ul class="meta">
-                                        <li><a href="#">{{ $ad->created_at->format('D M Y')  }}</a></li>
-                                        <!--<li><a href="#">By: {{ $ad->author }}</a></li>-->
-                                    </ul>
-                                    <h4 class="blog-title"><a href="#"
-                                                              style="text-align:end">
-                                        {{ $ad->{'title_'.LaravelLocalization::getCurrentLocale()} }}
-
-                                        </a>
-                                    </h4>
-                                    
-                                    <p>{{ $ad->{'content_'.LaravelLocalization::getCurrentLocale()} }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                                @if ($department)
+                                    <div class="sidebar-btn col-lg-6  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100" href="{{ $department->employe_link }}"
+                                            target="_blank">{{ __('custom.Employer opinion forms') }}</a>
+                                    </div>
+                                    <div class="sidebar-btn col-lg-6  col-sm-12">
+                                        <a class="main-btn col-lg-12 w-100" href="{{ $department->graduate_link }}"
+                                            target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
+                                    </div>
+                                @else
+                                    <p>No links found for this department.</p>
+                                @endif
                             </div>
 
                         </div>
@@ -452,10 +405,58 @@
             </div>
         </div>
     </section>
+
+    <!--====== Contact Ends ======-->
+    <!--====== Blog Start ======-->
+    @if (count($ads) > 0)
+        <section class="contact-area">
+            <div class="container">
+                <div class="contact-form" style="padding-top: 20px;">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="contact-title text-center">
+                                <h3 class="title">{{ __('custom.Ads') }}</h3>
+                                <br>
+                                <div class="row">
+                                    @foreach ($ads as $ad)
+                                        <div class="col-lg-4">
+                                            <div class="single-blog mt-30">
+                                                <div class="blog-image">
+                                                    <a href="#">
+                                                        <img src="{{ Storage::url('uploads/ads/' . $ad->image) }}"
+                                                            width="270" height="150" alt="blogsss">
+                                                    </a>
+                                                </div>
+                                                <div class="blog-content" style="text-align:end">
+                                                    <ul class="meta">
+                                                        <li><a href="#">{{ $ad->created_at->format('D M Y') }}</a>
+                                                        </li>
+                                                        <!--<li><a href="#">By: {{ $ad->author }}</a></li>-->
+                                                    </ul>
+                                                    <h4 class="blog-title"><a href="#" style="text-align:end">
+                                                            {{ $ad->{'title_' . LaravelLocalization::getCurrentLocale()} }}
+
+                                                        </a>
+                                                    </h4>
+
+                                                    <p>{{ $ad->{'content_' . LaravelLocalization::getCurrentLocale()} }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     @endif
 
     <!--====== Blog Ends ======-->
-            <!--====== Contact Start ======-->
+    <!--====== Contact Start ======-->
 
     <section class="contact-area">
         <div class="container">
@@ -465,17 +466,16 @@
                         <div class="contact-title text-center">
                             <h3 class="title">{{ __('custom.accreditation') }}</h3>
                             <br>
-                            
+
                             @if ($accreditations)
                                 <div class="row">
                                     @foreach ($accreditations as $accreditation)
-
-                                    <div class="sidebar-btn col-lg-3">
-                                        <a class="main-btn col-lg-12"
-                                            href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
-                                            target="_blank">
-                                            {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
-                                    </div>
+                                        <div class="sidebar-btn col-lg-3">
+                                            <a class="main-btn col-lg-12"
+                                                href="{{ asset(Storage::url('uploads/accreditation/' . $accreditation->image_1)) }}"
+                                                target="_blank">
+                                                {{ $accreditation->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
+                                        </div>
                                     @endforeach
                                 </div>
                             @endif
@@ -490,37 +490,213 @@
 
     <!--====== Contact Ends ======-->
     <!--====== Blog Ends ======-->
-            <!--====== Contact Start ======-->
-            @if (count($curriculas)>0)
-            <section class="contact-area">
-                <div class="container">
-                    <div class="contact-form" style="padding-top: 20px;">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-12">
-                                <div class="contact-title text-center">
-                                    <h3 class="title">{{ __('custom.curricula') }}</h3>
-                                    <br>
+    <!--====== Contact Start ======-->
+    <section class="contact-area">
+        <div class="container">
+            <div class="contact-form" style="padding-top: 20px;">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="contact-title text-center">
+                            <h3 class="title">{{ __('custom.curricula') }}</h3>
+                            <br>
+                            <div class="teacher-details-tab">
+                                <ul class="nav nav-justified">
+                                    @if (count($curriculasFifths) > 0)
+                                        <li class="nav-item"><a data-bs-toggle="tab"
+                                                href="#Fifth">{{ __('custom.Fifth stage lectures') }}</a></li>
+                                    @endif
+                                    <li class="nav-item"><a data-bs-toggle="tab"
+                                            href="#Fourth">{{ __('custom.Fourth stage lectures') }}</a></li>
+                                    <li class="nav-item"><a data-bs-toggle="tab"
+                                            href="#Third">{{ __('custom.Third stage lectures') }}</a></li>
+                                    <li class="nav-item"><a data-bs-toggle="tab"
+                                            href="#Second ">{{ __('custom.Second stage lectures') }}</a></li>
+                                    <li class="nav-item"><a data-bs-toggle="tab" class="active"
+                                            href="#First">{{ __('custom.First stage lectures') }}</a></li>
+
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="First">
                                         <div class="row">
-                                            @foreach ($curriculas as $curricula)
-                            
-                                            <div class="sidebar-btn col-lg-3">
-                                                <a class="main-btn col-lg-12"
-                                                    href="{{ asset(Storage::url('uploads/curricula/' . $curricula->image_1)) }}"
-                                                    target="_blank">
-                                                    {{ $curricula->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}</a>
-                                            </div>
-                                            @endforeach
+                                            @forelse($curriculasFirsts as $curriculasFirst)
+                                                <div class="event-schedule">
+                                                    <div class="event-schedule-table table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">{{ __('custom.link') }}</th>
+                                                                    <th class="">{{ __('custom.lecture') }} </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="">
+                                                                        <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFirst->image_1)) }}"
+                                                                            target="_blank">{{ __('custom.link') }}</a>
+
+                                                                    </td>
+                                                                    <td class="">
+                                                                        {{ $curriculasFirst->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            @empty
+                                                <tr>
+                                                </tr>
+                                            @endforelse
                                         </div>
-                                    
-                                    <br>
-        
+                                    </div>
+                                    <div class="tab-pane fade" id="Second">
+                                        <div class="row">
+                                            @forelse($curriculasSeconds as $curriculasSecond)
+                                                <div class="event-schedule">
+                                                    <div class="event-schedule-table table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">{{ __('custom.link') }}</th>
+                                                                    <th class="">{{ __('custom.lecture') }} </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="">
+                                                                        <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasSecond->image_1)) }}"
+                                                                            target="_blank">{{ __('custom.link') }}</a>
+
+                                                                    </td>
+                                                                    <td class="">
+                                                                        {{ $curriculasSecond->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            @empty
+                                                <tr>
+                                                </tr>
+                                            @endforelse
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="Third">
+                                        <div class="row">
+                                            @forelse($curriculasThirds as $curriculasThird)
+                                                <div class="event-schedule">
+                                                    <div class="event-schedule-table table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">{{ __('custom.link') }}</th>
+                                                                    <th class="">{{ __('custom.lecture') }} </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="">
+                                                                        <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasThird->image_1)) }}"
+                                                                            target="_blank">{{ __('custom.link') }}</a>
+
+                                                                    </td>
+                                                                    <td class="">
+                                                                        {{ $curriculasThird->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            @empty
+                                                <tr>
+                                                </tr>
+                                            @endforelse
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="Fourth">
+                                        <div class="row">
+                                            @forelse($curriculasFourths as $curriculasFourth)
+                                                <div class="event-schedule">
+                                                    <div class="event-schedule-table table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">{{ __('custom.link') }}</th>
+                                                                    <th class="">{{ __('custom.lecture') }} </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="">
+                                                                        <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFourth->image_1)) }}"
+                                                                            target="_blank">{{ __('custom.link') }}</a>
+
+                                                                    </td>
+                                                                    <td class="">
+                                                                        {{ $curriculasFourth->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            @empty
+                                                <tr>
+
+                                                </tr>
+                                            @endforelse
+                                        </div>
+                                    </div>
+                                    @if (count($curriculasFifths) > 0)
+                                        <div class="tab-pane fade" id="Fifth">
+                                            <div class="row">
+                                                @forelse($curriculasFifths as $curriculasFifth)
+                                                    <div class="event-schedule">
+                                                        <div class="event-schedule-table table-responsive">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="">{{ __('custom.link') }}</th>
+                                                                        <th class="">{{ __('custom.lecture') }}
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="">
+                                                                            <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFifth->image_1)) }}"
+                                                                                target="_blank">{{ __('custom.link') }}</a>
+
+                                                                        </td>
+                                                                        <td class="">
+                                                                            {{ $curriculasFifth->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                @empty
+                                                    <tr>
+                                                    </tr>
+                                                @endforelse
+                                            </div>
+                                        </div>
+                                    @endif
+
                                 </div>
                             </div>
+
+                            <br>
+
                         </div>
                     </div>
                 </div>
-            </section>
-            @endif
-            <!--====== Contact Ends ======-->
+            </div>
+        </div>
+    </section>
+    <!--====== Contact Ends ======-->
 
 @endsection
