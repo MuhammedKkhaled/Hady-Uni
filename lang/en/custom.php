@@ -79,7 +79,8 @@ return [
     "Book Name"=>"Book Name",
 
 
-
+    "Lecture name in Arabic"=>"Lecture name in Arabic",
+    "Lecture name in English"=>"Lecture name in English",
 
 //
 "First stage lectures"=>"First stage lectures",

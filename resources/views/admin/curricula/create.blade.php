@@ -29,13 +29,13 @@
                     </div>
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Department Name en") }}<span class="text-danger">*</span></label>
+                        <label>{{ __("custom.Lecture name in English") }}<span class="text-danger">*</span></label>
                         <input type="text" name="name_en" autofocus class="form-control" value="{{ old('name_en') }}" >
                     </div>
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label>{{ __("custom.Department Name ar") }}<span class="text-danger">*</span></label>
+                        <label>{{ __("custom.Lecture name in Arabic") }}<span class="text-danger">*</span></label>
                         <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name_ar') }}" >
                     </div>
                     <div class="form-group">

@@ -350,6 +350,8 @@ return [
 
 
 
+    "Lecture name in Arabic"=>"اسم المحاضره بالعربي",
+    "Lecture name in English"=>"اسم المحاضره بالانجليزي",
 
     ///--Ads
     'Ads' => 'إعلانات القسم',
