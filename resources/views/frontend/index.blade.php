@@ -164,7 +164,7 @@
                                 <img src="{{ asset("assets/images/icon/icon-2.webp") }}" width="70" height="70" alt="icon">
                             </div>
                             <div class="box-content">
-                                <p>{{ __("custom.frontend.Student Registration System") }}</p>
+                                <p>{{ __("custom.frontend.thesher Registration System") }}</p>
                             </div>
                         </div>
                     </div>
