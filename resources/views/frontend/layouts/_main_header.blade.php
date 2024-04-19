@@ -32,7 +32,7 @@
                                         {{ __("custom.frontend.Electronic library") }}</a>
                                     </li>
                                     <li><a
-                                        href="">
+                                        href="{{ route('Patents.show') }}">
                                         {{ __("custom.frontend.Written books and patents") }}</a>
                                     </li>
                                 </ul>

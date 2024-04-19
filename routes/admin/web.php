@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
 use App\Http\Controllers\Admin\CollegeController;
 use App\Http\Controllers\Admin\CurriculaController;
+use App\Http\Controllers\Admin\PatentsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\StudnetController;
@@ -179,7 +180,10 @@ Route::middleware([
             Route::get('/awards/data', 'awardsController@data')->name('awards.data');
             Route::delete('/awards/bulk_delete', 'awardsController@bulkDelete')->name('awards.bulk_delete');
             Route::resource('awards', awardsController::class);
-
+            //links patents
+            Route::get('/patents/data', 'PatentsController@data')->name('patents.data');
+            Route::delete('/patents/bulk_delete', 'PatentsController@bulkDelete')->name('patents.bulk_delete');
+            Route::resource('patents', PatentsController::class);
             //links sustainable
             Route::get('/sustainable/data', 'SustainableController@data')->name('sustainable.data');
             Route::delete('/sustainable/bulk_delete', 'SustainableController@bulkDelete')->name('sustainable.bulk_delete');

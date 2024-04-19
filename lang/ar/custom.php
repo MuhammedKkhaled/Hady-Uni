@@ -369,6 +369,8 @@ return [
     'Awards and achievements'=>"الجوائز والاوسمة",
     'view all awards' => 'عرض كل الانجازات',
     'Create awards' => 'إنشاء انجاز',
+    "patent Content ar"=>"براءات الاختراع بلعربية",
+    "patent Content en"=>"براءات الاختراع بلانجليزية",
 
 
     //////////// Front End

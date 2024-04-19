@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\PatentsController;
 use App\Http\Controllers\Front\AffiliateController;
 use App\Http\Controllers\Front\CollegeController;
 use App\Http\Controllers\Front\DepartmentController;
@@ -133,6 +134,7 @@ Route::prefix('main/')->group(function (){
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
     Route::get('Research/' , [ResearchController::class , 'show'])->name('Research.show');
+    Route::get('Patents/' , [PatentsController::class , 'show'])->name('Patents.show');
     Route::get('College/' , [CollegeController::class , 'show'])->name('College.show');
 });
 

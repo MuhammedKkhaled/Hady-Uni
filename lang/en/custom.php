@@ -77,7 +77,8 @@ return [
     "departmentCollege"=>"department",
     "Author Name"=>"Author Name",
     "Book Name"=>"Book Name",
-
+    "patent Content ar"=>"patent Content ar",
+    "patent Content en"=>"patent Content en",
 
     "Lecture name in Arabic"=>"Lecture name in Arabic",
     "Lecture name in English"=>"Lecture name in English",
