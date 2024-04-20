@@ -33,6 +33,8 @@
                 <div class="col-lg-12">
                     <div class="event-details-content mt-50">
 
+                        <input type="text" placeholder="بحث" class="form-control" id="Search" onkeyup="myFunction()" onkeydown="myFunction()">
+                        
                         <div class="event-schedule">
                             <div class="event-schedule-table table-responsive">
                                 <table class="table">
@@ -49,7 +51,7 @@
                                     <tbody>
 
                                     @forelse($affiliates as $affiliate)
-                                    <tr>
+                                    <tr class="target">
                                         <td class="">{{  $affiliate->{'notes_'.LaravelLocalization::getCurrentLocale()} }}</td>
                                         <td class=""> {{ $affiliate->{'title_'.LaravelLocalization::getCurrentLocale()} }}</td>
                                         <td class=""> {{ $affiliate->{'special_specialization_'.LaravelLocalization::getCurrentLocale()} }} </td>
@@ -70,4 +72,21 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        function myFunction() {
+            var input = document.getElementById("Search");
+            var filter = input.value.toLowerCase();
+            var nodes = document.getElementsByClassName('target');
+            
+                for (i = 0; i < nodes.length; i++) {
+                    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+                    nodes[i].style.display = "block";
+                    nodes[i].style.display = "";
+                    } else {
+                    nodes[i].style.display = "none";
+                    }
+                }
+            }
+      </script>
 @endsection
