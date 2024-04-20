@@ -41,10 +41,33 @@
                         <textarea name="content_ar" class="form-control" cols="30" rows="10" id="content-textarea">{{ old('content_ar', $patent->content_ar) }}</textarea>
                     </div>
 
-                    {{--image--}}
+                    {{-- Name --}}
                     <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Main Images") }}</label>
-                        <input type="file" name="image" id="input-file-now" class="dropify" @if(isset($patent)) data-default-file="{{$patent->image_path}}" data-show-remove="false" @endif data-height="585"/>
+                        <label>{{ __("custom.Instructor's name") }} en<span class="text-danger">*</span></label>
+                        <input type="text" name="Instructor_en" autofocus class="form-control" value="{{ old('Instructor_en', $patent->Instructor_en) }}" >
+                    </div>
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.Instructor's name") }} ar<span class="text-danger">*</span></label>
+                        <input type="text" name="Instructor_ar" autofocus class="form-control" value="{{ old('Instructor_ar', $patent->Instructor_ar) }}" >
+                    </div>
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.Donor") }} en<span class="text-danger">*</span></label>
+                        <input type="text" name="Donor_en" autofocus class="form-control" value="{{ old('Donor_en', $patent->Donor_en) }}" >
+                    </div>
+
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.Donor") }} ar<span class="text-danger">*</span></label>
+                        <input type="text" name="Donor_ar" autofocus class="form-control" value="{{ old('Donor_ar', $patent->Donor_ar) }}" >
+                    </div>
+                    {{-- Name --}}
+                    <div class="form-group">
+                        <label>{{ __("custom.the year") }} <span class="text-danger">*</span></label>
+                        <input type="number" name="year" autofocus class="form-control" value="{{ old('year', $patent->year) }}" >
                     </div>
 
                 </div>

@@ -39,9 +39,6 @@ class PatentsController extends Controller
         return DataTables::of($patents)
 
             ->addColumn('record_select', 'admin.patents.data_table.record_select')
-            ->addColumn('image', function (Patents $new) {
-                return view('admin.patents.data_table.image', compact('new'));
-            })
             ->editColumn('title_'. LaravelLocalization::getCurrentLocale(), function ( Patents $new) {
                 return $new->{"title_".LaravelLocalization::getCurrentLocale()} ;
             })
@@ -69,12 +66,6 @@ class PatentsController extends Controller
         $requestData = $request->validated();
 
         $requestData['author'] = auth()->user()->name;
-
-        if ($request->image) {
-            $request->image->store('public/uploads/patents/');
-            $requestData['image'] = $request->image->hashName();
-        }
-
         Patents::create($requestData);
 
         session()->flash('success', __('Added Successfully'));

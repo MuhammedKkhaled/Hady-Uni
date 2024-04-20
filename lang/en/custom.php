@@ -57,7 +57,11 @@ return [
 "Objectives7"=>"Develop the educational process and promote scientific research with available resources while ensuring knowledge exchange",
 
 
-
+"Patent name"=>"Patent name",
+"Patent summary"=>"Patent summary",
+"Donor"=>"Donor",
+"the year"=>"the year",
+"Instructor's name"=>"Instructor's name",
 
     ///// Login
     "LOGIN" => "Login",

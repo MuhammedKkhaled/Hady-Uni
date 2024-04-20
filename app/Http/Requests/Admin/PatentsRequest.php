@@ -26,7 +26,11 @@ class PatentsRequest extends FormRequest
             'title_en'       => 'nullable',
             'content_ar' => 'required',
             'content_en' => 'nullable',
-            'image'      => 'required|mimes:jpeg,png,jpg,gif,svg,webp',
+            'Instructor_ar' => 'required',
+            'Instructor_en' => 'nullable',
+            'Donor_ar' => 'required',
+            'Donor_en' => 'nullable',
+            'year' => 'required',
         ];
 
         if (in_array($this->method(), ['PUT', 'PATCH'])) {

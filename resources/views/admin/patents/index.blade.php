@@ -65,7 +65,6 @@
                                 </th>
                                 <th>{{ __("custom.News Title") }}</th>
                                 <th>{{ __("custom.News Author") }}</th>
-                                <th>{{ __("custom.News Poster") }}</th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
@@ -100,7 +99,6 @@
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
                 {data: 'title_'+'{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}' , name: 'title_'+ '{{ \Mcamara\LaravelLocalization\Facades\LaravelLocalization::getCurrentLocale() }}' },
                 {data: 'author', name: 'author', searchable: false},
-                {data: 'image', name: 'image', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

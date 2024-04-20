@@ -15,16 +15,12 @@ class patents extends Model
         'author',
         'content_en',
         'content_ar',
-        'image',
+        'Instructor_en',
+        'Instructor_ar',
+        'Donor_en',
+        'Donor_ar',
+        'year'
     ];
-
-    protected $appends = ['image_path'];
-
-    public function getImagePathAttribute()
-    {
-        return Storage::url('uploads/patents/' . $this->image);
-
-    }// end of getPosterPathAttribute
 
 
     public function scopeWhenSearch($query, $search)

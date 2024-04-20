@@ -26,31 +26,43 @@
     <!--====== Page Banner Ends ======-->
 
     @if ( count($patents) > 0 )
-    <section class="teachers-page">
+    <section class="event-details">
         <div class="container">
-            
-            <div class="tab-content" >
-                <div class="tab-pane fade show active" id="list">
-                    <div class="courses-wrapper wrapper-2">
-                        @foreach($patents as $new)
-                        <div class="courses-col">
-                            <div class="single-courses-2 courses-list mt-30">
-                                <div class="courses-image">
-                                    <a href="#"><img src="{{ Storage::url("uploads/patents/". $new->image) }}" width="320" height="300" alt="courses"></a>
-                                </div>
-                                <div class="courses-content">
-                                    <div class="">                                        
-                                        <h4 class="courses-title"><a href="">{{ $new->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
-                                        <div class="duration-rating">
-                                            <div class="">
-                                                <p class="duration" style="color: aliceblue">{{ $new->{'content_'.LaravelLocalization::getCurrentLocale()} }}</span></p>
-                                            </div>
-                                        </div>
-                                    </div>                                
-                                </div>                                
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="event-details-content mt-50">
+
+                        <input type="text" placeholder="بحث" class="form-control" id="Search" onkeyup="myFunction()" onkeydown="myFunction()">
+                        <div class="event-schedule">
+                            <div class="event-schedule-table table-responsive">
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th class="">{{ __("custom.Patent name") }}</th>
+                                        <th class="">{{ __("custom.Patent summary") }}</th>
+                                        <th class="">{{ __("custom.Instructor's name") }}</th>
+                                        <th class="">{{ __("custom.Donor") }}</th>
+                                        <th class="">{{ __("custom.the year") }}</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    @forelse($patents as $patent)
+                                    <tr class="target">
+                                        <td class="">{{ $patent->{'title_'.LaravelLocalization::getCurrentLocale()} }}</td>
+                                        <td class=""> {{ $patent->{'content_'.LaravelLocalization::getCurrentLocale()} }}</td>
+                                        <td class=""> {{ $patent->{'Instructor_'.LaravelLocalization::getCurrentLocale()} }} </td>
+                                        <td class=""> {{ $patent->{'Donor_'.LaravelLocalization::getCurrentLocale()} }} </td>
+                                        <td class=""> {{ $patent->{'year'} }} </td>
+                                    </tr>
+                                    @empty
+
+                                    @endforelse
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                        @endforeach
+
                     </div>
                 </div>
             </div>
@@ -58,6 +70,21 @@
     </section>
     @endif
 
-
+    <script>
+        function myFunction() {
+            var input = document.getElementById("Search");
+            var filter = input.value.toLowerCase();
+            var nodes = document.getElementsByClassName('target');
+            
+                for (i = 0; i < nodes.length; i++) {
+                    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+                    nodes[i].style.display = "block";
+                    nodes[i].style.display = "";
+                    } else {
+                    nodes[i].style.display = "none";
+                    }
+                }
+            }
+      </script>
 
 @endsection
