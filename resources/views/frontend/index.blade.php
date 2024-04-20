@@ -14,7 +14,7 @@
 
     <section class="slider-area slider-02 slider-active">
         <div class="single-slider d-flex align-items-center bg_cover"
-             style="background-image: url({{ asset("assets/images/slider-2-1.webp") }});">
+             style="background-image: url({{ asset("assets/images/slider-2-1.png") }});">
             <div class="container">
                 <div class="slider-content slider-content-2">
                     <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">
@@ -33,7 +33,7 @@
         </div>
 
         <div class="single-slider d-flex align-items-center bg_cover"
-             style="background-image: url({{ asset("assets/images/slider-2-2.webp") }});">
+             style="background-image: url({{ asset("assets/images/slider-2-2.png") }});">
             <div class="container">
                 <div class="slider-content slider-content-2">
                     <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">
@@ -52,8 +52,8 @@
             </div>
         </div>
 
-        <div class="single-slider d-flex align-items-center bg_cover"
-             style="background-image: url({{ asset("assets/images/slider-2-3.webp") }});">
+        <div class="single-slider d-flex align-items-center bg_cover" 
+             style="background-image: url({{ asset("assets/images/slider-2-3.png") }});">
             <div class="container">
                 <div class="slider-content slider-content-2">
                     <h2 class="title" data-animation="fadeInLeft" data-delay="0.2s">
