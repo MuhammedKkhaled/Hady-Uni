@@ -41,6 +41,22 @@ return [
 
 
 
+//about
+"About Al-Hadi University College"=>"About Al-Hadi University College",
+"Vision"=>"Vision",
+"Mission"=>"Mission",
+"Objectives"=>"Objectives",
+"Vision1"=>"Al-Hadi University College perceives that the foundation of the development and progress of countries, particularly our country, Iraq, relies on scientific and technological advancement. Therefore, the college operates according to a long-term, high-quality strategy to create a conscious and cultured generation of Iraqi youth capable of advancing the nation to the ranks of developed countries in the region.",
+"Mission1"=>"Al-Hadi University College aims to accredit high-quality academic programs that align with scientific and technological advancements at local, regional, and global levels. It strives for active participation in technology development and continuous improvement in the educational and research system at the college through ongoing collaboration with relevant entities.",
+"Objectives1"=>"Prepare a conscious and patriotic generation with high national spirit",
+"Objectives2"=>"Encourage scientific research and technological development to enhance the college's level",
+"Objectives3"=>"Work on continuous development of educational programs and coordinate efforts with relevant institutions",
+"Objectives4"=>"Encourage collaboration and partnership with reputable local and international universities",
+"Objectives5"=>"Attract advanced and competent teaching staff",
+"Objectives6"=>"Prepare intellectually, scientifically, and educationally qualified personnel to efficiently work in community institutions",
+"Objectives7"=>"Develop the educational process and promote scientific research with available resources while ensuring knowledge exchange",
+
+
 
 
     ///// Login

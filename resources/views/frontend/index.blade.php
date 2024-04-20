@@ -135,6 +135,43 @@
     <!--====== About Ends ======-->
 
     
+    <!--====== Notice Start ======-->
+
+    <section class="notice-area">
+        <div class="container">
+            <div class="row" style="text-align: center;">
+                <div class="col-lg-12">
+                    <div class="section-title-2">
+                        <h3 class="title">{{ __("custom.About Al-Hadi University College") }}</h3>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="notice-content">
+                <div class="single-notice">
+                    <h3 class="notice-title">{{ __("custom.Vision") }}</h3>
+                    <p>{{ __("custom.Vision1") }}</p>
+                </div>
+                <div class="single-notice">
+                    <h3 class="notice-title">{{ __("custom.Mission") }}</h3>
+                    <p>{{ __("custom.Mission1") }}</p>
+                </div>
+                <div class="single-notice">
+                    <h3 class="notice-title">{{ __("custom.Objectives") }}</h3>
+                    <p>{{ __("custom.Objectives1") }}</p>
+                    <p>{{ __("custom.Objectives2") }}</p>
+                    <p>{{ __("custom.Objectives3") }}</p>
+                    <p>{{ __("custom.Objectives4") }}</p>
+                    <p>{{ __("custom.Objectives5") }}</p>
+                    <p>{{ __("custom.Objectives6") }}</p>
+                    <p>{{ __("custom.Objectives7") }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Notice Ends ======-->
+    
 <br>
 <br>
     <!--====== Specialty Start ======-->
