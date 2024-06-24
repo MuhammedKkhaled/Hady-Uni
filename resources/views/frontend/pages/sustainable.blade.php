@@ -32,16 +32,16 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog mt-30">
                         <div class="blog-image">
-                            <a href="#">
+                            <a href="{{ route('main.sustainable.show', $library->id) }}">
                                 <img src="{{ Storage::url("uploads/sustainable/". $library->image) }}" width="270"
                                      height="150" alt="blogsss">
                             </a>
                         </div>
                         <div class="blog-content" style="text-align:end">
                             <ul class="meta">
-                                <li><a href="#">{{ $library->created_at->format('D M Y')  }}</a></li>
+                                <li><a href="{{ route('main.sustainable.show', $library->id) }}">{{ $library->created_at->format('D M Y')  }}</a></li>
                             </ul>
-                            <h4 class="blog-title"><a href="#"
+                            <h4 class="blog-title"><a href="{{ route('main.sustainable.show', $library->id) }}"
                                                       style="text-align:end">
                                 {{ $library->{'titel_'.LaravelLocalization::getCurrentLocale()} }}
 

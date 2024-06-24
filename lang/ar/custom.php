@@ -90,6 +90,8 @@ return [
     "department"=>"اسم الباحث",
     "Publisher"=>"المجلة",
     "Research Title"=>"عنوان البحث",
+    "Research"=>"الابحاث",
+    "Lectures"=>"المحاضرات",
     "date of publication"=>"تاريخ النشر",
     "Link"=>"الرابط",
     "View Departments"=>"عرض الأقسام",
@@ -137,6 +139,7 @@ return [
     "News Image"=>"صورة الخبر",
     "Submit"=>"إرسال",
     "Edit"=>"تعديل",
+    "View"=>"مشاهده",
     "News Title en"=> "العنوان بالإنجليزية",
     "News Title ar"=> "العنوان بالعربية",
     "News Content ar" => "محتوى الخبر بالعربية",
@@ -371,7 +374,7 @@ return [
     'Ads' => 'إعلانات القسم',
     'view all ads' => 'عرض جميع إعلانات الأقسام',
     'Create ads' => 'إنشاء إعلان قسم',
-
+    'statistics'=>"إحصائيات",
 
     "The most important pictures"=>"اهم الصور",
     ///--Characters
@@ -386,9 +389,23 @@ return [
     "patent Content ar"=>"براءات الاختراع بلعربية",
     "patent Content en"=>"براءات الاختراع بلانجليزية",
 
+    //// study
+    "phone number"=>"رقم الهاتف",
+    "Living"=>"السكن",
+    "City"=>"المدينة",
+    "Postal code"=>"الرمز البريدي",
+    "Nationality"=>"الجنسية",
+    "marital status"=>"الحالة الاجتماعية",
+    "qualification"=>"المؤهل",
+    "Enterprise"=>"المؤسسة",
+    "departmentstudy"=>"قسم",
+    "full name"=>"الاسم الكامل",
+    "Languages"=>"اللغات",
+    "Skills and other details"=>"مهارات وتفاصيل اخرى",
 
     //////////// Front End
     'frontend'=>[
+        "newsgalleries"=>"صور الاخبار",
         'title' => 'كلية الهادي',
         'The Iraqi Academic'=>"المجلة الأكاديمية العلمية العراقية",
         "Private Higher"=>"دائرة التعليم الجامعي الأهلي",
@@ -448,6 +465,7 @@ return [
         'evaluation_department' => 'شعبة التقويم',
         'electronic_information_department' => 'شعبة المعلومات الالكترونية',
         'faculty_board' => 'مجلس الكلية',
+        "Study in Iraq"=>"ادرس في العراق",
         'faculty_overview' => 'نبذة عن الكلية',
         'strategic_plan' => "تعليمات وقوانين جامعية",
         'strategic_plan1' => "الخطه الستراتيجية",

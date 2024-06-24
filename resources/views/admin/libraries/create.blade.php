@@ -15,6 +15,17 @@
                     @method('post')
                     @include('admin.partials._errors')
 
+                    <div class="form-group">
+                        <label for="teacher_id"> {{ __("custom.Teacher Name en") }}</label>
+                        <select id="teacher_id" name="teacher_id" class="form-control">
+                            <option value="0" disabled selected>-- Select teacher --</option>
+                            @foreach($teachers  as $teacher)
+                            <option value="{{ $teacher->id }}">
+                                {{ $teacher->{'name_'.LaravelLocalization::getCurrentLocale()} }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
                     {{-- Name --}}
                     <div class="form-group">
                         <label for="name_en">{{ __("custom.Research Title") }} en<span class="text-danger">*</span></label>

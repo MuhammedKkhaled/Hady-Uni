@@ -10,16 +10,20 @@ use App\Http\Controllers\Front\LibraryController;
 use App\Http\Controllers\Front\ResearchController;
 use App\Http\Controllers\Front\SustainableController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\StudyController;
 use App\Models\Affiliate;
 use App\Models\Conference;
 use App\Models\Characters;
 use App\Models\Department;
 use App\Models\awards;
+use App\Models\Curricula;
+use App\Models\Library;
 use App\Models\News;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Statistics;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,8 +45,9 @@ Route::get('/', function () {
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
+   $statistics = Statistics::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards','statistics'));
 });
 
 
@@ -64,8 +69,9 @@ Route::prefix('main/')->group(function (){
    $departments = Department::all();
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
+   $statistics = Statistics::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards','statistics'));
     });
 
     Route::get("teacher-details/{type?}" ,function ($type = 0){
@@ -88,8 +94,11 @@ Route::prefix('main/')->group(function (){
             $type = 0;
             $teacher = Teacher::where('type' , $type)->get()->first();
         }
+        
+        $curriculas = Curricula::where('teacher_id', $teacher->id)->get();
+        $libraries = Library::where('teacher_id', $teacher->id)->get();
 
-        return view("frontend.pages.teacher-details" , compact('teacher' , 'types'));
+        return view("frontend.pages.teacher-details" , compact('teacher' , 'types','curriculas','libraries'));
 
     });
 
@@ -118,6 +127,7 @@ Route::prefix('main/')->group(function (){
 
     Route::get('departments/{id}', [DepartmentController::class , 'show'])->name('main.departments.show');
     Route::get('sustainable/{id}', [SustainableController::class , 'show'])->name('main.sustainable.show');
+    Route::get('News/{id}', [NewsController::class , 'showone'])->name('main.new.show');
 
     Route::get('libraries/{id}' ,[ LibraryController::class , 'showsustainable'])->name('main.libraries.showsustainable');
 
@@ -131,10 +141,12 @@ Route::prefix('main/')->group(function (){
     Route::get('structure', [JournalController::class , 'showStructure']);
 
     Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
+    Route::post('study/store', [StudyController::class , 'store'])->name('study.store');
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
     Route::get('Research/' , [ResearchController::class , 'show'])->name('Research.show');
     Route::get('Patents/' , [PatentsController::class , 'show'])->name('Patents.show');
+    Route::get('Study/' , [PatentsController::class , 'showStudy'])->name('Study.show');
     Route::get('College/' , [CollegeController::class , 'show'])->name('College.show');
 });
 

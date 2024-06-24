@@ -606,7 +606,7 @@ button, input[type=submit] {
 .single-form {
   margin-top: 30px;
 }
-.single-form textarea, .single-form input {
+.single-form textarea, .single-form input ,.single-form select {
   width: 100%;
   height: 50px;
   padding: 0 20px;
@@ -617,11 +617,11 @@ button, input[type=submit] {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-.single-form textarea:focus, .single-form input:focus {
+.single-form textarea:focus, .single-form input:focus ,.single-form select:focus  {
   border-color: #0C8B51;
 }
 @media (max-width: 767px) {
-  .single-form textarea, .single-form input {
+  .single-form textarea, .single-form input ,.single-form select {
     height: 45px;
   }
 }

@@ -14,6 +14,7 @@ use App\Models\Department;
 use App\Models\Library;
 use App\Models\News;
 use App\Models\Specification;
+use App\Models\Teacher;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -58,7 +59,8 @@ class LibraryController extends Controller
     public function create()
     {
         $depratments =  Department::all();
-        return view('admin.libraries.create' , compact('depratments'));
+        $teachers =  Teacher::all();
+        return view('admin.libraries.create' , compact('depratments','teachers'));
     }// end of create
 
     public function store(LibraryRequest $request)

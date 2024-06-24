@@ -92,6 +92,8 @@ return [
     "date of publication"=>"Date of publication",
     "Link"=>"Link",
 
+    "Research"=>"Research",
+    "Lectures"=>"Lectures",
 
     "Book Number"=>"Book Number",
     "departmentCollege"=>"department",
@@ -373,6 +375,7 @@ return [
     "Fourth axis"=>"Fourth axis",
 
 
+    'statistics'=>"statistics",
 
     //curricula
     'curricula' => 'curricula',
@@ -396,10 +399,23 @@ return [
     'view all awards' => 'view all Awards',
     'Create awards' => 'Create Awards' ,
 
-
+    //// study
+    "phone number"=>"phone number",
+    "Living"=>"Living",
+    "City"=>"City",
+    "Postal code"=>"Postal code",
+    "Nationality"=>"Nationality",
+    "marital status"=>"marital status",
+    "qualification"=>"qualification",
+    "Enterprise"=>"Enterprise",
+    "departmentstudy"=>"department",
+    "full name"=>"full name",
+    "Languages"=>"Languages",
+    "Skills and other details"=>"Skills and other details",
 
     //////////// Front End
     'frontend'=>[
+        "newsgalleries"=>"News Galler",
         'title' => 'Elhady Collegue',
         'The Iraqi Academic'=>'The Iraqi Academic Scientific Journal',
         "Private Higher"=>"Private Higher Education Department",
@@ -485,9 +501,10 @@ return [
         'Affiliate' => 'Affiliate',
         'Management System'=>'Management System',
         'Affiliate title' => 'Elhady Collegue | Affiliates',
+        "Study in Iraq"=>"Study in Iraq",
         "This Department Hasn't Affiliates Yet" => "This Department Hasn't Affiliates Yet",
         "The Word" => "Al-Hadi University College is one of the leading educational institutions in the region, reflecting the university's vision in providing distinguished higher education and community development. The college consists of several departments and is characterized by the diversity of its educational programs, which cover a wide range of medical and scientific specialties.
-
+        
         Established in 2015, Al-Hadi University College has rapidly grown and developed since then to become one of the primary destinations for higher education in the region. The college encompasses multiple departments, most of which specialize in medical fields such as the Department of Dentistry, Anesthesia Technology Department, Radiology Technology Department, Medical Devices Technology Department, Nursing Department, Medical Laboratories Department, Medical Physics Department, as well as scientific departments demanded in the job market, such as the Law Department, Interior Design Department, in addition to five departments under development, providing ample opportunities for students to choose the specialization that suits them.
         
         Thanks to its distinguished educational structure, relying on the latest technologies and equipment, Al-Hadi College students have a unique opportunity to acquire the knowledge and practical skills necessary for success in their chosen fields. With experienced teaching and technical staff, and the latest technologies, equipment, and supplies, the college reflects its vitality through diverse student activities, cultural events, and social activities that promote communication and interaction between students and the community.

@@ -9,12 +9,15 @@ use App\Http\Controllers\Admin\JournalController;
 use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\StudyController;
 use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
 use App\Http\Controllers\Admin\CollegeController;
 use App\Http\Controllers\Admin\CurriculaController;
+use App\Http\Controllers\Admin\NewsGalleryController;
+use App\Http\Controllers\Admin\StatisticsController;
 use App\Http\Controllers\Admin\PatentsController;
 use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SpecificationController;
@@ -134,6 +137,11 @@ Route::middleware([
             Route::resource('messages', MessageController::class);
 
 
+            /// journals routes
+            Route::get('/studies/data', 'StudyController@data')->name('studies.data');
+            Route::delete('/studies/bulk_delete', 'StudyController@bulkDelete')->name('studies.bulk_delete');
+            Route::resource('studies', StudyController::class);
+
             //Product routes
             Route::get('/products/data', 'ProductController@data')->name('products.data');
             Route::delete('/products/bulk_delete', 'ProductController@bulkDelete')->name('products.bulk_delete');
@@ -193,6 +201,16 @@ Route::middleware([
             Route::get('/sustainablesgalleries/data', 'SustainablesGalleryController@data')->name('sustainablesgalleries.data');
             Route::delete('/sustainablesgalleries/bulk_delete', 'SustainablesGalleryController@bulkDelete')->name('sustainablesgalleries.bulk_delete');
             Route::resource('sustainablesgalleries', SustainablesGalleryController::class);
+            
+            //links NewsGalleryController            
+            Route::get('/newsgalleries/data', 'NewsGalleryController@data')->name('newsgalleries.data');
+            Route::delete('/newsgalleries/bulk_delete', 'NewsGalleryController@bulkDelete')->name('newsgalleries.bulk_delete');
+            Route::resource('newsgalleries', NewsGalleryController::class);
+            
+            //links StatisticsController            
+            Route::get('/statistics/data', 'StatisticsController@data')->name('statistics.data');
+            Route::delete('/statistics/bulk_delete', 'StatisticsController@bulkDelete')->name('statistics.bulk_delete');
+            Route::resource('statistics', StatisticsController::class);
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');
             // Route::delete('/contacts/bulk_delete', 'ContactController@bulkDelete')->name('contacts.bulk_delete');

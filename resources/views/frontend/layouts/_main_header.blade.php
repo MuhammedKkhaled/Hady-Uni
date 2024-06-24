@@ -35,6 +35,10 @@
                                         href="{{ route('Patents.show') }}">
                                         {{ __("custom.frontend.Written books and patents") }}</a>
                                     </li>
+                                    <li><a
+                                        href="{{ route('Study.show') }}">
+                                        {{ __("custom.frontend.Study in Iraq") }}</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li>

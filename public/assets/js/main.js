@@ -499,7 +499,7 @@ $(function() {
         numberOfOptions = $(this).children('option').length;
     
         // Hides the select element
-        $this.addClass('s-hidden');
+/*         $this.addClass('s-hidden');
     
         // Wrap the select element in a div
         $this.wrap('<div class="select"></div>');
@@ -508,7 +508,7 @@ $(function() {
         $this.after('<div class="styledSelect"></div>');
     
         // Cache the styled div
-        var $styledSelect = $this.next('div.styledSelect');
+        var $styledSelect = $this.next('div.styledSelect'); */
     
         // Show the first select option in the styled div
         $styledSelect.text($this.children('option').eq(0).text());

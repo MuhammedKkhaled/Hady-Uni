@@ -20,6 +20,7 @@ class Library extends Model
         'publisher_en',
         'publisher_ar',
         'published_at',
+        'teacher_id',
     ];
 
     protected $casts = [
@@ -36,5 +37,9 @@ class Library extends Model
     public function category():BelongsTo
     {
         return  $this->belongsTo(Category::class, 'category_id');
+    }
+    public function teacher():BelongsTo
+    {
+        return $this->belongsTo(Teacher::class , 'teacher_id');
     }
 }

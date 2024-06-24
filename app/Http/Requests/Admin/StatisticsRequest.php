@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CurriculaRequest extends FormRequest
+class StatisticsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,17 +22,10 @@ class CurriculaRequest extends FormRequest
     public function rules(): array
     {
         $rules = [
-            'department_id'=> ['numeric' , 'required'],
-            'teacher_id'=> ['numeric'],
-            'degree'=> ['numeric' , 'required'],
-            'name_en'       => 'string',
-            'name_ar'       => 'required|string',
-            'image_1'              => 'required|mimes:pdf,docx',
+            'graduated'=> ['numeric' , 'required'],
+            'students'=> ['numeric' , 'required'],
+            'success_percent'=> ['numeric' , 'required'],
         ];
-
-        if (in_array($this->method(), ['PUT', 'PATCH'])) {
-            $rules['image_1'] = 'sometimes|nullable';
-        }//end of if
 
         return $rules;
     }

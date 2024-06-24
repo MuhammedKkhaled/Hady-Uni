@@ -1,18 +1,17 @@
 @php use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
-@extends("frontend.layouts.app")
+@extends('frontend.layouts.app')
 
-@section("title" , "السيرة الذاتية| جامعة الهادي  ")
+@section('title', 'السيرة الذاتية| جامعة الهادي ')
 
-@section("content")
+@section('content')
 
     <!--====== Page Banner Start ======-->
 
     <section class="page-banner">
-        <div class="page-banner-bg bg_cover"
-             style="background-image: url({{ asset("assets/images/campus-2-2.jpg") }});">
+        <div class="page-banner-bg bg_cover" style="background-image: url({{ asset('assets/images/campus-2-2.jpg') }});">
             <div class="container">
                 <div class="banner-content text-center">
-                    <h2 class="title">{{ __("custom.frontend.cv") }}</h2>
+                    <h2 class="title">{{ __('custom.frontend.cv') }}</h2>
                 </div>
             </div>
         </div>
@@ -39,8 +38,8 @@
 
                             <a href="#">
 
-                                <img src="{{ asset(Storage::url("uploads/teachers/". $teacher->image)) }}" width="373"
-                                     height="503" alt="teacher">
+                                <img src="{{ asset(Storage::url('uploads/teachers/' . $teacher->image)) }}" width="373"
+                                    height="503" alt="teacher">
 
                             </a>
                         </div>
@@ -49,17 +48,18 @@
                 </div>
                 <div class="col-lg-5 teachers-col">
                     <div class="teacher-details-content mt-45">
-                        <h4 class="teacher-name">{{ $teacher->{'name_'.LaravelLocalization::getCurrentLocale()} }}</h4>
-                        <span class="designation"> {{ $teacher->{'specialization_'.LaravelLocalization::getCurrentLocale()} }}</span><br>
+                        <h4 class="teacher-name">{{ $teacher->{'name_' . LaravelLocalization::getCurrentLocale()} }}</h4>
+                        <span class="designation">
+                            {{ $teacher->{'specialization_' . LaravelLocalization::getCurrentLocale()} }}</span><br>
                         <span class="department">
-                           @foreach($types as $key => $value )
-                                @if($teacher->type == $key)
+                            @foreach ($types as $key => $value)
+                                @if ($teacher->type == $key)
                                     {{ $value }}
                                 @endif
                             @endforeach
                         </span>
                         <p>
-                            {{ $teacher->{'brief_'.LaravelLocalization::getCurrentLocale()} }}
+                            {{ $teacher->{'brief_' . LaravelLocalization::getCurrentLocale()} }}
                         </p>
                         <ul class="teacher-contact">
                             <li><strong>Email:</strong> <a href="#">{{ $teacher->email }}</a></li>
@@ -68,132 +68,89 @@
                     </div>
                 </div>
             </div>
-<!--
+
             <div class="teacher-details-tab">
                 <ul class="nav nav-justified">
-                    <li class="nav-item"><a data-bs-toggle="tab" href="#educational">المؤهلات العلميه</a></li>
-                    <li class="nav-item"><a data-bs-toggle="tab" href="#achievements ">الأنجازات </a></li>
-                    <li class="nav-item"><a class="active" data-bs-toggle="tab" href="#experience">الخبرات</a></li>
+                    <li class="nav-item "><a data-bs-toggle="tab" href="#library ">{{ __('custom.Lectures') }}</a></li>
+                    <li class="nav-item active"><a data-bs-toggle="tab" href="#curricula">{{ __('custom.Research') }}</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade show active" id="experience">
+                    <div class="tab-pane fade active" id="curricula">
                         <div class="row">
+                            <div class="event-schedule">
+                                <div class="event-schedule-table table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="">{{ __('custom.department') }}</th>
+                                                <th class="">{{ __('custom.Research Title') }}</th>
+                                                <th class="">{{ __('custom.date of publication') }}</th>
+                                                <th class="">{{ __('custom.Publisher') }}</th>
+                                                <th class="">{{ __('custom.Link') }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">محاضر</h4>
-                                    <p>إدارة الأعمال</p>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2008 إلى 2010</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">محاضر</h4>
-                                    <p>إدارة الأعمال</p>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2008 إلى 2010</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">محاضر</h4>
-                                    <p>إدارة الأعمال</p>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2008 إلى 2010</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">محاضر</h4>
-                                    <p>إدارة الأعمال</p>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2008 إلى 2010</p>
+                                            @forelse($libraries as $librarie)
+                                                <tr class="target">
+                                                    <td class="">
+                                                        {{ $librarie->{'specialization_name_' . LaravelLocalization::getCurrentLocale()} }}
+                                                    </td>
+                                                    <td class="">
+                                                        {{ $librarie->{'name_' . LaravelLocalization::getCurrentLocale()} }}
+                                                    </td>
+                                                    <td class=""> {{ $librarie->{'published_at'}->format('Y') }}
+                                                    </td>
+                                                    <td class="">
+                                                        {{ $librarie->{'publisher_' . LaravelLocalization::getCurrentLocale()} }}
+                                                    </td>
+                                                    <td class=""> <a href="{{ $librarie->{'file'} }}"
+                                                            target="_blank">{{ __('custom.Link') }}</a></td>
+                                                </tr>
+                                            @empty
+                                            @endforelse
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="educational">
+                    <div class="tab-pane fade" id="library">
                         <div class="row">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">دبلوم في تكنولوجيا المعلومات المهنية</h4>
-                                    <p>جامعة بوسطن</p>
-                                    <p>2007 إلى 2008</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="achievements">
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">جائزة أفضل بحث لعام 2019</h4>
-                                    <p>أبجد هوز الحاجة هذه الحالات بسيطة تماما وسهلة التمييز. في ساعة حرة ، عندما قوتنا
-                                        في الاختيار.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">جائزة أفضل بحث لعام 2019</h4>
-                                    <p>أبجد هوز الحاجة هذه الحالات بسيطة تماما وسهلة التمييز. في ساعة حرة ، عندما قوتنا
-                                        في الاختيار.</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <div class="single-content-tab">
-                                    <h4 class="title">جائزة أفضل بحث لعام 2019</h4>
-                                    <p>أبجد هوز الحاجة هذه الحالات بسيطة تماما وسهلة التمييز. في ساعة حرة ، عندما قوتنا
-                                        في الاختيار.</p>
+                            <div class="event-schedule">
+                                <div class="event-schedule-table table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="">{{ __('custom.link') }}</th>
+                                                <th class="">{{ __('custom.lecture') }} </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse($curriculas as $curricula)
+                                                <tr>
+                                                    <td class="">
+                                                        <a href="{{ asset(Storage::url('uploads/curricula/' . $curricula->image_1)) }}"
+                                                            target="_blank">{{ __('custom.link') }}</a>
+
+                                                    </td>
+                                                    <td class="">
+                                                        {{ $curricula->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                                <tr>
+                                                </tr>
+                                            @endforelse
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        --></div>
+        </div>
     </section>
 
     <!--====== Teacher Details Ends ======-->

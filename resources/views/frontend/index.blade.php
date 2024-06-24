@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-
+{{-- 
         <div class="single-slider d-flex align-items-center bg_cover" 
              style="background-image: url({{ asset("assets/images/slider-2-3.png") }});">
             <div class="container">
@@ -69,7 +69,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </section>
 
     <!--====== Slider Ends ======-->
@@ -327,7 +327,7 @@
                         <div class="custom-col">
                             <div class="single-blog mt-30">
                                 <div class="blog-image">
-                                    <a href="#">
+                                    <a href="{{ route('main.new.show', $new->id) }}">
                                         <img src="{{ Storage::url("uploads/news/". $new->image) }}" width="270"
                                              height="150" alt="blogsss">
                                     </a>
@@ -343,7 +343,7 @@
 
                                         </a>
                                     </h4>
-                                    <a href="#" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
+                                    <a href="{{ route('main.new.show', $new->id) }}" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -388,7 +388,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>1000<br> {{ __("custom.frontend.graduated") }}</p>
+                                    <p>{{$statistics[0]['graduated']}}<br> {{ __("custom.frontend.graduated") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -421,7 +421,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>8000 <br> {{ __("custom.frontend.student") }}</p>
+                                    <p>{{$statistics[0]['students']}} <br> {{ __("custom.frontend.student") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
@@ -431,7 +431,7 @@
                                          alt="Icon">
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
-                                    <p>90% <br> {{ __("custom.frontend.success percent") }}</p>
+                                    <p>{{$statistics[0]['success_percent']}}% <br> {{ __("custom.frontend.success percent") }}</p>
                                 </div>
                             </div>
                         </div>
@@ -601,10 +601,10 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-library text-center mt-30">
                         <div class="library-image">
-                            <a href="#"><img src={{ Storage::url("uploads/awards/". $award->image) }} width="276" height="286" alt="Product"></a>
+                            <a href=""><img src={{ Storage::url("uploads/awards/". $award->image) }} width="276" height="286" alt="Product"></a>
                         </div>
                         <div class="library-content">
-                            <h4 class="library-title"><a href="product-details.html">{{$award->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
+                            <h4 class="library-title"><a href="">{{$award->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></h4>
                             <span class="price">{{$award->{'content_'.LaravelLocalization::getCurrentLocale()} }}</span>
                         </div>
                     </div>
