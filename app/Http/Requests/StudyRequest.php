@@ -37,10 +37,12 @@ class StudyRequest extends FormRequest
             'department_id'                     => ['numeric' , 'required'],
             'personal'              => 'required|mimes:jpeg,png,jpg',
             'passport'              => 'required|mimes:jpeg,png,jpg',
-            'certificate'              => 'required|mimes:jpeg,png,jpg',
-            'cv'              => 'required|mimes:jpeg,png,jpg',
-            'certificate_1'              => 'required|mimes:jpeg,png,jpg',
+            'certificate'              => 'required|mimes:jpeg,png,jpg,pdf,docx',
+            'cv'              => 'required|mimes:jpeg,png,jpg,pdf,docx',
+            'certificate_1'              => 'required|mimes:jpeg,png,jpg,pdf,docx',
             'message'=>['string'],
+            'state'=>['numeric'],
+            'note'=>['string','nullable'],
         ];
         if (in_array($this->method(), ['PUT', 'PATCH'])) {
             $rules['personal'] = 'sometimes|nullable';

@@ -69,7 +69,9 @@ return [
     "Email Address" => "عنوان البريد الإلكتروني",
     "Password" => "كلمة المرور",
     "Login" => "تسجيل الدخول",
-
+    "facebook"=>"فيسبوك",
+    "twitter"=>"تويتر",
+    "linkedin"=>"لنكد ان",
     /// Sidebar
     "Dashboard"=> 'لوحة التحكم',
     "My Profile"=>"ملفي الشخصي",
@@ -291,7 +293,15 @@ return [
     'messages' => "الرسائل" ,
     'View ِAll messages' => "مشاهدة جميع الرسائل" ,
     'Department Vision' => "رؤية القسم " ,
-
+    "doneSend"=>"تم ارسال طلبك بنجاح ورقم الطلب هو :",
+    "Enter the order number"=>"ادخل رقم الطلب",
+    "tracking"=>"متابعه",
+    "track Order"=>"متابعة الطلب",
+    "state"=>"الحاله",
+    "note"=>"ملحوظات",
+    "approved"=>"موافقة",
+    "reject"=>"رفض",
+    "wait"=>"تحت المراجعة",
     /// Studnet
     'Student' => "طالب",
     'New Student' => "طالب جديد",

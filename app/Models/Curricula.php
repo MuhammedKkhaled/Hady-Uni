@@ -18,6 +18,7 @@ class Curricula extends Model
         'degree',
         'department_id',
         'teacher_id',
+        "affiliate_id",
     ];
 
     protected $appends = [
@@ -36,5 +37,9 @@ class Curricula extends Model
     public function teacher():BelongsTo
     {
         return $this->belongsTo(Teacher::class , 'teacher_id');
+    }
+    public function affiliate():BelongsTo
+    {
+        return $this->belongsTo(Affiliate::class , 'affiliate_id');
     }
 }

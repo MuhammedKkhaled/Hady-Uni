@@ -31,6 +31,7 @@ class LibraryRequest extends FormRequest
             'publisher_ar'=> [ 'string'],
             'published_at' => ['required' , 'date'],
             'teacher_id'=> ['numeric'],
+            'affiliate_id'=> ['numeric'],
             'file'      => [ 'string'],
         ];
 

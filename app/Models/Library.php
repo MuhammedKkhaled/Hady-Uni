@@ -21,6 +21,7 @@ class Library extends Model
         'publisher_ar',
         'published_at',
         'teacher_id',
+        "affiliate_id",
     ];
 
     protected $casts = [
@@ -41,5 +42,9 @@ class Library extends Model
     public function teacher():BelongsTo
     {
         return $this->belongsTo(Teacher::class , 'teacher_id');
+    }
+    public function affiliate():BelongsTo
+    {
+        return $this->belongsTo(Affiliate::class , 'affiliate_id');
     }
 }

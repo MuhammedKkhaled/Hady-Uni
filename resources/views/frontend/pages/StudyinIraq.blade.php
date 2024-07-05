@@ -8,10 +8,37 @@
 @endsection
 
 @section('content')
+    <!--====== Newsletter Start ======-->
+
+    <section class="newsletter-area">
+        <div class="container">
+            <div class="newsletter-wrapper bg_cover wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" style="background-color:  gainsboro;margin-bottom: 120px;">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-7">
+                        <div class="newsletter-form mt-30">
+                            <form  action="{{ route('study.check') }}"method="POST">
+                                @csrf
+                                <input type="number" name='id' placeholder="{{ __('custom.Enter the order number') }}">
+                                <button class="main-btn main-btn-2">{{ __('custom.tracking') }}</button>
+                            </form>
+                        </div>
+                    </div><div class="col-lg-5">
+                        <div class="section-title-2 mt-25">
+                            <h2 class="title">{{ __('custom.track Order') }}</h2>
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--====== Newsletter Ends ======-->
     <section class="newsletter-area">
         <div class="container">
             <div class="newsletter-wrapper bg_cover wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s"
-                style="background-color:  gainsboro;margin-bottom: 120px;">
+                style="background-color:  gainsboro;margin-bottom: 20px;">
                 <div class="row align-items-center">
 
                     <div class="col-lg-12">
@@ -19,6 +46,17 @@
                         <div class="col-md-12 row" style="text-align: center">
                             <h2 class="title">{{ __('custom.frontend.Study in Iraq') }}</h2>
                             <span class="line"></span>
+                        </div>
+                        <div class="col-md-12 row" style="text-align: center">
+                            
+                            @if(session('message') != "")
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        {{ session('message') }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            @endif
                         </div>
                         <div class="comment-form">
                             <form action="{{ route('study.store') }}" enctype="multipart/form-data" method="POST">
@@ -651,7 +689,7 @@
                                     <div class="single-form col-md-6">
                                         
                                         <label>شهادات خبرة/اخرى</label>
-                                        <input type="file"required
+                                        <input type="file"
                                             name="certificate_1"style="text-align : {{ LaravelLocalization::getCurrentLocaleDirection() == 'rtl' ? 'end' : 'start' }}">
                                     </div>
                                 </div>

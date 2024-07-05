@@ -30,6 +30,8 @@ class Study extends Model
         'certificate_1',
         'in_iraq',
         'message',
+        "state",
+        "note",
     ];
     protected $appends = [
         'personal_path',

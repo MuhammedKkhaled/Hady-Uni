@@ -68,10 +68,10 @@ class AffiliateController extends Controller
 
         $requestData = $request->validated();
 
-//        if ($request->image) {
-//            $request->image->store('public/uploads/teachers/');
-//            $requestData['image'] = $request->image->hashName();
-//        }
+        if ($request->image) {
+            $request->image->store('public/uploads/affiliates/');
+            $requestData['image'] = $request->image->hashName();
+        }
 
         Affiliate::create($requestData);
 
@@ -93,7 +93,16 @@ class AffiliateController extends Controller
     {
 
         $requestData = $request->validated();
-
+        if ($request->image) {
+            Storage::disk('local')->delete('public/uploads/affiliates/' . $affiliate->image);
+            $request->image->store('public/uploads/affiliates/');
+            $requestData['image'] = $request->image->hashName();
+        }
+        if ($request->cv) {
+            Storage::disk('local')->delete('public/uploads/affiliates/' . $affiliate->cv);
+            $request->cv->store('public/uploads/affiliates/');
+            $requestData['cv'] = $request->cv->hashName();
+        }
         $affiliate->update($requestData);
         session()->flash('success', __('custom.Update Successfully'));
         return redirect()->route('admin.affiliates.index');

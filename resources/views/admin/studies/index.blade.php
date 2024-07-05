@@ -74,6 +74,7 @@
                                 <th>{{ __('custom.full name') }}</th>
                                 <th>{{ __('custom.Nationality') }}</th>
                                 <th> {{ __("custom.Department Name") }} </th>
+                                <th>{{ __("custom.state") }}</th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
@@ -104,6 +105,7 @@
                 {data: 'name' , name: 'name'},
                 {data: 'nationality' , name: 'nationality'},
                 {data: 'department_id', name: 'department_id', searchable: false},
+                {data: 'state', name: 'state', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

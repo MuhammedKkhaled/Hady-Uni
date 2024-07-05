@@ -35,9 +35,16 @@ class StudyController extends Controller
             $request->certificate_1->store('public/uploads/study/');
             $validated_data['certificate_1'] = $request->certificate_1->hashName();
         }
-        Study::create($validated_data);
+        $id = Study::create($validated_data)->id;
 
         return redirect()
-            ->back();
+            ->back()
+            ->with('message' , __('custom.doneSend'). $id);;
+    }
+    
+    public function check(Request  $var)
+    {
+        $Study = Study::findOrFail($var->id);
+        return view("frontend.pages.CheckState" , compact('Study'));
     }
 }

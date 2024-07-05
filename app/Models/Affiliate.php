@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Storage;
 
 class Affiliate extends Model
 {
@@ -24,8 +25,25 @@ class Affiliate extends Model
         'title_ar',
         'notes_en',
         'notes_ar',
+        "facebook",
+        "twitter",
+        "linkedin",
+        "image",
+        "cv",
     ];
 
+    protected $appends = ['image','cv'];
+/* 
+    public function getImageAttribute()
+    {
+        return Storage::url('uploads/affiliates/' . $this->file);
+
+    }
+    public function getCVAttribute()
+    {
+        return Storage::url('uploads/affiliates/' . $this->file);
+
+    }// end of getPosterPathAttribute */
     public function department():BelongsTo
     {
         return $this->belongsTo(Department::class , 'department_id');

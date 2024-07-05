@@ -21,7 +21,7 @@ class AffiliateRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
 
             'department_id' => ['required'],
             'name_en'=>[ 'string'  , 'max:500'],
@@ -36,6 +36,18 @@ class AffiliateRequest extends FormRequest
             'title_ar'=>['required', 'string'  , 'max:900'],
             'notes_en'=>['string'  , 'max:900'],
             'notes_ar'=>['required', 'string'  , 'max:900'],
+            'facebook'=>[ 'string'  , 'nullable'],
+            'twitter'=>[ 'string'  , 'nullable'],
+            'linkedin'=>[ 'string'  , 'nullable'],
+            'image'=> ['string|mimes:jpeg,png,jpg'],
+            'cv'=> ['string|mimes:jpeg,png,jpg,gif,pdf,docx'],
         ];
+        
+        if (in_array($this->method(), ['PUT', 'PATCH'])) {
+            $rules['image'] = 'sometimes|nullable';
+            $rules['cv'] = 'sometimes|nullable';
+        }//end of if
+
+        return $rules;
     }
 }

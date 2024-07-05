@@ -24,6 +24,7 @@ class CurriculaRequest extends FormRequest
         $rules = [
             'department_id'=> ['numeric' , 'required'],
             'teacher_id'=> ['numeric'],
+            'affiliate_id'=> ['numeric'],
             'degree'=> ['numeric' , 'required'],
             'name_en'       => 'string',
             'name_ar'       => 'required|string',

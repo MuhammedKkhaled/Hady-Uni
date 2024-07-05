@@ -101,6 +101,17 @@ Route::prefix('main/')->group(function (){
         return view("frontend.pages.teacher-details" , compact('teacher' , 'types','curriculas','libraries'));
 
     });
+/*     Route::get("affiliate-details/{id?}" ,function ($id){
+
+
+        $affiliate = Affiliate::findOrFail($id);
+
+        $curriculas = Curricula::where('affiliate_id', $id)->get();
+        $libraries = Library::where('affiliate_id', $id)->get();
+
+        return view("frontend.pages.affiliate-details" , compact('affiliate' ,'curriculas','libraries'));
+
+    }); */
 
     Route::get('teachers/{type?}' , function($type){
 
@@ -130,6 +141,7 @@ Route::prefix('main/')->group(function (){
     Route::get('News/{id}', [NewsController::class , 'showone'])->name('main.new.show');
 
     Route::get('libraries/{id}' ,[ LibraryController::class , 'showsustainable'])->name('main.libraries.showsustainable');
+    Route::get('affiliate-details/{id}' ,[ AffiliateController::class , 'showaffiliate'])->name('main.affiliate-details.showaffiliate');
 
     Route::get('journal', [JournalController::class , 'show']);
     Route::get('news', [NewsController::class , 'show']);
@@ -142,6 +154,7 @@ Route::prefix('main/')->group(function (){
 
     Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
     Route::post('study/store', [StudyController::class , 'store'])->name('study.store');
+    Route::post('study/check', [StudyController::class , 'check'])->name('study.check');
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
     Route::get('Research/' , [ResearchController::class , 'show'])->name('Research.show');

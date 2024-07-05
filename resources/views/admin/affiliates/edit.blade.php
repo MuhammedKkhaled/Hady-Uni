@@ -20,12 +20,12 @@
                         <select id="department_id" name="department_id" class="form-control">
                             <option value="0" disabled selected>-- Select --</option>
 
-                            @foreach ($depratments as $department)
-                            @endforeach
+                            @foreach ($departments as $department)
                             <option value="{{ $department->id }}"
                                 {{ $affiliate->department->{'name_' . LaravelLocalization::getCurrentLocale()} == $department->{'name_' . LaravelLocalization::getCurrentLocale()} ? 'selected' : '' }}>
                                 {{ $department->{'name_' . LaravelLocalization::getCurrentLocale()} }}
                             </option>
+                            @endforeach
 
                         </select>
                     </div>
@@ -139,6 +139,40 @@
                         <input type="text" id="notes_ar" name="notes_ar" autofocus class="form-control"
                             value="{{ old('notes_ar', $affiliate->notes_ar) }}" required>
                     </div>
+                    
+                    {{-- Affiliate Title  --}}
+                    <div class="form-group">
+                        <label for="facebook">{{ __('custom.facebook') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="facebook" name="facebook" autofocus class="form-control"
+                            value="{{ old('facebook') }}">
+                    </div>
+
+                    {{-- Affiliate Title  --}}
+                    <div class="form-group">
+                        <label for="twitter">{{ __('custom.twitter') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="twitter" name="twitter" autofocus class="form-control"
+                            value="{{ old('twitter') }}">
+                    </div>
+
+                    {{-- Affiliate Title  --}}
+                    <div class="form-group">
+                        <label for="linkedin">{{ __('custom.linkedin') }} <span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="linkedin" name="linkedin" autofocus class="form-control"
+                            value="{{ old('linkedin') }}">
+                    </div>
+                    {{--file--}}
+                    <div class="form-group">
+                        <label class="text-capitalize">{{ __("custom.Main Image") }} <span class="text-danger">PNG , JPg*</span></label>
+                        <input type="file" name="image" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="text-capitalize">CV<span class="text-danger"></span></label>
+                        <input type="file" name="cv" id="input-file-now" class="dropify"  data-show-remove="false"  data-height="355"/>
+                    </div>
+
 
                 </div>
 

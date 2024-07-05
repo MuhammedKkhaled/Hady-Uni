@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StudyRequest;
 use App\Models\Study;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
@@ -36,6 +38,15 @@ class StudyController extends Controller
             ->editColumn('department_id' ,function (Study $study){
                 return $study->sustainable->{'name_'.LaravelLocalization::getCurrentLocale()};
             })
+            ->editColumn('state' ,function (Study $study){
+                if($study->state == 0){
+                    return (LaravelLocalization::getCurrentLocale() == "ar")?"تحت المراجعة":'wait';
+                }elseif($study->state >0){
+                    return (LaravelLocalization::getCurrentLocale() == "ar")?"موافقة":"approved";
+                }else{
+                    return (LaravelLocalization::getCurrentLocale() == "ar")?"رفض":"reject";
+                }
+            })
             ->editColumn('name' ,function (Study $study){
                 return $study->name;
             })
@@ -58,20 +69,13 @@ class StudyController extends Controller
 
     }// end of edit
 
-//    public function update(Request $request, Specification $specification)
-//    {
-//        $requestData = $request->validate([
-//            'name_ar'=>['required','string','unique:specifications,name_ar,'.$specification->id],
-//            'name_en'=>['required','string','unique:specifications,name_en,'.$specification->id],
-//        ]);
-//
-//        $specification->update($requestData);
-//
-//        session()->flash('success', __('Update Successfully'));
-//
-//        return redirect()->route('admin.specifications.index');
-//
-//    }// end of update
+    public function update(Request $request, Study $study)    {
+        
+        $validated_data =  $request->only(['state', 'note']);
+        $study->update($validated_data);
+        session()->flash('success', __('Update Successfully'));
+        return redirect()->route('admin.studies.index');
+    }// end of update
 
     public function destroy(Study $study)
     {
