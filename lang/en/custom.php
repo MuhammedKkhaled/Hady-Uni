@@ -444,6 +444,7 @@ return [
 
     //////////// Front End
     'frontend'=>[
+        "ranking"=>"Sequence",
         "newsgalleries"=>"News Galler",
         'title' => 'Elhady Collegue',
         'tops' => 'top student',

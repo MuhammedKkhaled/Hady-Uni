@@ -433,6 +433,7 @@ return [
 
     //////////// Front End
     'frontend'=>[
+        "ranking"=>"التسلسل",
         "newsgalleries"=>"صور الاخبار",
         'title' => 'كلية الهادي',
         'Review' => 'استمارة التواصل مع الخريجين',
