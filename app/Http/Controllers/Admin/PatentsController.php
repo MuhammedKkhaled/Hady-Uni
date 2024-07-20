@@ -57,7 +57,7 @@ class PatentsController extends Controller
 
     public function create()
     {
-        $departments=  Department::all();
+        $depratments=  Department::all();
         return view('admin.patents.create', compact('depratments'));
 
     }// end of create
