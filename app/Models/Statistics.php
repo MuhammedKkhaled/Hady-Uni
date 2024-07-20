@@ -13,6 +13,7 @@ class Statistics extends Model
     protected $fillable = [
         'graduated',
         'students',
+        'students_abroad',
         'success_percent',
     ];
 

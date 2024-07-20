@@ -647,7 +647,6 @@
                                         </select>
                                     </div>
                                 </div>
-                                
                                 <div class="col-md-12 row">
                                     <div class="single-form col-md-6">
                                         
@@ -663,7 +662,6 @@
                                             >
                                     </div>
                                 </div>
-                                
                                 <div class="col-md-12 row">
                                     <div class="single-form col-md-6">
                                         
@@ -678,8 +676,7 @@
                                             name="cv"style="text-align : {{ LaravelLocalization::getCurrentLocaleDirection() == 'rtl' ? 'end' : 'start' }}"
                                             >
                                     </div>
-                                </div>
-                                
+                                </div>                                
                                 <div class="col-md-12 row">
                                     <div class="single-form col-md-6">
                                         <input type="text"

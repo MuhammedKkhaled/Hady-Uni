@@ -104,21 +104,11 @@
                     </div>
 
                     <div class="form-group">
-                        <a href="{{ Storage::url('uploads/study/' . $study->personal) }}" target=""><img
-                                src="{{ Storage::url('uploads/study/' . $study->personal) }}" height="355px"
-                                width="33%"></a>
-                        <a href="{{ Storage::url('uploads/study/' . $study->passport) }}" target=""><img
-                                src="{{ Storage::url('uploads/study/' . $study->passport) }}" height="355px"
-                                width="33%"></a>
-                        <a href="{{ Storage::url('uploads/study/' . $study->certificate) }}" target=""><img
-                                src="{{ Storage::url('uploads/study/' . $study->certificate) }}" height="355px"
-                                width="33%"></a>
-                        <a href="{{ Storage::url('uploads/study/' . $study->cv) }}" target=""><img
-                                src="{{ Storage::url('uploads/study/' . $study->cv) }}" height="355px"
-                                width="33%"></a>
-                        <a href="{{ Storage::url('uploads/study/' . $study->certificate_1) }}" target=""><img
-                                src="{{ Storage::url('uploads/study/' . $study->certificate_1) }}" height="355px"
-                                width="33%"></a>
+                        <a href="{{ Storage::url('uploads/study/' . $study->certificate_1) }}" target="_blank" class="btn btn-primary mr-2">شهادات خبرة/اخرى</a>
+                        <a href="{{ Storage::url('uploads/study/' . $study->cv) }}" target="_blank" class="btn btn-primary mr-2">السيرة الذاتية</a>
+                        <a href="{{ Storage::url('uploads/study/' . $study->certificate) }}" target="_blank" class="btn btn-primary mr-2">صورة الشهادة</a>
+                        <a href="{{ Storage::url('uploads/study/' . $study->passport) }}" target="_blank" class="btn btn-primary mr-2">صورة الجواز</a>
+                        <a href="{{ Storage::url('uploads/study/' . $study->personal) }}" target="_blank" class="btn btn-primary mr-2">الصورة الشخصية</a>
                     </div>
 
                     <div class="form-group">

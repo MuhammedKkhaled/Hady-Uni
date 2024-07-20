@@ -57,6 +57,9 @@ class StatisticsController extends Controller
             ->editColumn('success_percent' ,function (Statistics $statistics){
                 return $statistics->success_percent;
             })
+            ->editColumn('students_abroad' ,function (Statistics $statistics){
+                return $statistics->students_abroad;
+            })
             ->editColumn('created_at', function (Statistics $statistics) {
                 return $statistics->created_at->format('Y-m-d');
             })

@@ -25,6 +25,17 @@
                         <label>{{ __("custom.categoriesar") }}<span class="text-danger">*</span></label>
                         <input type="text" name="name_ar" autofocus class="form-control" value="{{ old('name') }}" >
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="type"> {{ __('custom.type') }}</label>
+                        <select id="type" name="type" class="form-control">
+                            <option value="0" disabled selected>-- Select type --</option>
+                            <option value="1">{{ __('custom.frontend.sustainable') }}
+                            </option>
+                            <option value="2">{{ __('custom.frontend.quality') }}
+                            </option>
+                        </select>
+                    </div>
 
                 </div>
 

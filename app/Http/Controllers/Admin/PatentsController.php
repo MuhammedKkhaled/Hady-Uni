@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\PatentsRequest;
+use App\Models\Department;
 use App\Models\Patents;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
@@ -56,7 +57,8 @@ class PatentsController extends Controller
 
     public function create()
     {
-        return view('admin.patents.create');
+        $departments=  Department::all();
+        return view('admin.patents.create', compact('depratments'));
 
     }// end of create
 
@@ -76,7 +78,8 @@ class PatentsController extends Controller
 
     public function edit(Patents $patent)
     {
-        return view('admin.patents.edit', compact('patent'));
+        $departments=  Department::all();
+        return view('admin.patents.edit', compact('patent','departments'));
 
     }// end of edit
 

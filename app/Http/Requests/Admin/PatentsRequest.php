@@ -30,6 +30,7 @@ class PatentsRequest extends FormRequest
             'Instructor_en' => 'nullable',
             'Donor_ar' => 'required',
             'Donor_en' => 'nullable',
+            'department_id'=> ['numeric' , 'required'],
             'year' => 'required',
         ];
 

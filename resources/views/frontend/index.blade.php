@@ -222,7 +222,7 @@
                     </a>
                 </div>
                 <div class="col-sm-3">
-                    <a href="https://studyiniraq.scrd-gate.gov.iq/home" target="_blank"class="w-100">
+                    <a href="{{ route('Study.show') }}" class="w-100">
                         <div class="single-specialty mt-30">
                             <div class="specialty-box">
                                 <div class="box-icon">
@@ -391,6 +391,19 @@
                                     <p>{{$statistics[0]['graduated']}}<br> {{ __("custom.frontend.graduated") }}</p>
                                 </div>
                             </div>
+                            
+                            <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
+                                 data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="item-icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-1.webp") }}" width="70" height="70"
+                                         alt="Icon">
+                                </div>
+                                <div class="item-content media-body" style="text-align: center;">
+                                    <p> {{ count($libraries)  }} <br>
+                                    {{ __("custom.frontend.research") }}
+                                    </p>
+                                </div>
+                            </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
                                  data-wow-duration="1s" data-wow-delay="0.6s">
                                 <div class="item-icon">
@@ -422,6 +435,16 @@
                                 </div>
                                 <div class="item-content media-body" style="text-align: center;">
                                     <p>{{$statistics[0]['students']}} <br> {{ __("custom.frontend.student") }}</p>
+                                </div>
+                            </div>
+                            <div class="single-features-item d-flex align-items-center wow fadeInUpBig"
+                                 data-wow-duration="1s" data-wow-delay="0.4s">
+                                <div class="item-icon">
+                                    <img src="{{ asset("assets/images/icon/icon-2-2.webp") }}" width="70" height="70"
+                                         alt="Icon">
+                                </div>
+                                <div class="item-content media-body" style="text-align: center;">
+                                    <p>{{$statistics[0]['students_abroad']}} <br> {{ __("custom.frontend.students_abroad") }}</p>
                                 </div>
                             </div>
                             <div class="single-features-item d-flex align-items-center wow fadeInUpBig"

@@ -25,6 +25,7 @@
                             <tr>
                                 <th>{{ __("custom.frontend.graduated") }}</th>
                                 <th>{{ __("custom.frontend.student") }}</th>
+                                <th>{{ __("custom.frontend.students_abroad") }}</th>
                                 <th>{{ __("custom.frontend.success percent") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>

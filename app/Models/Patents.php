@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Storage;
 
 class patents extends Model
@@ -19,6 +20,7 @@ class patents extends Model
         'Instructor_ar',
         'Donor_en',
         'Donor_ar',
+        'department_id',
         'year'
     ];
 
@@ -33,4 +35,8 @@ class patents extends Model
 
     }// end of scopeWhenSearch
 
+    public function department():BelongsTo
+    {
+        return $this->belongsTo(Department::class , 'department_id');
+    }
 }

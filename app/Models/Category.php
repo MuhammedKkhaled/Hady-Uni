@@ -12,7 +12,7 @@ class Category extends Model
 
     use HasFactory;
 
-    protected $fillable = ['name_en' ,'name_ar'];
+    protected $fillable = ['name_en' ,'name_ar','type'];
 
     public function scopeWhenSearch($query, $search)
     {

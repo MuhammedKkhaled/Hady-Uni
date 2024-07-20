@@ -38,6 +38,14 @@ class CategoryController extends Controller
             ->editColumn('name_'.LaravelLocalization::getCurrentLocale() ,function (Category $category){
                 return $category->{"name_".LaravelLocalization::getCurrentLocale()};
             })
+            
+            ->editColumn('type' ,function (Category $category){
+                if($category->type == 1){
+                    return (LaravelLocalization::getCurrentLocale() == "ar")?'التنمية المستدامة':'sustainable';
+                }else{
+                    return (LaravelLocalization::getCurrentLocale() == "ar")?'ضمان الجودة':"quality assurance";
+                }
+            })
             ->editColumn('created_at' ,function (Category $category){
                 return $category->created_at->format('Y-m-d');
             })

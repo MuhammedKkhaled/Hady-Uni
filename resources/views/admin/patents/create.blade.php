@@ -68,6 +68,21 @@
                         <label>{{ __("custom.the year") }} <span class="text-danger">*</span></label>
                         <input type="number" name="year" autofocus class="form-control" value="{{ old('year') }}" >
                     </div>
+                    
+
+                    <div class="form-group">
+                        <label for="department_id"> {{ __('custom.Department Name') }}</label>
+                        <select id="department_id" name="department_id" class="form-control">
+                            <option value="0" disabled selected>-- Select --</option>
+
+
+                            @foreach ($depratments as $department)
+                                <option value="{{ $department->id }}">
+                                    {{ $department->{'name_' . LaravelLocalization::getCurrentLocale()} }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
                 <div class="card-footer">

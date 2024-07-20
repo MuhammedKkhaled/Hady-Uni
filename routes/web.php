@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Front\PatentsController;
 use App\Http\Controllers\Front\AffiliateController;
 use App\Http\Controllers\Front\CollegeController;
+use App\Http\Controllers\Front\CoursesController;
 use App\Http\Controllers\Front\DepartmentController;
 use App\Http\Controllers\Front\JournalController;
 use App\Http\Controllers\Front\NewsController;
@@ -11,6 +13,7 @@ use App\Http\Controllers\Front\ResearchController;
 use App\Http\Controllers\Front\SustainableController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\StudyController;
+use App\Http\Controllers\TopController;
 use App\Models\Affiliate;
 use App\Models\Conference;
 use App\Models\Characters;
@@ -46,8 +49,9 @@ Route::get('/', function () {
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
    $statistics = Statistics::all();
+   $libraries = Library::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards','statistics'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards','statistics','libraries'));
 });
 
 
@@ -70,8 +74,9 @@ Route::prefix('main/')->group(function (){
    $teachers = Teacher::all();
    $affiliates = Affiliate::all();
    $statistics = Statistics::all();
+   $libraries = Library::all();
    $news = News::latest()->paginate(3);
-   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards','statistics'));
+   return view('frontend.index' , compact('news' , 'departments' , 'teachers' , 'conferences','affiliates','characters','awards','statistics','libraries'));
     });
 
     Route::get("teacher-details/{type?}" ,function ($type = 0){
@@ -153,13 +158,17 @@ Route::prefix('main/')->group(function (){
     Route::get('structure', [JournalController::class , 'showStructure']);
 
     Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
+    Route::post('tops/', [TopController::class , 'show'])->name('tops.show');
     Route::post('study/store', [StudyController::class , 'store'])->name('study.store');
+    Route::post('Review/store', [ReviewController::class , 'store'])->name('Review.store');
     Route::post('study/check', [StudyController::class , 'check'])->name('study.check');
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
     Route::get('Research/' , [ResearchController::class , 'show'])->name('Research.show');
+    Route::get('course/' , [CoursesController::class , 'show'])->name('course.show');
     Route::get('Patents/' , [PatentsController::class , 'show'])->name('Patents.show');
     Route::get('Study/' , [PatentsController::class , 'showStudy'])->name('Study.show');
+    Route::get('Review/' , [PatentsController::class , 'showReview'])->name('Review.show');
     Route::get('College/' , [CollegeController::class , 'show'])->name('College.show');
 });
 

@@ -20,4 +20,9 @@ class PatentsController extends Controller
         $depratments = Department::all();
         return view('frontend.pages.StudyinIraq', compact('depratments'));
     }
+    public function showReview()
+    {
+        $depratments = Department::all();
+        return view('frontend.pages.Review', compact('depratments'));
+    }
 }

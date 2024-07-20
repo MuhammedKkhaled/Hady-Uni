@@ -10,11 +10,13 @@ use App\Http\Controllers\Admin\LibraryController;
 use App\Http\Controllers\Admin\LinkController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\StudyController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
 use App\Http\Controllers\Admin\CollegeController;
+use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CurriculaController;
 use App\Http\Controllers\Admin\NewsGalleryController;
 use App\Http\Controllers\Admin\StatisticsController;
@@ -25,6 +27,7 @@ use App\Http\Controllers\Admin\StudnetController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\SustainableController;
 use App\Http\Controllers\Admin\SustainablesGalleryController;
+use App\Http\Controllers\Admin\TopController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -131,6 +134,16 @@ Route::middleware([
             Route::resource('affiliates', AffiliateController::class);
 
 
+            /// courses routes
+            Route::get('/courses/data', 'CourseController@data')->name('courses.data');
+            Route::delete('/courses/bulk_delete', 'CourseController@bulkDelete')->name('courses.bulk_delete');
+            Route::resource('courses', CourseController::class);
+            
+            /// tops routes
+            Route::get('/tops/data', 'TopController@data')->name('tops.data');
+            Route::delete('/tops/bulk_delete', 'TopController@bulkDelete')->name('tops.bulk_delete');
+            Route::resource('tops', TopController::class);
+
             /// journals routes
             Route::get('/messages/data', 'MessageController@data')->name('messages.data');
             Route::delete('/messages/bulk_delete', 'MessageController@bulkDelete')->name('messages.bulk_delete');
@@ -141,6 +154,10 @@ Route::middleware([
             Route::get('/studies/data', 'StudyController@data')->name('studies.data');
             Route::delete('/studies/bulk_delete', 'StudyController@bulkDelete')->name('studies.bulk_delete');
             Route::resource('studies', StudyController::class);
+            /// journals routes
+            Route::get('/reviews/data', 'ReviewController@data')->name('reviews.data');
+            Route::delete('/reviews/bulk_delete', 'ReviewController@bulkDelete')->name('reviews.bulk_delete');
+            Route::resource('reviews', ReviewController::class);
 
             //Product routes
             Route::get('/products/data', 'ProductController@data')->name('products.data');

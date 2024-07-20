@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StudyRequest;
 use App\Models\Study;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Yajra\DataTables\DataTables;
 
 class StudyController extends Controller
 {

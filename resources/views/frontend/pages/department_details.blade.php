@@ -279,21 +279,24 @@
                                             <tr>
                                                 <td class="">
                                                     @if ($student->graduated_file)
-                                                        <a href="{{ asset(Storage::url('uploads/students/' . $student->graduated_file)) }}"
+                                                        <a class="main-btn"
+                                                            href="{{ asset(Storage::url('uploads/students/' . $student->graduated_file)) }}"
                                                             target="_blank">شاهد الخرجين</a>
                                                     @else
                                                         {{ __('No graduated file available') }}
                                                     @endif
                                                 </td>
                                                 <td class="">
-                                                    @if ($student->student_file)
-                                                        <a href="{{ asset(Storage::url('uploads/students/' . $student->student_file)) }}"
-                                                            target="_blank">شاهد الأوائل</a>
-                                                    @else
-                                                        {{ __('No student file available') }}
-                                                    @endif
+                                                    <form  action="{{ route('tops.show') }}"method="POST">
+                                                        @csrf
+                                                        <input type="number" name="department_id" value="{{ $department->id }}" hidden>
+                                                        <input type="number" name="year" value="{{ $student->year->format('Y') }}"
+                                                            hidden>
+                                                        <button class="main-btn" type="submit">شاهد الأوائل</button>
+                                                        
+                                                    </form>
                                                 </td>
-                                                <td class="">{{ $student->year->format('Y') ?? __('N/A') }}</td>
+                                                <td class=""><h1>{{ $student->year->format('Y') ?? __('N/A') }}</h1></td>
                                             </tr>
                                         @empty
                                             <tr>
@@ -391,8 +394,8 @@
                                             target="_blank">{{ __('custom.Employer opinion forms') }}</a>
                                     </div>
                                     <div class="sidebar-btn col-lg-6  col-sm-12">
-                                        <a class="main-btn col-lg-12 w-100" href="{{ $department->graduate_link }}"
-                                            target="_blank">{{ __('custom.Graduate opinion forms') }}</a>
+                                        <a class="main-btn col-lg-12 w-100" href="{{  route('Review.show') }}"
+                                            >{{ __('custom.Graduate opinion forms') }}</a>
                                     </div>
                                 @else
                                     <p>No links found for this department.</p>
@@ -518,17 +521,17 @@
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="First">
                                         <div class="row">
-                                                <div class="event-schedule">
-                                                    <div class="event-schedule-table table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="">{{ __('custom.link') }}</th>
-                                                                    <th class="">{{ __('custom.lecture') }} </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @forelse($curriculasFirsts as $curriculasFirst)
+                                            <div class="event-schedule">
+                                                <div class="event-schedule-table table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="">{{ __('custom.link') }}</th>
+                                                                <th class="">{{ __('custom.lecture') }} </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @forelse($curriculasFirsts as $curriculasFirst)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFirst->image_1)) }}"
@@ -539,28 +542,28 @@
                                                                         {{ $curriculasFirst->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
-                                                                @empty
-                                                                    <tr>
-                                                                    </tr>
-                                                                @endforelse
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                            @empty
+                                                                <tr>
+                                                                </tr>
+                                                            @endforelse
+                                                        </tbody>
+                                                    </table>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="Second">
                                         <div class="row">
-                                                <div class="event-schedule">
-                                                    <div class="event-schedule-table table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="">{{ __('custom.link') }}</th>
-                                                                    <th class="">{{ __('custom.lecture') }} </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
+                                            <div class="event-schedule">
+                                                <div class="event-schedule-table table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="">{{ __('custom.link') }}</th>
+                                                                <th class="">{{ __('custom.lecture') }} </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
                                                             @forelse($curriculasSeconds as $curriculasSecond)
                                                                 <tr>
                                                                     <td class="">
@@ -572,29 +575,29 @@
                                                                         {{ $curriculasSecond->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
-                                                                @empty
-                                                                    <tr>
-                                                                    </tr>
-                                                                @endforelse
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                            @empty
+                                                                <tr>
+                                                                </tr>
+                                                            @endforelse
+                                                        </tbody>
+                                                    </table>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="Third">
                                         <div class="row">
-                                                <div class="event-schedule">
-                                                    <div class="event-schedule-table table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="">{{ __('custom.link') }}</th>
-                                                                    <th class="">{{ __('custom.lecture') }} </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @forelse($curriculasThirds as $curriculasThird)
+                                            <div class="event-schedule">
+                                                <div class="event-schedule-table table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="">{{ __('custom.link') }}</th>
+                                                                <th class="">{{ __('custom.lecture') }} </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @forelse($curriculasThirds as $curriculasThird)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasThird->image_1)) }}"
@@ -605,29 +608,29 @@
                                                                         {{ $curriculasThird->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
-                                                                @empty
-                                                                    <tr>
-                                                                    </tr>
-                                                                @endforelse
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                            @empty
+                                                                <tr>
+                                                                </tr>
+                                                            @endforelse
+                                                        </tbody>
+                                                    </table>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="Fourth">
                                         <div class="row">
-                                                <div class="event-schedule">
-                                                    <div class="event-schedule-table table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th class="">{{ __('custom.link') }}</th>
-                                                                    <th class="">{{ __('custom.lecture') }} </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                @forelse($curriculasFourths as $curriculasFourth)
+                                            <div class="event-schedule">
+                                                <div class="event-schedule-table table-responsive">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="">{{ __('custom.link') }}</th>
+                                                                <th class="">{{ __('custom.lecture') }} </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @forelse($curriculasFourths as $curriculasFourth)
                                                                 <tr>
                                                                     <td class="">
                                                                         <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFourth->image_1)) }}"
@@ -638,32 +641,32 @@
                                                                         {{ $curriculasFourth->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                     </td>
                                                                 </tr>
-                                                                @empty
-                                                                    <tr>
-                    
-                                                                    </tr>
-                                                                @endforelse
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
+                                                            @empty
+                                                                <tr>
+
+                                                                </tr>
+                                                            @endforelse
+                                                        </tbody>
+                                                    </table>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                     @if (count($curriculasFifths) > 0)
                                         <div class="tab-pane fade" id="Fifth">
                                             <div class="row">
-                                                    <div class="event-schedule">
-                                                        <div class="event-schedule-table table-responsive">
-                                                            <table class="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th class="">{{ __('custom.link') }}</th>
-                                                                        <th class="">{{ __('custom.lecture') }}
-                                                                        </th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    @forelse($curriculasFifths as $curriculasFifth)
+                                                <div class="event-schedule">
+                                                    <div class="event-schedule-table table-responsive">
+                                                        <table class="table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class="">{{ __('custom.link') }}</th>
+                                                                    <th class="">{{ __('custom.lecture') }}
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @forelse($curriculasFifths as $curriculasFifth)
                                                                     <tr>
                                                                         <td class="">
                                                                             <a href="{{ asset(Storage::url('uploads/curricula/' . $curriculasFifth->image_1)) }}"
@@ -674,14 +677,14 @@
                                                                             {{ $curriculasFifth->{'name_' . LaravelLocalization::getCurrentLocale()} ?? ' ' }}
                                                                         </td>
                                                                     </tr>
-                                                                    @empty
-                                                                        <tr>
-                                                                        </tr>
-                                                                    @endforelse
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
+                                                                @empty
+                                                                    <tr>
+                                                                    </tr>
+                                                                @endforelse
+                                                            </tbody>
+                                                        </table>
                                                     </div>
+                                                </div>
                                             </div>
                                         </div>
                                     @endif

@@ -25,13 +25,13 @@
 
     <!--====== Page Banner Ends ======-->
 
-    @if ( count($patents) > 0 )
+    
     <section class="event-details">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="event-details-content mt-50">
-
+                        @if ( count($patents) > 0 )
                         <input type="text" placeholder="بحث" class="form-control" id="Search" onkeyup="myFunction()" onkeydown="myFunction()">
                         <div class="event-schedule">
                             <div class="event-schedule-table table-responsive">
@@ -43,6 +43,7 @@
                                         <th class="">{{ __("custom.Instructor's name") }}</th>
                                         <th class="">{{ __("custom.Donor") }}</th>
                                         <th class="">{{ __("custom.the year") }}</th>
+                                        <th class="">{{ __('custom.Department Name') }}</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -54,6 +55,7 @@
                                         <td class=""> {{ $patent->{'Instructor_'.LaravelLocalization::getCurrentLocale()} }} </td>
                                         <td class=""> {{ $patent->{'Donor_'.LaravelLocalization::getCurrentLocale()} }} </td>
                                         <td class=""> {{ $patent->{'year'} }} </td>
+                                        <td class=""> {{ $patent->department->{'name_'.LaravelLocalization::getCurrentLocale()} }} </td>
                                     </tr>
                                     @empty
 
@@ -63,12 +65,12 @@
                             </div>
                         </div>
 
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    @endif
 
     <script>
         function myFunction() {

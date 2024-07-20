@@ -23,6 +23,10 @@
                         <input type="number" name="students" autofocus class="form-control" value="{{ old('students', $statistic->students) }}" >
                     </div>
                     <div class="form-group">
+                        <label>{{ __("custom.frontend.students_abroad") }} <span class="text-danger">*</span></label>
+                        <input type="number" name="students_abroad" autofocus class="form-control" value="{{ old('students_abroad', $statistic->students_abroad) }}" >
+                    </div>
+                    <div class="form-group">
                         <label>{{ __("custom.frontend.success percent") }}  <span class="text-danger">*</span></label>
                         <input type="number" name="success_percent" autofocus class="form-control" step="any" min="0" max="100" value="{{ old('success_percent', $statistic->success_percent) }}" >
                     </div>

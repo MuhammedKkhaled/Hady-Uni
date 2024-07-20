@@ -26,6 +26,7 @@ class CategoryRequest extends FormRequest
         $rules = [
             'name_en' => 'required' ,
             'name_ar' => 'required' ,
+            'type' => 'required' ,
         ];
 
         return $rules;

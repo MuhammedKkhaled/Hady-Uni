@@ -24,6 +24,7 @@ class StatisticsRequest extends FormRequest
         $rules = [
             'graduated'=> ['numeric' , 'required'],
             'students'=> ['numeric' , 'required'],
+            'students_abroad'=> ['numeric' , 'required'],
             'success_percent'=> ['numeric' , 'required'],
         ];
 
