@@ -36,7 +36,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="single-blog mt-30">
                         <div class="blog-image">
-                            <a href="#">
+                            <a href="{{ route('main.new.show', $new->id) }}">
                                 <img src="{{ Storage::url("uploads/news/". $new->image) }}" width="270"
                                      height="150" alt="blogsss">
                             </a>
@@ -52,7 +52,7 @@
 
                                 </a>
                             </h4>
-                            <a href="#" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
+                            <a href="{{ route('main.new.show', $new->id) }}" class="more">مشاهده التفاصيل<i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>

@@ -59,8 +59,8 @@ return [
 
 "Patent name"=>"اسم براءة الاختراع",
 "Patent summary"=>"ملخص براءة الاختراع",
-"Course name"=>"اسم الدوره",
-"Course summary"=>"أساتذه الدوره",
+"Course name"=>"اسم الدورة",
+"Course summary"=>"أساتذه الدورة",
 "Donor"=>"الجهة المانحة",
 "the year"=>"السنة",
 "Instructor's name"=>"اسم التدريسي",
@@ -425,10 +425,10 @@ return [
     "message"=>"مقترحاتكم لتطوير المناهج الدراسية",
     "New"=>"أنشاء",
     "course year"=>"التاريخ",
-    "course lecturers ar"=>"المحاضرين بلانجليزي",
-    "course lecturers en"=>"المحاضرين بلعربي",
-    "course Name ar"=>"اسم الدوره بلانجليزي",
-    "course Name en"=>"اسم الدوره بلعربي",
+    "course lecturers ar"=>"المحاضرين بلعربي",
+    "course lecturers en"=>"المحاضرين بلانجليزي",
+    "course Name ar"=>"اسم الدورة بلعربي",
+    "course Name en"=>"اسم الدورة بلانجليزي",
     "Create course"=>"انشاء دوره",
 
     //////////// Front End

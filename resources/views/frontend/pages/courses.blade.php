@@ -1,6 +1,6 @@
-@extends("frontend.layouts.app")
+@extends('frontend.layouts.app')
 
-@section("title", "الدورات | جامعة الهادي " )
+@section('title', 'الدورات | جامعة الهادي ')
 
 @section('content')
 
@@ -8,7 +8,7 @@
 
     <section class="page-banner">
 
-        <div class="page-banner-bg bg_cover" style="background-image: url({{ asset("assets/images/campus-2-2.jpg") }});">
+        <div class="page-banner-bg bg_cover" style="background-image: url({{ asset('assets/images/campus-2-2.jpg') }});">
 
             <div class="container">
 
@@ -25,39 +25,56 @@
 
     <!--====== Page Banner Ends ======-->
 
-    
+
     <section class="event-details">
+
+        <div data-wow-duration="1s" data-wow-delay="0.2s"
+            style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInUpBig;">
+            <div class="item-icon" style="text-align: center;">
+                <img src="{{ asset('assets/images/icon/icon-2-1.webp') }}" width="70" height="70"
+                    alt="Icon">
+            </div>
+            <div class="item-content media-body" style="text-align: center;">
+                <p> {{ count($courses) }} <br>
+                    {{ __('custom.frontend.research') }}
+                </p>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="event-details-content mt-50">
-                        @if ( count($courses) > 0 )
-                        <input type="text" placeholder="بحث" class="form-control" id="Search" onkeyup="myFunction()" onkeydown="myFunction()">
-                        <div class="event-schedule">
-                            <div class="event-schedule-table table-responsive">
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th class="">{{ __("custom.Course name") }}</th>
-                                        <th class="">{{ __("custom.Course summary") }}</th>
-                                        <th class="">{{ __("custom.the year") }}</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
+                        @if (count($courses) > 0)
+                            <input type="text" placeholder="بحث" class="form-control" id="Search"
+                                onkeyup="myFunction()" onkeydown="myFunction()">
+                            <div class="event-schedule">
+                                <div class="event-schedule-table table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="">{{ __('custom.Course name') }}</th>
+                                                <th class="">{{ __('custom.Course summary') }}</th>
+                                                <th class="">{{ __('custom.the year') }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
 
-                                    @forelse($courses as $course)
-                                    <tr class="target">
-                                        <td class="">{{ $course->{'name_'.LaravelLocalization::getCurrentLocale()} }}</td>
-                                        <td class=""> {{ $course->{'lecturers_'.LaravelLocalization::getCurrentLocale()} }}</td>
-                                        <td class=""> {{ $course->date}} </td>
-                                    </tr>
-                                    @empty
-
-                                    @endforelse
-                                    </tbody>
-                                </table>
+                                            @forelse($courses as $course)
+                                                <tr class="target">
+                                                    <td class="">
+                                                        {{ $course->{'name_' . LaravelLocalization::getCurrentLocale()} }}
+                                                    </td>
+                                                    <td class="">
+                                                        {{ $course->{'lecturers_' . LaravelLocalization::getCurrentLocale()} }}
+                                                    </td>
+                                                    <td class=""> {{ $course->date }} </td>
+                                                </tr>
+                                            @empty
+                                            @endforelse
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                        </div>
 
                         @endif
                     </div>
@@ -71,16 +88,16 @@
             var input = document.getElementById("Search");
             var filter = input.value.toLowerCase();
             var nodes = document.getElementsByClassName('target');
-            
-                for (i = 0; i < nodes.length; i++) {
-                    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+
+            for (i = 0; i < nodes.length; i++) {
+                if (nodes[i].innerText.toLowerCase().includes(filter)) {
                     nodes[i].style.display = "block";
                     nodes[i].style.display = "";
-                    } else {
+                } else {
                     nodes[i].style.display = "none";
-                    }
                 }
             }
-      </script>
+        }
+    </script>
 
 @endsection
