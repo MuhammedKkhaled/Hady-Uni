@@ -85,9 +85,9 @@
                             <div class="single-teacher mt-80 text-center">
                                 <div class="teacher-social">
                                     <ul class="social">
-                                        <li><a href="{{$affiliate->facebook}}"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="{{$affiliate->twitter}}"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="{{$affiliate->linkedin}}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="{{$affiliate->facebook}}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="{{$affiliate->twitter}}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="{{$affiliate->linkedin}}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="teacher-image">

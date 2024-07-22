@@ -24,7 +24,7 @@ class StudentRequest extends FormRequest
         $rules = [
             'year'=> ['date' , 'required'],
             'department_id'=> ['numeric' , 'required'],
-            'student_file'              => 'required|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
+            'student_file'              => 'nullable|mimes:jpeg,png,jpg,gif,svg,webp,pdf,docx',
             'graduated_file'              => 'required|mimes:pdf,docx',
         ];
 

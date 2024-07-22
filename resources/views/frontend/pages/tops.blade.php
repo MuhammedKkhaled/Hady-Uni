@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 @empty
-                    <p>{{ "custom.frontend.This Department Hasn't Affiliates Yet" }}</p>
+                    <p></p>
                 @endforelse
 
 

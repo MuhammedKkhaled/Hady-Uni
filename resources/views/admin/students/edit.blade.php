@@ -21,12 +21,12 @@
                         <select id="department_id" name="department_id" class="form-control">
                             <option value="0" disabled selected>-- Select --</option>
 
-                            @foreach($departments  as $department) @endforeach
+                            @foreach($departments  as $department) 
                             <option
                                 value="{{ $department->id }}" {{ $student->department->{'name_'.LaravelLocalization::getCurrentLocale()}  == $department->{'name_'.LaravelLocalization::getCurrentLocale() } ? 'selected' :'' }} >
                                     {{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}
                             </option>
-
+                            @endforeach
                         </select>
                     </div>
 
@@ -38,10 +38,10 @@
                                value="{{ old('year' , $student->year) }}" required>
                     </div>
                     {{--file--}}
-                    <div class="form-group">
+                   {{--  <div class="form-group">
                         <label class="text-capitalize">{{ __("custom.Student File") }} <span class="text-danger">PDF,DOCX*</span></label>
                         <input type="file" name="student_file" id="input-file-now" class="dropify" @if(isset($student)) data-default-file="{{$student->student_file_path}}" data-show-remove="false" @endif  data-height="355"/>
-                    </div>
+                    </div> --}}
 
                     {{--file--}}
                     <div class="form-group">

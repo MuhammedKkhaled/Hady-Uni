@@ -32,18 +32,18 @@ class Affiliate extends Model
         "cv",
     ];
 
-    protected $appends = ['image','cv'];
-/* 
-    public function getImageAttribute()
+    protected $appends = ['image_path','cv_path'];
+
+    public function getImagePathAttribute()
     {
         return Storage::url('uploads/affiliates/' . $this->file);
 
     }
-    public function getCVAttribute()
+    public function getCVPathAttribute()
     {
         return Storage::url('uploads/affiliates/' . $this->file);
 
-    }// end of getPosterPathAttribute */
+    }// end of getPosterPathAttribute
     public function department():BelongsTo
     {
         return $this->belongsTo(Department::class , 'department_id');

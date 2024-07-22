@@ -72,10 +72,13 @@ class StudnetController extends Controller
 
         if ($request->student_file) {
             $request->student_file->store('public/uploads/students/');
-            $request->graduated_file->store('public/uploads/students/');
             $requestData['student_file'] = $request->student_file->hashName();
+        }
+        if ($request->graduated_file) {
+            $request->graduated_file->store('public/uploads/students/');
             $requestData['graduated_file'] = $request->graduated_file->hashName();
         }
+
 
         Student::create($requestData);
 
@@ -100,12 +103,15 @@ class StudnetController extends Controller
 
         if ($request->student_file) {
             Storage::disk('local')->delete('public/uploads/students/' . $student->student_file);
-            Storage::disk('local')->delete('public/uploads/students/' . $student->graduated_file);
             $request->student_file->store('public/uploads/students/');
-            $request->graduated_file->store('public/uploads/students/');
             $requestData['student_file'] = $request->student_file->hashName();
+        }
+        if ($request->graduated_file) {
+            Storage::disk('local')->delete('public/uploads/students/' . $student->graduated_file);
+            $request->graduated_file->store('public/uploads/students/');
             $requestData['graduated_file'] = $request->graduated_file->hashName();
         }
+
 
         $student->update($requestData);
         session()->flash('success', __('custom.Update Successfully'));

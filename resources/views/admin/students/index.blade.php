@@ -71,8 +71,6 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>{{ __("custom.Student File") }} </th>
-                                <th>{{ __("custom.Graduate File") }} </th>
                                 <th>{{ __("custom.Year") }} </th>
                                 <th> {{ __("custom.Department Name") }} </th>
                                 <th>{{ __("custom.Created at") }}</th>
@@ -108,8 +106,6 @@
             },
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
-                {data: 'student_file' , name: 'student_file' },
-                {data: 'graduated_file', name: 'graduated_file'},
                 {data: 'year', name: 'year'},
                 {data: 'department_id', name: 'department_id'},
                 {data: 'created_at', name: 'created_at', searchable: false},

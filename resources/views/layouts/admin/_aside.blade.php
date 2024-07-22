@@ -935,7 +935,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-text text-capitalize">{{ __("custom.frontend.sustainable") }}</span>
+                                    <span class="menu-text text-capitalize">{{ __("custom.sustainable1") }}</span>
                                     <i class="menu-arrow"></i>
                                 </a>
                                 <div class="menu-submenu" kt-hidden-height="240" style="">
@@ -946,7 +946,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">{{ __("custom.View All sustainable") }} </span>
+                                                <span class="menu-text">{{ __("custom.View All college") }} </span>
                                             </a>
                                         </li>
                                         
@@ -956,7 +956,7 @@
                                                     <i class="menu-bullet menu-bullet-dot">
                                                         <span></span>
                                                     </i>
-                                                    <span class="menu-text">{{ __("custom.Create sustainable") }}</span>
+                                                    <span class="menu-text">{{ __("custom.Create college") }}</span>
                                                 </a>
                                             </li>
                                         @endif
@@ -979,7 +979,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-text text-capitalize">{{ __("custom.frontend.sustainablesgalleries") }}</span>
+                                    <span class="menu-text text-capitalize">{{ __("custom.sustainablesgalleries1") }}</span>
                                     <i class="menu-arrow"></i>
                                 </a>
                                 <div class="menu-submenu" kt-hidden-height="240" style="">
@@ -990,7 +990,7 @@
                                                 <i class="menu-bullet menu-bullet-dot">
                                                     <span></span>
                                                 </i>
-                                                <span class="menu-text">{{ __("custom.View All sustainablesgalleries") }} </span>
+                                                <span class="menu-text">{{ __("custom.View All college") }} </span>
                                             </a>
                                         </li>
                                         
@@ -1000,7 +1000,7 @@
                                                     <i class="menu-bullet menu-bullet-dot">
                                                         <span></span>
                                                     </i>
-                                                    <span class="menu-text">{{ __("custom.Create sustainablesgalleries") }}</span>
+                                                    <span class="menu-text">{{ __("custom.Create college") }}</span>
                                                 </a>
                                             </li>
                                         @endif

@@ -28,9 +28,9 @@
                     <div class="single-teacher-details mt-50 text-center">
                         <div class="teacher-social">
                             <ul class="social">
-                                <li><a href="{{ $affiliate->facebook  }}"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="{{ $affiliate->twitter  }}"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="{{ $affiliate->linkedin  }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="{{ $affiliate->facebook  }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{{ $affiliate->twitter  }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="{{ $affiliate->linkedin  }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
 
@@ -62,9 +62,9 @@
                             {{ $affiliate->{'general_specialization_' . LaravelLocalization::getCurrentLocale()} }}
                         </p>
                         <ul class="teacher-contact">
-                            <li><strong>{{ __("custom.Affiliate Title") }}</strong> <a href="">{{ $affiliate->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></li>
-                            <li><strong>{{ __("custom.Affiliate Notes") }}</strong> <a href="">{{  $affiliate->{'notes_'.LaravelLocalization::getCurrentLocale()} }}</a></li>
-                        </ul>
+                            <li><strong>{{ __("custom.Affiliate Title") }}</strong> <br><a href="">{{ $affiliate->{'title_'.LaravelLocalization::getCurrentLocale()} }}</a></li>
+                            <li><strong>{{ __("custom.Affiliate Notes") }}</strong> <br><a href="">{{  $affiliate->{'notes_'.LaravelLocalization::getCurrentLocale()} }}</a></li>
+                        </ul><br>
                         <a class="main-btn"
                                     href="{{ Storage::url("uploads/affiliates/". $affiliate->cv) }}"
                                     target="_blank">

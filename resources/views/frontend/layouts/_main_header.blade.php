@@ -34,9 +34,6 @@
                                     <li><a href="{{ route('Patents.show') }}">
                                             {{ __('custom.frontend.Written books and patents') }}</a>
                                     </li>
-                                    <li><a href="{{  route('Review.show') }}">
-                                            {{ __('custom.frontend.Review') }}</a>
-                                    </li>
                                 </ul>
                             </li>
                             <li>

@@ -270,7 +270,7 @@
                                     <thead>
                                         <tr>
                                             <th class="">{{ __('custom.frontend.Graduated') }} </th>
-                                            <th class="">{{ __('custom.frontend.pioneers') }}</th>
+                                            <th class="">{{ __('custom.frontend.tops') }}</th>
                                             <th class="">{{ __('custom.frontend.year') }}</th>
                                         </tr>
                                     </thead>

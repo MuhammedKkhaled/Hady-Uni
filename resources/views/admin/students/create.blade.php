@@ -34,10 +34,10 @@
                                value="{{ old('year') }}" required>
                     </div>
                     {{--file--}}
-                    <div class="form-group">
+                   {{--  <div class="form-group">
                         <label class="text-capitalize">{{ __("custom.Student File") }} <span class="text-danger">PDF,DOCX*</span></label>
                         <input type="file" name="student_file" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div>
+                    </div> --}}
 
                     {{--file--}}
                     <div class="form-group">

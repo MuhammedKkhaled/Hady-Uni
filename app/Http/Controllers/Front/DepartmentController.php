@@ -18,7 +18,7 @@ class DepartmentController extends Controller
     {
 
         $department =  Department::findOrFail($id);
-        $department_students = Student::where('department_id', $id)->get();
+        $department_students = Student::where('department_id', $id)->orderBy('year', 'ASC')->get();
         $link = Link::where('department_id', $id)->first();
         $galleries = Gallery::where('department_id', $id)->get();
         $accreditations = Accreditation::where('department_id', $id)->get();
