@@ -28,8 +28,9 @@
                     <div class="single-teacher-details mt-50 text-center">
                         <div class="teacher-social">
                             <ul class="social">
-                                <li><a href="{{ $affiliate->facebook  }}" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="{{ $affiliate->twitter  }}" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="{{ $affiliate->researchgate  }}" target="_blank"><i class="fab fa-researchgate"></i></a></li>
+                                <li><a href="{{ $affiliate->google}}" target="_blank"><i class="fab fa-google"></i></a></li>
+                                <li><a href="{{ $affiliate->scopus}}" target="_blank"><img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://camo.githubusercontent.com/18655613a8ce9bfdc11e17b4c0659b30ee65f2902bef2526a89e2713d8392e0f/68747470733a2f2f696a6f672e67656f6c6f67692e6573646d2e676f2e69642f7075626c69632f736974652f696d616765732f6e616e612f49636f6e5f2d5f53636f7075732e706e67"></a></li>
                                 <li><a href="{{ $affiliate->linkedin  }}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>

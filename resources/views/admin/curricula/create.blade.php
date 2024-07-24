@@ -38,6 +38,19 @@
                             @endforeach
                         </select>
                     </div>
+
+                    
+                    <div class="form-group">
+                        <label for="affiliate_id"> {{ __('custom.Affiliate Name ar') }} </label>
+                        <select id="affiliate_id" name="affiliate_id" class="form-control">
+                            <option value="0" disabled selected>-- Select affiliate --</option>
+                            @foreach($affiliates  as $affiliate)
+                            <option value="{{ $affiliate->id }}">
+                                {{ $affiliate->{'name_'.LaravelLocalization::getCurrentLocale()} }}
+                            </option>
+                            @endforeach
+                        </select>
+                    </div>
                     {{-- Name --}}
                     <div class="form-group">
                         <label>{{ __("custom.Lecture name in English") }}<span class="text-danger">*</span></label>

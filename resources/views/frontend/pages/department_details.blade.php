@@ -390,8 +390,7 @@
                             <div class="row">
                                 @if ($department)
                                     <div class="sidebar-btn col-lg-6  col-sm-12">
-                                        <a class="main-btn col-lg-12 w-100" href="{{ $department->employe_link }}"
-                                            target="_blank">{{ __('custom.Employer opinion forms') }}</a>
+                                        <a class="main-btn col-lg-12 w-100" href="{{  route('Review.showTow') }}">{{ __('custom.Employer opinion forms') }}</a>
                                     </div>
                                     <div class="sidebar-btn col-lg-6  col-sm-12">
                                         <a class="main-btn col-lg-12 w-100" href="{{  route('Review.show') }}"

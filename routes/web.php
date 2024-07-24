@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReviewTowController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\Front\PatentsController;
 use App\Http\Controllers\Front\AffiliateController;
@@ -151,6 +152,8 @@ Route::prefix('main/')->group(function (){
     Route::get('journal', [JournalController::class , 'show']);
     Route::get('news', [NewsController::class , 'show']);
     Route::get('conferences', [NewsController::class , 'showconferences']);
+    
+    Route::get('classifications/{id}', [JournalController::class , 'showclassifications'])->name('main.classifications.show');
 
     Route::get('strategies', [JournalController::class , 'showStrategies']);
 
@@ -161,6 +164,7 @@ Route::prefix('main/')->group(function (){
     Route::post('tops/', [TopController::class , 'show'])->name('tops.show');
     Route::post('study/store', [StudyController::class , 'store'])->name('study.store');
     Route::post('Review/store', [ReviewController::class , 'store'])->name('Review.store');
+    Route::post('ReviewTow/store', [ReviewTowController::class , 'store'])->name('ReviewTow.store');
     Route::post('study/check', [StudyController::class , 'check'])->name('study.check');
 
     Route::get('affiliates/{id}' , [AffiliateController::class , 'show'])->name('affiliates.show');
@@ -168,7 +172,8 @@ Route::prefix('main/')->group(function (){
     Route::get('course/' , [CoursesController::class , 'show'])->name('course.show');
     Route::get('Patents/' , [PatentsController::class , 'show'])->name('Patents.show');
     Route::get('Study/' , [PatentsController::class , 'showStudy'])->name('Study.show');
-    Route::get('Review/' , [PatentsController::class , 'showReview'])->name('Review.show');
+    Route::get('Review/show' , [PatentsController::class , 'showReview'])->name('Review.show');
+    Route::get('Review/showTow' , [PatentsController::class , 'showReviewTow'])->name('Review.showTow');
     Route::get('College/' , [CollegeController::class , 'show'])->name('College.show');
 });
 

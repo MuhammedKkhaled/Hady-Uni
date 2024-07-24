@@ -1,5 +1,5 @@
 @php use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
-@php $name = 'tops' @endphp
+@php $name = 'reviewtows' @endphp
 @extends('layouts.admin.app')
 @section('content')
 
@@ -7,13 +7,13 @@
         <div class="card-header flex-wrap py-3">
             <div class="card-title">
                 <h3 class="card-label text-capitalize">
-                    {{ __('custom.frontend.tops') }}
+                    {{ __('custom.frontend.Review') }}
                 </h3>
             </div>
             <div class="card-toolbar">
 
                 <div>
-                    @if (auth()->user()->hasPermission('read_'.$name))
+                   {{--  @if (auth()->user()->hasPermission('read_'.$name))
                         <a href="{{ route('admin.'.$name.'.create') }}" class="btn btn-primary font-weight-bolder">
                         <span class="svg-icon svg-icon-md">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
@@ -29,9 +29,9 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            {{ __("custom.New") }}
+                            {{ __("custom.New Departments") }}
                         </a>
-                    @endif
+                    @endif --}}
 
                     @if (auth()->user()->hasPermission('delete_'.$name))
                         <form method="post" action="{{ route('admin.'.$name.'.bulk_delete') }}"
@@ -71,8 +71,10 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>{{ __("custom.tops Name") }} </th>
-                                <th> {{ __("custom.Department Name") }} </th>
+                                <th>{{ __('custom.full name') }}</th>
+                                <th>{{ __('custom.type') }}</th>
+                                <th>{{ __("custom.number_employees") }}</th>
+                                <th>{{ __("custom.state") }}</th>
                                 <th>{{ __("custom.Created at") }}</th>
                                 <th>{{ __("custom.Action") }}</th>
                             </tr>
@@ -87,15 +89,9 @@
 
 @endsection
 
-
-
-
-
-
 @push('js')
 
     <script>
-
 
         let rolesTable = $('#{{$name}}-table').DataTable({
             dom: "tiplr",
@@ -106,8 +102,10 @@
             },
             columns: [
                 {data: 'record_select', name: 'record_select', searchable: false, sortable: false, width: '1%'},
-                {data: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}', name: 'name_' + '{{ LaravelLocalization::getCurrentLocale() }}'},
-                {data: 'department_id', name: 'department_id', searchable: false},
+                {data: 'name' , name: 'name'},
+                {data: 'type' , name: 'type'},
+                {data: 'number_employees', name: 'number_employees', searchable: false},
+                {data: 'state', name: 'state', searchable: false},
                 {data: 'created_at', name: 'created_at', searchable: false},
                 {data: 'actions', name: 'actions', searchable: false, sortable: false, width: '20%'},
             ],

@@ -1,12 +1,12 @@
 @php use Mcamara\LaravelLocalization\Facades\LaravelLocalization; @endphp
-@php $name = 'students' @endphp
+@php $name = 'classifications' @endphp
 @extends('layouts.admin.app')
 @section('content')
 
 
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
-            <h3 class="card-title text-capitalize">{{ __("custom.New") }}</h3>
+            <h3 class="card-title text-capitalize">{{ __("custom.Create Gallery") }}</h3>
         </div>
         <div class="card-body">
             <form class="form" action="{{ route('admin.'.$name.'.store') }}" method="POST"
@@ -16,33 +16,22 @@
                     @method('post')
                     @include('admin.partials._errors')
                     <div class="form-group">
+
                         <label for="department_id"> {{ __("custom.Department Name") }}</label>
                         <select id="department_id" name="department_id" class="form-control">
-                            <option value="0" disabled selected>-- Select Department --</option>
+                            <option value="0" disabled selected>-- Select News --</option>
                             @foreach($depratments  as $department)
                             <option value="{{ $department->id }}">
-                                {{ $department->{'name_'.LaravelLocalization::getCurrentLocale()} }}
+                                {{ $department->{'title_'.LaravelLocalization::getCurrentLocale()} }}
                             </option>
                             @endforeach
                         </select>
                     </div>
-                    {{-- Name --}}
-                    <div class="form-group">
-                        <label for="year">{{ __("custom.Year") }} <span
-                                class="text-danger">*</span></label>
-                        <input type="date" id="year" name="year" autofocus class="form-control"
-                               value="{{ old('year') }}" required>
-                    </div>
-                    {{--file--}}
-                   {{--  <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Student File") }} <span class="text-danger">PDF,DOCX*</span></label>
-                        <input type="file" name="student_file" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
-                    </div> --}}
 
                     {{--file--}}
                     <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Graduate File") }} <span class="text-danger">PDF,DOCX*</span></label>
-                        <input type="file" name="graduated_file" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
+                        <label class="text-capitalize">{{ __("custom.Main Image") }} <span class="text-danger">PNG , JPg*</span></label>
+                        <input type="file" name="image_1" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
                     </div>
 
                 </div>

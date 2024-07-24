@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\CategoryRequest;
 use App\Http\Requests\Admin\ConferenceRequest;
 use App\Http\Requests\Admin\LibraryRequest;
 use App\Http\Requests\Admin\NewsRequest;
+use App\Models\Affiliate;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Conference;
@@ -58,9 +59,9 @@ class LibraryController extends Controller
 
     public function create()
     {
-        $depratments =  Department::all();
         $teachers =  Teacher::all();
-        return view('admin.libraries.create' , compact('depratments','teachers'));
+        $affiliates =  Affiliate::all();
+        return view('admin.libraries.create' , compact('teachers','affiliates'));
     }// end of create
 
     public function store(LibraryRequest $request)
@@ -78,8 +79,9 @@ class LibraryController extends Controller
 
     public function edit(Library $library)
     {
-        $depratments =  Department::all();
-        return view('admin.libraries.edit', compact('library' , 'depratments'));
+        $affiliates =  Affiliate::all();
+        $teachers =  Teacher::all();
+        return view('admin.libraries.edit', compact('library' ,'teachers','affiliates'));
 
     }// end of edit
 

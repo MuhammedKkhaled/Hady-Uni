@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\CharactersController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\awardsController;
 use App\Http\Controllers\Admin\AdsController;
+use App\Http\Controllers\Admin\ClassificationsController;
 use App\Http\Controllers\Admin\CollegeController;
 use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\CurriculaController;
@@ -22,6 +23,7 @@ use App\Http\Controllers\Admin\NewsGalleryController;
 use App\Http\Controllers\Admin\StatisticsController;
 use App\Http\Controllers\Admin\PatentsController;
 use App\Http\Controllers\Admin\PropertyController;
+use App\Http\Controllers\Admin\ReviewTowController;
 use App\Http\Controllers\Admin\SpecificationController;
 use App\Http\Controllers\Admin\StudnetController;
 use App\Http\Controllers\Admin\TeacherController;
@@ -158,6 +160,9 @@ Route::middleware([
             Route::get('/reviews/data', 'ReviewController@data')->name('reviews.data');
             Route::delete('/reviews/bulk_delete', 'ReviewController@bulkDelete')->name('reviews.bulk_delete');
             Route::resource('reviews', ReviewController::class);
+            Route::get('/reviewtows/data', 'ReviewTowController@data')->name('reviewtows.data');
+            Route::delete('/reviewtows/bulk_delete', 'ReviewTowController@bulkDelete')->name('reviewtows.bulk_delete');
+            Route::resource('reviewtows', ReviewTowController::class);
 
             //Product routes
             Route::get('/products/data', 'ProductController@data')->name('products.data');
@@ -228,6 +233,10 @@ Route::middleware([
             Route::get('/statistics/data', 'StatisticsController@data')->name('statistics.data');
             Route::delete('/statistics/bulk_delete', 'StatisticsController@bulkDelete')->name('statistics.bulk_delete');
             Route::resource('statistics', StatisticsController::class);
+            //links StatisticsController            
+            Route::get('/classifications/data', 'ClassificationsController@data')->name('classifications.data');
+            Route::delete('/classifications/bulk_delete', 'ClassificationsController@bulkDelete')->name('classifications.bulk_delete');
+            Route::resource('classifications', ClassificationsController::class);
             // //Contact Us routes
             // Route::get('/contacts/data', 'ContactController@data')->name('contacts.data');
             // Route::delete('/contacts/bulk_delete', 'ContactController@bulkDelete')->name('contacts.bulk_delete');

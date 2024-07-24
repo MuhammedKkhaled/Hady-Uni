@@ -22,6 +22,7 @@ use App\Models\Link;
 use App\Models\News;
 use App\Models\Student;
 use App\Models\Teacher;
+use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
@@ -51,7 +52,7 @@ class SustainablesGalleryController extends Controller
 
             ->addColumn('record_select', 'admin.galleries.data_table.record_select')
             ->editColumn('department_id' ,function (SustainablesGallery $sustainablesgallery){
-                return $sustainablesgallery->sustainable->titel_en;
+                return $sustainablesgallery->sustainable->{'titel_'.LaravelLocalization::getCurrentLocale()};
             })
             ->editColumn('created_at', function (SustainablesGallery $sustainablesgallery) {
                 return $sustainablesgallery->created_at->format('Y-m-d');
@@ -68,18 +69,15 @@ class SustainablesGalleryController extends Controller
         return view('admin.sustainablesgalleries.create' , compact('depratments'));
     }// end of create
 
-    public function store(SustainablesGalleryRequest $request)
+    public function store(Request $request)
     {
-        $requestData = $request->validated();
-
-        if ($request->image_1) {
-            $request->image_1->store('public/uploads/sustainablesgalleries/');
-            $requestData['image_1'] = $request->image_1->hashName();
-
+        
+        foreach ($request->file('images') as $index => $item) {
+            $request->images[$index]->store('public/uploads/sustainablesgalleries/');
+            $requestData['image_1'] = $request->images[$index]->hashName();
+            $requestData['department_id']  = $request['department_id'];
+            SustainablesGallery::create($requestData);
         }
-
-        SustainablesGallery::create($requestData);
-
         session()->flash('success', 'Added Successfully');
 
         return redirect()->route('admin.sustainablesgalleries.index');

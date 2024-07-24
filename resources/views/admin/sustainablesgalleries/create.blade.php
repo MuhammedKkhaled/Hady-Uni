@@ -31,7 +31,7 @@
                     {{--file--}}
                     <div class="form-group">
                         <label class="text-capitalize">{{ __("custom.Main Image") }} <span class="text-danger">PNG , JPg*</span></label>
-                        <input type="file" name="image_1" id="input-file-now" class="dropify" data-show-remove="false"  data-height="355"/>
+                        <input type="file" name="images[]" id="input-file-now" class="dropify" data-show-remove="false" multiple  required data-height="355"/>
                     </div>
 
                 </div>

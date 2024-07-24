@@ -163,8 +163,10 @@
                                 <a href="#">@lang('custom.frontend.college_classification')</a>
                                 <ul class="nav-dropdown nav-submenu">
                                     <li><a href="#">@lang('custom.frontend.iraqi_universities_classification')</a></li>
-                                    <li><a href="#">@lang('custom.frontend.webometrics_classification')</a></li>
-                                    <li><a href="#">@lang('custom.frontend.greenmetrics_classification')</a></li>
+                                    <li><a href="{{ route('main.classifications.show', 1) }}" target="_blank">@lang('custom.frontend.webometrics_classification')</a></li>
+                                    <li><a href="{{ route('main.classifications.show', 2) }}"target="_blank">@lang('custom.frontend.greenmetrics_classification')</a></li>
+                                    <li><a href="{{ route('main.classifications.show', 3) }}"target="_blank">@lang('custom.frontend.Scival_classification')</a></li>
+                                    <li><a href="{{ route('main.classifications.show', 4) }}"target="_blank">@lang('custom.frontend.Scopus_classification')</a></li>
                                 </ul>
                             </li>
 

@@ -29,7 +29,7 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="name_en">{{ __('custom.Affiliate Name en') }} <span
+                        <label for="name_en">{{ __('custom.top Name en') }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="name_en" name="name_en" autofocus class="form-control"
                             value="{{ old('name_en') }}">
@@ -38,7 +38,7 @@
 
                     {{-- Name --}}
                     <div class="form-group">
-                        <label for="name_ar">{{ __('custom.Affiliate Name ar') }} <span
+                        <label for="name_ar">{{ __('custom.top Name ar') }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="name_ar" name="name_ar" autofocus class="form-control"
                             value="{{ old('name_ar') }}" required>

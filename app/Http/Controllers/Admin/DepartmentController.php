@@ -94,11 +94,13 @@ class DepartmentController extends Controller
 
         if ($request->image) {
             $request->image->store('public/uploads/departments/');
-            $request->file->store('public/uploads/departments/');
             $requestData['image'] = $request->image->hashName();
-            $requestData['file'] = $request->file->hashName();
         }
 
+        if ($request->file) {
+            $request->file->store('public/uploads/departments/');
+            $requestData['file'] = $request->file->hashName();
+        }
         Department::create($requestData);
 
         session()->flash('success', 'Added Successfully');
@@ -120,10 +122,13 @@ class DepartmentController extends Controller
 
         if ($request->image) {
             Storage::disk('local')->delete('public/uploads/departments/' . $department->image);
-            Storage::disk('local')->delete('public/uploads/departments/' . $department->file);
             $request->image->store('public/uploads/departments/');
-            $request->file->store('public/uploads/departments/');
             $requestData['image'] = $request->image->hashName();
+        }
+        
+        if ($request->file) {
+            Storage::disk('local')->delete('public/uploads/departments/' . $department->file);
+            $request->file->store('public/uploads/departments/');
             $requestData['file'] = $request->file->hashName();
         }
 

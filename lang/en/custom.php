@@ -103,6 +103,7 @@ return [
     "wait"=>"under revision",
     "linkedin"=>"linkedin",
 "doneSend"=>"Your request has been sent successfully and the order number is : ",
+"doneSend1"=>"Your request has been sent successfully ",
 "Enter the order number"=>"Enter the order number",
 "tracking"=>"tracking",
 "track Order"=>"track Order",
@@ -135,6 +136,7 @@ return [
 
 
 
+    'tops Name'=>"name",
 
 
 
@@ -332,6 +334,8 @@ return [
     'Affiliate Name' => 'Affiliate Name',
     'Affiliate Name en' => 'Affiliate Name English',
     'Affiliate Name ar' => 'Affiliate Name Arabic',
+    'top Name en' => 'top Name English',
+    'top Name ar' => 'top Name Arabic',
     'Affiliate Notes' => "University Email" ,
     'Affiliate Notes en' => "University Email English" ,
     'Affiliate Notes ar' => "University Email Arabic" ,
@@ -443,6 +447,37 @@ return [
     "course Name ar"=>"course Name ar",
     "course Name en"=>"course Name en",
     "Create course"=>"Create course",
+    "q1"=>"They have sufficient knowledge and skills to do the required work",
+    "q2"=>"They use technology efficiently",
+    "q3"=>"They have the ability to apply knowledge and science",
+    "q4"=>"They have the ability to work effectively within a work team",
+    "q5"=>"They have the ability to research and analyze work-related data",
+    "q6"=>"Their English speaking and writing skills are appropriate to the nature of their work",
+    "q7"=>"They have the ability to identify problems and suggest appropriate solutions",
+    "q8"=>"They have the ability to work independently",
+    "q9"=>"They have the ability to organize and set priorities",
+    "q10"=>"They have self-confidence and self-reliance",
+    "q11"=>"They have leadership skills",
+    "q12"=>"They have the ability to quickly adapt to the work environment",
+    "q13"=>"They complete their work on time",
+    "q14"=>"They have skills in dealing with others",
+    "q15"=>"They have creative ideas to develop work",
+    "q16"=>"They accept constructive criticism in a positive way",
+    "q17"=>"They are keen to adhere to professional ethics",
+    "q18"=>"They have a desire to develop their knowledge and skills",
+    "q19"=>"The extent to which academic study focuses on providing opportunities, specialization, and depth in the field of knowledge and work in state departments",
+    "q20"=>"The extent of the link between academic education and the various sectors of production and work",
+    "q21"=>"They have the ability to logically analyze and evaluate results",
+    "enterprise"=>'enterprise',
+    "number_employees"=>"Number of Employees",
+    "employees_name"=>"Name and job title of the evaluator",
+    "message2"=>"Reasons for leaving work, if any",
+    "select"=>"Choose",
+    "Strongly Agree"=>"Strongly Agree",
+    "Agree"=>"Agree",
+    "neutral"=>"neutral",
+    "not agree"=>"not agree",
+    "Strongly Disagree"=>"Agree",
 
     //////////// Front End
     'frontend'=>[
@@ -521,6 +556,9 @@ return [
         'iraqi_universities_classification' => 'Iraqi Universities Classification',
         'webometrics_classification' => 'Webometrics Classification',
         'greenmetrics_classification' => 'Greenmetrics Classification',
+        'Scival_classification' => 'Scival Classification',
+        'classification' => 'Classification',
+        'Scopus_classification' => 'Scopus Classification',
         'home' => 'Home',
         'dean_word' => 'Dean Word',
         'min percent' => 'Evening Acceptance Rate',

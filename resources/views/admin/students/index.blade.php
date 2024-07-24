@@ -29,7 +29,7 @@
                             </svg>
                             <!--end::Svg Icon-->
                         </span>
-                            {{ __("custom.New Student") }}
+                            {{ __("custom.New") }}
                         </a>
                     @endif
 

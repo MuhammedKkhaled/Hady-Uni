@@ -21,6 +21,7 @@ use App\Models\NewsGallery;
 use App\Models\Link;
 use App\Models\Student;
 use App\Models\Teacher;
+use Illuminate\Http\Request;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Storage;
@@ -67,17 +68,15 @@ class NewsGalleryController extends Controller
         return view('admin.newsgalleries.create' , compact('depratments'));
     }// end of create
 
-    public function store(NewsGalleryRequest $request)
-    {
-        $requestData = $request->validated();
-
-        if ($request->image_1) {
-            $request->image_1->store('public/uploads/newsgalleries/');
-            $requestData['image_1'] = $request->image_1->hashName();
-
+    public function store(Request $request)
+    {        
+        foreach ($request->file('images') as $index => $item) {
+            $request->images[$index]->store('public/uploads/newsgalleries/');
+            $requestData['image_1'] = $request->images[$index]->hashName();
+            $requestData['department_id']  = $request['department_id'];
+            NewsGallery::create($requestData);
         }
 
-        NewsGallery::create($requestData);
 
         session()->flash('success', 'Added Successfully');
 

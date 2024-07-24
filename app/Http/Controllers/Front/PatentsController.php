@@ -25,4 +25,9 @@ class PatentsController extends Controller
         $depratments = Department::all();
         return view('frontend.pages.Review', compact('depratments'));
     }
+    public function showReviewTow()
+    {
+        $depratments = Department::all();
+        return view('frontend.pages.Review-tow', compact('depratments'));
+    }
 }

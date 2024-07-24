@@ -70,7 +70,8 @@ class CurriculaController extends Controller
     {
         $depratments =  Department::all();
         $teachers =  Teacher::all();
-        return view('admin.curricula.create' , compact('depratments','teachers'));
+        $affiliates =  Affiliate::all();
+        return view('admin.curricula.create' , compact('depratments','teachers','affiliates'));
     }// end of create
 
     public function store(CurriculaRequest $request)
@@ -96,7 +97,8 @@ class CurriculaController extends Controller
 
        $departments=  Department::all();
        $teachers =  teacher::all();
-        return view('admin.curricula.edit', compact('curriculum' , 'departments','teachers'));
+       $affiliates =  Affiliate::all();
+        return view('admin.curricula.edit', compact('curriculum' , 'departments','teachers','affiliates'));
 
     }// end of edit
 

@@ -3,25 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ReviewTowRequest;
-use App\Models\Review;
+use App\Models\ReviewTow;
 use Illuminate\Http\Request;
 
-class ReviewController extends Controller
+class ReviewTowController extends Controller
 {
     public function store(ReviewTowRequest $request)
     {
 
         $validated_data =  $request->validated();
-        $id = Review::create($validated_data)->id;
+        $id = ReviewTow::create($validated_data)->id;
 
         return redirect()
             ->back()
-            ->with('message' , __('custom.doneSend'). $id);;
+            ->with('message' , __('custom.doneSend1'));;
     }
     
     public function check(Request  $var)
     {
-        $Review = Review::findOrFail($var->id);
-        return view("frontend.pages.CheckState" , compact('Review'));
+        $ReviewTow = ReviewTow::findOrFail($var->id);
+        return view("frontend.pages.CheckState" , compact('ReviewTow'));
     }
 }

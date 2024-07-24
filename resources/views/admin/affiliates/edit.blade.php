@@ -142,18 +142,26 @@
                     
                     {{-- Affiliate Title  --}}
                     <div class="form-group">
-                        <label for="facebook">{{ __('custom.facebook') }} <span
+                        <label for="researchgate">researchgate <span
                                 class="text-danger">*</span></label>
-                        <input type="text" id="facebook" name="facebook" autofocus class="form-control"
-                            value="{{ old('facebook') }}">
+                        <input type="text" id="researchgate" name="researchgate" autofocus class="form-control"
+                            value="{{ old('researchgate', $affiliate->researchgate) }}">
                     </div>
+                    {{-- Affiliate Title  --}}
+                    <div class="form-group">
+                        <label for="google">google scholar<span
+                                class="text-danger">*</span></label>
+                        <input type="text" id="google" name="google" autofocus class="form-control"
+                            value="{{ old('google', $affiliate->google) }}">
+                    </div>
+
 
                     {{-- Affiliate Title  --}}
                     <div class="form-group">
-                        <label for="twitter">{{ __('custom.twitter') }} <span
+                        <label for="scopus">scopus <span
                                 class="text-danger">*</span></label>
-                        <input type="text" id="twitter" name="twitter" autofocus class="form-control"
-                            value="{{ old('twitter') }}">
+                        <input type="text" id="scopus" name="scopus" autofocus class="form-control"
+                            value="{{ old('scopus', $affiliate->scopus) }}">
                     </div>
 
                     {{-- Affiliate Title  --}}
@@ -161,7 +169,7 @@
                         <label for="linkedin">{{ __('custom.linkedin') }} <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="linkedin" name="linkedin" autofocus class="form-control"
-                            value="{{ old('linkedin') }}">
+                            value="{{ old('linkedin', $affiliate->linkedin) }}">
                     </div>
                     {{--file--}}
                     <div class="form-group">
