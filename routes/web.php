@@ -161,7 +161,8 @@ Route::prefix('main/')->group(function (){
     Route::get('structure', [JournalController::class , 'showStructure']);
 
     Route::post('messages/store', [MessageController::class , 'store'])->name('messages.store');
-    Route::post('tops/', [TopController::class , 'show'])->name('tops.show');
+    Route::post('tops/show', [TopController::class , 'show'])->name('tops.show');
+    Route::post('tops/showtow', [TopController::class , 'showtow'])->name('tops.showtow');
     Route::post('study/store', [StudyController::class , 'store'])->name('study.store');
     Route::post('Review/store', [ReviewController::class , 'store'])->name('Review.store');
     Route::post('ReviewTow/store', [ReviewTowController::class , 'store'])->name('ReviewTow.store');

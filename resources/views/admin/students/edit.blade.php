@@ -45,7 +45,7 @@
 
                     {{--file--}}
                     <div class="form-group">
-                        <label class="text-capitalize">{{ __("custom.Graduate File") }} <span class="text-danger">PDF,DOCX*</span></label>
+                        <label class="text-capitalize">{{ __("custom.Graduate File") }} <span class="text-danger">xlsx,xlsm,xlsb,xltx*</span></label>
                         <input type="file" name="graduated_file" id="input-file-now" class="dropify" @if(isset($student)) data-default-file="{{$student->graduated_file_path}}" data-show-remove="false" @endif  data-height="355"/>
                     </div>
 

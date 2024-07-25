@@ -278,13 +278,15 @@
                                         @forelse($department_students as $student)
                                             <tr>
                                                 <td class="">
-                                                    @if ($student->graduated_file)
-                                                        <a class="main-btn"
-                                                            href="{{ asset(Storage::url('uploads/students/' . $student->graduated_file)) }}"
-                                                            target="_blank">شاهد الخرجين</a>
-                                                    @else
-                                                        {{ __('No graduated file available') }}
-                                                    @endif
+                                                    
+                                                    <form  action="{{ route('tops.showtow') }}"method="POST">
+                                                        @csrf
+                                                        <input type="number" name="department_id" value="{{ $department->id }}" hidden>
+                                                        <input type="number" name="year" value="{{ $student->year->format('Y') }}"
+                                                            hidden>
+                                                        <button class="main-btn" type="submit">{{ __('custom.frontend.Graduates') }}</button>
+                                                        
+                                                    </form>
                                                 </td>
                                                 <td class="">
                                                     <form  action="{{ route('tops.show') }}"method="POST">
@@ -292,7 +294,7 @@
                                                         <input type="number" name="department_id" value="{{ $department->id }}" hidden>
                                                         <input type="number" name="year" value="{{ $student->year->format('Y') }}"
                                                             hidden>
-                                                        <button class="main-btn" type="submit">شاهد الأوائل</button>
+                                                        <button class="main-btn" type="submit">{{ __('custom.frontend.tops') }}</button>
                                                         
                                                     </form>
                                                 </td>

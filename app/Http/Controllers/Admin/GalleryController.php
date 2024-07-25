@@ -78,8 +78,6 @@ class GalleryController extends Controller
             Gallery::create($requestData);
         }
 
-        Gallery::create($requestData);
-
         session()->flash('success', 'Added Successfully');
 
         return redirect()->route('admin.galleries.index');
